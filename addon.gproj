@@ -1,0 +1,8 @@
+GameProject {
+ ID "ProtectionVanilla"
+ GUID "62610EAE425132C8"
+ TITLE "ProtectionVanilla"
+ Dependencies {
+  "5614E4829EAE4BB1" "608F1BA179AFBEC5" "5614E48126E3ADF2" "58D0FB3206B6F859"
+ }
+}
