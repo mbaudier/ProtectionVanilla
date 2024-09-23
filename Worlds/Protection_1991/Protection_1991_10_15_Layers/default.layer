@@ -1,0 +1,81 @@
+SCR_AIWorld SCR_AIWorld_Arland : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A2995A7E8BC2}" {
+     NavmeshFile "{FA94770AE4F52B83}worlds/MP/Navmeshes/Coop_CombatOps_Arland.nmn"
+    }
+   }
+  }
+ }
+ coords 2033.122 32.501 2019.837
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 2033.122 33.266 2023.837
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 2033.122 33.063 2022.837
+}
+SCR_FactionManager FactionManager_Protection : "{E70679F5E0A515AC}Prefabs/MP/Managers/Factions/FactionManager_Protection.et" {
+ coords 2033.102 32.567 2020.58
+ Factions {
+  SCR_Faction "{56DEAC40D3C2E623}" {
+   m_bIsPlayable 0
+  }
+  SCR_Faction "{56DEAC40D132400B}" {
+   m_bIsPlayable 0
+  }
+  SCR_Faction "{60EB3E61F4E10F1A}" {
+   m_bIsPlayable 0
+  }
+ }
+ m_bCanChangeFactionsPlayable 0
+}
+SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/ScenarioFramework/GameModeSF.et" {
+ components {
+  SCR_EditorRespawnBriefingComponent "{626F0784B49A42BC}" {
+   m_sJournalConfigPath "{793B754B50BD9A7B}Configs/Journal/Journal_HospitalRescue.conf"
+   m_Info SCR_UIInfo "{626F07848897B7BF}" {
+   }
+  }
+  SCR_GameModeCombatOpsManager "{5A96783ABCA252AE}" {
+   m_bDynamicDespawn 1
+  }
+  SCR_TimeAndWeatherHandlerComponent "{626F0792F94864EB}" {
+   m_bUsePredefineStartingTimeAndWeatehr 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{626F0792AF042DA4}" {
+     m_sWeatherPresetName "Overcast"
+     m_iStartingHour 0
+    }
+   }
+  }
+ }
+ coords 2033.122 32.126 2017.837
+ m_bAllowFactionChange 0
+ m_bUseSpawnPreload 1
+ m_aDisabledResourceTypes {
+  0
+ }
+}
+ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 2033.122 33.482 2024.837
+}
+SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
+ coords 2033.122 32.501 2019.837
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "TaskManager: "\
+   "Needed for task generation"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+SCR_LoadoutManager LoadoutManager_SOF : "{C4F7860EF519B92A}Prefabs/MP/Managers/Loadouts/LoadoutManager_SOF.et" {
+ coords 2033.122 32.126 2017.837
+}
