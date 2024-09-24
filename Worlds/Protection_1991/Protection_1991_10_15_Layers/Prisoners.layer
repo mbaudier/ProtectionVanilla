@@ -1,0 +1,64 @@
+GenericEntity AreaPrisoners : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 1385.683 37.875 2437.236
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   LayerPrisoners {
+    coords 0 0 0
+    {
+     GenericEntity SlotPrisoner01 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionMedical "{62710895343591E4}" {
+          m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{6271088574206FFE}" {
+           m_sLayerName "SlotPrisoner01"
+          }
+          m_aMedicalActions {
+           SCR_ScenarioFrameworkMedicalActionSetBlood "{627108910E5906E1}" {
+            m_fBloodValue 1000
+           }
+          }
+         }
+         SCR_ScenarioFrameworkActionShowPopupNotification "{6271089171BD053A}" {
+          m_sTitle "Test Activation"
+          m_sText "TEST"
+         }
+        }
+        m_sObjectToSpawn "{8541E0C0CDFA6729}Prefabs/Characters/Factions/INDFOR/RURAL/Character_RURAL_Farmer00.et"
+        m_sID "Prisoner01"
+        m_bCanBeGarbageCollected 0
+        m_eAISkill NONE
+        m_eAICombatType NONE
+       }
+      }
+      coords -3.88 0.507 -2.217
+      angleY 47.647
+     }
+    }
+   }
+   LayerHospital {
+    coords 0 0 0
+    {
+     $grp LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LightPrefabs/LampStreet_E_03_light.et" {
+      Light1 {
+       coords -5.908 3.348 -4.524
+       angleX 0
+       LV 6
+       Type Point
+       Radius 8
+       VolLightOffset 0
+      }
+      Light2 {
+       coords 0.031 3.368 -0.309
+       angleX 0
+       LV 6
+       Type Point
+       Radius 8
+       VolLightOffset 0
+      }
+     }
+    }
+   }
+  }
+ }
+}
