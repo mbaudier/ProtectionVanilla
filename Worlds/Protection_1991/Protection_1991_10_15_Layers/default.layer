@@ -21,6 +21,8 @@ SCR_FactionManager FactionManager_Protection : "{E70679F5E0A515AC}Prefabs/MP/Man
 }
 SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/ScenarioFramework/GameModeSF.et" {
  components {
+  SCR_CommandingManagerComponent "{6278F8D6E739F9AE}" {
+  }
   SCR_EditorRespawnBriefingComponent "{626F0784B49A42BC}" {
    m_sJournalConfigPath "{793B754B50BD9A7B}Configs/Journal/Journal_HospitalRescue.conf"
    m_Info SCR_UIInfo "{626F07848897B7BF}" {
