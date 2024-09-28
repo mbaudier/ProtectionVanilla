@@ -1,0 +1,19 @@
+GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 1388.085 36.126 2388.876
+ {
+  GenericEntity LayerWoodPatrol01 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 46.02 0.578 88.078
+   {
+    GenericEntity Patrol01_01 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sFactionKey "FIA"
+       m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+      }
+     }
+     coords 0.146 0.117 -5.255
+    }
+   }
+  }
+ }
+}
