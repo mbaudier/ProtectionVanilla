@@ -5,22 +5,36 @@ GenericEntity AreaPrisoners : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compo
    LayerPrisoners {
     coords 0 0 0
     {
-     GenericEntity SlotRural1 : "{51899FF5F9930355}Prefabs/ScenarioFramework/Components/SlotRural.et" {
+     GenericEntity Wounded01 : "{2090EF1F5B864436}Prefabs/ScenarioFramework/Components/SlotRuralWounded.et" {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
         m_aActivationActions {
-         SCR_ScenarioFrameworkActionMedical "{6278F8D7726925E4}" {
-          m_Getter SCR_ScenarioFrameworkGetEntityByName "{6278F8D77E3AB917}" {
-           m_sEntityName "Prisoner01"
+         SCR_ScenarioFrameworkActionMedical "{62890EF5477D5067}" {
+          m_Getter SCR_ScenarioFrameworkGetEntityByName "{62890EF54BE87F70}" {
+           m_sEntityName "RuralWounded01"
+          }
+         }
+        }
+        m_sID "RuralWounded01"
+       }
+      }
+      coords 0.245 -0 -0.579
+     }
+     GenericEntity Unconscious01 : "{8E32B3CE561BF28F}Prefabs/ScenarioFramework/Components/SlotRuralUnconscious.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionMedical "{628908A87D4E89EF}" {
+          m_Getter SCR_ScenarioFrameworkGetEntityByName "{628908A8474D591B}" {
+           m_sEntityName "UnconsciousRural01"
           }
           m_aMedicalActions {
-           SCR_ScenarioFrameworkMedicalActionSetBlood "{6278F8D75BE282FB}" {
-            m_fBloodValue 1000
+           SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{628908A8EA719362}" {
            }
           }
          }
         }
-        m_sID "Prisoner01"
+        m_sID "UnconsciousRural01"
        }
       }
       coords -3.95 0.509 -2.08
@@ -36,7 +50,7 @@ GenericEntity AreaPrisoners : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compo
        angleY 54.318
       }
       {
-       coords 8.247 -0 5.591
+       coords 8.247 0 5.591
        angleY 52.664
       }
      }
