@@ -1,3 +1,7 @@
+Vehicle UAZ452_ambulance1 : "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et" {
+ coords 1348.514 37.395 2404.9
+ angleY 63.558
+}
 GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 1384.646 37.875 2435.592
  {
@@ -23,105 +27,111 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compon
        VolLightOffset 0
       }
      }
+     GenericEntity Unconscious02 : "{8E32B3CE561BF28F}Prefabs/ScenarioFramework/Components/SlotRuralUnconscious.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionMedical "{628908A87D4E89EF}" {
+          m_Getter SCR_ScenarioFrameworkGetEntityByName "{628908A8474D591B}" {
+           m_sEntityName "UnconsciousRural02"
+          }
+          m_aMedicalActions {
+           SCR_ScenarioFrameworkMedicalActionSetBlood "{628908A857E95BFF}" {
+            m_fBloodValue 2000
+           }
+           SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{628908A8EA719362}" {
+           }
+          }
+         }
+        }
+        m_sID "UnconsciousRural02"
+        m_bCanBeGarbageCollected 0
+       }
+      }
+      coords -4.015 0.496 -1.521
+      angleY -167.003
+     }
     }
    }
    VehiclesLayer {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_ONE
-     }
-    }
-    coords -13.776 -0.706 -16.085
+    coords -17.374 -0.772 -17.206
     {
-     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-      MinibusExtractionVehicle {
-       coords 0 0 0
-       {
-        GenericEntity Minibus : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
-         components {
-          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-           m_aActivationActions {
-            SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{628B2A1F6A0FDD89}" {
-             m_iMaxNumberOfActivations 1
-             m_aActions {
-              SCR_ScenarioFrameworkActionAI "{628B2A1F7ABC1226}" {
-               m_Getter SCR_ScenarioFrameworkGetLayerBase "{628B2A1F7F22BF02}" {
-                m_sLayerBaseName "Rural01"
-               }
-               m_aAIActions {
-                SCR_ScenarioFrameworkAIAddWaypoint "{628B2A1F46A8BC3B}" {
-                 m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{628B2A1F4832F7BF}" {
-                  m_sLayerName "GetInExtractionVehicleWP"
-                 }
-                 m_bAddOnTopOfQueue 1
-                }
-               }
+     GenericEntity Truck : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{628B2A1D323EB768}" {
+          m_aActions {
+           SCR_ScenarioFrameworkActionShowPopupNotification "{628C980BC8C0A643}" {
+            m_sTitle "Prepare for extraction"
+            m_sText "Wait for the prisoners to get into the vehicle"
+           }
+           SCR_ScenarioFrameworkActionAI "{6292FA36468D5FE6}" {
+            m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{6292FA3624385303}" {
+             m_aLayerBaseNames {
+              "HospitalPrisoners" "Prisoners" "BunkerPrisoners01" "BunkerPrisoners02"
+             }
+            }
+            m_aAIActions {
+             SCR_ScenarioFrameworkAIAddWaypoint "{6292FA36040FDC10}" {
+              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{6292FA360BD09D31}" {
+               m_sLayerName "GetInExtractionVehicleWP"
               }
-              SCR_ScenarioFrameworkActionShowPopupNotification "{628B2A1FB8BAE975}" {
-               m_sTitle "Vehicle entered"
-              }
+              m_bAddOnTopOfQueue 1
              }
             }
            }
-           m_sObjectToSpawn "{49C909AFD66E90A1}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_randomized.et"
           }
          }
-         coords 0.068 -0.003 -0.006
-         angleY 148.313
         }
+        m_sObjectToSpawn "{16E32C3ABEAFC2C6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport.et"
        }
       }
-      TruckExtractionVehicle {
-       coords 0 0 0
-       {
-        GenericEntity Truck : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
-         components {
-          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-           m_aActivationActions {
-            SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{628B2A1D323EB768}" {
-             m_iMaxNumberOfActivations 1
-             m_aActions {
-              SCR_ScenarioFrameworkActionAI "{628B2A1D05127EE4}" {
-               m_Getter SCR_ScenarioFrameworkGetLayerBase "{628B2A1D121811F8}" {
-                m_sLayerBaseName "Rural01"
-               }
-               m_aAIActions {
-                SCR_ScenarioFrameworkAIAddWaypoint "{628B2A1D18EC98C2}" {
-                 m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{628B2A1DEBF6C6F6}" {
-                  m_sLayerName "GetInExtractionVehicleWP"
-                 }
-                 m_bAddOnTopOfQueue 1
-                }
-               }
-              }
-             }
-            }
-           }
-           m_sObjectToSpawn "{16E32C3ABEAFC2C6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport.et"
-          }
-         }
-         coords -2.362 -0.184 -5.467
-         angleY -46.543
-        }
-       }
-      }
+      coords 6.982 -0.391 -5.816
+      angleY 57.056
      }
-    }
-   }
-   ExtractionVehicleWaypoints {
-    coords -13.776 -0.706 -16.085
-    {
      GenericEntity GetInExtractionVehicleWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-        m_sID "Target1"
-        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{628B2A1C85237DEF}" {
-         m_fCompletionRadius 5
+        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{628C980A9EBAFA29}" {
+         m_fCompletionRadius 10
+         m_fPriorityLevel 1000
+         m_fHoldingTime 600
          m_bDriverAllowed 0
+         m_bGunnerAllowed 0
         }
        }
       }
-      coords 0.28 -0.174 -2.968
+      coords 6.782 -0.397 -6.062
+     }
+    }
+   }
+   HospitalPrisonersLayer {
+    coords 0 0 0
+    {
+     GenericEntity HospitalPrisoners : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "RURAL"
+        m_sObjectToSpawn "{28D14CBE43FE3FFB}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_Mix01.et"
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6292FA2ECDF69950}" {
+         m_aLayerName {
+          "HospitalPrisonersWP"
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+     GenericEntity HospitalPrisonersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointMove "{6292FA34617F168D}" {
+         m_fCompletionRadius 2
+        }
+       }
+      }
+      coords 0 0 0
      }
     }
    }

@@ -1,0 +1,96 @@
+GenericEntity BunkerArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 1283.574 37.214 2418.181
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   BunkerLightsLayer {
+    coords 0 0 0
+    {
+     $grp GameEntity : "{A76E82E2A746C3D3}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_01/LightPrefabs/LampStreet_E_01_glass.et" {
+      {
+       coords 3.77 1.326 4.115
+       {
+        LightEntity {
+         ID "55AB017249B346E6"
+         ColorType Temperature
+         Temperature 7000
+         LV 4
+        }
+       }
+      }
+      {
+       coords 0.399 2.527 8.962
+       {
+        LightEntity {
+         ID "55AB017249B346E6"
+         ColorType Temperature
+         Temperature 7000
+         LV 4
+        }
+       }
+      }
+      {
+       coords 7.224 2.54 -0.725
+       {
+        LightEntity {
+         ID "55AB017249B346E6"
+         ColorType Temperature
+         Temperature 7000
+         LV 4
+        }
+       }
+      }
+     }
+    }
+   }
+   BunkerPrisonersLayer {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      BunkerPrisoners01 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "RURAL"
+         m_sObjectToSpawn "{2E1785FE7C28537D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_2x.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6292FA3F913F4381}" {
+          m_aLayerName {
+           "BunkerPrisonersWP"
+          }
+         }
+        }
+       }
+       coords 6.955 -1.02 0.319
+       angleY 66.484
+      }
+      BunkerPrisoners02 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "RURAL"
+         m_sObjectToSpawn "{2E1785FE7C28537D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_2x.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6292FA3F913F4381}" {
+          m_aLayerName {
+           "BunkerPrisonersWP"
+          }
+         }
+        }
+       }
+       coords 2.358 -0.998 3.202
+       angleY 66.484
+      }
+     }
+     GenericEntity BunkerPrisonersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointMove "{6292FA37DF549ECF}" {
+         m_fCompletionRadius 0.5
+         m_eAIWaypointCompletionType All
+        }
+       }
+      }
+      coords -1.38 -1.009 0.589
+      angleY -31.28
+     }
+    }
+   }
+  }
+ }
+}

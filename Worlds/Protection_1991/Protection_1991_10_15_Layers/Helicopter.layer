@@ -1,0 +1,181 @@
+GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 1241.456 39.01 2389.149
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   LayerHelicopter {
+    coords 0 0 0
+    {
+     GenericEntity HelicopterSlot : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{6292FA34A9D03431}" {
+          m_aActions {
+           SCR_ScenarioFrameworkActionAI "{6292FA34B3B56787}" {
+            m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{6292FA34B45DA288}" {
+             m_aLayerBaseNames {
+              "HospitalPrisoners" "Prisoners" "BunkerPrisoners01" "BunkerPrisoners02"
+             }
+            }
+            m_aAIActions {
+             SCR_ScenarioFrameworkAIAddWaypoint "{6292FA28569ED5A7}" {
+              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{6292FA285AB0103E}" {
+               m_sLayerName "GetInHelicopterWP"
+              }
+              m_bAddOnTopOfQueue 1
+             }
+            }
+           }
+           SCR_ScenarioFrameworkActionShowPopupNotification "{6292FA2821CC5FED}" {
+            m_sTitle "Prepare for extraction"
+            m_sText "Wait for the prisoners to get into the vehicle"
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+       }
+      }
+      coords 0 0 0
+      angleY 127.196
+     }
+     GenericEntity GetInHelicopterWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{6292FA35717944F8}" {
+         m_fCompletionRadius 10
+         m_fPriorityLevel 1000
+         m_fHoldingTime 600
+         m_bDriverAllowed 0
+         m_bGunnerAllowed 0
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   LayerOtherHelicopters {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      OtherHelicopter01 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{6292FA34A9D03431}" {
+           m_aActions {
+            SCR_ScenarioFrameworkActionAI "{6292FA34B3B56787}" {
+             m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{6292FA34B45DA288}" {
+              m_aLayerBaseNames {
+               "HospitalPrisoners" "Prisoners" "BunkerPrisoners01" "BunkerPrisoners02"
+              }
+             }
+            }
+           }
+          }
+         }
+         m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+        }
+       }
+       coords -28.019 -0.01 -16.469
+       angleY 126.618
+      }
+      OtherHelicopter02 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{6292FA34A9D03431}" {
+           m_aActions {
+            SCR_ScenarioFrameworkActionAI "{6292FA34B3B56787}" {
+             m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{6292FA34B45DA288}" {
+              m_aLayerBaseNames {
+               "HospitalPrisoners" "Prisoners" "BunkerPrisoners01" "BunkerPrisoners02"
+              }
+             }
+            }
+           }
+          }
+         }
+         m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+        }
+       }
+       coords -39.17 -0.01 9.153
+       angleY 91.948
+      }
+     }
+    }
+   }
+   LayerEquipmentsAroundHelicopter {
+    coords 0 0 0
+    {
+     GenericEntity : "{372DCA487884C4E8}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR_Weapons.et" {
+      coords -16.25 -0.01 5.213
+      angleY -15.605
+     }
+     $grp GameEntity : "{616F4E93658E5A3A}Prefabs/Props/Military/Generators/GeneratorFloodlight_USSR_01.et" {
+      {
+       components {
+        SCR_BaseInteractiveLightComponent "{5882B9E6B4EFC9DF}" {
+         m_eInitialLightState LIT
+        }
+       }
+       coords -23.614 -0.011 11.642
+       angleY -163.359
+      }
+      {
+       components {
+        SCR_BaseInteractiveLightComponent "{5882B9E6B4EFC9DF}" {
+         m_eInitialLightState LIT
+        }
+       }
+       coords -13.701 -0.01 12.442
+       angleY 162.272
+      }
+     }
+     GenericEntity : "{76153B97A551AADE}Prefabs/Props/Military/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Explosives_USSR.et" {
+      coords -17.626 -0.01 5.95
+     }
+     $grp GenericEntity : "{7C93700E1AC4C388}Prefabs/Props/Military/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Launcher_USSR.et" {
+      {
+       coords -22.867 -0.01 5.11
+      }
+      {
+       coords -23.144 -0.01 5.577
+      }
+     }
+     GenericEntity : "{E74C02B60805F7C7}Prefabs/Props/Military/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Weapons_USSR.et" {
+      coords -21.122 -0.009 4.193
+     }
+     GenericEntity : "{FE8505D4F04785F8}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR_Equipment.et" {
+      coords -19.068 -0.01 5.469
+      angleY 0
+     }
+    }
+   }
+   LayerHelicopterDefenders {
+    coords 0 0 0
+    {
+     GenericEntity HelicopterDefenders : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+       }
+      }
+      coords 0 0 0
+     }
+     GenericEntity HelicopterDefendersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6292FA2B6ABA18AF}" {
+         m_fCompletionRadius 15
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,198 @@
+GameEntity : "{50E6A3845C9F20FD}Prefabs/Props/Military/Camps/LanternMilitary_US_01.et" {
+ coords 1348.929 38.244 2399.013
+ angleY -34.515
+}
+GenericEntity : "{72E42BEAFED9B5A7}Prefabs/Props/Garbage/Bins/GarbageContainer_01.et" {
+ coords 1361.01 36.991 2391.708
+ angleY -105.115
+}
+GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 1350.78 37.192 2399.76
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   PrisonFencesLayer {
+    coords 0 0 0
+    {
+     GenericEntity : "{0C923757B8B8306B}Prefabs/Compositions/Misc/FreeRoamBuilding/BarbedTapeTriple_S_USSR_01.et" {
+      coords 8.761 -0.071 -3.439
+      angleY -38.901
+      {
+       StaticModelEntity {
+        ID "5E64B54F57833D69"
+        coords -0.548 0.004 0.021
+        angleY 2.186
+       }
+      }
+     }
+     SCR_DestructibleEntity : "{56F6F5C13ED7431A}Prefabs/Structures/Walls/Net/NetFence_03/NetFence_03_Pole.et" {
+      coords 7.536 -0.04 -2.332
+      angleY 50.442
+     }
+     GameEntity : "{616F4E93658E5A3A}Prefabs/Props/Military/Generators/GeneratorFloodlight_USSR_01.et" {
+      components {
+       SCR_BaseInteractiveLightComponent "{5882B9E6B4EFC9DF}" {
+        m_eInitialLightState LIT
+       }
+      }
+      coords 2.943 -0.555 -18.152
+      angleY 29.367
+     }
+     $grp SCR_DestructibleEntity : "{7B75DBCC0EDB5EE3}Prefabs/Structures/Walls/Net/NetFence_03/NetFence_03_8m.et" {
+      {
+       coords -5.229 0.004 1.42
+       angleY -32.192
+      }
+      {
+       coords -2.233 -0.171 -6.42
+       angleY -124.983
+      }
+      {
+       coords 2.55 -0.275 -12.934
+       angleY -125.825
+      }
+      {
+       coords 10.29 -0.273 -9.602
+       angleY 143.424
+      }
+      {
+       coords 2.807 0.144 4.124
+       angleY 54.175
+      }
+     }
+     SCR_DestructibleEntity : "{9AEEFE7F2A93F585}Prefabs/Structures/Walls/Net/NetFence_03/NetFence_03_4m.et" {
+      coords 9.484 -0.15 -5.048
+      angleY 54.918
+     }
+     $grp SCR_DestructibleEntity : "{F118DE44157D7C27}Prefabs/Structures/Walls/Net/NetFence_03/NetFence_03_Corner.et" {
+      {
+       coords -6.926 -0.06 0.198
+       angleY -33.915
+      }
+      {
+       coords 1.618 0.231 5.787
+       angleY 52.093
+      }
+      {
+       coords 3.901 -0.35 -14.461
+       angleY -128.706
+      }
+      {
+       coords 11.839 -0.223 -8.297
+       angleY 140.304
+      }
+     }
+    }
+   }
+   PrisonTentLayer {
+    coords 0 0 0
+    {
+     StaticModelEntity : "{172DD50ACF177B9E}Prefabs/Props/Military/Furniture/ChairMilitary_USSR_01.et" {
+      coords -0.848 0.161 -1.424
+      angleY 141.187
+     }
+     StaticModelEntity : "{1A1020205E2B1710}Prefabs/Props/Military/Furniture/TableMilitary_USSR_01.et" {
+      coords 0.946 0.16 0.79
+      angleY -37.374
+     }
+     GameEntity : "{50E6A3845C9F20FD}Prefabs/Props/Military/Camps/LanternMilitary_US_01.et" {
+      coords 1.069 1.059 1.188
+      angleY -34.515
+     }
+     StaticModelEntity : "{5AC8AEF1B8F230AD}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Food_USSR_02.et" {
+      coords -1.723 0.153 -0.879
+      angleY -35.98
+     }
+     StaticModelEntity : "{881FCB0BDCE4B89F}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_Medical_USSR_02.et" {
+      coords 0.863 0.148 1.759
+      angleY 53.443
+     }
+     GenericEntity Unconscious01 : "{8E32B3CE561BF28F}Prefabs/ScenarioFramework/Components/SlotRuralUnconscious.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionMedical "{628908A87D4E89EF}" {
+          m_Getter SCR_ScenarioFrameworkGetEntityByName "{628908A8474D591B}" {
+           m_sEntityName "UnconsciousRural01"
+          }
+          m_aMedicalActions {
+           SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{628908A8EA719362}" {
+           }
+          }
+         }
+        }
+        m_sID "UnconsciousRural01"
+        m_bCanBeGarbageCollected 0
+       }
+      }
+      coords -0.683 0.635 1.533
+      angleY -167.003
+     }
+     $grp StaticModelEntity : "{C6BFE324CCCFE6C4}Prefabs/Props/Military/Furniture/CotMilitary_USSR_01.et" {
+      {
+       coords 2.036 0.171 -0.549
+       angleY 55.238
+      }
+      {
+       coords -0.199 0.157 2.01
+       angleY -36.378
+      }
+      {
+       coords -2.323 0.165 0.363
+       angleY 142.839
+      }
+     }
+     StaticModelEntity : "{CE5A6430C87F38AD}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/TentFIA_01_medical_CompositionDestruction.et" {
+      coords -0.093 -0.018 -0.535
+      angleY 144.27
+     }
+     StaticModelEntity : "{DA242761FD59A978}Prefabs/Compositions/Misc/SubCompositions/Furniture/Bed_Blankets_USSR_01.et" {
+      coords -0.985 0.165 -2.433
+      angleY 52.552
+     }
+    }
+   }
+   PrisonersLayer {
+    coords 3.271 -0.13 -4.824
+    {
+     GenericEntity Prisoners : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "RURAL"
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionAI "{628CDA41F94A5363}" {
+          m_aAIActions {
+           SCR_ScenarioFrameworkAIActionDisableLOD "{628CDA41C336E2F3}" {
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{28D14CBE43FE3FFB}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_Mix01.et"
+        m_bCanBeGarbageCollected 0
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{628C98068483C5F3}" {
+         m_aLayerName {
+          "PrisonersWP"
+         }
+        }
+        m_eAIGroupFormation Column
+       }
+      }
+      coords -0.099 0.048 0.454
+      angleY 54.04
+     }
+     GenericEntity PrisonersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointMove "{628CDA463C3E3AEA}" {
+         m_fCompletionRadius 3
+         m_eAIWaypointCompletionType All
+        }
+       }
+      }
+      coords 0.483 -0.058 -5.65
+      angleY -35.922
+     }
+    }
+   }
+  }
+ }
+}
