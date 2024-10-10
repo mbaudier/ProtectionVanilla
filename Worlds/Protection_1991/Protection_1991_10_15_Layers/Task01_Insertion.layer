@@ -1,26 +1,266 @@
-GenericEntity Area01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 1430.616 36.612 2457.74
  {
-  GenericEntity LayerTaskMoveToFence : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+  GenericEntity LayerTaskApproach : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
    components {
     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
-     m_sTaskTitle "Move to hole in the fence"
-     m_sTaskDescription "Move as discreetly as possible to a part of the fence which is open"
+     m_sTaskTitle "Approach the base"
     }
    }
-   coords 6.501 -0.021 23.271
+   coords 1.127 0.284 6.793
    {
-    GenericEntity SlotMoveToFence : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+    GenericEntity SlotTaskApproach : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
      components {
       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
        m_aPlugins {
         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-         m_fAreaRadius 3
+         m_fAreaRadius 20
+        }
+       }
+       m_aActionsOnFinished {
+        SCR_ScenarioFrameworkActionSpawnObjects "{6294E8F72399366C}" {
+         m_aNameOfObjectsToSpawnOnActivation {
+          "SlotSpawnPointApproach"
+         }
+        }
+        SCR_ScenarioFrameworkActionShowPopupNotification "{6294E8F7F5B6C77B}" {
+         m_sTitle "Checkpoint reached"
+         m_sText "Spawn point created"
         }
        }
       }
      }
      coords 0 0 0
+    }
+    GenericEntity SlotSpawnPointApproach : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+     components {
+      SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+       m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+      }
+     }
+     coords 16.968 0.815 -6.308
+    }
+   }
+  }
+  GenericEntity LayerTaskExtract : "{5AF3BFDA2EAE56EA}Prefabs/ScenarioFramework/Components/LayerTask.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+     m_eActivationType ON_TRIGGER_ACTIVATION
+     m_sTaskTitle "Extract"
+     m_sTaskDescription "Go with the vehicle to the extraction point"
+    }
+   }
+   coords 321.918 3.579 258.578
+   {
+    GenericEntity SlotTaskExtract : "{9C47DECB98FDA4DA}Prefabs/ScenarioFramework/Components/SlotExtraction.et" {
+     components {
+      SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+         m_fAreaRadius 20
+         m_fActivationCountdownTimer 15
+         m_bNotificationEnabled 1
+         m_sPlayerActivationNotificationTitle "Extracting..."
+        }
+       }
+       m_bShowDebugShapesInWorkbench 0
+       m_aActionsOnFinished {
+        SCR_ScenarioFrameworkActionBasedOnConditions "{6294E8F4820D62AB}" {
+         m_aActivationConditions {
+          SCR_ScenarioFrameworkVariableValueCondition "{6294E8C410544D1A}" {
+           m_sVariableName "MissionStatus"
+           m_sVariableValueToCheck "LOOSE"
+          }
+         }
+         m_aActions {
+          SCR_ScenarioFrameworkActionEndMission "{6294E8C4C17ECDCA}" {
+           m_bOverrideGameOverType 1
+           m_eOverriddenGameOverType LOOSE
+          }
+         }
+        }
+        SCR_ScenarioFrameworkActionBasedOnConditions "{6294E8C363BAE156}" {
+         m_aActivationConditions {
+          SCR_ScenarioFrameworkVariableValueCondition "{6294E8C36551BC24}" {
+           m_sVariableName "MissionStatus"
+           m_sVariableValueToCheck "VICTORY"
+          }
+         }
+         m_aActions {
+          SCR_ScenarioFrameworkActionEndMission "{6294E8C372C3A95E}" {
+           m_bOverrideGameOverType 1
+           m_eOverriddenGameOverType VICTORY
+          }
+         }
+        }
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity LayerExtractedCivilians : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 321.918 3.579 258.578
+   {
+    $grp GenericEntity : "{032C15BBEBE9E1E9}Prefabs/ScenarioFramework/Components/SlotTrigger.et" {
+     TriggerEndMissionPartialSuccess {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+          m_fAreaRadius 30
+          m_aCustomTriggerConditions {
+           SCR_CustomTriggerConditionsSpecificPrefabCount "{6294E8FEACC698A6}" {
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilterCount "{6294E8FEB4997AC1}" {
+              m_sSpecificPrefabName "{9377B9F8B8CA717A}Prefabs/Characters/Factions/INDFOR/RURAL/Character_RURAL_base.et"
+              m_bIncludeChildren 1
+              m_iPrefabCount 4
+             }
+            }
+           }
+          }
+          m_bOnce 1
+         }
+        }
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkSetVariable "{6294E8C32FC17D5A}" {
+          m_sVariableName "ProtectionMissionStatus"
+          m_sVariableValue "PARTIAL_SUCCESS"
+         }
+         SCR_ScenarioFrameworkActionIncrementCounter "{6294E8CB2F6C752C}" {
+          m_iMaxNumberOfActivations 1
+          m_sCounterName "CounterMissionStatus"
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+     TriggerEndMissionVictory {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+          m_fAreaRadius 30
+          m_aCustomTriggerConditions {
+           SCR_CustomTriggerConditionsSpecificPrefabCount "{6294E8FEACC698A6}" {
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilterCount "{6294E8FEB4997AC1}" {
+              m_sSpecificPrefabName "{9377B9F8B8CA717A}Prefabs/Characters/Factions/INDFOR/RURAL/Character_RURAL_base.et"
+              m_bIncludeChildren 1
+              m_iPrefabCount 6
+             }
+            }
+           }
+          }
+          m_bOnce 1
+         }
+        }
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkSetVariable "{6294E8C32FC17D5A}" {
+          m_sVariableName "ProtectionMissionStatus"
+          m_sVariableValue "VICTORY"
+         }
+         SCR_ScenarioFrameworkActionShowPopupNotification "{6294E8C3DEC228C3}" {
+          m_sTitle "VICTORY!!"
+         }
+         SCR_ScenarioFrameworkActionIncrementCounter "{6294E8C9659E1A6F}" {
+          m_iMaxNumberOfActivations 1
+          m_sCounterName "CounterMissionStatus"
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+     TriggerEndMissionPlayer {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+          m_eActivationPresence PLAYER
+          m_bOnce 1
+          m_fActivationCountdownTimer 5
+          m_bNotificationEnabled 1
+          m_sPlayerActivationNotificationTitle "Extracting"
+         }
+        }
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6294E8CB0FF10A4B}" {
+          m_eComparisonOperator EQUAL
+          m_sCounterName "CounterMissionStatus"
+          m_aActions {
+           SCR_ScenarioFrameworkActionEndMission "{6294E8CBE501FFA8}" {
+            m_bOverrideGameOverType 1
+            m_eOverriddenGameOverType COMBATPATROL_DEFEAT
+           }
+          }
+         }
+         SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6294E8CBFF686DCC}" {
+          m_eComparisonOperator EQUAL
+          m_iValue 1
+          m_sCounterName "CounterMissionStatus"
+          m_aActions {
+           SCR_ScenarioFrameworkActionEndMission "{6294E8CBC43A248F}" {
+            m_bOverrideGameOverType 1
+            m_eOverriddenGameOverType COMBATPATROL_PARTIAL_SUCCESS
+           }
+          }
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+     TriggerEndMissionDraw {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_aActivationActions {
+         SCR_ScenarioFrameworkCreateVariable "{6294E8C3FF2C6D35}" {
+          m_sVariableName "ProtectionMissionStatus"
+          m_sVariableValue "DEFEAT"
+         }
+        }
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+          m_fAreaRadius 30
+          m_aCustomTriggerConditions {
+           SCR_CustomTriggerConditionsSpecificPrefabCount "{6294E8FEACC698A6}" {
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilterCount "{6294E8FEB4997AC1}" {
+              m_sSpecificPrefabName "{9377B9F8B8CA717A}Prefabs/Characters/Factions/INDFOR/RURAL/Character_RURAL_base.et"
+              m_bIncludeChildren 1
+              m_iPrefabCount 2
+             }
+            }
+           }
+          }
+          m_bOnce 1
+         }
+        }
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkSetVariable "{6294E8C32FC17D5A}" {
+          m_sVariableName "ProtectionMissionStatus"
+          m_sVariableValue "DRAW"
+         }
+         SCR_ScenarioFrameworkActionIncrementCounter "{6294E8CB4539F3E1}" {
+          m_iMaxNumberOfActivations 1
+          m_sCounterName "CounterMissionStatus"
+         }
+        }
+       }
+      }
+      coords -0.213 0.081 -0.6
+     }
+    }
+    SCR_ScenarioFrameworkLogicCounter CounterMissionStatus : "{6C1792C71DCAFD55}Prefabs/ScenarioFramework/Components/LogicCounter.et" {
+     coords 0 0 0
+     m_iCountTo 4
     }
    }
   }

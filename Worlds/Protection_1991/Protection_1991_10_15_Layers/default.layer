@@ -8,6 +8,8 @@ SCR_FactionManager FactionManager_Protection : "{E70679F5E0A515AC}Prefabs/MP/Man
  coords 2033.102 32.567 2020.58
  Factions {
   SCR_Faction "{56DEAC40D3C2E623}" {
+   UIInfo SCR_FactionUIInfo "{528C96127F8B6B08}" {
+   }
    m_bIsPlayable 0
   }
   SCR_Faction "{56DEAC40D132400B}" {

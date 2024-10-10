@@ -56,6 +56,11 @@ GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
     }
    }
    LayerOtherHelicopters {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_BASED_ON_PLAYERS_COUNT
+     }
+    }
     coords 0 0 0
     {
      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
@@ -78,8 +83,8 @@ GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
          m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
         }
        }
-       coords -28.019 -0.01 -16.469
-       angleY 126.618
+       coords -16.244 -0.01 -15.655
+       angleY 85.333
       }
       OtherHelicopter02 {
        components {
@@ -100,8 +105,8 @@ GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
          m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
         }
        }
-       coords -39.17 -0.01 9.153
-       angleY 91.948
+       coords -30.779 -0.01 1.339
+       angleY -178.286
       }
      }
     }
@@ -142,6 +147,15 @@ GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
       }
       {
        coords -23.144 -0.01 5.577
+      }
+     }
+     $grp GenericEntity : "{7D39683D0F8EDB59}Prefabs/Props/Military/MilitaryCrates/CrateStack_01/Dst/CrateStack_01_Dst_3_dark.et" {
+      {
+       coords -20.773 -0.009 6.944
+       angleY 36.907
+      }
+      {
+       coords -19.161 -0.01 7.923
       }
      }
      GenericEntity : "{E74C02B60805F7C7}Prefabs/Props/Military/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Weapons_USSR.et" {
