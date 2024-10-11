@@ -11,7 +11,7 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
        m_bOnce 1
        m_fActivationCountdownTimer 360
        m_bNotificationEnabled 1
-       m_sPlayerActivationNotificationTitle "Rebel OMSDON troops will soon attack the base"
+       m_sPlayerActivationNotificationTitle "Rogue Vityaz troops will soon attack the base"
       }
      }
      m_bShowDebugShapesInWorkbench 0
@@ -92,6 +92,29 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
        }
        coords 33.657 -2.544 68.678
       }
+     }
+    }
+   }
+   LayerHelicopterDefenders {
+    coords -112.94 0.25 77.798
+    {
+     GenericEntity HelicopterDefenders : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+       }
+      }
+      coords 0 0 0
+     }
+     GenericEntity HelicopterDefendersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6292FA2B6ABA18AF}" {
+         m_fCompletionRadius 15
+        }
+       }
+      }
+      coords 0 0 0
      }
     }
    }

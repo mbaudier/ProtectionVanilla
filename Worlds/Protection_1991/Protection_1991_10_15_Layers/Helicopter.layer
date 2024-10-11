@@ -27,8 +27,16 @@ GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
             }
            }
            SCR_ScenarioFrameworkActionShowPopupNotification "{6292FA2821CC5FED}" {
-            m_sTitle "Prepare for extraction"
             m_sText "Wait for the prisoners to get into the vehicle"
+           }
+          }
+         }
+         SCR_ScenarioFrameworkActionOnEngineStartedOrStop "{6297077B8ACA35FA}" {
+          m_aActions {
+           SCR_ScenarioFrameworkActionSpawnObjects "{6297077B926B2474}" {
+            m_aNameOfObjectsToSpawnOnActivation {
+             "LayerTaskExtraction"
+            }
            }
           }
          }
@@ -38,6 +46,19 @@ GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
       }
       coords 0 0 0
       angleY 127.196
+     }
+     GenericEntity HelicopterMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6297077C8BB3C9D2}" {
+         m_sMapMarkerText "Vityaz helicopter"
+         m_eMapMarkerFactionIcon OPFOR
+         m_eMapMarkerType1Modifier ROTARY_WING
+         m_eMapMarkerType2Modifier ROTARY_WING
+        }
+       }
+      }
+      coords 0 0 0
      }
      GenericEntity GetInHelicopterWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
@@ -164,29 +185,6 @@ GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
      GenericEntity : "{FE8505D4F04785F8}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR_Equipment.et" {
       coords -19.068 -0.01 5.469
       angleY 0
-     }
-    }
-   }
-   LayerHelicopterDefenders {
-    coords 0 0 0
-    {
-     GenericEntity HelicopterDefenders : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-      components {
-       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
-       }
-      }
-      coords 0 0 0
-     }
-     GenericEntity HelicopterDefendersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
-      components {
-       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-        m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6292FA2B6ABA18AF}" {
-         m_fCompletionRadius 15
-        }
-       }
-      }
-      coords 0 0 0
      }
     }
    }
