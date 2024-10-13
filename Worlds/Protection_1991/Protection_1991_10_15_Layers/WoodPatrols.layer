@@ -5,7 +5,8 @@ GenericEntity AreaWoodPatrols : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Com
    LayerWoodPatrols {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_BASED_ON_PLAYERS_COUNT
+      m_SpawnChildren RANDOM_MULTIPLE
+      m_iRandomPercent 50
      }
     }
     coords 0.009 -0.001 0.013
@@ -95,17 +96,6 @@ GenericEntity AreaWoodPatrols : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Com
        }
        coords -61.695 0.301 -12.91
       }
-     }
-     GenericEntity WoodPatrolsMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
-      components {
-       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
-        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{629707606E9AAE9A}" {
-         m_sMapMarkerText "Patrols"
-         m_eMapMarkerFactionIcon INDFOR
-        }
-       }
-      }
-      coords -44.128 -0.287 -3.745
      }
     }
    }

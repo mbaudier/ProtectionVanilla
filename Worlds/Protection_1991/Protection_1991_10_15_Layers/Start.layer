@@ -101,6 +101,28 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Component
        }
        coords -238.698 -4.719 81.196
       }
+      BaseSquadsMarker {
+       components {
+        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+         m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6297077E9D6E9CDF}" {
+          m_sMapMarkerText "Base defenders"
+          m_eMapMarkerFactionIcon INDFOR
+         }
+        }
+       }
+       coords -219.917 -6.042 3.094
+      }
+      WoodPatrolsMarker {
+       components {
+        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+         m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{629707606E9AAE9A}" {
+          m_sMapMarkerText "Patrols"
+          m_eMapMarkerFactionIcon INDFOR
+         }
+        }
+       }
+       coords -224.177 -5.661 104.539
+      }
      }
     }
    }

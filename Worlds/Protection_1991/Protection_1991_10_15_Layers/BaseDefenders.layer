@@ -5,7 +5,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
    LayerTowerSoldiers {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_BASED_ON_PLAYERS_COUNT
+      m_SpawnChildren RANDOM_ONE
      }
     }
     coords 28.801 6.967 -2.287
@@ -43,7 +43,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
    LayerBaseSquads {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_BASED_ON_PLAYERS_COUNT
+      m_SpawnChildren RANDOM_ONE
      }
     }
     coords 6.322 -0.103 -16.317
@@ -73,19 +73,8 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
          }
         }
        }
-       coords -9.919 0.251 5.973
+       coords -34.215 1.722 4.99
       }
-     }
-     GenericEntity BaseSquadsMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
-      components {
-       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
-        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6297077E9D6E9CDF}" {
-         m_sMapMarkerText "Base defenders"
-         m_eMapMarkerFactionIcon INDFOR
-        }
-       }
-      }
-      coords 0 0 0
      }
     }
    }

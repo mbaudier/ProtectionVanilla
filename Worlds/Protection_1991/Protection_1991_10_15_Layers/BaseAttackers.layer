@@ -18,7 +18,7 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
      m_aTriggerActions {
       SCR_ScenarioFrameworkActionSpawnObjects "{6294E8EEE4ED30C5}" {
        m_aNameOfObjectsToSpawnOnActivation {
-        "LayerBaseAttackers"
+        "LayerBaseAttackers" "LayerHelicopterDefenders"
        }
       }
      }
@@ -30,7 +30,7 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
    LayerBaseAttackers {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_BASED_ON_PLAYERS_COUNT
+      m_SpawnChildren RANDOM_ONE
       m_eActivationType ON_TRIGGER_ACTIVATION
      }
     }
@@ -96,6 +96,11 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
     }
    }
    LayerHelicopterDefenders {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
     coords -112.94 0.25 77.798
     {
      GenericEntity HelicopterDefenders : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
