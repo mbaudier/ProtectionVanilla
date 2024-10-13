@@ -14,6 +14,7 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
        m_sPlayerActivationNotificationTitle "Rogue Vityaz troops will soon attack the base"
       }
      }
+     m_sObjectToSpawn "{9DB5EBFFEC1A54B4}Prefabs/ScenarioFramework/Triggers/TriggerAnyPlayerSlow.et"
      m_bShowDebugShapesInWorkbench 0
      m_aTriggerActions {
       SCR_ScenarioFrameworkActionSpawnObjects "{6294E8EEE4ED30C5}" {
@@ -30,7 +31,6 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
    LayerBaseAttackers {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_ONE
       m_eActivationType ON_TRIGGER_ACTIVATION
      }
     }

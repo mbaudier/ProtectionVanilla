@@ -68,6 +68,6 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/T
   }
  }
 }
-SCR_LoadoutManager LoadoutManager_SOF : "{C4F7860EF519B92A}Prefabs/MP/Managers/Loadouts/LoadoutManager_SOF.et" {
- coords 2033.122 32.126 2017.837
+SCR_LoadoutManager : "{B54D08AEA74A5354}Prefabs/MP/Managers/Loadouts/LoadoutManager_Editor.et" {
+ coords 2031.73 33.801 2026.467
 }
