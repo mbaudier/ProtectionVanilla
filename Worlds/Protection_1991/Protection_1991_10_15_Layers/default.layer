@@ -71,14 +71,9 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/T
 SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
  coords 2031.73 33.82 2026.563
  m_aPlayerLoadouts {
-  SCR_FactionPlayerLoadout "{629D11DD298FFDC5}" {
-   m_sLoadoutName "Protection SOF"
-   m_sLoadoutResource "{95E8247374D70A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SOF_TL.et"
-   m_sAffiliatedFaction "US"
-  }
   SCR_PlayerArsenalLoadout "{629D19EB7D67619C}" {
    m_sLoadoutName "#AR-Loadout_Editor_SavedArsenalLoadout_Name"
-   m_sLoadoutResource "{836E7E39AAC5888B}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Base.et"
+   m_sLoadoutResource "{95E8247374D70A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SOF_TL.et"
    m_sAffiliatedFaction "US"
   }
  }

@@ -55,7 +55,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
          m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6294E8E4E3D3C8F9}" {
           m_aLayerName {
-           "BaseSquadsWP"
+           "BaseSquad01WP"
           }
          }
         }
@@ -68,7 +68,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
          m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6294E8E4E3D3C8F9}" {
           m_aLayerName {
-           "BaseSquadsWP"
+           "BaseSquad02WP"
           }
          }
         }
@@ -92,15 +92,25 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
        }
        coords 29.295 6.967 -2.287
       }
-      BaseSquadsWP {
+      BaseSquad01WP {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
          m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6294E8E40151855E}" {
-          m_fCompletionRadius 40
+          m_fCompletionRadius 25
          }
         }
        }
-       coords -7.927 0.247 -16.78
+       coords 8.929 -0.267 -26.767
+      }
+      BaseSquad02WP {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6294E8E40151855E}" {
+          m_fCompletionRadius 25
+         }
+        }
+       }
+       coords -10.842 0.261 -29.227
       }
      }
     }

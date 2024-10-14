@@ -103,27 +103,36 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
      GenericEntity BaseAttackersTrigger : "{032C15BBEBE9E1E9}Prefabs/ScenarioFramework/Components/SlotTrigger.et" {
       components {
        SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_bExcludeFromDynamicDespawn 1
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
           m_fAreaRadius 150
           m_eActivationPresence PLAYER
           m_bOnce 1
-          m_fActivationCountdownTimer 360
+          m_fActivationCountdownTimer 300
           m_bNotificationEnabled 1
           m_sPlayerActivationNotificationTitle "Rogue Vityaz troops will soon attack the base"
          }
         }
-        m_bShowDebugShapesInWorkbench 0
+        m_bCanBeGarbageCollected 0
         m_aTriggerActions {
          SCR_ScenarioFrameworkActionSpawnObjects "{6294E8EEE4ED30C5}" {
           m_aNameOfObjectsToSpawnOnActivation {
-           "LayerBaseAttackers" "LayerHelicopterDefenders"
+           "LayerBaseAttackersSoldiers" "LayerHelicopterDefenders"
+          }
+         }
+         SCR_ScenarioFrameworkActionDeleteEntity "{629D2A5ECC6D29F9}" {
+          m_Getter SCR_ScenarioFrameworkGetLayerBase "{629D2A5ED10A249D}" {
+           m_sLayerBaseName "BaseAttackersTrigger"
           }
          }
         }
        }
       }
       coords 25.892 -2.461 80.149
+     }
+     SCR_ScenarioFrameworkLogicCounter BaseAttackersTriggered : "{6C1792C71DCAFD55}Prefabs/ScenarioFramework/Components/LogicCounter.et" {
+      coords 0 0 0
      }
     }
    }
