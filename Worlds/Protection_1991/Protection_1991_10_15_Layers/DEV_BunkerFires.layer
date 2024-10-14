@@ -2,27 +2,12 @@ GenericEntity BunkerFiresArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Com
  coords 1281.842 36.216 2418.466
  {
   GenericEntity BunkerFiresLayer : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-   coords 1.732 0.998 -0.285
-   {
-    $grp ParticleEffectEntity : "{899360C930DA3EE3}Prefabs/Particles/Campfire_burning.et" {
-     {
-      coords 8.9 -0.399 7.597
-      angleY -38.686
-     }
-     {
-      coords 0.737 -1.011 1.941
-     }
-     {
-      coords -3.225 -0.999 -0.805
-     }
-     {
-      coords -1.285 -1.02 9.115
-     }
-     {
-      coords 7.975 -1.02 -0.807
-     }
+   components {
+    SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+     m_eActivationType ON_TRIGGER_ACTIVATION
     }
    }
+   coords 1.732 0.998 -0.285
   }
  }
 }

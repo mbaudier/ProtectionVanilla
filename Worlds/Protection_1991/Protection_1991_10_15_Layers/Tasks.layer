@@ -16,7 +16,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 20
+          m_fAreaRadius 30
          }
         }
         m_aActionsOnFinished {
@@ -29,30 +29,24 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           m_sTitle "Checkpoint reached"
           m_sText "Spawn point created"
          }
+         SCR_ScenarioFrameworkActionDeleteEntity "{629D2A5887C6B4C8}" {
+          m_Getter SCR_ScenarioFrameworkGetLayerBase "{629D2A5893BC9FAC}" {
+           m_sLayerBaseName "SlotStartSpawnpoint"
+          }
+         }
         }
        }
       }
-      coords 0 0 0
+      coords 16.64 0.34 13.083
      }
-     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
-      SlotSpawnPointApproach {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_eActivationType ON_TRIGGER_ACTIVATION
-         m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
-        }
+     GenericEntity SlotSpawnPointApproach : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
        }
-       coords 16.968 0.815 -6.308
       }
-      SlotArsenalSpawnApproach {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_sObjectToSpawn "{BE99D77D1155B127}Prefabs/Props/Military/Arsenal/ArsenalBoxes/US/ArsenalBox_US.et"
-        }
-       }
-       coords 17.016 1.064 -4.921
-       angleY 146.97
-      }
+      coords 49.629 0.418 26.802
      }
     }
    }
