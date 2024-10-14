@@ -90,10 +90,6 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
       coords 0.946 0.16 0.79
       angleY -37.374
      }
-     Vehicle UAZ452_ambulance1 : "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et" {
-      coords -2.266 0.203 5.14
-      angleY 63.558
-     }
      $grp GameEntity : "{50E6A3845C9F20FD}Prefabs/Props/Military/Camps/LanternMilitary_US_01.et" {
       {
        coords -1.851 1.052 -0.747
@@ -111,27 +107,6 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
      StaticModelEntity : "{881FCB0BDCE4B89F}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_Medical_USSR_02.et" {
       coords 0.863 0.148 1.759
       angleY 53.443
-     }
-     GenericEntity Unconscious01 : "{8E32B3CE561BF28F}Prefabs/ScenarioFramework/Components/SlotRuralUnconscious.et" {
-      components {
-       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionMedical "{628908A87D4E89EF}" {
-          m_Getter SCR_ScenarioFrameworkGetEntityByName "{628908A8474D591B}" {
-           m_sEntityName "UnconsciousRural01"
-          }
-          m_aMedicalActions {
-           SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{628908A8EA719362}" {
-           }
-          }
-         }
-        }
-        m_sID "UnconsciousRural01"
-        m_bCanBeGarbageCollected 0
-       }
-      }
-      coords -0.683 0.635 1.533
-      angleY -167.003
      }
      $grp StaticModelEntity : "{C6BFE324CCCFE6C4}Prefabs/Props/Military/Furniture/CotMilitary_USSR_01.et" {
       {
@@ -154,20 +129,6 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
      StaticModelEntity : "{DA242761FD59A978}Prefabs/Compositions/Misc/SubCompositions/Furniture/Bed_Blankets_USSR_01.et" {
       coords -0.985 0.165 -2.433
       angleY 52.552
-     }
-     GenericEntity PrisonMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
-      components {
-       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
-        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6297077EA5DF57FF}" {
-         m_sMapMarkerText "Prison"
-         m_eMapMarkerFactionIcon INDFOR
-         m_eMapMarkerDimension INSTALLATION
-         m_eMapMarkerType1Modifier MAINTENANCE
-         m_eMapMarkerType2Modifier MAINTENANCE
-        }
-       }
-      }
-      coords 0 0 0
      }
     }
    }
@@ -198,6 +159,50 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
       }
       coords -0.099 0.048 0.454
       angleY 54.04
+     }
+     GenericEntity Unconscious01 : "{8E32B3CE561BF28F}Prefabs/ScenarioFramework/Components/SlotRuralUnconscious.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionMedical "{628908A87D4E89EF}" {
+          m_Getter SCR_ScenarioFrameworkGetEntityByName "{628908A8474D591B}" {
+           m_sEntityName "UnconsciousRural01"
+          }
+          m_aMedicalActions {
+           SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{628908A8EA719362}" {
+           }
+          }
+         }
+        }
+        m_sID "UnconsciousRural01"
+        m_bCanBeGarbageCollected 0
+       }
+      }
+      coords -3.954 0.765 6.357
+      angleY -167.003
+     }
+     GenericEntity PrisonAmbulance : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et"
+       }
+      }
+      coords 1.861 0.323 9.78
+      angleY 145.128
+     }
+     GenericEntity PrisonMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6297077EA5DF57FF}" {
+         m_sMapMarkerText "Prison"
+         m_eMapMarkerFactionIcon INDFOR
+         m_eMapMarkerDimension INSTALLATION
+         m_eMapMarkerType1Modifier MAINTENANCE
+         m_eMapMarkerType2Modifier MAINTENANCE
+        }
+       }
+      }
+      coords -3.271 0.13 4.824
      }
      GenericEntity PrisonersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
