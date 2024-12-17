@@ -3,40 +3,20 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
  {
   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
    LayerTowerSoldiers {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_ONE
-     }
-    }
     coords 28.801 6.967 -2.287
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-      TowerSoldierSharpshooter {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{CE33AB22F61F3365}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Sharpshooter.et"
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6294E8E5253A9F66}" {
-          m_aLayerName {
-           "TowerSoldiersWP"
-          }
+     GenericEntity TowerSoldierSharpshooter : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{CE33AB22F61F3365}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Sharpshooter.et"
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6294E8E5253A9F66}" {
+         m_aLayerName {
+          "TowerSoldiersWP"
          }
         }
        }
-       coords -0.088 -0.037 1.466
       }
-      TowerSoldiersMachineGun {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{75FC25863194612A}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_AMG.et"
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6294E8E51E0BEFB8}" {
-          m_aLayerName {
-           "TowerSoldiersWP"
-          }
-         }
-        }
-       }
-       coords 0.501 -0.037 -1.628
-      }
+      coords -0.088 0.102 0.076
      }
     }
    }
