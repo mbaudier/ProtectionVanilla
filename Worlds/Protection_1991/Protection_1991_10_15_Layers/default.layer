@@ -34,13 +34,15 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/ScenarioFramework/GameM
    m_bDynamicDespawn 1
   }
   SCR_TimeAndWeatherHandlerComponent "{626F0792F94864EB}" {
-   m_bUsePredefineStartingTimeAndWeatehr 1
+   m_bRandomStartingWeather 1
+   m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
     SCR_TimeAndWeatherState "{626F0792AF042DA4}" {
      m_sWeatherPresetName "Overcast"
      m_iStartingHour 0
     }
    }
+   m_bRandomWeatherChanges 1
   }
  }
  coords 2033.122 32.126 2017.837
