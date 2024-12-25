@@ -159,12 +159,27 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
         "LayerTaskMoveToBeauregard" "LayerArlevilleFIADefenders"
        }
       }
+      SCR_ScenarioFrameworkActionAI "{6333287922E77BEC}" {
+       m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{633328792BA3DF0E}" {
+        m_aLayerBaseNames {
+         "Task02VIP" "Task02Businessman01" "Task02Businessman02"
+        }
+       }
+       m_aAIActions {
+        SCR_ScenarioFrameworkAIAddWaypoint "{633328790BA4A3FB}" {
+         m_Getter SCR_ScenarioFrameworkGetLayerBase "{6333287911CCD3F3}" {
+          m_sLayerBaseName "Task02EscapeWP"
+         }
+         m_bAddOnTopOfQueue 1
+        }
+       }
+      }
      }
      m_bShowDebugShapesInWorkbench 1
      m_fDefendTime 240
      m_aFactionSettings {
       SCR_ScenarioFrameworkTaskDefendAttackingFaction "{60E90AC6CDEDAB98}" {
-       m_sFactionKey "RU"
+       m_sFactionKey "USSR"
       }
       SCR_ScenarioFrameworkTaskDefendDefendingFaction "{60E90AC6D6E2F077}" {
        m_sFactionKey "US"
@@ -204,7 +219,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
         m_sObjectToSpawn "{C4B3985F031B34B4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Businessman00.et"
         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90AD9F4A26F48}" {
          m_aLayerName {
-          "Task02EscapeWP"
+          "Task02HideWP" "Task02StayHidden"
          }
         }
         m_bSpawnAIOnWPPos 0
@@ -220,7 +235,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
         m_sObjectToSpawn "{212FD4A60FFEA3DF}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Businessman01.et"
         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90AC7FD3FB27D}" {
          m_aLayerName {
-          "Task02EscapeWP"
+          "Task02HideWP" "Task02StayHidden"
          }
         }
         m_bSpawnAIOnWPPos 0
@@ -236,7 +251,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
         m_sObjectToSpawn "{212FD4A60FFEA3DF}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Businessman01.et"
         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90AC7CAEF3976}" {
          m_aLayerName {
-          "Task02EscapeWP"
+          "Task02HideWP" "Task02StayHidden"
          }
         }
         m_bSpawnAIOnWPPos 0
@@ -247,16 +262,39 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
       angleY 97.883
      }
     }
-    GenericEntity Task02EscapeWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
-     components {
-      SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-       m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{60E90AC67ECB851D}" {
-        m_fCompletionRadius 2
-        m_bGunnerAllowed 0
+    $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     Task02EscapeWP {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{60E90AC67ECB851D}" {
+         m_fCompletionRadius 2
+         m_bDriverAllowed 0
+         m_bGunnerAllowed 0
+        }
        }
       }
+      coords 14.251 -1.067 17.977
      }
-     coords 14.251 -1.067 17.977
+     Task02HideWP {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{633328781FF87B1D}" {
+         m_fCompletionRadius 0.5
+        }
+       }
+      }
+      coords 20.303 -1.42 26.293
+     }
+     Task02StayHidden {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6333287E02C48F27}" {
+         m_fCompletionRadius 1
+        }
+       }
+      }
+      coords 19.771 -1.42 25.844
+     }
     }
    }
   }

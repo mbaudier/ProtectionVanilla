@@ -7,7 +7,7 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
      m_aTriggerActionsOnFinish {
       SCR_ScenarioFrameworkActionSpawnObjects "{60E5151532FF59E3}" {
        m_aNameOfObjectsToSpawnOnActivation {
-        "LayerTaskDefendMayorMeeting"
+        "LayerTaskDefendMayorMeeting" "LayerMayorMeetingAttackers"
        }
       }
      }
@@ -76,7 +76,7 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
        m_sObjectToSpawn "{4A71F755A4513227}Prefabs/Vehicles/Wheeled/M998/M1025.et"
       }
      }
-     coords 14.695 -1.208 20.143
+     coords 12.753 -1.208 16.486
      angleY 135.85
     }
    }
