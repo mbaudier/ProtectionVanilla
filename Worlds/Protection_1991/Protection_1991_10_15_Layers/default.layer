@@ -25,13 +25,23 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/ScenarioFramework/GameM
  components {
   SCR_CommandingManagerComponent "{6278F8D6E739F9AE}" {
   }
-  SCR_EditorRespawnBriefingComponent "{626F0784B49A42BC}" {
-   m_sJournalConfigPath "{793B754B50BD9A7B}Configs/Journal/Journal_HospitalRescue.conf"
-   m_Info SCR_UIInfo "{626F07848897B7BF}" {
-   }
-  }
   SCR_GameModeCombatOpsManager "{5A96783ABCA252AE}" {
    m_bDynamicDespawn 1
+  }
+  SCR_RespawnBriefingComponent "{644321912E0DDC57}" {
+   m_sJournalConfigPath "{793B754B50BD9A7B}Configs/Journal/Journal_HospitalRescue.conf"
+   m_Info SCR_UIInfo "{644321913D4C6F96}" {
+   }
+   m_aGameModeHints {
+    SCR_HintUIInfo "{64432190E0D1D7B8}" {
+     Name "Briefing"
+    }
+   }
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "US"
+   }
   }
   SCR_TimeAndWeatherHandlerComponent "{626F0792F94864EB}" {
    m_bUsePredefineStartingTimeAndWeather 1
@@ -45,7 +55,6 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/ScenarioFramework/GameM
  }
  coords 2033.122 32.126 2017.837
  m_bAllowFactionChange 0
- m_bUseSpawnPreload 1
  m_aDisabledResourceTypes {
   0
  }
@@ -71,6 +80,11 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/T
 SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
  coords 2031.73 33.82 2026.563
  m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{64432193648D5FFA}" {
+   m_sLoadoutName "Special Force"
+   m_sLoadoutResource "{95E8247374D70A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SOF_TL.et"
+   m_sAffiliatedFaction "US"
+  }
   SCR_PlayerArsenalLoadout "{629D19EB7D67619C}" {
    m_sLoadoutName "#AR-Loadout_Editor_SavedArsenalLoadout_Name"
    m_sLoadoutResource "{95E8247374D70A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SOF_TL.et"
