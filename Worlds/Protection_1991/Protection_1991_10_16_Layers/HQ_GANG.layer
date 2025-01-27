@@ -1,0 +1,55 @@
+GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 2206.698 53.511 2897.354
+ {
+  GenericEntity LayerHqGang : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity HqGang : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+     components {
+      SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+       m_bCanBeHQ 1
+       m_bDisableWhenUnusedAsHQ 0
+      }
+      SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+       "faction affiliation" "GANG"
+      }
+     }
+     coords 22.515 -0.087 -26.004
+     angleX -1.65
+     angleY -85.678
+     angleZ -1.919
+     {
+      GenericEntity {
+       ID "5CCED514A5908822"
+       components {
+        SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+         "faction affiliation" "GANG"
+        }
+       }
+      }
+      GenericEntity {
+       ID "606078EE23DE48AC"
+       components {
+        SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+         "faction affiliation" "GANG"
+        }
+       }
+      }
+      SCR_CampaignSpawnPointGroup {
+       ID "5C6696731466AF36"
+       m_sFaction "US"
+      }
+     }
+    }
+    GenericEntity ArsenalGang : "{A81F31C694165D8D}PrefabsEditable/Auto/Systems/Arsenal/ArsenalBoxes/GANG/E_ArsenalBox_GANG.et" {
+     coords -17.622 -0.418 -14.494
+     angleY -52.622
+    }
+    GenericEntity : "{F9A490888BED61DB}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_04_Campaign.et" {
+     coords -36.722 -0.036 -7.935
+     angleY -137.65
+    }
+   }
+  }
+ }
+}

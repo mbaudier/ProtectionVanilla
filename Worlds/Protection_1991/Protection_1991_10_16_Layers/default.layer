@@ -1,0 +1,45 @@
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 1891.659 11.438 1822.161
+}
+SCR_GameModeCampaign GameMode_Campaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Campaign.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5CC49B5A1313B84E}" {
+   m_bRandomStartingDaytime 0
+  }
+ }
+ coords 1891.659 11.326 1821.161
+}
+SCR_CampaignFactionManager ProtectionCampaignFactionManager1 : "{CF862129A8426292}Prefabs/MP/Campaign/ProtectionCampaignFactionManager.et" {
+ coords 1891.623 11.735 1824.298
+ Factions {
+  SCR_CampaignFaction "{50B30C3AF4BFD934}" {
+   m_bIsPlayable 0
+   m_bShowInWelcomeScreenIfNonPlayable 0
+  }
+  SCR_CampaignFaction "{56F0C3A6336375DC}" {
+  }
+ }
+}
+SCR_BaseTaskManager CampaignTaskManager : "{17E3EF2CF455460F}Prefabs/MP/Campaign/CampaignTaskManager.et" {
+ coords 1891.659 11.839 1825.161
+}
+SCR_LoadoutManager CampaignLoadoutManager : "{58FBD035E53D95C1}Prefabs/MP/Campaign/CampaignLoadoutManager.et" {
+ coords 1891.659 11.959 1826.161
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{6477031DF729B8DE}" {
+   m_sLoadoutName "#AR-Loadout_Editor_NewArsenalLoadout_Name"
+   m_sLoadoutResource "{E062ADE88FDC1A41}Prefabs/Characters/Factions/INDFOR/GANG/Character_GANG_Gangsta00.et"
+   m_sAffiliatedFaction "GANG"
+  }
+  SCR_FactionPlayerLoadout "{64773728ED565CB5}" {
+   m_sLoadoutName "#AR-Loadout_Editor_NewArsenalLoadout_Name"
+   m_sLoadoutResource "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+   m_sAffiliatedFaction "FIA"
+  }
+  SCR_PlayerArsenalLoadout "{6477031DCE45A2CD}" {
+   m_sLoadoutName "#AR-Loadout_Editor_SavedArsenalLoadout_Name"
+   m_sLoadoutResource "{B95C14B8EBE9B3FA}Prefabs/Characters/Factions/INDFOR/GANG/Character_GANG_Base.et"
+   m_sAffiliatedFaction "GANG"
+  }
+ }
+}

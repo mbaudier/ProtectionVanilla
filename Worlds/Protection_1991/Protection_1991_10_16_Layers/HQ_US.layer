@@ -1,0 +1,56 @@
+GenericEntity AreaHqUs : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 2335.627 4.983 3225.96
+ angleY 133.331
+ {
+  GenericEntity LayerHqUs : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity HqUs : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+     components {
+      SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+       m_bCanBeHQ 1
+       m_bDisableWhenUnusedAsHQ 0
+      }
+      SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+       "faction affiliation" "US"
+      }
+     }
+     coords -18.812 -1.564 -9.066
+     angleX 4.786
+     angleY 62.726
+     angleZ -0.481
+     {
+      GenericEntity {
+       ID "5CCED514A5908822"
+       components {
+        SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+         "faction affiliation" "US"
+        }
+       }
+      }
+      GenericEntity {
+       ID "606078EE23DE48AC"
+       components {
+        SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+         "faction affiliation" "US"
+        }
+       }
+      }
+      SCR_CampaignSpawnPointGroup {
+       ID "5C6696731466AF36"
+       m_sFaction "US"
+      }
+     }
+    }
+    GenericEntity : "{1FE6CA907FA552E7}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyCache_S_FIA_04.et" {
+     coords -21.329 -2.853 -53.308
+     angleY -16.57
+    }
+    GenericEntity : "{A13F6A7F82DF031B}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_US_01.et" {
+     coords -9.558 -1.465 -33.324
+     angleY -26.028
+    }
+   }
+  }
+ }
+}
