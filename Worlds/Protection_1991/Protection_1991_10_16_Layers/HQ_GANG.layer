@@ -1,3 +1,9 @@
+GenericEntity : "{18BD3B067D00FF3D}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_LivingArea_S_GANG_01.et" {
+ coords 2236.09 53.252 2892.063
+}
+GenericEntity : "{7CBCBA91D3F27603}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_VehicleMaintenance_S_GANG_01.et" {
+ coords 2211.51 53.469 2893.569
+}
 GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 2206.698 53.511 2897.354
  {
@@ -41,13 +47,13 @@ GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
       }
      }
     }
-    GenericEntity ArsenalGang : "{A81F31C694165D8D}PrefabsEditable/Auto/Systems/Arsenal/ArsenalBoxes/GANG/E_ArsenalBox_GANG.et" {
-     coords -17.622 -0.418 -14.494
-     angleY -52.622
+    GenericEntity : "{47789BA6E9CA2928}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_03_Campaign.et" {
+     coords 1.29 -0.088 -17.906
+     angleY 39.42
     }
-    GenericEntity : "{F9A490888BED61DB}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_04_Campaign.et" {
-     coords -36.722 -0.036 -7.935
-     angleY -137.65
+    GenericEntity ArsenalGang : "{A81F31C694165D8D}PrefabsEditable/Auto/Systems/Arsenal/ArsenalBoxes/GANG/E_ArsenalBox_GANG.et" {
+     coords -7.827 -0.071 -13.295
+     angleY -52.622
     }
    }
   }

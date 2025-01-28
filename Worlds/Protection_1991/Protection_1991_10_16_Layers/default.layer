@@ -9,7 +9,7 @@ SCR_GameModeCampaign GameMode_Campaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Con
  }
  coords 1891.659 11.326 1821.161
 }
-SCR_CampaignFactionManager ProtectionCampaignFactionManager1 : "{CF862129A8426292}Prefabs/MP/Campaign/ProtectionCampaignFactionManager.et" {
+SCR_CampaignFactionManager ProtectionCampaignFactionManager : "{CF862129A8426292}Prefabs/MP/Campaign/ProtectionCampaignFactionManager.et" {
  coords 1891.623 11.735 1824.298
  Factions {
   SCR_CampaignFaction "{50B30C3AF4BFD934}" {
@@ -33,8 +33,8 @@ SCR_LoadoutManager CampaignLoadoutManager : "{58FBD035E53D95C1}Prefabs/MP/Campai
   }
   SCR_FactionPlayerLoadout "{64773728ED565CB5}" {
    m_sLoadoutName "#AR-Loadout_Editor_NewArsenalLoadout_Name"
-   m_sLoadoutResource "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
-   m_sAffiliatedFaction "FIA"
+   m_sLoadoutResource "{AE995C910C889FB6}Prefabs/Characters/Factions/INDFOR/GANG/Character_GANG_Gangsta04.et"
+   m_sAffiliatedFaction "GANG"
   }
   SCR_PlayerArsenalLoadout "{6477031DCE45A2CD}" {
    m_sLoadoutName "#AR-Loadout_Editor_SavedArsenalLoadout_Name"
