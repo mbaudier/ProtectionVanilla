@@ -14,9 +14,11 @@ SCR_CampaignFactionManager ProtectionCampaignFactionManager : "{CF862129A8426292
  Factions {
   SCR_CampaignFaction "{50B30C3AF4BFD934}" {
    m_bIsPlayable 0
-   m_bShowInWelcomeScreenIfNonPlayable 0
   }
   SCR_CampaignFaction "{56F0C3A6336375DC}" {
+  }
+  SCR_CampaignFaction "{64772CF83CCD1BAB}" {
+   m_iOrder 1500
   }
  }
 }
