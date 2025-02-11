@@ -1,0 +1,67 @@
+SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{64973654CB01BAF2}" {
+     NavmeshFile "{D8EF7131FB31AF97}worlds/GameMaster/Navmeshes/GM_Arland.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60CA9BE5536BF701}" {
+     NavmeshFile "{A0AEEB1E7EF474FA}worlds/GameMaster/Navmeshes/GM_Arland_vehicles.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5C8C9B750D124A63}" {
+   NavmeshSettings NavmeshWorld "{5C8C9B750B60C6E2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" {
+     NavmeshFile "{804386FFEB7B7EFD}worlds/MP/Navmeshes/LowResArland.nmn"
+    }
+   }
+  }
+ }
+ coords 1891.659 11.576 1823.161
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 1891.659 11.438 1822.161
+}
+SCR_GameModeCampaign GameMode_Campaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Campaign.et" {
+ coords 1891.659 11.326 1821.161
+}
+SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/MP/Campaign/CampaignFactionManager.et" {
+ coords 1891.659 11.714 1824.161
+ Factions {
+  SCR_CampaignFaction "{50B30C3AF4BFD934}" {
+   m_bIsPlayable 0
+  }
+  SCR_CampaignFaction "{50B30C3ADB052C80}" {
+   m_bIsPlayable 0
+   m_bShowInWelcomeScreenIfNonPlayable 0
+  }
+  SCR_CampaignFaction "{56F0C3A6336375DC}" {
+   m_bShowInWelcomeScreenIfNonPlayable 0
+  }
+  SCR_CampaignFaction "{649709031BF0907A}" : "{2BD6CDBB8091F637}Configs/Factions/REDPEACE_Campaign.conf" {
+  }
+  SCR_CampaignFaction "{6497365A0A484407}" : "{081E35D18047E893}Configs/Factions/GANG_Campaign.conf" {
+  }
+ }
+}
+GenericEntity ConflictMilitaryBase : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+ coords 1891.659 12.065 1827.161
+}
+SCR_BaseTaskManager CampaignTaskManager : "{17E3EF2CF455460F}Prefabs/MP/Campaign/CampaignTaskManager.et" {
+ coords 1891.659 11.839 1825.161
+}
+SCR_LoadoutManager CampaignLoadoutManager : "{58FBD035E53D95C1}Prefabs/MP/Campaign/CampaignLoadoutManager.et" {
+ coords 1891.659 11.959 1826.161
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{64971ADAE2AE19E3}" {
+   m_sLoadoutName "#AR-Loadout_Editor_NewArsenalLoadout_Name"
+   m_sLoadoutResource "{FC0F7D05A318F84F}Prefabs/Characters/Factions/OPFOR/REDPEACE/Character_REDPEACE_Rifleman.et"
+   m_sAffiliatedFaction "REDPEACE"
+  }
+ }
+}

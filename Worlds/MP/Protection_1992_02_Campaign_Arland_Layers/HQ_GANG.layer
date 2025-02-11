@@ -1,0 +1,21 @@
+GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 2210.897 53.469 2891.415
+ {
+  GenericEntity LayerHqGang : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+     components {
+      SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+       m_bCanBeHQ 1
+      }
+      SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+       "faction affiliation" "GANG"
+      }
+     }
+     coords 20.099 -0.046 -21.886
+    }
+   }
+  }
+ }
+}
