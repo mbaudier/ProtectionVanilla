@@ -83,7 +83,7 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
         m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
        }
       }
-      coords 0 0 0
+      coords 4.573 0.12 0.591
      }
      GenericEntity HelicopterDefendersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
@@ -93,7 +93,7 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
         }
        }
       }
-      coords 0 0 0
+      coords 4.573 0.12 0.591
      }
     }
    }

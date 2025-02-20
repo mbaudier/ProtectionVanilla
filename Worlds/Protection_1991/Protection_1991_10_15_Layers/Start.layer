@@ -127,25 +127,17 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Component
       }
       coords -4.501 -1.597 -3.584
      }
-     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
-      SlotStartSpawnpoint {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_sFactionKey "US"
-         m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
-        }
+     GenericEntity SlotStartArsenalBox : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et"
        }
-       coords 0 -0.498 0
       }
-      SlotStartArsenalBox {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_sObjectToSpawn "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et"
-        }
-       }
-       coords -9.096 -1.644 -1.063
-       angleY -71.538
-      }
+      coords -9.096 -1.644 -1.063
+      angleY -71.538
+     }
+     SCR_SpawnPoint : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
+      coords -2.589 -1.487 -1.405
      }
     }
    }
