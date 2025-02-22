@@ -9,28 +9,6 @@ GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_aActivationActions {
-         SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{6292FA34A9D03431}" {
-          m_aActions {
-           SCR_ScenarioFrameworkActionAI "{6292FA34B3B56787}" {
-            m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{6292FA34B45DA288}" {
-             m_aLayerBaseNames {
-              "HospitalPrisoners" "Prisoners" "BunkerPrisoners01" "BunkerPrisoners02"
-             }
-            }
-            m_aAIActions {
-             SCR_ScenarioFrameworkAIAddWaypoint "{6292FA28569ED5A7}" {
-              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{6292FA285AB0103E}" {
-               m_sLayerName "GetInHelicopterWP"
-              }
-              m_bAddOnTopOfQueue 1
-             }
-            }
-           }
-           SCR_ScenarioFrameworkActionShowPopupNotification "{6292FA2821CC5FED}" {
-            m_sText "Wait for the prisoners to get into the vehicle"
-           }
-          }
-         }
          SCR_ScenarioFrameworkActionOnEngineStartedOrStop "{6297077B8ACA35FA}" {
           m_aActions {
            SCR_ScenarioFrameworkActionSpawnObjects "{6297077B926B2474}" {

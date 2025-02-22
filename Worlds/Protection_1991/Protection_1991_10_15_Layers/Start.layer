@@ -137,7 +137,16 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Component
       angleY -71.538
      }
      SCR_SpawnPoint : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
+      components {
+       SCR_EditableSpawnPointComponent "{52E65E94E3532698}" {
+        m_UIInfo SCR_EditableDescriptorUIInfo "{52E65E94C47560A2}" {
+        }
+       }
+      }
       coords -2.589 -1.487 -1.405
+      m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+       Name "Insertion"
+      }
      }
     }
    }

@@ -22,17 +22,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         m_aActionsOnFinished {
          SCR_ScenarioFrameworkActionSpawnObjects "{6294E8F72399366C}" {
           m_aNameOfObjectsToSpawnOnActivation {
-           "SlotSpawnPointApproach"
+           "SlotSpawnPointApproach" "LayerTaskHospital"
           }
          }
          SCR_ScenarioFrameworkActionShowPopupNotification "{6294E8F7F5B6C77B}" {
           m_sTitle "Checkpoint reached"
           m_sText "Spawn point created"
-         }
-         SCR_ScenarioFrameworkActionDeleteEntity "{629D2A5887C6B4C8}" {
-          m_Getter SCR_ScenarioFrameworkGetLayerBase "{629D2A5893BC9FAC}" {
-           m_sLayerBaseName "SlotStartSpawnpoint"
-          }
          }
         }
        }
@@ -55,7 +50,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  AreaTaskExtraction {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_sTriggerResource "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
+    m_sTriggerResource "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
     m_fAreaRadius 30
     m_aTriggerActions {
      SCR_ScenarioFrameworkActionSpawnObjects "{6297077BE730CD6D}" {
@@ -103,7 +98,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           m_sCountdownAudio "SOUND_RESPAWNMENU"
          }
         }
-        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
        }
       }
       coords 0.139 0.014 -0.887
@@ -129,7 +124,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           m_sActivatedByThisFaction "RURAL"
          }
         }
-        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
        }
       }
       coords 0 0 0
@@ -195,6 +190,55 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
       }
+     }
+    }
+   }
+  }
+ }
+ AreaTaskHospital {
+  coords 1377.701 37.654 2447.693
+  {
+   GenericEntity LayerTaskHospital : "{5AF3BFDA2EAE56EA}Prefabs/ScenarioFramework/Components/LayerTask.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_sTaskTitle "Hospital"
+      m_sTaskDescription "Approach the hospital in order to free prisoners"
+     }
+    }
+    coords 0 0 0
+    {
+     GenericEntity SlotTaskHospital : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_fAreaRadius 25
+         }
+        }
+        m_aActionsOnFinished {
+         SCR_ScenarioFrameworkActionSpawnObjects "{64AD03B51680750D}" {
+          m_aNameOfObjectsToSpawnOnActivation {
+           "SlotSpawnPointHospital" "LayerTaskExtraction"
+          }
+         }
+         SCR_ScenarioFrameworkActionShowPopupNotification "{64AD03B5E7744F36}" {
+          m_sTitle "Checkpoint reached"
+          m_sText "Spawn point created"
+         }
+        }
+       }
+      }
+      coords 6.938 0.221 -12.107
+     }
+     GenericEntity SlotSpawnPointHospital : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+       }
+      }
+      coords 0 0 0
      }
     }
    }

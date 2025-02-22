@@ -1,6 +1,3 @@
-GenericEntity : "{B455DA2086A1C821}PrefabsEditable/Auto/Props/Military/Compositions/US/E_ArsenalBox_US_Weapons.et" {
- coords 1370.969 37.348 2422.717
-}
 GenericEntity WallsArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 1384.475 37.875 2435.533
  {

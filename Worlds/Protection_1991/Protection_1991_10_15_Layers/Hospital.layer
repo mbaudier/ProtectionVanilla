@@ -56,28 +56,6 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compon
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_aActivationActions {
-         SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{628B2A1D323EB768}" {
-          m_aActions {
-           SCR_ScenarioFrameworkActionShowPopupNotification "{628C980BC8C0A643}" {
-            m_sText "Wait for the prisoners to get into the vehicle"
-           }
-           SCR_ScenarioFrameworkActionAI "{6292FA36468D5FE6}" {
-            m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{6292FA3624385303}" {
-             m_aLayerBaseNames {
-              "HospitalPrisoners" "Prisoners" "BunkerPrisoners01" "BunkerPrisoners02"
-             }
-            }
-            m_aAIActions {
-             SCR_ScenarioFrameworkAIAddWaypoint "{6292FA36040FDC10}" {
-              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{6292FA360BD09D31}" {
-               m_sLayerName "GetInExtractionVehicleWP"
-              }
-              m_bAddOnTopOfQueue 1
-             }
-            }
-           }
-          }
-         }
          SCR_ScenarioFrameworkActionOnEngineStartedOrStop "{6297077A6DF1671E}" {
           m_aActions {
            SCR_ScenarioFrameworkActionSpawnObjects "{6297077A40A013B1}" {
@@ -159,7 +137,7 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compon
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
         m_Waypoint SCR_ScenarioFrameworkWaypointMove "{6292FA34617F168D}" {
-         m_fCompletionRadius 2
+         m_sWaypointPrefab "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
         }
        }
       }

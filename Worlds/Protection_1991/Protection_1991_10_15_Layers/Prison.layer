@@ -209,6 +209,7 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
         m_Waypoint SCR_ScenarioFrameworkWaypointMove "{628CDA463C3E3AEA}" {
          m_fCompletionRadius 3
+         m_sWaypointPrefab "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
          m_eAIWaypointCompletionType All
         }
        }

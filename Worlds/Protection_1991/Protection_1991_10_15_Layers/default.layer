@@ -15,51 +15,35 @@ SCR_FactionManager FactionManager_Protection : "{E70679F5E0A515AC}Prefabs/MP/Man
   SCR_Faction "{56DEAC40D132400B}" {
    m_bIsPlayable 0
   }
-  SCR_Faction "{60EB3E61F4E10F1A}" {
-   m_bIsPlayable 0
+  SCR_Faction "{60E2C10830408844}" {
   }
  }
  m_bCanChangeFactionsPlayable 0
 }
-SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/ScenarioFramework/GameModeSF.et" {
+ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 2033.122 33.482 2024.837
+}
+SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFramework/ProtectionGameModeSF.et" {
  components {
-  SCR_CommandingManagerComponent "{6278F8D6E739F9AE}" {
-  }
-  SCR_GameModeCombatOpsManager "{5A96783ABCA252AE}" {
-   m_bDynamicDespawn 1
-  }
-  SCR_RespawnBriefingComponent "{644321912E0DDC57}" {
-   m_sJournalConfigPath "{793B754B50BD9A7B}Configs/Journal/Journal_HospitalRescue.conf"
-   m_Info SCR_UIInfo "{644321913D4C6F96}" {
-   }
-   m_aGameModeHints {
-    SCR_HintUIInfo "{64432190E0D1D7B8}" {
-     Name "Briefing"
-    }
-   }
-  }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
    m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "US"
    }
   }
-  SCR_TimeAndWeatherHandlerComponent "{626F0792F94864EB}" {
+  SCR_TimeAndWeatherHandlerComponent "{64AD31EFBF957F5C}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
-    SCR_TimeAndWeatherState "{626F0792AF042DA4}" {
+    SCR_TimeAndWeatherState "{64AD31EF8EA60D0E}" {
      m_sWeatherPresetName "Rainy"
-     m_iStartingHour 0
+     m_iStartingHour 20
+     m_iStartingMinutes 15
     }
    }
+   m_bRandomWeatherChanges 1
   }
  }
  coords 2033.122 32.126 2017.837
  m_bAllowFactionChange 0
- m_aDisabledResourceTypes {
-  0
- }
-}
-ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
- coords 2033.122 33.482 2024.837
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
  coords 2033.122 32.501 2019.837
