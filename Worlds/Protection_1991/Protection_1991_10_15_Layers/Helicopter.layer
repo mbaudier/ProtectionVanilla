@@ -8,17 +8,6 @@ GenericEntity AreaHelicopter : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
      GenericEntity HelicopterSlot : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionOnEngineStartedOrStop "{6297077B8ACA35FA}" {
-          m_aActions {
-           SCR_ScenarioFrameworkActionSpawnObjects "{6297077B926B2474}" {
-            m_aNameOfObjectsToSpawnOnActivation {
-             "LayerTaskExtraction"
-            }
-           }
-          }
-         }
-        }
         m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
        }
       }

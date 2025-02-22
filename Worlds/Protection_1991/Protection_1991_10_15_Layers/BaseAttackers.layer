@@ -5,6 +5,7 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
    LayerBaseAttackersSoldiers {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
       m_eActivationType ON_TRIGGER_ACTIVATION
      }
     }
@@ -110,7 +111,6 @@ GenericEntity AreaBaseAttackers : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
           m_eActivationPresence PLAYER
           m_bOnce 1
           m_fActivationCountdownTimer 300
-          m_bNotificationEnabled 1
           m_sPlayerActivationNotificationTitle "Rogue Vityaz troops will soon attack the base"
          }
         }

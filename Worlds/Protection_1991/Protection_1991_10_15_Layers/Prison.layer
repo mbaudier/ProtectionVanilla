@@ -181,14 +181,25 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
       coords -3.954 0.765 6.357
       angleY -167.003
      }
-     GenericEntity PrisonAmbulance : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_sObjectToSpawn "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et"
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      Ambulance01 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et"
+        }
        }
+       coords 1.861 0.323 9.78
+       angleY 145.128
       }
-      coords 1.861 0.323 9.78
-      angleY 145.128
+      Ambulance02 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et"
+        }
+       }
+       coords 10.781 -0.183 -5.815
+       angleY -127.851
+      }
      }
      GenericEntity PrisonMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
       components {

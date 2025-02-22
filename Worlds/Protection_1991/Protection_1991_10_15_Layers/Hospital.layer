@@ -52,25 +52,34 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compon
    VehiclesLayer {
     coords -17.374 -0.772 -17.206
     {
-     GenericEntity Truck : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionOnEngineStartedOrStop "{6297077A6DF1671E}" {
-          m_aActions {
-           SCR_ScenarioFrameworkActionSpawnObjects "{6297077A40A013B1}" {
-            m_aNameOfObjectsToSpawnOnActivation {
-             "LayerTaskExtraction"
-            }
-           }
-          }
-         }
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      Truck01 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{16E32C3ABEAFC2C6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport.et"
         }
-        m_sObjectToSpawn "{16E32C3ABEAFC2C6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport.et"
        }
+       coords 6.982 -0.391 -5.816
+       angleY 57.056
       }
-      coords 6.982 -0.391 -5.816
-      angleY 57.056
+      Truck02 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{16E32C3ABEAFC2C6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport.et"
+        }
+       }
+       coords 28.834 -1.119 -29.457
+       angleY -176.804
+      }
+      Truck03 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{16E32C3ABEAFC2C6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport.et"
+        }
+       }
+       coords 33.714 -1.166 -30.4
+       angleY -176.804
+      }
      }
      GenericEntity TruckMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
       components {
