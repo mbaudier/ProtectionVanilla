@@ -121,11 +121,12 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Component
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
         m_sFactionKey "US"
-        m_sObjectToSpawn "{95E8247374D70A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SOF_TL.et"
-        m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
+        m_sObjectToSpawn "{D0886786634E55AE}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_Squad.et"
+        m_sWPToSpawn "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
+        m_eAIGroupFormation StaggeredColumn
        }
       }
-      coords -4.501 -1.597 -3.584
+      coords -2.524 -1.539 0.737
      }
      GenericEntity SlotStartArsenalBox : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
       components {
