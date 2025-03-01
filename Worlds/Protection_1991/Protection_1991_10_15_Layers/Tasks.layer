@@ -213,7 +213,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 25
+          m_fAreaRadius 18
          }
         }
         m_aActionsOnFinished {
@@ -229,7 +229,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
       }
-      coords 6.938 0.221 -12.107
+      coords 6.403 0.221 -12.392
      }
      GenericEntity SlotSpawnPointHospital : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
       components {
