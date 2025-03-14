@@ -1,0 +1,26 @@
+GenericEntity PopulatedArleville : "{2A3E567DA8A7B4DB}Prefabs/ScenarioFramework/Components/PopulatedArea.et" {
+ components {
+  ARGEO_PopulatedArea "{59E8CDC50969206E}" {
+   m_sFactionKey "RURAL"
+  }
+ }
+ coords 2795.983 74.03 1629.076
+}
+GenericEntity AreaRefugeeCamp : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 2983.515 61.664 1642.246
+ {
+  GenericEntity RefugeeCampBase : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity RefugeeCampMilitaryBase : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+     components {
+      SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+       "faction affiliation" "RURAL"
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

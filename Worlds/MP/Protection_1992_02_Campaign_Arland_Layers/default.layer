@@ -31,30 +31,26 @@ SCR_GameModeCampaign GameMode_Campaign_Protection : "{589A2658A7EFEEDB}Prefabs/M
  coords 1891.87 11.377 1821.87
  m_sBLUFORFactionKey "GANG"
  m_sOPFORFactionKey "REDPEACE"
+ m_sINDFORFactionKey "RURAL"
 }
 SCR_CampaignFactionManager CampaignFactionManager_GANGxREDPEACE : "{CF862129A8426292}Prefabs/MP/Campaign/CampaignFactionManager_GANGxREDPEACE.et" {
  coords 1891.85 11.618 1823.612
+ Factions {
+  SCR_CampaignFaction "{64DAF34D259B8095}" {
+  }
+  SCR_CampaignFaction "{64DAF34D10235480}" : "{15B582F8FA0B0940}Configs/Factions/USSR_Campaign.conf" {
+   m_iOrder 5000
+   m_bIsPlayable 0
+  }
+ }
 }
 SCR_BaseTaskManager CampaignTaskManager : "{17E3EF2CF455460F}Prefabs/MP/Campaign/CampaignTaskManager.et" {
  coords 1891.659 11.839 1825.161
 }
-SCR_LoadoutManager CampaignLoadoutManager : "{58FBD035E53D95C1}Prefabs/MP/Campaign/CampaignLoadoutManager.et" {
- coords 1891.659 11.959 1826.161
+SCR_LoadoutManager : "{45CF966A1B9938E4}Prefabs/MP/Campaign/CampaignLoadoutManager_GANGxREDPEACE.et" {
+ coords 1889.146 11.94 1823.875
  m_aPlayerLoadouts {
-  SCR_FactionPlayerLoadout "{5690D9DB9BA76597}" {
-   m_sLoadoutResource "{E062ADE88FDC1A41}Prefabs/Characters/Factions/INDFOR/GANG/Character_GANG_Gangsta00.et"
-   m_sAffiliatedFaction "GANG"
-  }
-  SCR_FactionPlayerLoadout "{5690D9DB9400735C}" {
-   m_sLoadoutResource "{FC0F7D05A318F84F}Prefabs/Characters/Factions/OPFOR/REDPEACE/Character_REDPEACE_Rifleman.et"
-   m_sAffiliatedFaction "REDPEACE"
-  }
-  SCR_PlayerArsenalLoadout "{5B108B49559B24A2}" {
-   m_sLoadoutResource "{B95C14B8EBE9B3FA}Prefabs/Characters/Factions/INDFOR/GANG/Character_GANG_Base.et"
-   m_sAffiliatedFaction "GANG"
-  }
   SCR_PlayerArsenalLoadout "{5B108B4948B445F8}" {
-   m_sLoadoutResource "{D39B5420E9FF4922}Prefabs/Characters/Campaign/Final/Campaign_REDPEACE_Base.et"
    m_sAffiliatedFaction "REDPEACE"
   }
  }

@@ -1,13 +1,30 @@
 GenericEntity AreaHqPeace : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 1386.318 36.272 2377.769
  {
+  GenericEntity RadioArleville : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
+   components {
+    SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+     "faction affiliation" "PEACE"
+    }
+   }
+   coords 1100.352 58.45 -468.378
+   angleY -80.19
+  }
   GenericEntity LayerHqPeace : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {
-    GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+    GenericEntity HqPeace : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
      components {
       SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
        m_bCanBeHQ 1
+      }
+      SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+       Transceivers {
+        RelayTransceiver "{5C669673E8C94083}" {
+         "Transmitting Range" 1500
+        }
+       }
+       m_bIsSource 1
       }
       SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
        "faction affiliation" "REDPEACE"

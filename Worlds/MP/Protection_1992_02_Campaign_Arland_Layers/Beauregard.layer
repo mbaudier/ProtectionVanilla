@@ -1,0 +1,33 @@
+GenericEntity PopulatedBeauregard : "{2A3E567DA8A7B4DB}Prefabs/ScenarioFramework/Components/PopulatedArea.et" {
+ components {
+  ARGEO_PopulatedArea "{59E8CDC50969206E}" {
+   m_sFactionKey "URBAN"
+  }
+ }
+ coords 3165.465 11.571 2797.519
+}
+GenericEntity AreaBeauregardPort : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 3269.652 2.102 2877.818
+ {
+  GenericEntity BeauregardPortBase : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity BeauregardPortMilitaryBase : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+     components {
+      SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+       m_bIsControlPoint 1
+      }
+      SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+       m_bIgnoreNonPlayableAttackers 0
+       m_bShowNotifications 1
+      }
+      SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+       "faction affiliation" "URBAN"
+      }
+     }
+     coords 28.279 -0.102 -16.363
+    }
+   }
+  }
+ }
+}
