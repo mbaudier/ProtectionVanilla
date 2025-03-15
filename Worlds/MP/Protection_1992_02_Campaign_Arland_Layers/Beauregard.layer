@@ -9,19 +9,6 @@ GenericEntity PopulatedBeauregard : "{2A3E567DA8A7B4DB}Prefabs/ScenarioFramework
 GenericEntity AreaBeauregard : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 3269.652 2.102 2877.818
  {
-  GenericEntity RadioBeauregard : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
-   components {
-    SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
-     Transceivers {
-      RelayTransceiver "{5C727AD73024FB39}" {
-       "Transmitting Range" 1000
-      }
-     }
-    }
-   }
-   coords -392.747 59.334 0.108
-   angleY -87.535
-  }
   GenericEntity BeauregardPortBase : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {

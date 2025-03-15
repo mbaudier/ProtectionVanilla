@@ -12,6 +12,7 @@ GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
       SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
        Transceivers {
         RelayTransceiver "{5C669673E8C94083}" {
+         "Transmitting Range" 800
         }
        }
        m_bIsSource 1

@@ -1,14 +1,58 @@
 GenericEntity AreaSignalHill : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 2506.492 147.823 2267.697
  {
-  GenericEntity RadioSignalHill : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
-   components {
-    SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
-     "faction affiliation" "USSR"
+  $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
+   RadioSignalHill {
+    components {
+     SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+      m_sBaseName "Radio Tower"
+      m_sBaseNameUpper "RADIO TOWER"
+     }
+     SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+      "faction affiliation" "USSR"
+     }
     }
+    coords -0.082 0.975 -0.069
+    angleY -51.747
    }
-   coords -0.082 0.975 -0.069
-   angleY -51.747
+   RelaySouth {
+    components {
+     SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+      m_sBaseName "Relay South"
+      m_sBaseNameUpper "RELAY SOUTH"
+     }
+     SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+      Transceivers {
+       RelayTransceiver "{5C727AD73024FB39}" {
+        "Transmitting Range" 1000
+       }
+      }
+     }
+    }
+    coords -261.441 -82.363 -383.093
+    angleY 119.606
+   }
+   RelayNorth {
+    components {
+     SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+      m_sBaseName "Relay North"
+      m_sBaseNameUpper "RELAY NORTH"
+     }
+     SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+      Transceivers {
+       RelayTransceiver "{5C727AD73024FB39}" {
+        "Transmitting Range" 1000
+       }
+      }
+     }
+    }
+    coords 370.413 -86.387 610.229
+    angleY -87.535
+   }
+   ReleayEast {
+    coords 547.598 -99.735 132.581
+    angleY 167.024
+   }
   }
  }
 }
