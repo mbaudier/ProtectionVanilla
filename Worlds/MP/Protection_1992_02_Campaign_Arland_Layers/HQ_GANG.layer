@@ -1,14 +1,6 @@
 GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 2210.897 53.469 2891.415
  {
-  GenericEntity RadioBeauregard : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
-   components {
-    SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
-     "faction affiliation" "GANG"
-    }
-   }
-   coords 666.008 7.967 -13.489
-  }
   GenericEntity LayerHqGang : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {
@@ -20,7 +12,6 @@ GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
       SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
        Transceivers {
         RelayTransceiver "{5C669673E8C94083}" {
-         "Transmitting Range" 1500
         }
        }
        m_bIsSource 1

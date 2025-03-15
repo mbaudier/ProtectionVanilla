@@ -6,16 +6,32 @@ GenericEntity PopulatedArleville : "{2A3E567DA8A7B4DB}Prefabs/ScenarioFramework/
  }
  coords 2795.983 74.03 1629.076
 }
-GenericEntity AreaRefugeeCamp : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaArleville : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 2983.515 61.664 1642.246
  {
+  GenericEntity RadioArleville : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
+   components {
+    SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+     Transceivers {
+      RelayTransceiver "{5C727AD73024FB39}" {
+       "Transmitting Range" 1000
+      }
+     }
+    }
+   }
+   coords -738.464 3.796 242.358
+   angleY 119.606
+  }
   GenericEntity RefugeeCampBase : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {
     GenericEntity RefugeeCampMilitaryBase : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
      components {
-      SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
-       "faction affiliation" "RURAL"
+      SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+       m_bIsControlPoint 1
+      }
+      SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+       m_fMaximumSeizingTime 20
       }
      }
      coords 0 0 0

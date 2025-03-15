@@ -31,15 +31,13 @@ SCR_GameModeCampaign GameMode_Campaign_Protection : "{589A2658A7EFEEDB}Prefabs/M
  coords 1891.87 11.377 1821.87
  m_sBLUFORFactionKey "GANG"
  m_sOPFORFactionKey "REDPEACE"
- m_sINDFORFactionKey "RURAL"
+ m_sINDFORFactionKey "USSR"
 }
-SCR_CampaignFactionManager CampaignFactionManager_GANGxREDPEACE : "{CF862129A8426292}Prefabs/MP/Campaign/CampaignFactionManager_GANGxREDPEACE.et" {
- coords 1891.85 11.618 1823.612
+SCR_CampaignFactionManager CampaignFactionManager_GANGxREDPEACE1 : "{CF862129A8426292}Prefabs/MP/Campaign/CampaignFactionManager_GANGxREDPEACE.et" {
+ coords 1891.813 11.598 1823.438
  Factions {
-  SCR_CampaignFaction "{64DAF34D259B8095}" {
-  }
-  SCR_CampaignFaction "{64DAF34D10235480}" : "{15B582F8FA0B0940}Configs/Factions/USSR_Campaign.conf" {
-   m_iOrder 5000
+  SCR_CampaignFaction "{64DEECE73CAB7EC0}" : "{15B582F8FA0B0940}Configs/Factions/USSR_Campaign.conf" {
+   m_iOrder 2000
    m_bIsPlayable 0
   }
  }

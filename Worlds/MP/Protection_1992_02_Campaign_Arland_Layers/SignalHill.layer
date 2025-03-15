@@ -1,12 +1,14 @@
-GenericEntity RadioSignalHill : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
- components {
-  SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
-   "faction affiliation" "USSR"
-  }
- }
- coords 2506.41 148.798 2267.628
- angleY -51.747
-}
 GenericEntity AreaSignalHill : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 2506.492 147.823 2267.697
+ {
+  GenericEntity RadioSignalHill : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
+   components {
+    SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+     "faction affiliation" "USSR"
+    }
+   }
+   coords -0.082 0.975 -0.069
+   angleY -51.747
+  }
+ }
 }
