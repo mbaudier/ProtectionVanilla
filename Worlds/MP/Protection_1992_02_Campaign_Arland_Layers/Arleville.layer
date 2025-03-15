@@ -23,6 +23,14 @@ GenericEntity AreaArleville : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compo
      }
      coords 0 0 0
     }
+    GenericEntity : "{47789BA6E9CA2928}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_03_Campaign.et" {
+     coords -6.203 -0.773 22.605
+     angleY -31.86
+    }
+    GenericEntity : "{C63BFEEA9DE1CF26}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_05_Campaign.et" {
+     coords -1.918 -0.598 12.993
+     angleY -30.172
+    }
    }
   }
  }

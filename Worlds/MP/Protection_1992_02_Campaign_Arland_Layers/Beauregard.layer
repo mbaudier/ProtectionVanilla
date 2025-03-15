@@ -19,11 +19,18 @@ GenericEntity AreaBeauregard : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
       }
       SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
        m_fMaximumSeizingTime 20
-       m_bIgnoreNonPlayableAttackers 0
-       m_bShowNotifications 1
       }
      }
      coords 28.279 -0.102 -16.363
+     angleY -42.394
+    }
+    GenericEntity : "{47789BA6E9CA2928}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_03_Campaign.et" {
+     coords 39.908 -0.101 -4.38
+     angleY -38.681
+    }
+    GenericEntity : "{C63BFEEA9DE1CF26}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_05_Campaign.et" {
+     coords 33.77 -0.102 -0.181
+     angleY 53.18
     }
    }
   }

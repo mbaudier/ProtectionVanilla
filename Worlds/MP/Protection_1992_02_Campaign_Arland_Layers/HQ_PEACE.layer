@@ -22,6 +22,72 @@ GenericEntity AreaHqPeace : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compone
       }
      }
      coords 16.729 -0.335 6.276
+     angleY -179.354
+    }
+    GenericEntity : "{1A6F76E0028DE740}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Shelter_Arsenal_USSR_01.et" {
+     coords 26.563 -0.43 -4.148
+     angleY -55.152
+    }
+    GenericEntity : "{1EB5949DF6738E38}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_USSR_01.et" {
+     components {
+      FactionAffiliationComponent "{5D06E95AF4851C5E}" {
+       "faction affiliation" "REDPEACE"
+      }
+     }
+     coords 2.859 -0.013 -19.813
+     angleY 82.711
+     {
+      GenericEntity {
+       ID "5D22B941F0092492"
+       components {
+        SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
+         "faction affiliation" "REDPEACE"
+        }
+       }
+      }
+     }
+    }
+    GenericEntity : "{525C793E1943EA05}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_USSR_01.et" {
+     coords -30.575 0.668 17.939
+     angleX 1.054
+     angleY 55.206
+     angleZ 0.972
+     {
+      GenericEntity {
+       ID "5D22B941350A4D8F"
+       components {
+        SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
+         "faction affiliation" "REDPEACE"
+        }
+       }
+      }
+     }
+    }
+    GenericEntity : "{763B4200BE49686E}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Shelter_Arsenal_USSR_02.et" {
+     coords 27.555 -0.408 4.87
+     angleY -111.515
+    }
+    GenericEntity : "{77F90F896D5145C8}Prefabs/Compositions/Slotted/SlotFlatSmall/LivingArea_S_US_01.et" {
+     components {
+      FactionAffiliationComponent "{5D06E95D184CD4C6}" {
+       "faction affiliation" "REDPEACE"
+      }
+     }
+     coords -10.941 0.113 -2.51
+     angleY 140.546
+     {
+      GenericEntity {
+       ID "5D22B92C55FB6E83"
+       components {
+        SCR_CampaignBuildingProviderComponent "{5ED7185081A6289C}" {
+         m_iRank PRIVATE
+        }
+        SCR_FactionAffiliationComponent "{5D22B92ED7E59790}" {
+         "faction affiliation" "REDPEACE"
+        }
+       }
+      }
+     }
     }
    }
   }

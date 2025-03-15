@@ -1,27 +1,81 @@
 GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 2210.897 53.469 2891.415
  {
-  GenericEntity LayerHqGang : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-   coords 0 0 0
-   {
-    GenericEntity HqGang : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
-     components {
-      SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
-       m_bCanBeHQ 1
-      }
-      SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
-       Transceivers {
-        RelayTransceiver "{5C669673E8C94083}" {
-         "Transmitting Range" 800
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   LayerHqGang {
+    coords 0 0 0
+    {
+     GenericEntity HqGang : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+      components {
+       SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+        m_bCanBeHQ 1
+       }
+       SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+        m_iSupplies 1000
+        m_iSuppliesMax 3000
+       }
+       SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+        Transceivers {
+         RelayTransceiver "{5C669673E8C94083}" {
+          "Transmitting Range" 800
+         }
+        }
+        m_bIsSource 1
+       }
+       SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+        "faction affiliation" "GANG"
+       }
+       SCR_ResourceComponent "{5D587B89D3599C99}" {
+        m_aGenerators {
+         SCR_ResourceGenerator "{5D587B8946012988}" {
+         }
         }
        }
-       m_bIsSource 1
       }
-      SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
-       "faction affiliation" "GANG"
-      }
+      coords 16.641 -0.062 -20.994
      }
-     coords 20.099 -0.046 -21.886
+     GenericEntity : "{18BD3B067D00FF3D}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_LivingArea_S_GANG_01.et" {
+      coords 1.943 -0.03 -9.651
+      angleY 129.84
+     }
+     GenericEntity : "{7CBCBA91D3F27603}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_VehicleMaintenance_S_GANG_01.et" {
+      coords 19.263 -0.247 -10.907
+      angleY -20.984
+     }
+     GenericEntity : "{A13F6A7F82DF031B}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_US_01.et" {
+      coords -5.824 0.312 16.83
+      angleY 38.221
+     }
+     GenericEntity : "{AAB41F3CE4965A76}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Shelter_Arsenal_US_02.et" {
+      coords 32.376 0.209 -28.262
+      angleY 15.629
+     }
+     GenericEntity : "{C6E02BDC5852D558}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Shelter_Arsenal_US_01.et" {
+      coords 26.598 0.057 -27.061
+      angleY 13.531
+     }
+    }
+   }
+   LayerGangStart {
+    coords 0 0 0
+    {
+     GenericEntity SlotAI1 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{9EB0377EE756B199}Prefabs/Groups/INDFOR/GANG/Group_GANG_Mix00.et"
+       }
+      }
+      coords -1.411 -0.219 -37.071
+     }
+     GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+       }
+      }
+      coords -7.49 -0.25 -41.102
+      angleY -138.496
+     }
     }
    }
   }
