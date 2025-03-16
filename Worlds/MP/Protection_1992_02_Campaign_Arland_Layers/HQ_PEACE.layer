@@ -4,10 +4,17 @@ GenericEntity AreaHqPeace : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compone
   GenericEntity LayerHqPeace : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {
+    Vehicle Mi8MT_armed_REDPEACE1 : "{13914E94D3B0D844}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_REDPEACE.et" {
+     coords -58.67 1.736 -55.128
+     angleX 1.414
+     angleY -125.277
+    }
     GenericEntity HqPeace : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
      components {
       SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
        m_bCanBeHQ 1
+       m_sBaseName "HQ"
+       m_sBaseNameUpper "HQ"
       }
       SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
        Transceivers {
@@ -47,21 +54,29 @@ GenericEntity AreaHqPeace : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compone
       }
      }
     }
-    GenericEntity : "{525C793E1943EA05}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_USSR_01.et" {
-     coords -30.575 0.668 17.939
-     angleX 1.054
-     angleY 55.206
-     angleZ 0.972
+    GenericEntity : "{4093AE33DCEFAD67}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_USSR_01.et" {
+     coords -69.969 0.905 -19.251
+     angleY 150.153
      {
       GenericEntity {
-       ID "5D22B941350A4D8F"
-       components {
-        SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
-         "faction affiliation" "REDPEACE"
+       ID "570705C23F45832C"
+       {
+        DecalEntity {
+         ID "56DEFDB4A9499F9B"
+         coords 0 -1.08 0
+         angleX -90
+         angleY -180
+         angleZ -180
         }
        }
       }
      }
+    }
+    GenericEntity : "{525C793E1943EA05}Prefabs/Compositions/Slotted/SlotFlatLarge/Helipad_L_USSR_01.et" {
+     coords -57.978 1.711 -55.256
+     angleX -0.242
+     angleY -34.121
+     angleZ 2.958
     }
     GenericEntity : "{763B4200BE49686E}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Shelter_Arsenal_USSR_02.et" {
      coords 27.555 -0.408 4.87

@@ -16,12 +16,17 @@ GenericEntity AreaArleville : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compo
      components {
       SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
        m_bIsControlPoint 1
+       m_sMapLocationName "Refugee camp"
       }
       SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
        m_fMaximumSeizingTime 20
       }
      }
      coords 0 0 0
+    }
+    GenericEntity : "{1EB5949DF6738E38}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_USSR_01.et" {
+     coords -14.802 2.497 -23.854
+     angleY 49.514
     }
     GenericEntity : "{47789BA6E9CA2928}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_03_Campaign.et" {
      coords -6.203 -0.773 22.605
@@ -30,6 +35,10 @@ GenericEntity AreaArleville : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compo
     GenericEntity : "{C63BFEEA9DE1CF26}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_05_Campaign.et" {
      coords -1.918 -0.598 12.993
      angleY -30.172
+    }
+    GenericEntity : "{FD952CFF9CAD3F2B}Prefabs/Compositions/Slotted/SlotFlatSmall/LivingArea_S_USSR_01.et" {
+     coords -13.76 -0.373 30.318
+     angleY -24.802
     }
    }
   }

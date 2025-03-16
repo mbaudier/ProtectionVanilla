@@ -5,8 +5,9 @@ GenericEntity AreaSignalHill : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
    RadioSignalHill {
     components {
      SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
-      m_sBaseName "Radio Tower"
+      m_sBaseName "Radio tower"
       m_sBaseNameUpper "RADIO TOWER"
+      m_sMapLocationName "Radio tower"
      }
      SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
       "faction affiliation" "USSR"
@@ -52,6 +53,35 @@ GenericEntity AreaSignalHill : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
    ReleayEast {
     coords 547.598 -99.735 132.581
     angleY 167.024
+   }
+  }
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   LayerSignalHillDefenders {
+    coords 0 0 0
+    {
+     GenericEntity SignalHillDefenders : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
+        m_sWPToSpawn "{FAD1D789EE291964}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large.et"
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   LayerRelayEastDefenders {
+    coords 435.974 -76.246 28.544
+    {
+     GenericEntity RelayEastDefenders : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
+       }
+      }
+      coords -0.838 0.45 -0.162
+     }
+    }
    }
   }
  }
