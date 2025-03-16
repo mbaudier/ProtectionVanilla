@@ -1,3 +1,7 @@
+GenericEntity : "{77F90F896D5145C8}Prefabs/Compositions/Slotted/SlotFlatSmall/LivingArea_S_US_01.et" {
+ coords 2210.465 53.435 2880.891
+ angleY 130.548
+}
 GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  coords 2210.897 53.469 2891.415
  {
@@ -35,10 +39,6 @@ GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
        }
       }
       coords 16.641 -0.062 -20.994
-     }
-     GenericEntity : "{18BD3B067D00FF3D}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_LivingArea_S_GANG_01.et" {
-      coords 1.943 -0.03 -9.651
-      angleY 129.84
      }
      GenericEntity : "{69131FD53AF6C044}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_US_01.et" {
       components {
