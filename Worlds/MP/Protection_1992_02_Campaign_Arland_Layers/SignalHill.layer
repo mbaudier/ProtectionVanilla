@@ -5,9 +5,8 @@ GenericEntity AreaSignalHill : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
    RadioSignalHill {
     components {
      SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
-      m_sBaseName "Radio tower"
+      m_sBaseName "Radio Tower"
       m_sBaseNameUpper "RADIO TOWER"
-      m_sMapLocationName "Radio tower"
      }
      SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
       "faction affiliation" "USSR"
@@ -51,6 +50,19 @@ GenericEntity AreaSignalHill : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
     angleY -87.535
    }
    ReleayEast {
+    components {
+     SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+      m_sBaseName "Relay East"
+      m_sBaseNameUpper "RELAY EAST"
+     }
+     SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+      Transceivers {
+       RelayTransceiver "{5C727AD73024FB39}" {
+        "Transmitting Range" 1000
+       }
+      }
+     }
+    }
     coords 547.598 -99.735 132.581
     angleY 167.024
    }
