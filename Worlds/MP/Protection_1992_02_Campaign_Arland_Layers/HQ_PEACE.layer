@@ -55,6 +55,11 @@ GenericEntity AreaHqPeace : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compone
      }
     }
     GenericEntity : "{4093AE33DCEFAD67}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_USSR_01.et" {
+     components {
+      FactionAffiliationComponent "{56E0D915F82EB4E8}" {
+       "faction affiliation" "REDPEACE"
+      }
+     }
      coords -69.969 0.905 -19.251
      angleY 150.153
      {
