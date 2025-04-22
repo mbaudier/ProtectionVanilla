@@ -1,47 +1,77 @@
-$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  AreaTaskApproach {
   coords 1430.616 36.612 2457.74
   {
-   GenericEntity LayerTaskApproach : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
-    components {
-     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
-      m_sTaskTitle "Approach"
-      m_sTaskDescription "Approach the base from the woods"
+   $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+    LayerTaskApproach {
+     components {
+      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+       m_sTaskTitle "Approach"
+       m_sTaskDescription "Approach the base from the woods"
+      }
      }
-    }
-    coords 1.127 0.284 6.793
-    {
-     GenericEntity SlotTaskApproach : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
-      components {
-       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 40
-         }
-        }
-        m_aActionsOnFinished {
-         SCR_ScenarioFrameworkActionSpawnObjects "{6294E8F72399366C}" {
-          m_aNameOfObjectsToSpawnOnActivation {
-           "SlotSpawnPointApproach" "LayerTaskHospital" "LayerTaskBunker"
+     coords 1.127 0.284 6.793
+     {
+      GenericEntity SlotTaskApproach : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+       components {
+        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+           m_fAreaRadius 40
           }
          }
-         SCR_ScenarioFrameworkActionShowPopupNotification "{6294E8F7F5B6C77B}" {
-          m_sTitle "Checkpoint reached"
-          m_sText "Spawn point created"
+         m_sID "TaskApproach"
+         m_aActionsOnFinished {
+          SCR_ScenarioFrameworkActionSpawnObjects "{6294E8F72399366C}" {
+           m_aNameOfObjectsToSpawnOnActivation {
+            "SlotSpawnPointApproach" "LayerTaskHospital" "LayerTaskBunker"
+           }
+          }
+          SCR_ScenarioFrameworkActionShowPopupNotification "{6294E8F7F5B6C77B}" {
+           m_sTitle "Checkpoint reached"
+           m_sText "Spawn point created"
+          }
          }
         }
        }
+       coords -10.002 3.01 -14.898
       }
-      coords -10.002 3.01 -14.898
+      GenericEntity SlotSpawnPointApproach : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+        }
+       }
+       coords 49.629 0.418 26.802
+      }
      }
-     GenericEntity SlotSpawnPointApproach : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_eActivationType ON_TRIGGER_ACTIVATION
-        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+    }
+    LayerTaskMove1 {
+     components {
+      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+       m_aTriggerActionsOnFinish {
+        SCR_ScenarioFrameworkActionShowPopupNotification "{6502FBB6CF8E5E4D}" {
+         m_sTitle "TIRGGERED"
+         m_sText "Triggered"
+        }
        }
       }
-      coords 49.629 0.418 26.802
+     }
+     coords 0 0 0
+     {
+      GenericEntity SlotMoveTo1 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+       components {
+        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+           m_fAreaRadius 175
+          }
+         }
+        }
+       }
+       coords 0 0 0
+      }
      }
     }
    }
@@ -50,7 +80,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  AreaTaskExtraction {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_sTriggerResource "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+    m_sTriggerResource "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
     m_fAreaRadius 30
     m_aTriggerActions {
      SCR_ScenarioFrameworkActionSpawnObjects "{6297077BE730CD6D}" {
@@ -63,7 +93,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
   }
   coords 1752.54 40.188 2716.326
   {
-   GenericEntity LayerTaskExtraction : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+   GenericEntity LayerTaskExtraction : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
       m_bShowDebugShapesDuringRuntime 1
@@ -75,7 +105,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
       m_sTaskTitle "Extraction"
       m_sTaskDescription "Bring the civilans to the extraction point"
-      m_sTaskPrefab "{6829FAD588965A88}Prefabs/ScenarioFramework/Tasks/TaskExtract.et"
+      m_sTaskPrefab "{6829FAD588965A88}Prefabs/Systems/ScenarioFramework/Tasks/TaskExtract.et"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionEndMission "{5C6E788E9FA7BE1A}" {
        }
@@ -84,7 +114,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     coords 0 0 0
     {
-     GenericEntity SlotExtraction01 : "{9C47DECB98FDA4DA}Prefabs/ScenarioFramework/Components/SlotExtraction.et" {
+     GenericEntity SlotExtraction01 : "{9C47DECB98FDA4DA}Prefabs/Systems/ScenarioFramework/Components/SlotExtraction.et" {
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
@@ -98,17 +128,17 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           m_sCountdownAudio "SOUND_RESPAWNMENU"
          }
         }
-        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
        }
       }
       coords 0.139 0.014 -0.887
      }
     }
    }
-   GenericEntity LayerExtractedCivilians : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity LayerExtractedCivilians : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
-     GenericEntity TriggerEndMissionFaction : "{032C15BBEBE9E1E9}Prefabs/ScenarioFramework/Components/SlotTrigger.et" {
+     GenericEntity TriggerEndMissionFaction : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
       components {
        SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
         m_aActivationActions {
@@ -124,12 +154,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           m_sActivatedByThisFaction "RURAL"
          }
         }
-        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
        }
       }
       coords 0 0 0
      }
-     $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/ScenarioFramework/Components/LogicCounter.et" {
+     $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
       MissionStatusDraw {
        coords 0 0 0
        m_aInputs {
@@ -198,7 +228,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  AreaTaskHospital {
   coords 1377.701 37.654 2447.693
   {
-   GenericEntity LayerTaskHospital : "{5AF3BFDA2EAE56EA}Prefabs/ScenarioFramework/Components/LayerTask.et" {
+   GenericEntity LayerTaskHospital : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
@@ -208,7 +238,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     coords 0 0 0
     {
-     GenericEntity SlotTaskHospital : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+     GenericEntity SlotTaskHospital : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
@@ -231,7 +261,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
       coords 6.403 0.221 -12.392
      }
-     GenericEntity SlotSpawnPointHospital : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+     GenericEntity SlotSpawnPointHospital : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_eActivationType ON_TRIGGER_ACTIVATION
@@ -247,7 +277,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  AreaTaskBunker {
   coords 1286.116 40.676 2418.515
   {
-   GenericEntity LayerTaskBunker : "{5AF3BFDA2EAE56EA}Prefabs/ScenarioFramework/Components/LayerTask.et" {
+   GenericEntity LayerTaskBunker : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
@@ -257,7 +287,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     coords 0.591 0.002 -0.382
     {
-     GenericEntity SlotTaskBunker : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+     GenericEntity SlotTaskBunker : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
@@ -280,7 +310,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
       coords 0.664 2.967 7.975
      }
-     GenericEntity SlotSpawnBunker : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+     GenericEntity SlotSpawnBunker : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_eActivationType ON_TRIGGER_ACTIVATION

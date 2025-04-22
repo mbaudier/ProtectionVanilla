@@ -34,18 +34,16 @@ SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFrame
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
     SCR_TimeAndWeatherState "{64AD31EF8EA60D0E}" {
-     m_sWeatherPresetName "Rainy"
-     m_iStartingHour 20
-     m_iStartingMinutes 15
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 22
     }
    }
-   m_bRandomWeatherChanges 1
   }
  }
  coords 2033.122 32.126 2017.837
  m_bAllowFactionChange 0
 }
-SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
+SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
  coords 2033.122 32.501 2019.837
  {
   CommentEntity {
