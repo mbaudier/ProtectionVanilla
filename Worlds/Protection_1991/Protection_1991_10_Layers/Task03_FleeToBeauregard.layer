@@ -1,9 +1,10 @@
-GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 2746.307 72.719 1720.927
  {
-  GenericEntity LayerTaskMoveToBeauregard : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+  GenericEntity LayerTaskMoveToBeauregard : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
    components {
-    SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+    SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+     m_eActivationType ON_TRIGGER_ACTIVATION
      m_bExcludeFromDynamicDespawn 1
      m_sTaskTitle "Flee with the vehicle to Beauregard"
      m_aTriggerActionsOnFinish {
@@ -35,7 +36,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
    }
    coords -0.132 0 -0.572
    {
-    GenericEntity TriggerEndMissionFaction : "{032C15BBEBE9E1E9}Prefabs/ScenarioFramework/Components/SlotTrigger.et" {
+    GenericEntity TriggerEndMissionFaction : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
      components {
       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
        m_aPlugins {
@@ -49,7 +50,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
      }
      coords 371.2 -68.75 1291.598
     }
-    GenericEntity SlotMoveToBeauregard : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+    GenericEntity SlotMoveToBeauregard : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
      components {
       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
        m_bExcludeFromDynamicDespawn 1
@@ -61,7 +62,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
      }
      coords 372.272 -68.758 1290.209
     }
-    GenericEntity FinishMissionTrigger : "{D183AFE8DAF9793D}Prefabs/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+    GenericEntity FinishMissionTrigger : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
      components {
       SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
        m_aPlugins {
@@ -80,7 +81,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
     }
    }
   }
-  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    LayerArlevilleFIADefenders {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
@@ -89,7 +90,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
     }
     coords 0 0 0
     {
-     GenericEntity ArlevilleFIADefenders00 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     GenericEntity ArlevilleFIADefenders00 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
         m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
@@ -104,7 +105,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
       coords -105.969 8.66 4.191
       angleY 133.274
      }
-     $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       Task03FIAForcedMoveWP {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
@@ -131,7 +132,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
    LayerFinishBusinessmenWP {
     coords 381.509 -68.643 1279.644
     {
-     GenericEntity Task03FinishBusinessmenWP0 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     GenericEntity Task03FinishBusinessmenWP0 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       coords -15.278 -0.005 1.297
      }
     }
@@ -144,7 +145,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
     }
     coords 372.187 -69.252 1310.586
     {
-     $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/ScenarioFramework/Components/LogicCounter.et" {
+     $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
       MissionStatusDraw {
        coords 0 0 0
        m_aInputs {
