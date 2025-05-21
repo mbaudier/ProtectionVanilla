@@ -1,0 +1,21 @@
+$grp GenericEntity : "{2A3E567DA8A7B4DB}Prefabs/ScenarioFramework/Components/PopulatedArea.et" {
+ PopulatedArleville {
+  components {
+   ARGEO_PopulatedArea "{59E8CDC50969206E}" {
+    m_sFactionKey "RURAL"
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 2764.027 76.803 1630.438
+ }
+ PopulatedBeauregard {
+  components {
+   ARGEO_PopulatedArea "{59E8CDC50969206E}" {
+    m_sFactionKey "URBAN"
+    m_bShowDebugShapesInWorkbench 1
+    m_fAreaRadius 175
+   }
+  }
+  coords 3141.846 11.555 2768.636
+ }
+}

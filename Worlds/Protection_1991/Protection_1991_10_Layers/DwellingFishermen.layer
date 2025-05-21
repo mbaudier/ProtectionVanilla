@@ -1,20 +1,19 @@
-GenericEntity AreaDwellingFishermen : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaDwellingFishermen : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  components {
   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
    m_bDynamicDespawn 1
    m_iDynamicDespawnRange 250
-   m_bShowDebugShapesInWorkbench 1
   }
  }
  coords 3146.55 27.601 1346.101
  {
-  GenericEntity LayerDwellingFishermen : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  GenericEntity LayerDwellingFishermen : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {
-    GenericEntity WaypointsFishermen : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    GenericEntity WaypointsFishermen : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
      coords -12.829 6.002 32.147
      {
-      $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
        FishermenWP3 {
         components {
          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
@@ -68,7 +67,7 @@ GenericEntity AreaDwellingFishermen : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramewo
       }
      }
     }
-    $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+    $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
      StartFisherman00 {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -100,7 +99,7 @@ GenericEntity AreaDwellingFishermen : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramewo
       angleY -123.332
      }
     }
-    GenericEntity FishermenWPCycle : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+    GenericEntity FishermenWPCycle : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
      components {
       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
        m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{60E708B72E5DF8AC}" {

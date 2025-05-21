@@ -2,76 +2,47 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  AreaTaskApproach {
   coords 1430.616 36.612 2457.74
   {
-   $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
-    LayerTaskApproach {
-     components {
-      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
-       m_sTaskTitle "Approach"
-       m_sTaskDescription "Approach the base from the woods"
-      }
-     }
-     coords 1.127 0.284 6.793
-     {
-      GenericEntity SlotTaskApproach : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-       components {
-        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-         m_aPlugins {
-          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-           m_fAreaRadius 40
-          }
-         }
-         m_sID "TaskApproach"
-         m_aActionsOnFinished {
-          SCR_ScenarioFrameworkActionSpawnObjects "{6294E8F72399366C}" {
-           m_aNameOfObjectsToSpawnOnActivation {
-            "SlotSpawnPointApproach" "LayerTaskHospital" "LayerTaskBunker"
-           }
-          }
-          SCR_ScenarioFrameworkActionShowPopupNotification "{6294E8F7F5B6C77B}" {
-           m_sTitle "Checkpoint reached"
-           m_sText "Spawn point created"
-          }
-         }
-        }
-       }
-       coords -10.002 3.01 -14.898
-      }
-      GenericEntity SlotSpawnPointApproach : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_eActivationType ON_TRIGGER_ACTIVATION
-         m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
-        }
-       }
-       coords 49.629 0.418 26.802
-      }
+   GenericEntity LayerTaskApproach : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+      m_sTaskTitle "Approach"
+      m_sTaskDescription "Approach the base from the woods"
      }
     }
-    LayerTaskMove1 {
-     components {
-      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-       m_aTriggerActionsOnFinish {
-        SCR_ScenarioFrameworkActionShowPopupNotification "{6502FBB6CF8E5E4D}" {
-         m_sTitle "TIRGGERED"
-         m_sText "Triggered"
+    coords 1.127 0.284 6.793
+    {
+     GenericEntity SlotTaskApproach : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_fAreaRadius 40
+         }
         }
-       }
-      }
-     }
-     coords 0 0 0
-     {
-      GenericEntity SlotMoveTo1 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-       components {
-        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-         m_aPlugins {
-          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-           m_fAreaRadius 175
+        m_sID "TaskApproach"
+        m_aActionsOnFinished {
+         SCR_ScenarioFrameworkActionSpawnObjects "{6294E8F72399366C}" {
+          m_aNameOfObjectsToSpawnOnActivation {
+           "SlotSpawnPointApproach" "LayerTaskHospital" "LayerTaskBunker"
           }
+         }
+         SCR_ScenarioFrameworkActionShowPopupNotification "{6294E8F7F5B6C77B}" {
+          m_sTitle "Checkpoint reached"
+          m_sText "Spawn point created"
          }
         }
        }
-       coords 0 0 0
       }
+      coords -10.002 3.01 -14.898
+     }
+     GenericEntity SlotSpawnPointApproach : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+       }
+      }
+      coords 49.629 0.418 26.802
      }
     }
    }
@@ -95,7 +66,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   {
    GenericEntity LayerTaskExtraction : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
-     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_bShowDebugShapesDuringRuntime 1
       m_eActivationType ON_TRIGGER_ACTIVATION
       m_aActivationActions {
@@ -230,7 +201,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   {
    GenericEntity LayerTaskHospital : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
     components {
-     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
       m_sTaskTitle "Hospital"
       m_sTaskDescription "Approach the hospital in order to free prisoners"
@@ -279,7 +250,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   {
    GenericEntity LayerTaskBunker : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
     components {
-     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
       m_sTaskTitle "Bunker"
       m_sTaskDescription "Approach the bunker in order to free prisoners"
