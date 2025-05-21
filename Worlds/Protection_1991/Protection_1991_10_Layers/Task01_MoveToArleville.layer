@@ -20,6 +20,7 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     GenericEntity MoveToMayorMeeting : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
      components {
       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+       m_bShowDebugShapesInWorkbench 0
        m_aPlugins {
         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
          m_fAreaRadius 50
@@ -45,22 +46,23 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
        }
       }
-      coords -2.361 -0.547 -1.111
+      coords 7.892 -1.231 11.695
       angleY 16.08
      }
      Bodyguards {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_sObjectToSpawn "{84E5BBAB25EA23E5}Prefabs/Groups/BLUFOR/Group_US_FireTeam.et"
+        m_sObjectToSpawn "{AFE566DDD3814874}Prefabs/Groups/INDFOR/GANG/Group_GANG_LightFireTeam.et"
+        m_eAIGroupFormation Line
        }
       }
-      coords 15.951 -1.41 0
-      angleX 0.568
-      angleY 100.342
-      angleZ 0.104
+      coords 18.57 -1.457 5.151
+      angleX 0.194
+      angleY 19.554
+      angleZ -0.544
      }
     }
-    GenericEntity Task01EscapeVehicle : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+    GenericEntity EscapeVehicle : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
      components {
       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
        m_aActivationActions {

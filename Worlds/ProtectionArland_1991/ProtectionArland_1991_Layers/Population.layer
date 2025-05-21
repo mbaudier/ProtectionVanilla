@@ -3,7 +3,6 @@ $grp GenericEntity : "{2A3E567DA8A7B4DB}Prefabs/ScenarioFramework/Components/Pop
   components {
    ARGEO_PopulatedArea "{59E8CDC50969206E}" {
     m_sFactionKey "RURAL"
-    m_bShowDebugShapesInWorkbench 1
    }
   }
   coords 2764.027 76.803 1630.438
@@ -12,7 +11,6 @@ $grp GenericEntity : "{2A3E567DA8A7B4DB}Prefabs/ScenarioFramework/Components/Pop
   components {
    ARGEO_PopulatedArea "{59E8CDC50969206E}" {
     m_sFactionKey "URBAN"
-    m_bShowDebugShapesInWorkbench 1
     m_fAreaRadius 175
    }
   }

@@ -1,19 +1,14 @@
-GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+Vehicle Cinematic_Flying_UH1 : "{41609B3289F9ECC4}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_UH1.et" {
+ coords 3233.923 4.066 1210.011
+ angleY -140.946
+}
+GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 3177.489 0.707 1158.746
  {
-  GenericEntity LayerStart : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  GenericEntity LayerStart : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {
-    $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
-     StartVehicle {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_eActivationType ON_AREA_TRIGGER_ACTIVATION
-        m_sObjectToSpawn "{870EB660433857D3}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_teal.et"
-       }
-      }
-      coords -16.992 3.109 14.83
-     }
+    $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
      StartSupply {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
@@ -49,10 +44,10 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Component
       coords -24.154 3.057 10.846
      }
     }
-    SCR_SpawnPoint : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
-     coords -3.261 0.182 -0.574
-    }
    }
   }
  }
+}
+SCR_SpawnPoint StartSpawn : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
+ coords 3171.481 3.578 1168.094
 }

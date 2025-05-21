@@ -28,22 +28,32 @@ SCR_FactionManager FactionManager_Protection : "{E70679F5E0A515AC}Prefabs/MP/Man
  Factions {
   SCR_Faction "{56DEAC40D2DBC8B1}" {
    m_bIsPlayable 1
+   m_aFriendlyFactionsIds + {
+    "GANG"
+   }
   }
   SCR_Faction "{56DEAC40D3C2E623}" {
    m_bIsPlayable 0
+   m_aFriendlyFactionsIds {
+   }
   }
   SCR_Faction "{56DEAC40D132400B}" {
    m_bIsPlayable 0
+   m_aFriendlyFactionsIds + {
+    "URBAN"
+   }
   }
   SCR_Faction "{60E2C10835E36609}" {
    m_aFriendlyFactionsIds {
-    "USSR" "US" "RURAL"
+    "US" "RURAL" "GANG"
    }
   }
   SCR_Faction "{60E2C10830408844}" {
    m_aFriendlyFactionsIds {
-    "FIA" "US" "URBAN"
+    "FIA" "US" "URBAN" "GANG"
    }
+  }
+  SCR_Faction "{656AD74F99418819}" : "{5C630F7CDC94DACA}Configs/Factions/GANG.conf" {
   }
  }
  m_bCanChangeFactionsPlayable 0
@@ -60,6 +70,16 @@ SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFrame
    m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
     m_sForcedFaction "US"
    }
+  }
+  SCR_TimeAndWeatherHandlerComponent "{656AFC12746F8A8B}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{656AFC125BCBA7DB}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 19
+    }
+   }
+   m_bRandomWeatherChanges 1
   }
  }
  coords 2032.705 32.189 2018.177
