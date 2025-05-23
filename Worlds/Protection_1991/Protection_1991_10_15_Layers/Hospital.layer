@@ -57,19 +57,6 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
        angleY -176.804
       }
      }
-     GenericEntity TruckMarker : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
-      components {
-       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
-        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{629707602714DD14}" {
-         m_sMapMarkerText "Truck"
-         m_eMapMarkerFactionIcon INDFOR
-         m_eMapMarkerType1Modifier WHEELED_TRANSPORT
-         m_eMapMarkerType2Modifier WHEELED_TRANSPORT
-        }
-       }
-      }
-      coords 6.96 -0.389 -5.784
-     }
      GenericEntity GetInExtractionVehicleWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
@@ -117,7 +104,7 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
          }
         }
        }
-       coords 2.281 -0 2.169
+       coords 2.281 0 2.169
       }
       SlotCivilian3 {
        components {
@@ -129,7 +116,7 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
          }
         }
        }
-       coords -1.735 -0 4.946
+       coords -1.735 0 4.946
       }
       SlotCivilian4 {
        components {
@@ -141,7 +128,7 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
          }
         }
        }
-       coords -3.425 -0 -5.99
+       coords -3.425 0 -5.99
       }
      }
      GenericEntity HospitalMarker : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {

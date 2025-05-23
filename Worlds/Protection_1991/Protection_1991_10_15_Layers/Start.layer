@@ -56,39 +56,6 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
     coords 0 0 0
     {
      $grp GenericEntity : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
-      MarkerFenceBroken01 {
-       components {
-        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
-         m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6294E8E9B52BDCF6}" {
-          m_sMapMarkerText "Fence broken"
-          m_eMapMarkerIcon POINT_OF_INTEREST2
-         }
-        }
-       }
-       coords -178.368 -5.469 45.925
-      }
-      MarkerFenceBroken02 {
-       components {
-        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
-         m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6294E8E9B52BDCF6}" {
-          m_sMapMarkerText "Fence broken"
-          m_eMapMarkerIcon POINT_OF_INTEREST2
-         }
-        }
-       }
-       coords -178.19 -5.438 112.018
-      }
-      MarkerWallBroken01 {
-       components {
-        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
-         m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6297077FB83A8135}" {
-          m_sMapMarkerText "Wall broken"
-          m_eMapMarkerIcon POINT_OF_INTEREST2
-         }
-        }
-       }
-       coords -238.698 -4.719 81.196
-      }
       BaseSquadsMarker {
        components {
         SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
