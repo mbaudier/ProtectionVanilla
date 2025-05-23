@@ -44,6 +44,12 @@ ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedCh
 }
 SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFramework/ProtectionGameModeSF.et" {
  components {
+  SCR_FactionAliasComponent "{656D036D6C157AC3}" {
+   m_aFactionAliases {
+    SCR_ScenarioFrameworkFactionAliasConfig "{656D036D6F681C56}" {
+    }
+   }
+  }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
    m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
     m_sForcedFaction "US"
@@ -77,18 +83,6 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFra
   }
  }
 }
-SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
- coords 2031.73 33.82 2026.563
- m_aPlayerLoadouts {
-  SCR_FactionPlayerLoadout "{64432193648D5FFA}" {
-   m_sLoadoutName "Special Force"
-   m_sLoadoutResource "{95E8247374D70A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SOF_TL.et"
-   m_sAffiliatedFaction "US"
-  }
-  SCR_PlayerArsenalLoadout "{629D19EB7D67619C}" {
-   m_sLoadoutName "#AR-Loadout_Editor_SavedArsenalLoadout_Name"
-   m_sLoadoutResource "{95E8247374D70A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SOF_TL.et"
-   m_sAffiliatedFaction "US"
-  }
- }
+SCR_LoadoutManager LoadoutManager_SOF : "{C4F7860EF519B92A}Prefabs/MP/Managers/Loadouts/LoadoutManager_SOF.et" {
+ coords 2031.731 33.819 2026.558
 }

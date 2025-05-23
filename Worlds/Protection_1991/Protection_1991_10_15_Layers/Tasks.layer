@@ -7,6 +7,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_sTaskTitle "Approach"
       m_sTaskDescription "Approach the base from the woods"
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionSpawnObjects "{656D03660383A95E}" {
+        m_aNameOfObjectsToSpawnOnActivation {
+         "SlotSpawnPointApproach" "LayerTaskHospital" "LayerTaskBunker"
+        }
+       }
+      }
      }
     }
     coords 1.127 0.284 6.793
@@ -17,18 +24,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 40
-         }
-        }
-        m_sID "TaskApproach"
-        m_aActionsOnFinished {
-         SCR_ScenarioFrameworkActionSpawnObjects "{6294E8F72399366C}" {
-          m_aNameOfObjectsToSpawnOnActivation {
-           "SlotSpawnPointApproach" "LayerTaskHospital" "LayerTaskBunker"
-          }
-         }
-         SCR_ScenarioFrameworkActionShowPopupNotification "{6294E8F7F5B6C77B}" {
-          m_sTitle "Checkpoint reached"
-          m_sText "Spawn point created"
          }
         }
        }
@@ -76,7 +71,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
       m_sTaskTitle "Extraction"
       m_sTaskDescription "Bring the civilans to the extraction point"
-      m_sTaskPrefab "{6829FAD588965A88}Prefabs/Systems/ScenarioFramework/Tasks/TaskExtract.et"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionEndMission "{5C6E788E9FA7BE1A}" {
        }
@@ -199,12 +193,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  AreaTaskHospital {
   coords 1377.701 37.654 2447.693
   {
-   GenericEntity LayerTaskHospital : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+   GenericEntity LayerTaskHospital : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
       m_sTaskTitle "Hospital"
       m_sTaskDescription "Approach the hospital in order to free prisoners"
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionSpawnObjects "{656D03652F69737F}" {
+        m_aNameOfObjectsToSpawnOnActivation {
+         "SlotSpawnPointHospital" "LayerTaskExtraction"
+        }
+       }
+      }
      }
     }
     coords 0 0 0
@@ -232,7 +233,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
       coords 6.403 0.221 -12.392
      }
-     GenericEntity SlotSpawnPointHospital : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     GenericEntity SlotSpawnHospital : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_eActivationType ON_TRIGGER_ACTIVATION
@@ -248,12 +249,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  AreaTaskBunker {
   coords 1286.116 40.676 2418.515
   {
-   GenericEntity LayerTaskBunker : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+   GenericEntity LayerTaskBunker : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
       m_sTaskTitle "Bunker"
       m_sTaskDescription "Approach the bunker in order to free prisoners"
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionSpawnObjects "{656D03656C69F0C4}" {
+        m_aNameOfObjectsToSpawnOnActivation {
+         "SlotSpawnPointBunker" "LayerTaskExtraction"
+        }
+       }
+      }
      }
     }
     coords 0.591 0.002 -0.382
@@ -264,17 +272,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 25
-         }
-        }
-        m_aActionsOnFinished {
-         SCR_ScenarioFrameworkActionSpawnObjects "{64AD03B51680750D}" {
-          m_aNameOfObjectsToSpawnOnActivation {
-           "SlotSpawnPointBunker" "LayerTaskExtraction"
-          }
-         }
-         SCR_ScenarioFrameworkActionShowPopupNotification "{64AD03B5E7744F36}" {
-          m_sTitle "Checkpoint reached"
-          m_sText "Spawn point created"
          }
         }
        }

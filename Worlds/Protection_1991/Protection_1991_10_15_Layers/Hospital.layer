@@ -1,7 +1,7 @@
-GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 1384.646 37.875 2435.592
  {
-  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    HospitalLayer {
     coords 0 0 0
     {
@@ -23,36 +23,12 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compon
        VolLightOffset 0
       }
      }
-     GenericEntity Unconscious02 : "{8E32B3CE561BF28F}Prefabs/ScenarioFramework/Components/SlotRuralUnconscious.et" {
-      components {
-       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionMedical "{628908A87D4E89EF}" {
-          m_Getter SCR_ScenarioFrameworkGetEntityByName "{628908A8474D591B}" {
-           m_sEntityName "UnconsciousRural02"
-          }
-          m_aMedicalActions {
-           SCR_ScenarioFrameworkMedicalActionSetBlood "{628908A857E95BFF}" {
-            m_fBloodValue 2000
-           }
-           SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{628908A8EA719362}" {
-           }
-          }
-         }
-        }
-        m_sID "UnconsciousRural02"
-        m_bCanBeGarbageCollected 0
-       }
-      }
-      coords -4.015 0.496 -1.521
-      angleY -167.003
-     }
     }
    }
    VehiclesLayer {
     coords -17.374 -0.772 -17.206
     {
-     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       Truck01 {
        components {
         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
@@ -81,7 +57,7 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compon
        angleY -176.804
       }
      }
-     GenericEntity TruckMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+     GenericEntity TruckMarker : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
       components {
        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
         m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{629707602714DD14}" {
@@ -94,7 +70,7 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compon
       }
       coords 6.96 -0.389 -5.784
      }
-     GenericEntity GetInExtractionVehicleWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     GenericEntity GetInExtractionVehicleWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{628C980A9EBAFA29}" {
@@ -111,24 +87,64 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compon
     }
    }
    HospitalPrisonersLayer {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_sFactionKey "RURAL"
+     }
+    }
     coords 0 0 0
     {
-     GenericEntity HospitalPrisoners : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-      components {
-       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_sFactionKey "RURAL"
-        m_sObjectToSpawn "{28D14CBE43FE3FFB}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_Mix01.et"
-        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6292FA2ECDF69950}" {
-         m_aLayerName {
-          "HospitalPrisonersWP"
+     $grp GenericEntity : "{B5B3DFD888F6032C}Prefabs/ScenarioFramework/Components/SlotCivilian.et" {
+      SlotCivilian1 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D0369265DD0B3}" {
+          m_aLayerName {
+           "HospitalPrisonersWP"
+          }
          }
         }
-        m_eAIGroupFormation Column
        }
+       coords -6.214 -2.925 -3.904
       }
-      coords 0 0 1.141
+      SlotCivilian2 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D03691CDBEF7D}" {
+          m_aLayerName {
+           "HospitalPrisonersWP"
+          }
+         }
+        }
+       }
+       coords 2.281 -0 2.169
+      }
+      SlotCivilian3 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D03691E652F4C}" {
+          m_aLayerName {
+           "HospitalPrisonersWP"
+          }
+         }
+        }
+       }
+       coords -1.735 -0 4.946
+      }
+      SlotCivilian4 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D03691A8C8878}" {
+          m_aLayerName {
+           "HospitalPrisonersWP"
+          }
+         }
+        }
+       }
+       coords -3.425 -0 -5.99
+      }
      }
-     GenericEntity HospitalMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+     GenericEntity HospitalMarker : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
       components {
        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
         m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6297077E198C773D}" {
@@ -142,7 +158,7 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Compon
       }
       coords 0 0 0
      }
-     GenericEntity HospitalPrisonersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     GenericEntity HospitalPrisonersWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
         m_Waypoint SCR_ScenarioFrameworkWaypointMove "{6292FA34617F168D}" {

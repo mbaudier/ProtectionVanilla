@@ -43,11 +43,16 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
       }
       coords -24.154 3.057 10.846
      }
+     StartSpawn {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+       }
+      }
+      coords -5.468 2.256 8.925
+     }
     }
    }
   }
  }
-}
-SCR_SpawnPoint StartSpawn : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
- coords 3171.481 3.578 1168.094
 }

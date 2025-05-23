@@ -1,0 +1,61 @@
+GenericEntity AreaBeauregardDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 3269.135 2.184 2873.1
+ {
+  GenericEntity BeauregardFIADefenders : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   components {
+    SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+     m_eActivationType ON_TRIGGER_ACTIVATION
+    }
+   }
+   coords 1.831 -0.059 2.101
+   {
+    GenericEntity BeauregardFIADefenders00 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_eActivationType ON_INIT
+       m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
+       m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656EE3EC82B5253C}" {
+        m_aLayerName {
+         "BeauregardDefendersGetInWP" "BeauregardDefendersMoveWP"
+        }
+       }
+      }
+     }
+     coords 10.734 -0.089 -8.835
+     angleY -80.732
+    }
+    $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+     BeauregardDefendersMoveWP {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{656EE3EB52ADE86F}" {
+         m_eAIWaypointCompletionType All
+        }
+       }
+      }
+      coords -494.437 73.202 -1251.913
+     }
+     BeauregardDefendersGetInWP {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{656EE3EB0BDD5506}" {
+        }
+       }
+      }
+      coords -1.778 0.076 -3.2
+     }
+    }
+    $grp Vehicle : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
+     UAZ469_FIA2 {
+      coords -7.288 0.247 -6.687
+      angleY -133.074
+     }
+     UAZ469_FIA3 {
+      coords 1.84 -0.013 -1.214
+      angleY -104.855
+     }
+    }
+   }
+  }
+ }
+}

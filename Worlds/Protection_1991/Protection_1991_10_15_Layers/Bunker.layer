@@ -1,7 +1,7 @@
-GenericEntity AreaBunker : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaBunker : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 1283.574 37.214 2418.181
  {
-  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    LayerBunkerLights {
     coords 0 0 0
     {
@@ -43,41 +43,28 @@ GenericEntity AreaBunker : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
     }
    }
    LayerBunkerPrisoners {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_sFactionKey "RURAL"
+     }
+    }
     coords 0 0 0
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-      BunkerPrisoners01 {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sFactionKey "RURAL"
-         m_sObjectToSpawn "{2E1785FE7C28537D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_2x.et"
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6292FA3F913F4381}" {
-          m_aLayerName {
-           "BunkerPrisonersWP"
-          }
-         }
-        }
-       }
-       coords 6.955 -1.02 0.319
-       angleY 66.484
+     $grp GenericEntity : "{B5B3DFD888F6032C}Prefabs/ScenarioFramework/Components/SlotCivilian.et" {
+      SlotCivilian9 {
+       coords 6.598 -1.02 0.334
       }
-      BunkerPrisoners02 {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sFactionKey "RURAL"
-         m_sObjectToSpawn "{2E1785FE7C28537D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_2x.et"
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6292FA3F913F4381}" {
-          m_aLayerName {
-           "BunkerPrisonersWP"
-          }
-         }
-        }
-       }
-       coords 2.358 -0.998 3.202
-       angleY 66.484
+      SlotCivilian10 {
+       coords 6.757 -1.02 1.075
+      }
+      SlotCivilian11 {
+       coords 0.207 -1.02 6.949
+      }
+      SlotCivilian12 {
+       coords -0.365 -1.02 7.641
       }
      }
-     GenericEntity BunkerMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+     GenericEntity BunkerMarker : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
       components {
        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
         m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6297077E4A406A58}" {
@@ -88,18 +75,6 @@ GenericEntity AreaBunker : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
        }
       }
       coords 0 0 0
-     }
-     GenericEntity BunkerPrisonersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
-      components {
-       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-        m_Waypoint SCR_ScenarioFrameworkWaypointMove "{6292FA37DF549ECF}" {
-         m_fCompletionRadius 0.5
-         m_eAIWaypointCompletionType All
-        }
-       }
-      }
-      coords -1.38 -1.009 0.589
-      angleY -31.28
      }
     }
    }

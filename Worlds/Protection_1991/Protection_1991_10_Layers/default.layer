@@ -63,9 +63,6 @@ ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedCh
 }
 SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFramework/ProtectionGameModeSF.et" {
  components {
-  SCR_GameModeSFManager "{5A96783ABCA252AE}" {
-   m_bDynamicDespawn 1
-  }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
    m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
     m_sForcedFaction "US"
@@ -99,6 +96,19 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFra
   }
  }
 }
-SCR_LoadoutManager LoadoutManager_Protection : "{C4F7860EF519B92A}Prefabs/MP/Managers/Loadouts/LoadoutManager_SOF.et" {
- coords 2034.439 33.063 2022.739
+SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ coords 2034.418 33.062 2022.737
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{656F09872ECC0C1E}" {
+   m_sLoadoutName "#AR-Role_GreenBeret"
+   m_sLoadoutResource "{33155540F5CAA602}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_S.et"
+   m_sLoadoutImage "{6EE70386E174CFD1}UI/Textures/EditorPreviews/Characters/Factions/BLUFOR/US_Army/GreenBerets/Supressed/Character_US_SF_S.edds"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_PlayerArsenalLoadout "{656F0986B3A24126}" {
+   m_sLoadoutName "#AR-Loadout_Editor_SavedArsenalLoadout_Name"
+   m_sLoadoutResource "{894628A45793E7A0}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_BaseLoadout.et"
+   m_sAffiliatedFaction "US"
+  }
+ }
 }

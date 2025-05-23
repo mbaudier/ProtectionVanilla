@@ -1,7 +1,7 @@
-GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 1350.78 37.192 2399.76
  {
-  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    PrisonFencesLayer {
     coords 0 0 0
     {
@@ -133,55 +133,14 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
     }
    }
    PrisonersLayer {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_sFactionKey "RURAL"
+     }
+    }
     coords 3.271 -0.13 -4.824
     {
-     GenericEntity Prisoners : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-      components {
-       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_sFactionKey "RURAL"
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionAI "{628CDA41F94A5363}" {
-          m_aAIActions {
-           SCR_ScenarioFrameworkAIActionDisableLOD "{628CDA41C336E2F3}" {
-           }
-          }
-         }
-        }
-        m_sObjectToSpawn "{28D14CBE43FE3FFB}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_Mix01.et"
-        m_bCanBeGarbageCollected 0
-        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{628C98068483C5F3}" {
-         m_aLayerName {
-          "PrisonersWP"
-         }
-        }
-        m_eAIGroupFormation Column
-       }
-      }
-      coords -0.099 0.048 0.454
-      angleY 54.04
-     }
-     GenericEntity Unconscious01 : "{8E32B3CE561BF28F}Prefabs/ScenarioFramework/Components/SlotRuralUnconscious.et" {
-      components {
-       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionMedical "{628908A87D4E89EF}" {
-          m_Getter SCR_ScenarioFrameworkGetEntityByName "{628908A8474D591B}" {
-           m_sEntityName "UnconsciousRural01"
-          }
-          m_aMedicalActions {
-           SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{628908A8EA719362}" {
-           }
-          }
-         }
-        }
-        m_sID "UnconsciousRural01"
-        m_bCanBeGarbageCollected 0
-       }
-      }
-      coords -3.954 0.765 6.357
-      angleY -167.003
-     }
-     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       Ambulance01 {
        components {
         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
@@ -201,7 +160,57 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
        angleY -127.851
       }
      }
-     GenericEntity PrisonMarker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+     $grp GenericEntity : "{B5B3DFD888F6032C}Prefabs/ScenarioFramework/Components/SlotCivilian.et" {
+      SlotCivilian5 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D036885B9F5A7}" {
+          m_aLayerName {
+           "PrisonersWP"
+          }
+         }
+        }
+       }
+       coords 1.978 -0.136 -4.314
+      }
+      SlotCivilian6 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D036880A6E266}" {
+          m_aLayerName {
+           "PrisonersWP"
+          }
+         }
+        }
+       }
+       coords -1.529 -0.096 -2.295
+      }
+      SlotCivilian7 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D0368FDFF07B8}" {
+          m_aLayerName {
+           "PrisonersWP"
+          }
+         }
+        }
+       }
+       coords 3.59 -0.045 -2.383
+      }
+      SlotCivilian8 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D0368FEA85683}" {
+          m_aLayerName {
+           "PrisonersWP"
+          }
+         }
+        }
+       }
+       coords 1.698 0.081 1.768
+      }
+     }
+     GenericEntity PrisonMarker : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
       components {
        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
         m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6297077EA5DF57FF}" {
@@ -215,7 +224,7 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Componen
       }
       coords -3.271 0.13 4.824
      }
-     GenericEntity PrisonersWP : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     GenericEntity PrisonersWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
         m_Waypoint SCR_ScenarioFrameworkWaypointMove "{628CDA463C3E3AEA}" {
