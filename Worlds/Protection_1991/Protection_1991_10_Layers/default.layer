@@ -54,6 +54,7 @@ SCR_FactionManager FactionManager_Protection : "{E70679F5E0A515AC}Prefabs/MP/Man
    }
   }
   SCR_Faction "{656AD74F99418819}" : "{5C630F7CDC94DACA}Configs/Factions/GANG.conf" {
+   m_bIsPlayable 0
   }
  }
  m_bCanChangeFactionsPlayable 0
