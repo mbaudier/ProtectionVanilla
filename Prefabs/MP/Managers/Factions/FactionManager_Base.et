@@ -1,0 +1,12 @@
+SCR_FactionManager {
+ ID "56B2B4776E6E4499"
+ components {
+  ARGEO_ProtectionFactionManagerComponent "{658F0D185B17FCDF}" {
+   m_sProtectedFaction "PROTECTED"
+  }
+ }
+ Factions {
+  SCR_Faction "{658F0D19BA030CC2}" : "{E387E0009A554CC0}Configs/Factions/PROTECTED.conf" {
+  }
+ }
+}
