@@ -64,6 +64,10 @@ ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedCh
 }
 SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFramework/ProtectionGameModeSF.et" {
  components {
+  ARGEO_PopulationComponent "{657F0CE6ADBB46C4}" {
+   m_sDefaultCivilianFactionKey "RURAL"
+   m_fGlobalBuildingsOccupation 100
+  }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
    m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
     m_sForcedFaction "US"
