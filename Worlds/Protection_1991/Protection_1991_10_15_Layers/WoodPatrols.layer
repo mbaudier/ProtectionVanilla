@@ -1,7 +1,7 @@
-GenericEntity AreaWoodPatrols : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaWoodPatrols : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 1434.266 36.692 2477.736
  {
-  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    LayerWoodPatrols {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
@@ -11,7 +11,7 @@ GenericEntity AreaWoodPatrols : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Com
     }
     coords 0.009 -0.001 0.013
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       Patrol01 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -102,10 +102,10 @@ GenericEntity AreaWoodPatrols : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Com
    LayerWoodpatrolsWaypoints {
     coords 0 0 0
     {
-     GenericEntity Waypoints_WoodPatrols : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+     GenericEntity Waypoints_WoodPatrols : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
       coords 0.009 -0.001 0.013
       {
-       $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+       $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
         WoodPatrolsWP01 {
          components {
           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
@@ -145,7 +145,7 @@ GenericEntity AreaWoodPatrols : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Com
        }
       }
      }
-     $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       WPCyclePatrol01 {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {

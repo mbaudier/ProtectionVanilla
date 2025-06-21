@@ -84,6 +84,10 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
    LayerStartSpawn {
     coords 0 -0.001 0
     {
+     GenericEntity ArsenalBoxStart : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+      coords -9.096 -1.644 -1.063
+      angleY -71.538
+     }
      GenericEntity SlotBuddy : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -95,25 +99,33 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
       }
       coords -2.524 -1.539 0.737
      }
-     GenericEntity SlotStartArsenalBox : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     GenericEntity SpawnStart : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_sObjectToSpawn "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et"
-       }
-      }
-      coords -9.096 -1.644 -1.063
-      angleY -71.538
-     }
-     SCR_SpawnPoint : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
-      components {
-       SCR_EditableSpawnPointComponent "{52E65E94E3532698}" {
-        m_UIInfo SCR_EditableDescriptorUIInfo "{52E65E94C47560A2}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEBA4AF0BC63}" {
+          m_Info SCR_UIInfo "{65AAEEB9B2641F32}" {
+           Name "Insertion"
+          }
+         }
         }
+        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
        }
       }
       coords -2.589 -1.487 -1.405
-      m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-       Name "Insertion"
+     }
+     $grp GenericEntity : "{D07C2D4844753F76}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_storage.et" {
+      {
+       coords -5.931 -1.462 1.654
+       angleY -64.836
+      }
+      {
+       coords -6.357 -1.462 0.868
+       angleY -64.761
+      }
+      {
+       coords -6.101 -1.21 1.293
+       angleY -61.569
       }
      }
     }

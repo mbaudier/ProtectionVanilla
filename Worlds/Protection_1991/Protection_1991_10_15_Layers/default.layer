@@ -60,12 +60,19 @@ SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFrame
    m_aStartingWeatherAndTime {
     SCR_TimeAndWeatherState "{64AD31EF8EA60D0E}" {
      m_sWeatherPresetName "Cloudy"
-     m_iStartingHour 22
+     m_iStartingHour 6
+     m_iStartingMinutes 30
     }
    }
   }
  }
  coords 2033.122 32.126 2017.837
+ OnGameStart ""\
+ "		ChimeraWorld world = GetWorld();"\
+ "		// force date according to the lore"\
+ "		world.GetTimeAndWeatherManager().SetDate(1991, 10, 15, false);"\
+ "		Print(\"Date changed\");"\
+ "	"
  m_bAllowFactionChange 0
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {

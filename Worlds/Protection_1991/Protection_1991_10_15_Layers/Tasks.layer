@@ -34,7 +34,14 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_eActivationType ON_TRIGGER_ACTIVATION
-        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB8F8036CA8}" {
+          m_Info SCR_UIInfo "{65AAEEB8EF4FCBE7}" {
+           Name "Approach"
+          }
+         }
+        }
+        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
        }
       }
       coords 49.629 0.418 26.802
@@ -202,7 +209,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03652F69737F}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "SlotSpawnPointHospital" "LayerTaskExtraction"
+         "SlotSpawnHospital" "LayerTaskExtraction"
         }
        }
       }
@@ -236,8 +243,14 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      GenericEntity SlotSpawnHospital : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_eActivationType ON_TRIGGER_ACTIVATION
-        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB827B44B8B}" {
+          m_Info SCR_UIInfo "{65AAEEB823160711}" {
+           Name "Hospital"
+          }
+         }
+        }
+        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
        }
       }
       coords 0 0 0
@@ -258,7 +271,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03656C69F0C4}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "SlotSpawnPointBunker" "LayerTaskExtraction"
+         "SlotSpawnBunker" "LayerTaskExtraction"
         }
        }
       }
@@ -281,8 +294,14 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      GenericEntity SlotSpawnBunker : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_eActivationType ON_TRIGGER_ACTIVATION
-        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB83D2DE79F}" {
+          m_Info SCR_UIInfo "{65AAEEB83BB33A34}" {
+           Name "Bunker"
+          }
+         }
+        }
+        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
        }
       }
       coords -11.079 -2.916 6.008
