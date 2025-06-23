@@ -92,28 +92,41 @@ GenericEntity AreaHqUS : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Co
    StartUS {
     coords -10.567 0.009 20.301
     {
-     Vehicle M923A1_engineer1 : "{2D74C39A650A3030}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et" {
-      coords 48.024 0.002 -59.745
-      angleY 150.2
-     }
-     SCR_SpawnPoint : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
-      coords 30.705 0.981 -46.835
-      m_fSpawnRadius 2
-      m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-       Name "Harbor"
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      Helicopter01 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{CB4D4CF7E887B2D0}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HEDP.et"
+        }
+       }
+       coords 20.689 0.609 -34.944
+       angleY 145.741
+      }
+      ContructionTruck01 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{37A9871AD4CC9610}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer_MERDC.et"
+        }
+       }
+       coords 44.426 0.002 -62.129
+      }
+      SpawnStart {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginSpawnPoint "{65AF2D2240DDDCE5}" {
+           m_Info SCR_UIInfo "{65AF2D25B9C814AD}" {
+            Name "Harbor"
+           }
+          }
+         }
+         m_sObjectToSpawn "{987991DCED3DC197}PrefabsEditable/SpawnPoints/E_SpawnPoint.et"
+        }
+       }
+       coords 30.706 0.002 -46.851
       }
      }
     }
-   }
-   HelicopterUS01 {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_bEnableRepeatedSpawn 1
-      m_eActivationType ON_TRIGGER_ACTIVATION
-     }
-    }
-    coords 0 -0 0
-    angleX -0.895
    }
   }
  }

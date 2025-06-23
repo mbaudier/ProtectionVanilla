@@ -1,0 +1,106 @@
+GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 2696.676 76.132 1812.785
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   LightVehicles01 {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      Assault011 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{6E725D44CA973C24}Prefabs/Groups/INDFOR/Group_FIA_SentryTeam.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65AF2D201E5A934C}" {
+          m_aLayerName {
+           "GetInVehicle011" "AssaultBeauregardWPs"
+          }
+         }
+        }
+       }
+       coords -26.577 3.469 34.469
+      }
+      Assault012 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{6E725D44CA973C24}Prefabs/Groups/INDFOR/Group_FIA_SentryTeam.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65AF2D200F568EB2}" {
+          m_aLayerName {
+           "GetInVehicle012" "AssaultBeauregardWPs"
+          }
+         }
+        }
+       }
+       coords -31.379 4.274 10.975
+      }
+     }
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      Vehicle011 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{22B327C6752EC4D4}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM_FIA.et"
+        }
+       }
+       coords -28.674 4.274 34.435
+      }
+      Vehicle012 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{22B327C6752EC4D4}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM_FIA.et"
+        }
+       }
+       coords -31.92 4.274 7.966
+      }
+     }
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      GetInVehicle011 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65AF2D20F5D3AA2C}" {
+          m_fCompletionRadius 5
+         }
+        }
+       }
+       coords -28.674 4.274 34.435
+      }
+      GetInVehicle012 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65AF2D20F5D3AA2C}" {
+          m_fCompletionRadius 5
+         }
+        }
+       }
+       coords -31.92 4.274 7.966
+      }
+     }
+    }
+   }
+   AssaultBeauregardWPs {
+    coords 469.662 -64.575 983.594
+    {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      ClearHarbor {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{65AF2D23F9B2A7B4}" {
+          m_fCompletionRadius 70
+         }
+        }
+       }
+       coords 108.784 -9.557 90.125
+      }
+      MoveToBeauregard {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{65AF2D23862086C6}" {
+         }
+        }
+       }
+       coords -0.825 0.013 2.993
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -99,7 +99,8 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramewo
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
     SCR_TimeAndWeatherState "{65AF0C1AE81CFF2C}" {
-     m_sWeatherPresetName "Cloudy"
+     m_sWeatherPresetName "Rainy"
+     m_iStartingHour 7
     }
    }
   }
