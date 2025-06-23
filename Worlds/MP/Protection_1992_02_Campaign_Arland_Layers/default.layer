@@ -29,6 +29,12 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 }
 SCR_GameModeCampaign GameMode_Campaign_Protection : "{589A2658A7EFEEDB}Prefabs/MP/Modes/Conflict/GameMode_Campaign_Protection.et" {
  coords 1891.87 11.377 1821.87
+ OnGameStart ""\
+ "		ChimeraWorld world = GetWorld();"\
+ "		// force date according to the lore"\
+ "		world.GetTimeAndWeatherManager().SetDate(1992, 02, 10, false);"\
+ "		Print(\"Date changed\");"\
+ "	"
  m_sBLUFORFactionKey "GANG"
  m_sOPFORFactionKey "REDPEACE"
  m_sINDFORFactionKey "USSR"

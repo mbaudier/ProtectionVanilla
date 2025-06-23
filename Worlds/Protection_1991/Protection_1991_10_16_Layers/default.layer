@@ -1,0 +1,148 @@
+SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{65ACE4102B67DDA4}" {
+     NavmeshFile "{FA94770AE4F52B83}worlds/MP/Navmeshes/Coop_CombatOps_Arland.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60CA9BE5536BF701}" {
+     NavmeshFile "{39DC008432CB842C}worlds/MP/Navmeshes/Coop_CombatOps_Arland_vehicles.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5C8C9B750D124A63}" {
+   NavmeshSettings NavmeshWorld "{5C8C9B750B60C6E2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" {
+     NavmeshFile "{804386FFEB7B7EFD}worlds/MP/Navmeshes/LowResArland.nmn"
+    }
+   }
+  }
+ }
+ coords 1891.659 11.438 1822.161
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 1891.659 12.065 1827.161
+}
+SCR_FactionManager FactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionManager_Base.et" {
+ coords 1891.659 11.714 1824.161
+ Factions {
+  SCR_CampaignFaction "{65ACE40D499FF39B}" : "{ADFDBDA163950168}Configs/Factions/US_Campaign.conf" {
+   m_aFriendlyFactionsIds {
+    "RURAL" "URBAN" "GANG" "USSR"
+   }
+  }
+  SCR_CampaignFaction "{65ACE40EB4E052DB}" : "{CF9447B87AB774DB}Configs/Factions/FIA_Campaign.conf" {
+   m_aFriendlyFactionsIds {
+    "RURAL"
+   }
+  }
+  SCR_CampaignFaction "{65ACE40EABE738E5}" : "{081E35D18047E893}Configs/Factions/GANG_Campaign.conf" {
+   m_aFriendlyFactionsIds {
+    "URBAN" "RURAL" "US" "USSR"
+   }
+  }
+  SCR_Faction "{65ACE41905CA8603}" : "{E5B2FC4A0D01E456}Configs/Factions/RURAL.conf" {
+  }
+  SCR_Faction "{65ACE4190297209A}" : "{FFF1E35BF8F3312D}Configs/Factions/URBAN.conf" {
+  }
+  SCR_Faction "{65ACE40EB20C3CA5}" : "{09727032415AC39B}Configs/Factions/USSR.conf" {
+   m_bIsPlayable 0
+  }
+ }
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 1891.659 11.959 1826.161
+}
+SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramework/GameModeSF.et" {
+ components {
+  ARGEO_PopulationComponent "{657F0CE6ADBB46C4}" {
+   m_sDefaultCivilianFactionKey "RURAL"
+   m_fGlobalBuildingsOccupation 100
+  }
+  SCR_CampaignBuildingManagerComponent "{65AD169834E0865D}" {
+   m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
+   m_BudgetType CAMPAIGN
+   m_iCompositionRefundPercentage 100
+   m_sPrefabsToBuildResource "{D2527D9AA5B4A33E}Configs/Editor/PlaceableEntities/Compositions/Compositions_FreeRoamBuilding.conf"
+   m_sPrefabToHoldSupplyOnRefund "{4BBE0A784C01900E}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_FreeRoamBuilding.et"
+  }
+  SCR_CampaignServiceCompositionComponent "{65AD1698DCDDBD76}" {
+  }
+  SCR_CommandingManagerComponent "{65AEE09EA51D5291}" {
+   m_sAIGroupPrefab "{4A9D83DCB0619829}Prefabs/AI/Groups/Commanded_Group.et"
+   m_sCommandsConfigPath "{4615FA289AC337D6}Configs/Commanding/ProtectionCommands.conf"
+  }
+  SCR_CompositionSlotManagerComponent "{65AD1698866EA8A4}" {
+  }
+  SCR_GameModeSFManager "{5A96783ABCA252AE}" {
+   m_aAfterTasksInitActions {
+    SCR_ScenarioFrameworkActionShowPopupNotification "{65AF0C11615418AE}" {
+     m_sTitle "AFTER TASKS INIT"
+    }
+    SCR_ScenarioFrameworkActionSpawnObjects "{65AF0C111AE8CD39}" {
+     m_aNameOfObjectsToSpawnOnActivation {
+      "Mortar01" "Mortar02"
+     }
+    }
+   }
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "US"
+   }
+  }
+  SCR_TimeAndWeatherHandlerComponent "{65AF0C1AEC8DE50B}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{65AF0C1AE81CFF2C}" {
+     m_sWeatherPresetName "Cloudy"
+    }
+   }
+  }
+ }
+ coords 1891.659 11.326 1821.161
+ OnGameStart ""\
+ "		ChimeraWorld world = GetWorld();"\
+ "		// force date according to the lore"\
+ "		world.GetTimeAndWeatherManager().SetDate(1991, 10, 16, false);"\
+ "		Print(\"Date changed\");"\
+ "	"
+ m_eTestGameFlags 7
+}
+ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 1891.659 12.175 1828.161
+}
+SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
+ coords 1891.659 11.576 1823.161
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "TaskManager: "\
+   "Needed for task generation"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ coords 1891.659 11.839 1825.161
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{65ACE41B99B2EAA8}" {
+   m_sLoadoutName "SOF"
+   m_sLoadoutResource "{95E8247374D70A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SOF_TL.et"
+   m_sLoadoutImage "{22835410C4A34254}UI/Textures/EditorPreviews/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_Officer.edds"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{65ACE41BE1C680FC}" {
+   m_sLoadoutResource "{1A6501B0C9C50EC4}Prefabs/Characters/Factions/INDFOR/GANG/Character_GANG_Gangsta01.et"
+   m_sAffiliatedFaction "GANG"
+  }
+ }
+}

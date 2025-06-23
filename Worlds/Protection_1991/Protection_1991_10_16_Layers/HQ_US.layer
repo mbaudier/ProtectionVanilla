@@ -1,0 +1,120 @@
+GenericEntity AreaHqUS : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 3229.856 1.989 2948.691
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   InfrastructureUS {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionSpawnObjects "{65AD0B5DE2598F36}" {
+        m_aNameOfObjectsToSpawnOnActivation {
+         "HelicopterUS01"
+        }
+       }
+      }
+     }
+    }
+    coords -0.552 0.376 -4.004
+    {
+     GenericEntity : "{0FB92802AFA233FA}PrefabsEditable/Auto/Props/Military/Compositions/US/E_ArsenalBox_US_Equipment.et" {
+      coords 25.431 -0.365 -17.689
+      angleY 50.769
+     }
+     GenericEntity : "{3D51CCBA7F824DB0}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Storage/Location/E_Storage_Warehouse_01_FIA_01.et" {
+      components {
+       SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+        m_aContainers {
+         SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+          m_bEnableResourceGain 1
+          m_fResourceGain 100
+          m_fResourceGainTickrate 10
+         }
+        }
+        m_aGenerators {
+         SCR_ResourceGenerator "{5DE4B6C45FC967FC}" {
+          m_fStorageRange 200
+         }
+        }
+       }
+      }
+      coords 20.25 -2.365 50.047
+      angleY 0
+     }
+     GenericEntity : "{543C31BC05F032B6}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_VehicleMaintenance_S_US_01.et" {
+      coords 31.191 -0.366 -21.265
+      angleX 2.526
+      angleY -130.508
+      angleZ 2.953
+     }
+     $grp GenericEntity : "{56172705C7E6E70B}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Storage/E_Storage_Supplies_Containers_FIA_04.et" {
+      {
+       coords 18.506 -0.646 3.154
+       angleY -36.817
+      }
+      {
+       coords -12.337 -0.377 -3.272
+       angleY -40.325
+      }
+     }
+     GenericEntity : "{6B23023DB28A6E3C}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Storage/E_Storage_Supplies_Containers_FIA_03.et" {
+      components {
+       SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+        m_aContainers {
+         SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+         }
+        }
+       }
+      }
+      coords 48.115 -0.308 -35.906
+      angleY 31.284
+     }
+     GenericEntity : "{B455DA2086A1C821}PrefabsEditable/Auto/Props/Military/Compositions/US/E_ArsenalBox_US_Weapons.et" {
+      coords 23.899 -0.366 -15.839
+      angleY -127.631
+     }
+     GenericEntity : "{C6B534F64C60C583}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatLarge/E_Helipad_L_US_01.et" {
+      coords 11.389 -0.366 -9.897
+      angleY -35.686
+      {
+       GenericEntity {
+        ID "5E64C0FB916EAEB1"
+        coords -9.586 -0.17 9.92
+        angleY 97.704
+       }
+      }
+     }
+     GenericEntity : "{DB7F01C68EACBEC0}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_LivingArea_S_US_01.et" {
+      coords -21.872 -0.635 9.503
+      angleY 53.394
+     }
+    }
+   }
+   StartUS {
+    coords -10.567 0.009 20.301
+    {
+     Vehicle M923A1_engineer1 : "{2D74C39A650A3030}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et" {
+      coords 48.024 0.002 -59.745
+      angleY 150.2
+     }
+     SCR_SpawnPoint : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
+      coords 30.705 0.981 -46.835
+      m_fSpawnRadius 2
+      m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+       Name "Harbor"
+      }
+     }
+    }
+   }
+   HelicopterUS01 {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_bEnableRepeatedSpawn 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords 0 -0 0
+    angleX -0.895
+   }
+  }
+ }
+}

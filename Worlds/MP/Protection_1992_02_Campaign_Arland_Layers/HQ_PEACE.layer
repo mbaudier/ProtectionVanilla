@@ -1,7 +1,7 @@
-GenericEntity AreaHqPeace : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaHqPeace : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 1386.318 36.272 2377.769
  {
-  GenericEntity LayerHqPeace : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  GenericEntity LayerHqPeace : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {
     Vehicle Mi8MT_armed_REDPEACE1 : "{13914E94D3B0D844}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_REDPEACE.et" {

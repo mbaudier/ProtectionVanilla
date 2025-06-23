@@ -1,7 +1,7 @@
-GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 2210.897 53.469 2891.415
  {
-  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    LayerHqGang {
     coords 0 0 0
     {

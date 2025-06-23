@@ -1,0 +1,8 @@
+GenericEntity AreaHqGang : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 2225.044 53.251 2875.662
+ {
+  GenericEntity InfrastructureGang : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+  }
+ }
+}
