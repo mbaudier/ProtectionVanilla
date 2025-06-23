@@ -287,7 +287,14 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          }
         }
        }
-       m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginSpawnPoint "{65AF3B8AC5F80EB0}" {
+         m_Info SCR_UIInfo "{65AF3B8AC76657C6}" {
+          Name "Hotel"
+         }
+        }
+       }
+       m_sObjectToSpawn "{987991DCED3DC197}PrefabsEditable/SpawnPoints/E_SpawnPoint.et"
        m_bCanBeGarbageCollected 0
       }
      }
