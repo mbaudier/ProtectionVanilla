@@ -30,11 +30,24 @@ SCR_FactionManager FactionManager_Protection : "{E70679F5E0A515AC}Prefabs/MP/Man
    UIInfo SCR_FactionUIInfo "{528C96127F8B6B08}" {
    }
    m_bIsPlayable 0
+   m_aFriendlyFactionsIds {
+   }
   }
   SCR_Faction "{56DEAC40D132400B}" {
    m_bIsPlayable 0
+   m_aFriendlyFactionsIds + {
+    "URBAN"
+   }
+  }
+  SCR_Faction "{60E2C10835E36609}" {
+   m_aFriendlyFactionsIds {
+    "RURAL"
+   }
   }
   SCR_Faction "{60E2C10830408844}" {
+   m_aFriendlyFactionsIds {
+    "URBAN"
+   }
   }
  }
  m_bCanChangeFactionsPlayable 0

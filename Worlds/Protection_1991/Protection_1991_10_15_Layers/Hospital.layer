@@ -76,7 +76,7 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
    HospitalPrisonersLayer {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_sFactionKey "RURAL"
+      m_sFactionKey "URBAN"
      }
     }
     coords 0 0 0
