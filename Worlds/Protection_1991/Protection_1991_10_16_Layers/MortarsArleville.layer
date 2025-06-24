@@ -9,45 +9,18 @@ GenericEntity AreaMortarsArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenario
       coords 4.469 -0.335 -4.282
       angleY 12.249
      }
-     GenericEntity ServantMortar01 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+     GenericEntity SentinelsMortar01 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionAI "{62AE8756DE24D179}" {
-          m_aAIActions {
-           SCR_ScenarioFrameworkAIAddWaypoint "{62AE8756D1B4D2C8}" {
-            m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE8756C98975E3}" {
-             m_sLayerBaseName "GetInMortar01"
-            }
-            m_bAddOnTopOfQueue 1
-            m_bClearPreviousWaypoints 1
-           }
-           SCR_ScenarioFrameworkAIActionOnWaypointCompleted "{62AE8756F90F6589}" {
-            m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE8756FDCF1AB2}" {
-             m_sLayerBaseName "GetInMortar01"
-            }
-            m_aActionsOnWaypointCompleted {
-             SCR_ScenarioFrameworkActionShowPopupNotification "{65AF03D080880354}" {
-              m_sTitle "Mortar01 READY"
-             }
-             SCR_ScenarioFrameworkActionAI "{62AE8756E6AD0A25}" {
-              m_aAIActions {
-               SCR_ScenarioFrameworkAIAddWaypoint "{62AE8756E5C8DAD4}" {
-                m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE87551EDFA30A}" {
-                 m_sLayerBaseName "TargetMunicipal"
-                }
-               }
-              }
-             }
-            }
-           }
-          }
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65B0F9E93465A830}" {
+         m_aLayerName {
+          "DefendMortar01"
          }
         }
-        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
        }
       }
-      coords 2.947 -0.232 -12.09
+      coords 1.619 -0.236 -13.633
      }
      GenericEntity StorageMortar01 : "{9AE2149222FAD9A3}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_FIA_03.et" {
       components {
@@ -63,14 +36,28 @@ GenericEntity AreaMortarsArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenario
       coords -7.21 0.183 3.709
       angleY -22.306
      }
-     GenericEntity GetInMortar01 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-      components {
-       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{62AE8756B2564616}" {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      GetInMortar01 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{62AE8756B2564616}" {
+          m_fCompletionRadius 5
+         }
         }
        }
+       coords 4.469 -0.335 -4.282
       }
-      coords 4.469 -0.335 -4.282
+      DefendMortar01 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesInWorkbench 0
+         m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{65B0F9E9CB983333}" {
+          m_fCompletionRadius 12
+         }
+        }
+       }
+       coords 4.469 -0.335 -4.282
+      }
      }
     }
    }
@@ -97,45 +84,18 @@ GenericEntity AreaMortarsArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenario
       coords -1.154 0.229 -2.953
       angleY 12.249
      }
-     GenericEntity ServantMortar02 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+     GenericEntity SentinelsMortar02 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionAI "{62AE8756DE24D179}" {
-          m_aAIActions {
-           SCR_ScenarioFrameworkAIAddWaypoint "{62AE8756D1B4D2C8}" {
-            m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE8756C98975E3}" {
-             m_sLayerBaseName "GetInMortar02"
-            }
-            m_bAddOnTopOfQueue 1
-            m_bClearPreviousWaypoints 1
-           }
-           SCR_ScenarioFrameworkAIActionOnWaypointCompleted "{62AE8756F90F6589}" {
-            m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE8756FDCF1AB2}" {
-             m_sLayerBaseName "GetInMortar02"
-            }
-            m_aActionsOnWaypointCompleted {
-             SCR_ScenarioFrameworkActionShowPopupNotification "{65AF03D30BD0F5F6}" {
-              m_sTitle "Mortar02 READY"
-             }
-             SCR_ScenarioFrameworkActionAI "{62AE8756E6AD0A25}" {
-              m_aAIActions {
-               SCR_ScenarioFrameworkAIAddWaypoint "{62AE8756E5C8DAD4}" {
-                m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE87551EDFA30A}" {
-                 m_sLayerBaseName "TargetMunicipal"
-                }
-               }
-              }
-             }
-            }
-           }
-          }
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65B0F9E93465A830}" {
+         m_aLayerName {
+          "DefendMortar02"
          }
         }
-        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
        }
       }
-      coords -3.539 -0.112 -11.361
+      coords 2.494 0.02 3.957
      }
      GenericEntity StorageMortar02 : "{9AE2149222FAD9A3}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_FIA_03.et" {
       components {
@@ -150,14 +110,42 @@ GenericEntity AreaMortarsArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenario
       }
       coords -11.698 -0.098 -4.987
      }
-     GenericEntity GetInMortar02 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-      components {
-       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{62AE8756B2564616}" {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      GetInMortar02 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{62AE8756B2564616}" {
+          m_fCompletionRadius 5
+         }
         }
        }
+       coords -1.154 0.229 -2.953
       }
-      coords -1.154 0.229 -2.953
+      DefendMortar02 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesInWorkbench 0
+         m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{65B0F9E9CB983333}" {
+          m_fCompletionRadius 12
+         }
+        }
+       }
+       coords -1.154 0.229 -2.953
+      }
+     }
+    }
+   }
+   ScatteredSentries {
+    coords -32.73 2.028 -58.326
+    {
+     GenericEntity Sentry01 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{1BB20A4B3A53D0F5}Prefabs/Groups/INDFOR/Group_FIA_LightFireTeam.et"
+        m_sWPToSpawn "{FAD1D789EE291964}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large.et"
+       }
+      }
+      coords 0 0 0
      }
     }
    }

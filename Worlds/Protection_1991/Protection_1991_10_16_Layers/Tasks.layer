@@ -1,0 +1,155 @@
+GenericEntity AreaTasksArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 2770.823 73.834 1699.658
+ {
+  $grp GenericEntity : "{2008B4EE6C4D528E}Prefabs/Systems/ScenarioFramework/Components/LayerTaskKill.et" {
+   TaskKillServantMortar02 {
+    components {
+     SCR_ScenarioFrameworkLayerTaskKill "{5B02763B6A6D6C4B}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_sTaskTitle "Neutralize Mortar Servant"
+     }
+    }
+    coords -18.881 3.471 -29.146
+    {
+     GenericEntity ServantMortar02 : "{C70DC6CBD1AAEC9A}Prefabs/Systems/ScenarioFramework/Components/SlotKill.et" {
+      components {
+       SCR_ScenarioFrameworkSlotKill "{5B02763C1EAA0BF1}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionAI "{65B0F9E8E6DB3292}" {
+          m_aAIActions {
+           SCR_ScenarioFrameworkAIAddWaypoint "{62AE8756D1B4D2C8}" {
+            m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE8756C98975E3}" {
+             m_sLayerBaseName "GetInMortar02"
+            }
+            m_bAddOnTopOfQueue 1
+            m_bClearPreviousWaypoints 1
+           }
+           SCR_ScenarioFrameworkAIActionOnWaypointCompleted "{62AE8756F90F6589}" {
+            m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE8756FDCF1AB2}" {
+             m_sLayerBaseName "GetInMortar02"
+            }
+            m_aActionsOnWaypointCompleted {
+             SCR_ScenarioFrameworkActionAI "{62AE8756E6AD0A25}" {
+              m_aAIActions {
+               SCR_ScenarioFrameworkAIAddWaypoint "{62AE8756E5C8DAD4}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE87551EDFA30A}" {
+                 m_sLayerBaseName "TargetMunicipal"
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bCanBeGarbageCollected 0
+       }
+      }
+      coords -30.565 0.225 4.672
+     }
+    }
+   }
+   TaskKillServantMortar01 {
+    components {
+     SCR_ScenarioFrameworkLayerTaskKill "{5B02763B6A6D6C4B}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_sTaskTitle "Neutralize Mortar Servant"
+     }
+    }
+    coords 1.736 1.885 -2.507
+    {
+     GenericEntity ServantMortar01 : "{C70DC6CBD1AAEC9A}Prefabs/Systems/ScenarioFramework/Components/SlotKill.et" {
+      components {
+       SCR_ScenarioFrameworkSlotKill "{5B02763C1EAA0BF1}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionAI "{65B0F9E8E6DB3292}" {
+          m_aAIActions {
+           SCR_ScenarioFrameworkAIAddWaypoint "{62AE8756D1B4D2C8}" {
+            m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE8756C98975E3}" {
+             m_sLayerBaseName "GetInMortar01"
+            }
+            m_bAddOnTopOfQueue 1
+            m_bClearPreviousWaypoints 1
+           }
+           SCR_ScenarioFrameworkAIActionOnWaypointCompleted "{62AE8756F90F6589}" {
+            m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE8756FDCF1AB2}" {
+             m_sLayerBaseName "GetInMortar01"
+            }
+            m_aActionsOnWaypointCompleted {
+             SCR_ScenarioFrameworkActionAI "{62AE8756E6AD0A25}" {
+              m_aAIActions {
+               SCR_ScenarioFrameworkAIAddWaypoint "{62AE8756E5C8DAD4}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{62AE87551EDFA30A}" {
+                 m_sLayerBaseName "TargetMunicipal"
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bCanBeGarbageCollected 0
+       }
+      }
+      coords 41.413 -2.827 -26.127
+     }
+    }
+   }
+  }
+  GenericEntity TaskHeliRecon : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+     m_sTaskTitle "Helicopter Reconnaissance"
+     m_sTaskDescription "FIA seems to be moving mortars to Arlevile, take an helicopter and observe the situation from above"
+     m_aTriggerActionsOnFinish {
+      SCR_ScenarioFrameworkActionSpawnObjects "{65B0F9E87009989C}" {
+       m_aNameOfObjectsToSpawnOnActivation {
+        "TaskKillServantMortar01" "TaskKillServantMortar02"
+       }
+      }
+     }
+    }
+   }
+   coords 0 0 0
+   {
+    GenericEntity AssaultTrigger : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+     components {
+      SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+       m_bShowDebugShapesInWorkbench 0
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+         m_fAreaRadius 200
+        }
+       }
+       m_aTriggerActions {
+        SCR_ScenarioFrameworkActionSpawnObjects "{65B0F9EA75BAFB7F}" {
+         m_aNameOfObjectsToSpawnOnActivation {
+          "LightVehicles01" "LightVehicles11"
+         }
+        }
+       }
+      }
+     }
+     coords -60.674 -19.133 309.741
+    }
+    GenericEntity SlotHeliRecon : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+     components {
+      SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+         m_fAreaRadius 250
+        }
+       }
+      }
+     }
+     coords 0 255.032 0
+    }
+   }
+  }
+ }
+}

@@ -27,7 +27,7 @@ GenericEntity AreaHqUS : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Co
          SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
           m_bEnableResourceGain 1
           m_fResourceGain 100
-          m_fResourceGainTickrate 10
+          m_fResourceGainTickrate 30
          }
         }
         m_aGenerators {

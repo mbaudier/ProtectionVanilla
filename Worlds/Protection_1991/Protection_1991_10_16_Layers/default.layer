@@ -41,6 +41,7 @@ SCR_FactionManager FactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Facti
    }
   }
   SCR_CampaignFaction "{65ACE40EABE738E5}" : "{081E35D18047E893}Configs/Factions/GANG_Campaign.conf" {
+   m_bIsPlayable 0
    m_aFriendlyFactionsIds {
     "URBAN" "RURAL" "US" "USSR"
    }
