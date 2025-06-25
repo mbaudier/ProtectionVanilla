@@ -52,10 +52,15 @@ ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedCh
 }
 SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protection/GameModeSF_Protection.et" {
  components {
-  SCR_TimeAndWeatherHandlerComponent "{64AD31EFBF957F5C}" {
+  ARGEO_ProtectionLoreComponent "{65B323F75AA99671}" {
+   m_iYear 1991
+   m_iMonthOfTheYear 10
+   m_iDayOfTheMonth 15
+  }
+  SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
-    SCR_TimeAndWeatherState "{64AD31EF8EA60D0E}" {
+    SCR_TimeAndWeatherState "{65B323FCE0619CC5}" {
      m_sWeatherPresetName "Cloudy"
      m_iStartingHour 6
      m_iStartingMinutes 30
@@ -64,12 +69,6 @@ SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protect
   }
  }
  coords 2033.122 32.126 2017.837
- OnGameStart ""\
- "		ChimeraWorld world = GetWorld();"\
- "		// force date according to the lore"\
- "		world.GetTimeAndWeatherManager().SetDate(1991, 10, 15, false);"\
- "		Print(\"Date changed\");"\
- "	"
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
  coords 2033.122 32.501 2019.837

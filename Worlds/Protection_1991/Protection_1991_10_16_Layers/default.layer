@@ -61,6 +61,23 @@ ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedCh
  coords 1891.659 12.175 1828.161
 }
 SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protection/GameModeSF_Protection.et" {
+ components {
+  ARGEO_ProtectionLoreComponent "{65B323F75AA99671}" {
+   m_iYear 1991
+   m_iMonthOfTheYear 10
+   m_iDayOfTheMonth 16
+  }
+  SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{65B323FC3C8366AB}" {
+     m_sWeatherPresetName "Rainy"
+     m_iStartingHour 6
+     m_iStartingMinutes 45
+    }
+   }
+  }
+ }
  coords 1891.528 12.021 1826.648
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {

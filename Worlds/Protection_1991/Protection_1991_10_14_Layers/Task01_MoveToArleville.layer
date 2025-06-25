@@ -12,11 +12,6 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         "LayerTaskDefendMayorMeeting" "LayerMayorMeetingAttackers"
        }
       }
-      SCR_ScenarioFrameworkActionDeleteEntity "{656EE3E307059607}" {
-       m_Getter SCR_ScenarioFrameworkGetLayerBase "{656EE3E37CC6D6C9}" {
-        m_sLayerBaseName "StartSpawn"
-       }
-      }
      }
     }
    }

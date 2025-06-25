@@ -1,6 +1,8 @@
 SCR_GameModeCampaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Campaign.et" {
  ID "56B2B479C6B96951"
  components {
+  ARGEO_ProtectionLoreComponent "{65B323F24ED272F7}" {
+  }
   ARGEO_WarCrimesComponent "{657D06928358A762}" {
    m_bKillingHorsDeCombatIsWarCrime 1
   }

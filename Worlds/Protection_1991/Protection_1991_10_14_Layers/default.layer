@@ -56,25 +56,23 @@ SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protect
    m_sDefaultCivilianFactionKey "RURAL"
    m_fGlobalBuildingsOccupation 100
   }
-  SCR_TimeAndWeatherHandlerComponent "{656AFC12746F8A8B}" {
+  ARGEO_ProtectionLoreComponent "{65B323F75AA99671}" {
+   m_iYear 1991
+   m_iMonthOfTheYear 10
+   m_iDayOfTheMonth 14
+  }
+  SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
-    SCR_TimeAndWeatherState "{656AFC125BCBA7DB}" {
+    SCR_TimeAndWeatherState "{65B323FCFAE07126}" {
      m_sWeatherPresetName "Cloudy"
      m_iStartingHour 16
      m_iStartingMinutes 55
     }
    }
-   m_bRandomWeatherChanges 1
   }
  }
  coords 2032.705 32.189 2018.177
- OnGameStart ""\
- "		ChimeraWorld world = GetWorld();"\
- "		// force date according to the lore"\
- "		world.GetTimeAndWeatherManager().SetDate(1991, 10, 14, false);"\
- "		Print(\"Date changed\");"\
- "	"
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
  coords 2033.122 32.501 2019.837
