@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et"
+ Name "{FDDB712823199E09}Prefabs/ScenarioFramework/ProtectionGameModeSF.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

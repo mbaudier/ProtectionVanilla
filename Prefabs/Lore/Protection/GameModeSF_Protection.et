@@ -1,0 +1,25 @@
+SCR_BaseGameMode : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramework/GameModeSF.et" {
+ ID "56B2B479C6B96951"
+ components {
+  ARGEO_PopulationComponent "{657F0CE6ADBB46C4}" {
+   m_sDefaultCivilianFactionKey "RURAL"
+   m_fGlobalBuildingsOccupation 100
+  }
+  SCR_CampaignBuildingManagerComponent "{65B2F52D1CFFC5DF}" {
+  }
+  SCR_CommandingManagerComponent "{64AD03B2FC3136C6}" {
+   m_sAIGroupPrefab "{4A9D83DCB0619829}Prefabs/AI/Groups/Commanded_Group.et"
+   m_sCommandsConfigPath "{4615FA289AC337D6}Configs/Commanding/ProtectionCommands.conf"
+   m_iMaxAIPerGroup -1
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{5B6640F98711544D}Configs/NameTags/NametagSingleFriendly.conf"
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "US"
+   }
+  }
+ }
+ m_bAllowFactionChange 0
+}

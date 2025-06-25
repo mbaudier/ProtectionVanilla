@@ -1,0 +1,11 @@
+SCR_GameModeCampaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Campaign.et" {
+ ID "56B2B479C6B96951"
+ components {
+  ARGEO_WarCrimesComponent "{657D06928358A762}" {
+   m_bKillingHorsDeCombatIsWarCrime 1
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{5B6640F98711544D}Configs/NameTags/NametagSingleFriendly.conf"
+  }
+ }
+}

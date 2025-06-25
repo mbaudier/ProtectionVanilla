@@ -1,4 +1,4 @@
-SCR_AIWorld AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
+SCR_AIWorld SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
  components {
   NavmeshWorldComponent "{5584F30E67F617AD}" {
    NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
@@ -23,63 +23,46 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
  coords 2033.122 33.063 2022.837
 }
-SCR_FactionManager FactionManager_Protection : "{E70679F5E0A515AC}Prefabs/MP/Managers/Factions/FactionManager_Protection.et" {
+SCR_FactionManager FactionManager_1991_10 : "{E70679F5E0A515AC}Prefabs/Lore/Protection/FactionManager_1991_10.et" {
  coords 2033.122 32.688 2020.837
  Factions {
-  SCR_Faction "{56DEAC40D2DBC8B1}" {
-   m_bIsPlayable 1
-   m_aFriendlyFactionsIds + {
-    "GANG"
+  SCR_CampaignFaction "{65B2E17F453D6459}" {
+   m_aFriendlyFactionsIds {
+    "URBAN" "RURAL" "GANG"
    }
   }
-  SCR_Faction "{56DEAC40D3C2E623}" {
+  SCR_CampaignFaction "{65B2E17F4016CE55}" {
+   m_bIsPlayable 0
+  }
+  SCR_CampaignFaction "{65B2E17CB9AB760F}" {
+   m_aFriendlyFactionsIds {
+    "RURAL" "URBAN"
+   }
+  }
+  SCR_CampaignFaction "{65B2E17CA2C76861}" {
    m_bIsPlayable 0
    m_aFriendlyFactionsIds {
+    "URBAN" "RURAL" "US"
    }
-  }
-  SCR_Faction "{56DEAC40D132400B}" {
-   m_bIsPlayable 0
-   m_aFriendlyFactionsIds + {
-    "URBAN"
-   }
-  }
-  SCR_Faction "{60E2C10835E36609}" {
-   m_aFriendlyFactionsIds {
-    "US" "RURAL" "GANG"
-   }
-  }
-  SCR_Faction "{60E2C10830408844}" {
-   m_aFriendlyFactionsIds {
-    "FIA" "US" "URBAN" "GANG"
-   }
-  }
-  SCR_Faction "{656AD74F99418819}" : "{5C630F7CDC94DACA}Configs/Factions/GANG.conf" {
-   m_bIsPlayable 0
   }
  }
- m_bCanChangeFactionsPlayable 0
 }
 ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
  coords 2033.122 33.482 2024.837
 }
-SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFramework/ProtectionGameModeSF.et" {
+SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protection/GameModeSF_Protection.et" {
  components {
   ARGEO_PopulationComponent "{657F0CE6ADBB46C4}" {
    m_sDefaultCivilianFactionKey "RURAL"
    m_fGlobalBuildingsOccupation 100
-  }
-  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
-   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
-    m_sForcedFaction "US"
-   }
   }
   SCR_TimeAndWeatherHandlerComponent "{656AFC12746F8A8B}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
     SCR_TimeAndWeatherState "{656AFC125BCBA7DB}" {
      m_sWeatherPresetName "Cloudy"
-     m_iStartingHour 17
-     m_iStartingMinutes 15
+     m_iStartingHour 16
+     m_iStartingMinutes 55
     }
    }
    m_bRandomWeatherChanges 1
@@ -95,32 +78,7 @@ SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFrame
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
  coords 2033.122 32.501 2019.837
- {
-  CommentEntity {
-   coords 0 1 0
-   m_Comment "TaskManager: "\
-   "Needed for task generation"
-   m_Color 0 0 0
-   m_FaceCamera 1
-   m_TextBackground 1
-   m_BackgroundColor 1 0.6 0
-   m_BackgroundTransparency 0
-  }
- }
 }
-SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
- coords 2034.418 33.062 2022.737
- m_aPlayerLoadouts {
-  SCR_FactionPlayerLoadout "{656F09872ECC0C1E}" {
-   m_sLoadoutName "#AR-Role_GreenBeret"
-   m_sLoadoutResource "{33155540F5CAA602}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_S.et"
-   m_sLoadoutImage "{6EE70386E174CFD1}UI/Textures/EditorPreviews/Characters/Factions/BLUFOR/US_Army/GreenBerets/Supressed/Character_US_SF_S.edds"
-   m_sAffiliatedFaction "US"
-  }
-  SCR_PlayerArsenalLoadout "{656F0986B3A24126}" {
-   m_sLoadoutName "#AR-Loadout_Editor_SavedArsenalLoadout_Name"
-   m_sLoadoutResource "{894628A45793E7A0}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_BaseLoadout.et"
-   m_sAffiliatedFaction "US"
-  }
- }
+SCR_LoadoutManager LoadoutManager_1991_10 : "{C4F7860EF519B92A}Prefabs/Lore/Protection/LoadoutManager_1991_10.et" {
+ coords 2031.835 32.462 2019.632
 }

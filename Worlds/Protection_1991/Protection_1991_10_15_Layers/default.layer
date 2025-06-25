@@ -1,4 +1,4 @@
-SCR_AIWorld AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
+SCR_AIWorld SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
  components {
   NavmeshWorldComponent "{5584F30E67F617AD}" {
    NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
@@ -23,51 +23,35 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
  coords 2033.122 33.063 2022.837
 }
-SCR_FactionManager FactionManager_Protection : "{E70679F5E0A515AC}Prefabs/MP/Managers/Factions/FactionManager_Protection.et" {
+SCR_FactionManager FactionManager_1991_10 : "{E70679F5E0A515AC}Prefabs/Lore/Protection/FactionManager_1991_10.et" {
  coords 2033.102 32.567 2020.58
  Factions {
-  SCR_Faction "{56DEAC40D3C2E623}" {
-   UIInfo SCR_FactionUIInfo "{528C96127F8B6B08}" {
+  SCR_CampaignFaction "{65B2E17F453D6459}" {
+   m_aFriendlyFactionsIds {
+    "URBAN" "RURAL" "GANG"
    }
+  }
+  SCR_CampaignFaction "{65B2E17F4016CE55}" {
+   m_bIsPlayable 0
+  }
+  SCR_CampaignFaction "{65B2E17CB9AB760F}" {
+   m_aFriendlyFactionsIds {
+    "RURAL" "URBAN"
+   }
+  }
+  SCR_CampaignFaction "{65B2E17CA2C76861}" {
    m_bIsPlayable 0
    m_aFriendlyFactionsIds {
-   }
-  }
-  SCR_Faction "{56DEAC40D132400B}" {
-   m_bIsPlayable 0
-   m_aFriendlyFactionsIds + {
-    "URBAN"
-   }
-  }
-  SCR_Faction "{60E2C10835E36609}" {
-   m_aFriendlyFactionsIds {
-    "RURAL"
-   }
-  }
-  SCR_Faction "{60E2C10830408844}" {
-   m_aFriendlyFactionsIds {
-    "URBAN"
+    "URBAN" "RURAL" "US"
    }
   }
  }
- m_bCanChangeFactionsPlayable 0
 }
 ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
  coords 2033.122 33.482 2024.837
 }
-SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFramework/ProtectionGameModeSF.et" {
+SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protection/GameModeSF_Protection.et" {
  components {
-  SCR_FactionAliasComponent "{656D036D6C157AC3}" {
-   m_aFactionAliases {
-    SCR_ScenarioFrameworkFactionAliasConfig "{656D036D6F681C56}" {
-    }
-   }
-  }
-  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
-   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
-    m_sForcedFaction "US"
-   }
-  }
   SCR_TimeAndWeatherHandlerComponent "{64AD31EFBF957F5C}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
@@ -86,23 +70,10 @@ SCR_BaseGameMode ProtectionGameModeSF : "{FDDB712823199E09}Prefabs/ScenarioFrame
  "		world.GetTimeAndWeatherManager().SetDate(1991, 10, 15, false);"\
  "		Print(\"Date changed\");"\
  "	"
- m_bAllowFactionChange 0
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
  coords 2033.122 32.501 2019.837
- {
-  CommentEntity {
-   coords 0 1 0
-   m_Comment "TaskManager: "\
-   "Needed for task generation"
-   m_Color 0 0 0
-   m_FaceCamera 1
-   m_TextBackground 1
-   m_BackgroundColor 1 0.6 0
-   m_BackgroundTransparency 0
-  }
- }
 }
-SCR_LoadoutManager LoadoutManager_SOF : "{C4F7860EF519B92A}Prefabs/MP/Managers/Loadouts/LoadoutManager_SOF.et" {
+SCR_LoadoutManager LoadoutManager_1991_10 : "{C4F7860EF519B92A}Prefabs/Lore/Protection/LoadoutManager_1991_10.et" {
  coords 2031.731 33.819 2026.558
 }

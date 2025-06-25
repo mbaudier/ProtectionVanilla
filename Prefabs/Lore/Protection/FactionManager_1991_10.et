@@ -1,0 +1,23 @@
+SCR_FactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionManager_Base.et" {
+ ID "56B2B4776E6E4499"
+ components {
+  ARGEO_ProtectionFactionManagerComponent "{658F0D185B17FCDF}" {
+   m_bAlliesCanBeRecruited 1
+  }
+ }
+ Factions {
+  SCR_CampaignFaction "{65B2E17F453D6459}" : "{ADFDBDA163950168}Configs/Factions/US_Campaign.conf" {
+  }
+  SCR_CampaignFaction "{65B2E17F4016CE55}" : "{15B582F8FA0B0940}Configs/Factions/USSR_Campaign.conf" {
+  }
+  SCR_CampaignFaction "{65B2E17CB9AB760F}" : "{CF9447B87AB774DB}Configs/Factions/FIA_Campaign.conf" {
+  }
+  SCR_CampaignFaction "{65B2E17CA2C76861}" : "{081E35D18047E893}Configs/Factions/GANG_Campaign.conf" {
+  }
+  SCR_CampaignFaction "{65B2E17C9E12D96F}" : "{8D2B128564EDFC31}Configs/Factions/RURAL_Campaign.conf" {
+  }
+  SCR_CampaignFaction "{65B2E17C981BACF2}" : "{9DF3980184DEF50C}Configs/Factions/URBAN_Campaign.conf" {
+  }
+ }
+ m_bCanChangeFactionsPlayable 0
+}
