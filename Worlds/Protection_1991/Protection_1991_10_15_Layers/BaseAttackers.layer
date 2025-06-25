@@ -3,7 +3,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   coords 1354.396 38.76 2311.351
   {
    $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-    LayerBaseAttackersSoldiers {
+    BaseAttackersSoldiers {
      components {
       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
        m_SpawnChildren RANDOM_ONE
@@ -66,35 +66,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
      }
     }
-    LayerHelicopterDefenders {
-     components {
-      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       m_eActivationType ON_TRIGGER_ACTIVATION
-      }
-     }
-     coords -112.94 0.25 77.798
-     {
-      GenericEntity HelicopterDefenders : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
-        }
-       }
-       coords 4.573 0.12 0.591
-      }
-      GenericEntity HelicopterDefendersWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-       components {
-        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6292FA2B6ABA18AF}" {
-          m_fCompletionRadius 15
-         }
-        }
-       }
-       coords 4.573 0.12 0.591
-      }
-     }
-    }
-    LayerBaseAttackers {
+    BaseAttackers {
      coords 0 0 0
      {
       GenericEntity BaseAttackersTrigger : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
@@ -118,7 +90,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
            m_aActions {
             SCR_ScenarioFrameworkActionSpawnObjects "{65AAE39947BFEA7D}" {
              m_aNameOfObjectsToSpawnOnActivation {
-              "LayerBaseAttackersSoldiers" "LayerHelicopterDefenders" "LayerHelicopters"
+              "BaseAttackersSoldiers" "Helicopters" "HelicopterDefendersSoldiers"
              }
             }
            }
@@ -137,7 +109,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   coords 1241.456 39.01 2389.149
   {
    $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-    LayerHelicopters {
+    Helicopters {
      components {
       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
        m_eActivationType ON_TRIGGER_ACTIVATION
@@ -247,7 +219,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
      }
     }
-    LayerEquipmentsAroundHelicopter {
+    EquipmentsAroundHelicopters {
      coords 0 0 0
      {
       GenericEntity : "{372DCA487884C4E8}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR_Weapons.et" {
@@ -300,6 +272,29 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       GenericEntity : "{FE8505D4F04785F8}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR_Equipment.et" {
        coords -19.068 -0.01 5.469
        angleY 0
+      }
+     }
+    }
+    HelicopterDefendersSoldiers {
+     coords 0 0 0
+     {
+      GenericEntity HelicopterDefenders : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+        }
+       }
+       coords 4.573 0.12 0.591
+      }
+      GenericEntity HelicopterDefendersWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6292FA2B6ABA18AF}" {
+          m_fCompletionRadius 15
+         }
+        }
+       }
+       coords 4.573 0.12 0.591
       }
      }
     }

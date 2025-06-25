@@ -1,11 +1,11 @@
-GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 1388.085 36.126 2388.876
  {
-  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-   LayerTowerSoldiers {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   TowerSoldiers {
     coords 28.801 6.967 -2.287
     {
-     GenericEntity TowerSoldierSharpshooter : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     GenericEntity TowerSoldierSharpshooter : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
         m_sObjectToSpawn "{CE33AB22F61F3365}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Sharpshooter.et"
@@ -20,7 +20,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
      }
     }
    }
-   LayerBaseSquads {
+   BaseSquads {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
       m_SpawnChildren RANDOM_ONE
@@ -28,7 +28,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
     }
     coords 6.322 -0.103 -16.317
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       BaseSquad01 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -58,10 +58,10 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/C
      }
     }
    }
-   LayerBaseDefenders {
+   BaseDefenders {
     coords 0 0 0
     {
-     $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       TowerSoldiersWP {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {

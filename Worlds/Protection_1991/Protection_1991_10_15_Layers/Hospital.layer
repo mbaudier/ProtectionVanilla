@@ -2,7 +2,7 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
  coords 1384.646 37.875 2435.592
  {
   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-   HospitalLayer {
+   Hospital {
     coords 0 0 0
     {
      $grp LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LightPrefabs/LampStreet_E_03_light.et" {
@@ -23,9 +23,24 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
        VolLightOffset 0
       }
      }
+     GenericEntity SlotSpawnHospital : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB827B44B8B}" {
+          m_Info SCR_UIInfo "{65AAEEB823160711}" {
+           Name "Hospital"
+          }
+         }
+        }
+        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
+       }
+      }
+      coords -6.945 -0.221 12.101
+     }
     }
    }
-   VehiclesLayer {
+   Vehicles {
     coords -17.374 -0.772 -17.206
     {
      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
@@ -57,23 +72,9 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
        angleY -176.804
       }
      }
-     GenericEntity GetInExtractionVehicleWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-      components {
-       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{628C980A9EBAFA29}" {
-         m_fCompletionRadius 10
-         m_fPriorityLevel 1000
-         m_fHoldingTime 600
-         m_bDriverAllowed 0
-         m_bGunnerAllowed 0
-        }
-       }
-      }
-      coords 6.782 -0.397 -6.062
-     }
     }
    }
-   HospitalPrisonersLayer {
+   HospitalPrisoners {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
       m_sFactionKey "URBAN"

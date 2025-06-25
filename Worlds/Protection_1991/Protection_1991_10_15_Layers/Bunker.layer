@@ -2,7 +2,7 @@ GenericEntity AreaBunker : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
  coords 1283.574 37.214 2418.181
  {
   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-   LayerBunkerLights {
+   Bunker {
     coords 0 0 0
     {
      $grp GameEntity : "{A76E82E2A746C3D3}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_01/LightPrefabs/LampStreet_E_01_glass.et" {
@@ -40,9 +40,24 @@ GenericEntity AreaBunker : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
       }
      }
+     GenericEntity SlotSpawnBunker : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB83D2DE79F}" {
+          m_Info SCR_UIInfo "{65AAEEB83BB33A34}" {
+           Name "Bunker"
+          }
+         }
+        }
+        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
+       }
+      }
+      coords -7.946 0.452 5.96
+     }
     }
    }
-   LayerBunkerPrisoners {
+   BunkerPrisoners {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
       m_sFactionKey "URBAN"
@@ -75,6 +90,50 @@ GenericEntity AreaBunker : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
       }
       coords 0 0 0
+     }
+    }
+   }
+   BunkerDefenders {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      BunkerDefenders01 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{6E725D44CA973C24}Prefabs/Groups/INDFOR/Group_FIA_SentryTeam.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6292FA399C104ABB}" {
+          m_aLayerName {
+           "DefendBunkerWP"
+          }
+         }
+        }
+       }
+       coords -1.118 -1.02 9.396
+      }
+      BunkerDefenders02 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{6E725D44CA973C24}Prefabs/Groups/INDFOR/Group_FIA_SentryTeam.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6292FA399C104ABB}" {
+          m_aLayerName {
+           "DefendBunkerWP"
+          }
+         }
+        }
+       }
+       coords 6.929 -1.02 -0.208
+      }
+     }
+     GenericEntity DefendBunkerWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_bShowDebugShapesInWorkbench 0
+        m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{628D114B32452C68}" {
+         m_fCompletionRadius 8
+        }
+       }
+      }
+      coords 3.948 -1 4.25
      }
     }
    }

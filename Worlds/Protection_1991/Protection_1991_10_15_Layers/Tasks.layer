@@ -116,14 +116,14 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_aActivationActions {
          SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077867ABB969}" {
           m_eGameOverType COMBATPATROL_DEFEAT
-          m_sSubtitle "This is a distater, you have saved no civilian"
+          m_sSubtitle "This is a disaster, you have saved no civilian"
          }
         }
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
           m_fAreaRadius 30
           m_eActivationPresence ANY_CHARACTER
-          m_sActivatedByThisFaction "RURAL"
+          m_sActivatedByThisFaction "URBAN"
          }
         }
         m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
@@ -240,21 +240,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
       coords 6.403 0.221 -12.392
      }
-     GenericEntity SlotSpawnHospital : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB827B44B8B}" {
-          m_Info SCR_UIInfo "{65AAEEB823160711}" {
-           Name "Hospital"
-          }
-         }
-        }
-        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
-       }
-      }
-      coords 0 0 0
-     }
     }
    }
   }
@@ -290,21 +275,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        }
       }
       coords 0.664 2.967 7.975
-     }
-     GenericEntity SlotSpawnBunker : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB83D2DE79F}" {
-          m_Info SCR_UIInfo "{65AAEEB83BB33A34}" {
-           Name "Bunker"
-          }
-         }
-        }
-        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
-       }
-      }
-      coords -11.079 -2.916 6.008
      }
     }
    }
