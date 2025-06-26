@@ -1,0 +1,42 @@
+$grp ARGEO_PopulateStructuresTriggerEntity : "{D48BC61D01C94A5D}Prefabs/Systems/Population/PopulateStructuresTrigger.et" {
+ Populate_MossHill {
+  coords 2126.837 73.129 1262.261
+  SphereRadius 550
+  m_sPopulatedTerritoryID "Arleville"
+ }
+ Populate_ArlevilleHeights {
+  coords 3068.474 44.394 2029.597
+  SphereRadius 30
+  m_sPopulatedTerritoryID "Arleville"
+ }
+ Populate_FarmBeauregard {
+  components {
+   FactionAffiliationComponent "{65B5068E3672FD54}" {
+    "faction affiliation" "RURAL"
+   }
+  }
+  coords 3110.117 43.996 2423.972
+  SphereRadius 50
+  m_sPopulatedTerritoryID "Beauregard"
+ }
+ Populate_NorthHead {
+  components {
+   FactionAffiliationComponent "{65B5068E3672FD54}" {
+    "faction affiliation" "URBAN"
+   }
+  }
+  coords 2125.138 36.175 3127.699
+  SphereRadius 300
+  m_sPopulatedTerritoryID "Beauregard"
+ }
+ Populate_HeiferPound {
+  components {
+   FactionAffiliationComponent "{65B5068E3672FD54}" {
+    "faction affiliation" "RURAL"
+   }
+  }
+  coords 2037 49.909 2677.233
+  SphereRadius 30
+  m_sPopulatedTerritoryID "Arleville"
+ }
+}

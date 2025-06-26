@@ -73,7 +73,7 @@ SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protect
     SCR_TimeAndWeatherState "{65B323FC3C8366AB}" {
      m_sWeatherPresetName "Rainy"
      m_iStartingHour 6
-     m_iStartingMinutes 45
+     m_iStartingMinutes 50
     }
    }
   }

@@ -3,7 +3,7 @@ SCR_BaseGameMode : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramework/GameMode
  components {
   ARGEO_PopulationComponent "{657F0CE6ADBB46C4}" {
    m_sDefaultCivilianFactionKey "RURAL"
-   m_fGlobalBuildingsOccupation 100
+   m_fGlobalBuildingsOccupation 80
   }
   ARGEO_ProtectionLoreComponent "{65B323F75AA99671}" {
   }
@@ -25,5 +25,6 @@ SCR_BaseGameMode : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramework/GameMode
   SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
   }
  }
+ m_eTestGameFlags 7
  m_bAllowFactionChange 0
 }
