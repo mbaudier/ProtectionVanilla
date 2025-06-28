@@ -37,6 +37,6 @@ $grp ARGEO_PopulateStructuresTriggerEntity : "{D48BC61D01C94A5D}Prefabs/Systems/
   }
   coords 2037 49.909 2677.233
   SphereRadius 30
-  m_sPopulatedTerritoryID "Arleville"
+  m_sPopulatedTerritoryID "Beauregard"
  }
 }
