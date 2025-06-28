@@ -73,7 +73,7 @@ SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protect
     SCR_TimeAndWeatherState "{65B323FC3C8366AB}" {
      m_sWeatherPresetName "Rainy"
      m_iStartingHour 6
-     m_iStartingMinutes 50
+     m_iStartingMinutes 55
     }
    }
   }
@@ -85,4 +85,12 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFra
 }
 SCR_LoadoutManager LoadoutManager_1991_10 : "{C4F7860EF519B92A}Prefabs/Lore/Protection/LoadoutManager_1991_10.et" {
  coords 1891.968 11.785 1825.005
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{65B90615D4CC8E45}" {
+   m_sLoadoutName "US Helicopter Pilot"
+   m_sLoadoutResource "{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et"
+   m_sLoadoutImage "{F293529C376FB00C}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_HeliPilot.edds"
+   m_sAffiliatedFaction "US"
+  }
+ }
 }
