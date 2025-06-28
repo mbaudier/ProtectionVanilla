@@ -149,6 +149,64 @@ GenericEntity AreaMortarsArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenario
      }
     }
    }
+   Mortar03 {
+    coords -65.502 3.233 -100.434
+    {
+     GenericEntity PlacementMortar03 : "{2DE0838804526A10}Prefabs/Compositions/Slotted/SlotFlatSmall/MortarPlacement_S_FIA_01.et" {
+      coords -1.154 0.229 -2.953
+      angleY 25.932
+     }
+     GenericEntity SentinelsMortar03 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65B0F9E93465A830}" {
+         m_aLayerName {
+          "DefendMortar03"
+         }
+        }
+       }
+      }
+      coords 2.494 0.02 3.957
+     }
+     GenericEntity StorageMortar03 : "{9AE2149222FAD9A3}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_FIA_03.et" {
+      components {
+       SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+        m_aContainers {
+         SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+          m_fResourceGain 100
+          m_fResourceGainTickrate 10
+         }
+        }
+       }
+      }
+      coords -11.698 -0.098 -4.987
+     }
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      GetInMortar03 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{62AE8756B2564616}" {
+          m_fCompletionRadius 5
+         }
+        }
+       }
+       coords -1.154 0.229 -2.953
+      }
+      DefendMortar03 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesInWorkbench 0
+         m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{65B0F9E9CB983333}" {
+          m_fCompletionRadius 12
+         }
+        }
+       }
+       coords -1.154 0.229 -2.953
+      }
+     }
+    }
+   }
   }
  }
 }

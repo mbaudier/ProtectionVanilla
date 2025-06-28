@@ -3,85 +3,88 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
  {
   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    LightVehicles11 {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_eActivationType ON_TRIGGER_ACTIVATION
-     }
-    }
     coords 0 0 0
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-      Assault111 {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{AFE566DDD3814874}Prefabs/Groups/INDFOR/GANG/Group_GANG_LightFireTeam.et"
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65AF2D201E5A934C}" {
-          m_aLayerName {
-           "GetInVehicle111" "CounterAttackWPs"
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+      LightVehicle112 {
+       coords -0.049 -0.011 -1.914
+       {
+        GenericEntity Assault112 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+         components {
+          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+           m_sObjectToSpawn "{AFE566DDD3814874}Prefabs/Groups/INDFOR/GANG/Group_GANG_LightFireTeam.et"
+           m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65AF2D200F568EB2}" {
+            m_aLayerName {
+             "GetInVehicle112" "CounterAttackWPs"
+            }
+           }
           }
          }
+         coords 3.423 -0.03 -2.966
+         angleY 121.164
         }
-       }
-       coords -15.659 0.259 8.96
-       angleY 117.008
-      }
-      Assault112 {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{AFE566DDD3814874}Prefabs/Groups/INDFOR/GANG/Group_GANG_LightFireTeam.et"
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65AF2D200F568EB2}" {
-          m_aLayerName {
-           "GetInVehicle112" "CounterAttackWPs"
+        GenericEntity Vehicle112 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sObjectToSpawn "{85F0BD6AF0F42D6D}Prefabs/Vehicles/Wheeled/S105/S105_red.et"
           }
          }
+         coords 0.558 0.003 1.054
+         angleY 121.164
         }
-       }
-       coords 3.374 -0.041 -4.88
-       angleY 121.164
-      }
-     }
-     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-      Vehicle111 {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_sObjectToSpawn "{128253A267BE9424}Prefabs/Vehicles/Wheeled/S105/S105_randomized.et"
-        }
-       }
-       coords -17.791 0.471 11.835
-       angleY 117.008
-      }
-      Vehicle112 {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_sObjectToSpawn "{128253A267BE9424}Prefabs/Vehicles/Wheeled/S105/S105_randomized.et"
-        }
-       }
-       coords 0.509 -0.008 -0.86
-       angleY 121.164
-      }
-     }
-     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-      GetInVehicle111 {
-       components {
-        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65AF2D20F5D3AA2C}" {
-          m_fCompletionRadius 5
+        GenericEntity GetInVehicle112 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65AF2D20F5D3AA2C}" {
+            m_fCompletionRadius 5
+            m_fPriorityLevel 1000
+           }
+          }
          }
+         coords 0.558 0.003 1.054
+         angleY 121.164
         }
        }
-       coords -17.791 0.471 11.835
-       angleY 117.008
       }
-      GetInVehicle112 {
-       components {
-        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65AF2D20F5D3AA2C}" {
-          m_fCompletionRadius 5
+      LightVehicle111 {
+       coords -17.721 0.402 10.454
+       {
+        GenericEntity Assault111 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+         components {
+          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+           m_sObjectToSpawn "{AFE566DDD3814874}Prefabs/Groups/INDFOR/GANG/Group_GANG_LightFireTeam.et"
+           m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65AF2D201E5A934C}" {
+            m_aLayerName {
+             "GetInVehicle111" "CounterAttackWPs"
+            }
+           }
+          }
          }
+         coords 2.063 -0.143 -1.494
+         angleY 117.008
+        }
+        GenericEntity Vehicle111 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sObjectToSpawn "{5555DCAFADB8CE2A}Prefabs/Vehicles/Wheeled/S105/S105_rally.et"
+          }
+         }
+         coords -0.07 0.069 1.381
+         angleY 117.008
+        }
+        GenericEntity GetInVehicle111 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65AF2D20F5D3AA2C}" {
+            m_fCompletionRadius 5
+            m_fPriorityLevel 1000
+           }
+          }
+         }
+         coords -0.07 0.069 1.381
+         angleY 117.008
         }
        }
-       coords 0.509 -0.008 -0.86
-       angleY 121.164
       }
      }
     }
@@ -93,7 +96,7 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
       A_MoveCounterAttack {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{65B0F9E1A44BBDDA}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointMove "{65B915FE294E00C6}" {
          }
         }
        }
@@ -109,6 +112,19 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
        }
        coords -732.228 126.507 -2224.692
       }
+     }
+    }
+   }
+   BeauregardDefenders12 {
+    coords 129.365 -2.857 -32.32
+    {
+     GenericEntity Defenders12 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{AFE566DDD3814874}Prefabs/Groups/INDFOR/GANG/Group_GANG_LightFireTeam.et"
+       }
+      }
+      coords -24.014 1.581 -12.497
      }
     }
    }

@@ -52,7 +52,7 @@ SCR_FactionManager FactionManager_1991_10 : "{E70679F5E0A515AC}Prefabs/Lore/Prot
   SCR_CampaignFaction "{65B2E17CA2C76861}" {
    m_bIsPlayable 0
    m_aFriendlyFactionsIds {
-    "URBAN" "RUAL" "US"
+    "URBAN" "RURAL" "US"
    }
   }
  }

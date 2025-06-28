@@ -85,7 +85,9 @@ GenericEntity AreaHqUS : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Co
      }
      GenericEntity : "{DB7F01C68EACBEC0}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_LivingArea_S_US_01.et" {
       coords -21.872 -0.635 9.503
-      angleY 53.394
+      angleX -1.411
+      angleY 53.478
+      angleZ -3.405
      }
     }
    }
@@ -108,7 +110,8 @@ GenericEntity AreaHqUS : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Co
          m_sObjectToSpawn "{37A9871AD4CC9610}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer_MERDC.et"
         }
        }
-       coords 44.426 0.002 -62.129
+       coords 48.157 0.002 -60.235
+       angleY -127.61
       }
       SpawnStart {
        components {
@@ -128,6 +131,65 @@ GenericEntity AreaHqUS : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Co
      }
     }
    }
+   SandbagsHqUS {
+    coords 39.793 0.011 -48.038
+    {
+     $grp GenericEntity : "{113DEDEA31F5EB1C}Prefabs/Props/Military/Sandbags/Dst/Sandbag_01_single_dst_02_burlap.et" {
+      {
+       coords -1.994 0 -2.264
+      }
+      {
+       coords -2.454 0.031 -2.463
+      }
+      {
+       coords -1.937 0.13 -2.421
+      }
+     }
+     $grp GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_01_long_burlap.et" {
+      {
+       coords 3.406 0.001 2.832
+       angleY -60.692
+      }
+      {
+       coords 1.773 0.001 -0.105
+       angleY -60.096
+      }
+     }
+     GenericEntity : "{3B19CA49C71B8D33}Prefabs/Props/Military/Sandbags/Dst/Sandbag_01_single_dst_01_burlap.et" {
+      coords -2.189 0 -2.683
+     }
+     Turret : "{887DB60486A18575}Prefabs/Weapons/Tripods/Tripod_M122_MG_M60.et" {
+      coords -1.914 0.001 -1.502
+      angleY -160.723
+     }
+     $grp GenericEntity : "{B31A14BC1A0E7776}Prefabs/Props/Military/Sandbags/Sandbag_01_round_burlap.et" {
+      {
+       coords -0.24 0.001 -2.383
+       angleY 153.831
+      }
+      {
+       coords -3.758 0.001 -1.272
+       angleY -119.651
+      }
+     }
+     $grp GenericEntity : "{C971AFD204F62488}Prefabs/Props/Military/Sandbags/Dst/Sandbag_01_single_dst_03_burlap.et" {
+      {
+       coords -2.525 0 -2.181
+      }
+      {
+       coords -1.882 0.01 -2.676
+      }
+     }
+    }
+   }
+  }
+  GenericEntity DefendersUS : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+   components {
+    SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+     m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+    }
+   }
+   coords 26.786 0.026 -30.621
   }
  }
 }
