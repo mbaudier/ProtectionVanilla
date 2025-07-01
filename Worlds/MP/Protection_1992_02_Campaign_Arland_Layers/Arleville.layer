@@ -1,44 +1,35 @@
-GenericEntity PopulatedArleville : "{2A3E567DA8A7B4DB}Prefabs/ScenarioFramework/Components/PopulatedArea.et" {
- components {
-  ARGEO_PopulatedArea "{59E8CDC50969206E}" {
-   m_sFactionKey "RURAL"
-  }
- }
- coords 2795.983 74.03 1629.076
-}
-GenericEntity AreaArleville : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 2983.515 61.664 1642.246
  {
-  GenericEntity RefugeeCampBase : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  GenericEntity IdpCampBase : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {
-    GenericEntity RefugeeCampMilitaryBase : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+    GenericEntity IdpCampMilitaryBase : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
      components {
       SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
        m_bIsControlPoint 1
-       m_sMapLocationName "Refugee camp"
+       m_sMapLocationName "IDP Camp"
       }
       SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
        m_fMaximumSeizingTime 20
       }
+      SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+       "faction affiliation" "RURAL"
+      }
      }
-     coords 0 0 0
-    }
-    GenericEntity : "{1EB5949DF6738E38}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_USSR_01.et" {
-     coords -14.802 2.497 -23.854
-     angleY 49.514
+     coords 38.985 -3.515 155.753
     }
     GenericEntity : "{47789BA6E9CA2928}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_03_Campaign.et" {
-     coords -6.203 -0.773 22.605
+     coords 54.981 -1.371 175.797
      angleY -31.86
     }
-    GenericEntity : "{C63BFEEA9DE1CF26}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_05_Campaign.et" {
-     coords -1.918 -0.598 12.993
-     angleY -30.172
+    GenericEntity : "{74B740B56C82C0CF}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatLarge/E_LivingArea_L_US_01.et" {
+     coords 67.398 -2.539 153.791
+     angleY 49.458
     }
-    GenericEntity : "{FD952CFF9CAD3F2B}Prefabs/Compositions/Slotted/SlotFlatSmall/LivingArea_S_USSR_01.et" {
-     coords -13.76 -0.373 30.318
-     angleY -24.802
+    GenericEntity : "{C63BFEEA9DE1CF26}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_05_Campaign.et" {
+     coords 66.811 -0.838 181.134
+     angleY -30.172
     }
    }
   }

@@ -1,15 +1,7 @@
-GenericEntity PopulatedBeauregard : "{2A3E567DA8A7B4DB}Prefabs/ScenarioFramework/Components/PopulatedArea.et" {
- components {
-  ARGEO_PopulatedArea "{59E8CDC50969206E}" {
-   m_sFactionKey "URBAN"
-  }
- }
- coords 3165.465 11.571 2797.519
-}
-GenericEntity AreaBeauregard : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+GenericEntity AreaBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 3269.652 2.102 2877.818
  {
-  GenericEntity BeauregardPortBase : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+  GenericEntity BeauregardPortBase : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    coords 0 0 0
    {
     GenericEntity BeauregardPortMilitaryBase : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
@@ -21,13 +13,12 @@ GenericEntity AreaBeauregard : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
       SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
        m_fMaximumSeizingTime 20
       }
+      SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+       "faction affiliation" "URBAN"
+      }
      }
      coords 28.279 -0.102 -16.363
      angleY -42.394
-    }
-    GenericEntity : "{1EB5949DF6738E38}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_USSR_01.et" {
-     coords 20.034 -0.102 8.458
-     angleY -124.486
     }
     GenericEntity : "{47789BA6E9CA2928}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_03_Campaign.et" {
      coords 39.908 -0.101 -4.38
@@ -36,20 +27,6 @@ GenericEntity AreaBeauregard : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Comp
     GenericEntity : "{C63BFEEA9DE1CF26}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_05_Campaign.et" {
      coords 33.77 -0.102 -0.181
      angleY 53.18
-    }
-    GenericEntity : "{FD952CFF9CAD3F2B}Prefabs/Compositions/Slotted/SlotFlatSmall/LivingArea_S_USSR_01.et" {
-     coords 8.213 0.117 -17.96
-     angleY 14.911
-     {
-      GenericEntity {
-       ID "5D22B92C154776A8"
-       components {
-        SCR_CampaignBuildingProviderComponent "{5ED7185081A6289C}" {
-         m_iRank PRIVATE
-        }
-       }
-      }
-     }
     }
    }
   }

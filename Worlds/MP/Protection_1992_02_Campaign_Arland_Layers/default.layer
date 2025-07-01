@@ -55,9 +55,7 @@ SCR_CampaignFactionManager CampaignFactionManager_GANGxREDPEACE1 : "{CF862129A84
     "RURAL" "URBAN"
    }
   }
-  SCR_Faction "{64DEECE2B3FF3633}" : "{E5B2FC4A0D01E456}Configs/Factions/RURAL.conf" {
-  }
-  SCR_Faction "{64DEECE2B615FC60}" : "{FFF1E35BF8F3312D}Configs/Factions/URBAN.conf" {
+  SCR_CampaignFaction "{65C311C5C0CD784B}" {
   }
   SCR_CampaignFaction "{64DEECE73CAB7EC0}" : "{15B582F8FA0B0940}Configs/Factions/USSR_Campaign.conf" {
    m_iOrder 2000
