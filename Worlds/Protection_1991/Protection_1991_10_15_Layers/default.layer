@@ -20,37 +20,7 @@ SCR_AIWorld SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 2033.122 33.266 2023.837
 }
-RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
- coords 2033.122 33.063 2022.837
-}
-SCR_FactionManager FactionManager_1991_10 : "{E70679F5E0A515AC}Prefabs/Lore/Protection/FactionManager_1991_10.et" {
- coords 2033.102 32.567 2020.58
- Factions {
-  SCR_CampaignFaction "{65B2E17F453D6459}" {
-   m_aFriendlyFactionsIds {
-    "URBAN" "RURAL" "GANG"
-   }
-  }
-  SCR_CampaignFaction "{65B2E17F4016CE55}" {
-   m_bIsPlayable 0
-  }
-  SCR_CampaignFaction "{65B2E17CB9AB760F}" {
-   m_aFriendlyFactionsIds {
-    "RURAL" "URBAN"
-   }
-  }
-  SCR_CampaignFaction "{65B2E17CA2C76861}" {
-   m_bIsPlayable 0
-   m_aFriendlyFactionsIds {
-    "URBAN" "RURAL" "US"
-   }
-  }
- }
-}
-ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
- coords 2033.122 33.482 2024.837
-}
-SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protection/GameModeSF_Protection.et" {
+SCR_BaseGameMode GameModeSF_Protection_Lore : "{785663D551AFE173}Prefabs/Lore/Protection/GameModeSF_Protection_Lore.et" {
  components {
   ARGEO_ProtectionLoreComponent "{65B323F75AA99671}" {
    m_iYear 1991
@@ -69,6 +39,15 @@ SCR_BaseGameMode GameModeSF_Protection : "{FDDB712823199E09}Prefabs/Lore/Protect
   }
  }
  coords 2033.122 32.126 2017.837
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 2033.122 33.063 2022.837
+}
+SCR_FactionManager FactionManager_1991_10 : "{D1FD1F8F861F5002}Prefabs/Lore/Protection/FactionManager_1991_10.et" {
+ coords 2033.102 32.567 2020.58
+}
+ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 2033.122 33.482 2024.837
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
  coords 2033.122 32.501 2019.837

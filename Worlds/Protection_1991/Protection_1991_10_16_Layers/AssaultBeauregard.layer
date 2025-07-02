@@ -86,7 +86,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
         GenericEntity Assault013 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
          components {
           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+           m_sObjectToSpawn "{1BB20A4B3A53D0F5}Prefabs/Groups/INDFOR/Group_FIA_LightFireTeam.et"
            m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65AF2D200F568EB2}" {
             m_aLayerName {
              "GetInVehicle013" "AssaultBeauregardWPs"
@@ -138,6 +138,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
          m_Waypoint SCR_ScenarioFrameworkWaypointMove "{65B915FEC33022F2}" {
+          m_fPriorityLevel 1000
          }
         }
        }

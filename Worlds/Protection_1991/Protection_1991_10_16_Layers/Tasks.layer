@@ -3,7 +3,7 @@ GenericEntity AreaTasksArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFr
   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
    m_aActivationActions {
     SCR_ScenarioFrameworkActionWaitAndExecute "{65B941D085E9E7CB}" {
-     m_iDelayInSeconds 600
+     m_iDelayInSeconds 300
      m_iDelayInSecondsMax 0
      m_aActions {
       SCR_ScenarioFrameworkActionChangeWeather "{65B915F02223E45E}" {
@@ -15,7 +15,7 @@ GenericEntity AreaTasksArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFr
        m_iDelayInSecondsMax 0
        m_aActions {
         SCR_ScenarioFrameworkActionChangeWeather "{65B915F02223E45E}" {
-         m_sWeatherPresetName "Cloudy"
+         m_sWeatherPresetName "Overcast"
          m_fTransitionDuration 30
         }
        }
