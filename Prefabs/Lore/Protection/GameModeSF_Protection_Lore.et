@@ -7,5 +7,8 @@ SCR_BaseGameMode : "{FDDB712823199E09}Prefabs/Systems/ScenarioFramework/GameMode
   }
   ARGEO_ProtectionLoreComponent "{65C4F0AFC88F0211}" {
   }
+  SCR_PerceivedFactionManagerComponent "{61AA7E6E0C6A76F9}" {
+   m_sAIFallbackFaction "RURAL"
+  }
  }
 }

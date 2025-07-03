@@ -6,6 +6,12 @@ SCR_BaseGameMode {
   }
   ARGEO_WarCrimesComponent "{657D06928358A762}" {
    m_bKillingHorsDeCombatIsWarCrime 1
+   m_bTreatAllWarCrimesAsFriendlyKills 0
+  }
+  SCR_PerceivedFactionManagerComponent "{61AA7E6E0C6A76F9}" {
+   m_eCharacterPerceivedFactionOutfitType HIGHEST_VALUE
+   m_ePunishmentKillingWhileDisguised WARCRIME
+   m_bPerceivedFactionChangesAffectsAI 1
   }
  }
  m_eTestGameFlags 6
