@@ -21,8 +21,14 @@ SCR_FactionManager : "{E70679F5E0A515AC}Prefabs/MP/Managers/Factions/FactionMana
    }
   }
   SCR_CampaignFaction "{65B2E17C9E12D96F}" : "{8D2B128564EDFC31}Configs/Factions/RURAL_Campaign.conf" {
+   m_aFriendlyFactionsIds {
+    "URBAN"
+   }
   }
   SCR_CampaignFaction "{65B2E17C981BACF2}" : "{9DF3980184DEF50C}Configs/Factions/URBAN_Campaign.conf" {
+   m_aFriendlyFactionsIds {
+    "RURAL"
+   }
   }
  }
  m_bCanChangeFactionsPlayable 0
