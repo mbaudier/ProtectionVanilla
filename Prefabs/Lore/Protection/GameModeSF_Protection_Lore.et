@@ -10,5 +10,7 @@ SCR_BaseGameMode : "{FDDB712823199E09}Prefabs/Systems/ScenarioFramework/GameMode
   SCR_PerceivedFactionManagerComponent "{61AA7E6E0C6A76F9}" {
    m_sAIFallbackFaction "RURAL"
   }
+  SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
+  }
  }
 }
