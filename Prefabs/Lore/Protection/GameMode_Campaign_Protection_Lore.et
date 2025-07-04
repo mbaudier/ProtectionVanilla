@@ -2,8 +2,8 @@ SCR_GameModeCampaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Cam
  ID "56B2B479C6B96951"
  components {
   ARGEO_PopulationComponent "{657F0CE6ADBB46C4}" {
-   m_sDefaultCivilianFactionKey "RURAL"
-   m_fGlobalBuildingsOccupation 80
+   m_sDefaultFaction "RURAL"
+   m_fGlobalBuildingsOccupation 70
   }
   ARGEO_ProtectionLoreComponent "{65B323F24ED272F7}" {
   }

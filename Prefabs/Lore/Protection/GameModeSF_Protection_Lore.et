@@ -2,7 +2,7 @@ SCR_BaseGameMode : "{FDDB712823199E09}Prefabs/Systems/ScenarioFramework/GameMode
  ID "56B2B479C6B96951"
  components {
   ARGEO_PopulationComponent "{657F0CE6ADBB46C4}" {
-   m_sDefaultCivilianFactionKey "RURAL"
+   m_sDefaultFaction "RURAL"
    m_fGlobalBuildingsOccupation 70
   }
   ARGEO_ProtectionLoreComponent "{65C4F0AFC88F0211}" {
