@@ -1,7 +1,3 @@
-Vehicle Cinematic_Flying_UH1 : "{41609B3289F9ECC4}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_UH1.et" {
- coords 3233.923 4.066 1210.011
- angleY -140.946
-}
 GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 3177.489 0.707 1158.746
  {
@@ -9,19 +5,20 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
    coords 0 0 0
    {
     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-     StartSupply {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_sObjectToSpawn "{13A99500A14FA14C}Prefabs/Props/Military/SupplyBox/SupplyShippingContainers/SupplyShippingContainers_01/SupplyShippingContainers_01_20ft.et"
-       }
-      }
-      coords -21.751 2.44 3.545
-      angleY -34.589
-     }
      StartArsenal {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_sObjectToSpawn "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et"
+        m_sFactionKey "Legal"
+        m_aFactionSwitchedObjects {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65C908886CE1D17A}" {
+          m_sFactionKey "US"
+          m_sObjectToSpawn "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et"
+         }
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65C90888654FC5E1}" {
+          m_sFactionKey "USSR"
+          m_sObjectToSpawn "{AD59EDEAA26CE792}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR.et"
+         }
+        }
        }
       }
       coords -18.851 3.127 5.396
@@ -48,6 +45,7 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_aPlugins {
          SCR_ScenarioFrameworkPluginSpawnPoint "{65AF3B8AE8098E3E}" {
+          m_sFaction "Legal"
           m_Info SCR_UIInfo "{65AF3B8AE6832723}" {
            Name "Insertion"
           }
@@ -58,8 +56,41 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
       }
       coords -5.468 2.256 8.925
      }
+     StartCinematicHelicopter {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sFactionKey "Legal"
+        m_aActivationActions {
+         ARGEO_ScenarioFrameworkActionProtectionCinematic "{65C908890C428D30}" {
+         }
+        }
+        m_aFactionSwitchedObjects {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65C908893E287302}" {
+          m_sFactionKey "US"
+          m_sObjectToSpawn "{41609B3289F9ECC4}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_UH1.et"
+         }
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65C90889255C07A0}" {
+          m_sFactionKey "USSR"
+          m_sObjectToSpawn "{039615384D5685B3}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_Mi8.et"
+         }
+        }
+       }
+      }
+      coords 56.434 3.359 51.265
+      angleY -140.946
+     }
     }
    }
   }
+ }
+}
+$grp GenericEntity : "{D07C2D4844753F76}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_storage.et" {
+ {
+  coords 3158.503 3.633 1167.503
+  angleY -42.832
+ }
+ {
+  coords 3158.483 3.946 1167.455
+  angleY -33.43
  }
 }

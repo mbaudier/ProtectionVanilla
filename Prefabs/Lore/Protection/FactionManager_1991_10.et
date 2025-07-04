@@ -1,23 +1,34 @@
 SCR_FactionManager : "{E70679F5E0A515AC}Prefabs/MP/Managers/Factions/FactionManager_Protection.et" {
  ID "56B2B4776E6E4499"
+ components {
+  SCR_FactionAliasComponent "{65C9088E44A8A973}" {
+   m_aFactionAliases {
+    SCR_ScenarioFrameworkFactionAliasConfig "{65C9088E46DA4B70}" {
+     m_sAlias "Criminal"
+     m_sFactionKey "USSR"
+    }
+    SCR_ScenarioFrameworkFactionAliasConfig "{65C90889B95FD0BD}" {
+     m_sAlias "Legal"
+     m_sFactionKey "US"
+    }
+   }
+  }
+ }
  Factions {
   SCR_CampaignFaction "{65B2E17F453D6459}" : "{ADFDBDA163950168}Configs/Factions/US_Campaign.conf" {
-   m_aFriendlyFactionsIds {
-    "RURAL" "URBAN" "GANG"
-   }
   }
   SCR_CampaignFaction "{65B2E17F4016CE55}" : "{15B582F8FA0B0940}Configs/Factions/USSR_Campaign.conf" {
    m_bIsPlayable 0
   }
   SCR_CampaignFaction "{65B2E17CB9AB760F}" : "{CF9447B87AB774DB}Configs/Factions/FIA_Campaign.conf" {
    m_aFriendlyFactionsIds {
-    "RURAL" "URBAN"
+    "RURAL"
    }
   }
   SCR_CampaignFaction "{65B2E17CA2C76861}" : "{081E35D18047E893}Configs/Factions/GANG_Campaign.conf" {
    m_bIsPlayable 0
    m_aFriendlyFactionsIds {
-    "URBAN" "RURAL" "US"
+    "URBAN" "RURAL" "US" "USSR"
    }
   }
   SCR_CampaignFaction "{65B2E17C9E12D96F}" : "{8D2B128564EDFC31}Configs/Factions/RURAL_Campaign.conf" {
