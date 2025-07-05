@@ -73,20 +73,6 @@ ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedCh
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
  coords 2033.122 32.501 2019.837
 }
-SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
- coords 2031.834 32.462 2019.629
- m_aPlayerLoadouts {
-  SCR_FactionPlayerLoadout "{65C9088BCE0FA3A4}" {
-   m_sLoadoutName "#AR-Role_GreenBeret_Officer"
-   m_sLoadoutResource "{C0F45FA0C11853D1}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_Officer.et"
-   m_sLoadoutImage "{22835410C4A34254}UI/Textures/EditorPreviews/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_Officer.edds"
-   m_sAffiliatedFaction "US"
-  }
-  SCR_FactionPlayerLoadout "{65C9088B618C7863}" {
-   m_sLoadoutName "#AR-Role_Spetsnaz_Officer"
-   m_sLoadoutResource "{B2A71FE01BA567D6}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Officer.et"
-   m_sLoadoutImage "{37D9FD086B0184BE}UI/Textures/EditorPreviews/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Officer.edds"
-   m_sAffiliatedFaction "USSR"
-  }
- }
+SCR_LoadoutManager LoadoutManager_1991_10 : "{C4F7860EF519B92A}Prefabs/Lore/Protection/LoadoutManager_1991_10.et" {
+ coords 2031.82 32.461 2019.627
 }

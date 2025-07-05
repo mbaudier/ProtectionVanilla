@@ -20,7 +20,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
            }
           }
          }
-         coords -6.362 -5.844 -1.533
+         coords -6.362 -5.819 -1.533
         }
         GenericEntity Vehicle012 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
          components {
@@ -28,7 +28,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
            m_sObjectToSpawn "{22B327C6752EC4D4}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM_FIA.et"
           }
          }
-         coords -5.602 -5.749 -5.041
+         coords -5.602 -5.793 -5.041
         }
         GenericEntity GetInVehicle012 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
          components {
@@ -39,7 +39,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
            }
           }
          }
-         coords -5.602 -5.75 -5.041
+         coords -5.602 -5.793 -5.041
         }
        }
       }
@@ -57,7 +57,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
            }
           }
          }
-         coords -30.295 -51.805 -21.249
+         coords -30.295 -51.02 -21.249
         }
         GenericEntity Vehicle011 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
          components {
@@ -65,7 +65,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
            m_sObjectToSpawn "{22B327C6752EC4D4}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM_FIA.et"
           }
          }
-         coords -32.393 -50.985 -21.283
+         coords -32.393 -50.986 -21.283
         }
         GenericEntity GetInVehicle011 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
          components {
@@ -94,7 +94,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
            }
           }
          }
-         coords 0.351 0.282 8.156
+         coords 0.351 0.283 8.156
         }
         GenericEntity Vehicle013 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
          components {
@@ -102,7 +102,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
            m_sObjectToSpawn "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et"
           }
          }
-         coords -0.249 -0.008 -0.2
+         coords -0.249 -0.007 -0.2
         }
         GenericEntity GetInVehicle013 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
          components {
@@ -113,7 +113,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
            }
           }
          }
-         coords -0.249 -0.008 -0.2
+         coords -0.249 -0.007 -0.2
         }
        }
       }
@@ -138,11 +138,10 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
          m_Waypoint SCR_ScenarioFrameworkWaypointMove "{65B915FEC33022F2}" {
-          m_fPriorityLevel 1000
          }
         }
        }
-       coords -309.358 54.014 -664.752
+       coords -85.37 8.272 -153.772
       }
      }
     }

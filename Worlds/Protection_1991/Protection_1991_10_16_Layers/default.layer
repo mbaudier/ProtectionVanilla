@@ -27,6 +27,11 @@ SCR_BaseGameMode GameModeSF_Protection_Lore : "{785663D551AFE173}Prefabs/Lore/Pr
    m_iMonthOfTheYear 10
    m_iDayOfTheMonth 16
   }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "Legal"
+   }
+  }
   SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
@@ -44,13 +49,6 @@ RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.
 }
 SCR_FactionManager FactionManager_1991_10 : "{D1FD1F8F861F5002}Prefabs/Lore/Protection/FactionManager_1991_10.et" {
  coords 1891.256 12.194 1827.967
- Factions {
-  SCR_CampaignFaction "{65B2E17CB9AB760F}" {
-   m_aFriendlyFactionsIds {
-    "RURAL"
-   }
-  }
- }
 }
 ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
  coords 1891.659 12.175 1828.161

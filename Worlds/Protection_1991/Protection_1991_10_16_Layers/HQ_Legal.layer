@@ -1,0 +1,310 @@
+GenericEntity AreaHqLegal : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 3229.856 1.989 2948.691
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   InfrastructureLegal {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionSpawnObjects "{65AD0B5DE2598F36}" {
+        m_aNameOfObjectsToSpawnOnActivation {
+         "HelicopterUS01"
+        }
+       }
+      }
+     }
+    }
+    coords -0.552 0.376 -4.004
+    {
+     GenericEntity HqLegalStorageWarehouse1 : "{3D51CCBA7F824DB0}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Storage/Location/E_Storage_Warehouse_01_FIA_01.et" {
+      components {
+       SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+        m_aContainers {
+         SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+          m_fResourceGain 100
+          m_fResourceGainTickrate 30
+         }
+        }
+        m_aGenerators {
+         SCR_ResourceGenerator "{5DE4B6C45FC967FC}" {
+          m_fStorageRange 200
+         }
+        }
+       }
+      }
+      coords -2.317 -0.427 -27.884
+      angleY -34.043
+     }
+     $grp GenericEntity : "{56172705C7E6E70B}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Storage/E_Storage_Supplies_Containers_FIA_04.et" {
+      HqLegalContainer1 {
+       coords 18.506 -0.646 3.154
+       angleY -36.817
+      }
+      HqLegalContainer2 {
+       coords -12.337 -0.377 -3.272
+       angleY -40.325
+      }
+     }
+     GenericEntity HqLegalContainer3 : "{6B23023DB28A6E3C}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Storage/E_Storage_Supplies_Containers_FIA_03.et" {
+      components {
+       SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+        m_aContainers {
+         SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+         }
+        }
+       }
+      }
+      coords 48.115 -0.308 -35.906
+      angleY 31.284
+     }
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      ArsenalWeaponsLegal {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FA780C9D48}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{2F17BFBCDB329CCA}Prefabs/Props/Military/Compositions/US/ArsenalBox_US_Weapons.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FA48D5CAB2}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{372DCA487884C4E8}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR_Weapons.et"
+          }
+         }
+        }
+       }
+       coords 23.899 -0.366 -15.839
+       angleY -127.631
+      }
+      ArsenalEquipmentLegal {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FD9FFB2FFA}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{A28E5D231A74D95D}Prefabs/Props/Military/Compositions/US/ArsenalBox_US_Equipment.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FD96AB0BE5}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{FE8505D4F04785F8}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR_Equipment.et"
+          }
+         }
+        }
+       }
+       coords 25.431 -0.365 -17.689
+       angleY 50.769
+      }
+      HelipadLegal {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FDDBDF40D6}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{C6B534F64C60C583}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatLarge/E_Helipad_L_US_01.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FDCBA4FE31}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{B2BE9F96CF7399CC}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatLarge/E_Helipad_L_USSR_01.et"
+          }
+         }
+        }
+       }
+       coords 11.389 -0.366 -9.897
+       angleY -35.686
+      }
+      LivingAreaLegal {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FCBEA2950D}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{DB7F01C68EACBEC0}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_LivingArea_S_US_01.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FCA8496125}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{BE3988DF6E3CD0B2}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_LivingArea_S_USSR_01.et"
+          }
+         }
+        }
+       }
+       coords -21.872 -0.635 9.503
+       angleX -1.411
+       angleY 53.478
+       angleZ -3.405
+      }
+      VehicleMaintenanceLegal {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69F12344E9FD}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{543C31BC05F032B6}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_VehicleMaintenance_S_US_01.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69F10BA80F32}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{DA380948C0CE5990}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_VehicleMaintenance_S_USSR_01.et"
+          }
+         }
+        }
+       }
+       coords 31.191 -0.366 -21.265
+       angleX 2.526
+       angleY -130.508
+       angleZ 2.953
+      }
+     }
+    }
+   }
+   StartLegal {
+    coords -10.567 0.009 20.301
+    {
+     GenericEntity DefendersLegal : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "Legal"
+        m_aFactionSwitchedObjects {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FD192063A6}" {
+          m_sFactionKey "US"
+          m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         }
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FD117D8262}" {
+          m_sFactionKey "USSR"
+          m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+         }
+        }
+       }
+      }
+      coords 37.353 0.017 -50.922
+     }
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      Helicopter01 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FACAA85D6C}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{CB4D4CF7E887B2D0}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HEDP.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FAC1C336B3}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{DBEC63C9DEE4358C}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HEDP.et"
+          }
+         }
+        }
+       }
+       coords 20.689 0.58 -34.944
+       angleY 145.741
+      }
+      ContructionTruck01 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FD7AC179A7}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{37A9871AD4CC9610}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer_MERDC.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FD766B323B}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{6E9142CD2471741C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer.et"
+          }
+         }
+        }
+       }
+       coords 48.157 0.002 -60.235
+       angleY -127.61
+      }
+      SpawnStart {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginSpawnPoint "{65AF2D2240DDDCE5}" {
+           m_sFaction "Legal"
+           m_Info SCR_UIInfo "{65AF2D25B9C814AD}" {
+            Name "Harbor"
+           }
+          }
+         }
+         m_sObjectToSpawn "{987991DCED3DC197}PrefabsEditable/SpawnPoints/E_SpawnPoint.et"
+        }
+       }
+       coords 30.706 0.002 -46.851
+      }
+     }
+    }
+   }
+   SandbagsHqLegal {
+    coords 39.793 0.011 -48.038
+    {
+     $grp GenericEntity : "{113DEDEA31F5EB1C}Prefabs/Props/Military/Sandbags/Dst/Sandbag_01_single_dst_02_burlap.et" {
+      {
+       coords -1.994 0 -2.264
+      }
+      {
+       coords -2.454 0.031 -2.463
+      }
+      {
+       coords -1.937 0.13 -2.421
+      }
+     }
+     $grp GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_01_long_burlap.et" {
+      {
+       coords 3.406 0.001 2.832
+       angleY -60.692
+      }
+      {
+       coords 1.773 0.001 -0.105
+       angleY -60.096
+      }
+     }
+     GenericEntity : "{3B19CA49C71B8D33}Prefabs/Props/Military/Sandbags/Dst/Sandbag_01_single_dst_01_burlap.et" {
+      coords -2.189 0 -2.683
+     }
+     GenericEntity TripodLegal1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sFactionKey "Legal"
+        m_aFactionSwitchedObjects {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FCE1B556C0}" {
+          m_sFactionKey "US"
+          m_sObjectToSpawn "{887DB60486A18575}Prefabs/Weapons/Tripods/Tripod_M122_MG_M60.et"
+         }
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FCC5C35553}" {
+          m_sFactionKey "USSR"
+          m_sObjectToSpawn "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et"
+         }
+        }
+       }
+      }
+      coords -1.914 0.001 -1.502
+      angleY -160.723
+     }
+     $grp GenericEntity : "{B31A14BC1A0E7776}Prefabs/Props/Military/Sandbags/Sandbag_01_round_burlap.et" {
+      {
+       coords -0.24 0.001 -2.383
+       angleY 153.831
+      }
+      {
+       coords -3.758 0.001 -1.272
+       angleY -119.651
+      }
+     }
+     $grp GenericEntity : "{C971AFD204F62488}Prefabs/Props/Military/Sandbags/Dst/Sandbag_01_single_dst_03_burlap.et" {
+      {
+       coords -2.525 0 -2.181
+      }
+      {
+       coords -1.882 0.01 -2.676
+      }
+     }
+    }
+   }
+  }
+ }
+}
