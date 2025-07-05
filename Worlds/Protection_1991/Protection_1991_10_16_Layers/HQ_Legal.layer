@@ -3,17 +3,6 @@ GenericEntity AreaHqLegal : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework
  {
   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    InfrastructureLegal {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_aActivationActions {
-       SCR_ScenarioFrameworkActionSpawnObjects "{65AD0B5DE2598F36}" {
-        m_aNameOfObjectsToSpawnOnActivation {
-         "HelicopterUS01"
-        }
-       }
-      }
-     }
-    }
     coords -0.552 0.376 -4.004
     {
      GenericEntity HqLegalStorageWarehouse1 : "{3D51CCBA7F824DB0}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Storage/Location/E_Storage_Warehouse_01_FIA_01.et" {
@@ -182,7 +171,7 @@ GenericEntity AreaHqLegal : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework
       coords 37.353 0.017 -50.922
      }
      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-      Helicopter01 {
+      HelicopterLegal1 {
        components {
         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
          m_sFactionKey "Legal"
@@ -198,7 +187,8 @@ GenericEntity AreaHqLegal : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework
          }
         }
        }
-       coords 20.689 0.58 -34.944
+       coords 20.687 0.609 -34.942
+       angleX 2.809
        angleY 145.741
       }
       ContructionTruck01 {

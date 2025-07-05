@@ -49,6 +49,18 @@ RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.
 }
 SCR_FactionManager FactionManager_1991_10 : "{D1FD1F8F861F5002}Prefabs/Lore/Protection/FactionManager_1991_10.et" {
  coords 1891.256 12.194 1827.967
+ Factions {
+  SCR_CampaignFaction "{65B2E17F453D6459}" {
+   m_aFriendlyFactionsIds {
+    "USSR"
+   }
+  }
+  SCR_CampaignFaction "{65B2E17F4016CE55}" {
+   m_aFriendlyFactionsIds {
+    "US"
+   }
+  }
+ }
 }
 ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
  coords 1891.659 12.175 1828.161

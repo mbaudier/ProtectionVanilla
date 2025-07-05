@@ -1,0 +1,185 @@
+GenericEntity AreaMortarsSignalHill : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 2535.778 143.852 2270.282
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   Mortar11 {
+    coords -0.131 -0.053 -1.892
+    {
+     GenericEntity PlacementMortar11 : "{2DE0838804526A10}Prefabs/Compositions/Slotted/SlotFlatSmall/MortarPlacement_S_FIA_01.et" {
+      coords 4.469 -0.335 -4.282
+      angleY 159.258
+     }
+     GenericEntity ServantMortar11 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "Criminal"
+        m_aFactionSwitchedObjects {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65CA83D6700C5A7C}" {
+          m_sFactionKey "USSR"
+          m_sObjectToSpawn "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+         }
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65CA83D66F203D5A}" {
+          m_sFactionKey "US"
+          m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         }
+        }
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65CA83D6C39E9424}" {
+         m_aLayerName {
+          "GetInMortar11" "CycleMortar11"
+         }
+        }
+       }
+      }
+      coords -0.99 -0.028 -4.447
+     }
+     GenericEntity StorageMortar11 : "{9AE2149222FAD9A3}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_FIA_03.et" {
+      components {
+       SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+        m_aContainers {
+         SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+          m_fResourceGain 100
+          m_fResourceGainTickrate 10
+         }
+        }
+       }
+      }
+      coords -7.21 0.183 3.709
+      angleY -22.306
+     }
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      GetInMortar11 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{62AE8756B2564616}" {
+          m_fCompletionRadius 5
+         }
+        }
+       }
+       coords 4.469 -0.335 -4.282
+      }
+      CycleMortar11 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{65CA83D436C086F4}" {
+          m_aLayersWithWaypointsToCycle {
+           "IndiscriminateBombingArleville"
+          }
+          m_bUseRandomOrder 1
+         }
+        }
+       }
+       coords 0.003 0 0.015
+      }
+     }
+    }
+   }
+   Mortar12 {
+    coords -28.329 3.927 -12.417
+    {
+     GenericEntity PlacementMortar12 : "{2DE0838804526A10}Prefabs/Compositions/Slotted/SlotFlatSmall/MortarPlacement_S_FIA_01.et" {
+      coords 3.898 -0.329 -5.034
+      angleY 159.258
+     }
+     GenericEntity ServantMortar12 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "Criminal"
+        m_aFactionSwitchedObjects {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65CA83D61299F802}" {
+          m_sFactionKey "USSR"
+          m_sObjectToSpawn "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+         }
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65CA83D60849B3D5}" {
+          m_sFactionKey "US"
+          m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         }
+        }
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65CA83D6BF5E7B43}" {
+         m_aLayerName {
+          "GetInMortar12" "CycleMortar12"
+         }
+        }
+       }
+      }
+      coords -0.99 -0.028 -4.447
+     }
+     GenericEntity StorageMortar12 : "{9AE2149222FAD9A3}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_FIA_03.et" {
+      components {
+       SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+        m_aContainers {
+         SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+          m_fResourceGain 100
+          m_fResourceGainTickrate 10
+         }
+        }
+       }
+      }
+      coords -7.21 0.183 3.709
+      angleY -22.306
+     }
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      GetInMortar12 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{62AE8756B2564616}" {
+          m_fCompletionRadius 5
+         }
+        }
+       }
+       coords 4.469 -0.335 -4.282
+      }
+      CycleMortar12 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{65CA83D436C086F4}" {
+          m_aLayersWithWaypointsToCycle {
+           "IndiscriminateBombingArleville"
+          }
+          m_bUseRandomOrder 1
+         }
+        }
+       }
+       coords 2.258 0.062 3.949
+      }
+     }
+    }
+   }
+  }
+  GenericEntity IndiscriminateBombingArleville : "{74621A37D545698D}Prefabs/Systems/ScenarioFramework/Components/IndiscriminateBombing_M.et" {
+   coords 238.976 -57.052 -629.686
+   angleY 79.559
+   {
+    GenericEntity SlotWaypoint10 {
+     ID "65CA83CD32913937"
+    }
+    GenericEntity SlotWaypoint2 {
+     ID "65CA83CEE099790B"
+    }
+    GenericEntity SlotWaypoint1 {
+     ID "65CA83CE3551759B"
+    }
+    GenericEntity SlotWaypoint9 {
+     ID "65CA83CD6665C956"
+    }
+    GenericEntity SlotWaypoint8 {
+     ID "65CA83CEB45FC193"
+    }
+    GenericEntity SlotWaypoint7 {
+     ID "65CA83CEA67079B7"
+    }
+    GenericEntity SlotWaypoint3 {
+     ID "65CA83CE8076090C"
+    }
+    GenericEntity SlotWaypoint6 {
+     ID "65CA83CE807608D0"
+    }
+    GenericEntity SlotWaypoint5 {
+     ID "65CA83CE80760932"
+    }
+    GenericEntity SlotWaypoint4 {
+     ID "65CA83CE80760919"
+    }
+   }
+  }
+ }
+}

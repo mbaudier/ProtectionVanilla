@@ -207,6 +207,45 @@ GenericEntity AreaMortarsArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenario
      }
     }
    }
+   CiviliansNearMortars {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+     }
+    }
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      CiviliansNearMortar02 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{591DED76888ABC0D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_3x.et"
+         m_sWPToSpawn "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
+        }
+       }
+       coords -92.149 4.499 4.369
+      }
+      CiviliansNearMortar03 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{591DED76888ABC0D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_3x.et"
+         m_sWPToSpawn "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
+        }
+       }
+       coords -73.371 3.889 -95.89
+      }
+      CiviliansNearMortar01 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{591DED76888ABC0D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_3x.et"
+         m_sWPToSpawn "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
+        }
+       }
+       coords 9.774 -0.402 -3.736
+      }
+     }
+    }
+   }
   }
  }
 }
