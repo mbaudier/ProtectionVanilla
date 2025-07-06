@@ -5,13 +5,18 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
    components {
     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
      m_sFactionKey "Legal"
-     m_sTaskTitle "Move to Arleville"
-     m_sTaskDescription "Join businessmen meeting with Arleville's mayor"
+     m_sTaskTitle "#PRTC-SC01_Task01_Title"
+     m_sTaskDescription "#PRTC-SC01_Task01_Text"
      m_aTriggerActionsOnFinish {
       SCR_ScenarioFrameworkActionSpawnObjects "{60E5151532FF59E3}" {
        m_aNameOfObjectsToSpawnOnActivation {
         "TaskDefendMayorMeeting" "MayorMeetingAttackers"
        }
+      }
+      SCR_ScenarioFrameworkActionShowHint "{65CD0DCE4BF7DC51}" {
+       m_sTitle "#PRTC-Hint_Command_Protect_Title"
+       m_sText "#PRTC-Hint_Command_Protect_Text"
+       m_sFactionKey "Legal"
       }
      }
     }

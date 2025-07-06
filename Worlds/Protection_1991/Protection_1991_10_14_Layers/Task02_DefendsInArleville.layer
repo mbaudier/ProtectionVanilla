@@ -272,24 +272,8 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         "TaskMoveToBeauregard" "ArlevilleFIADefenders" "SignalHillBattle"
        }
       }
-      SCR_ScenarioFrameworkActionAI "{6333287922E77BEC}" {
-       m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{633328792BA3DF0E}" {
-        m_aLayerBaseNames {
-         "Task02VIP" "Task02Businessman01" "Task02Businessman02"
-        }
-       }
-       m_aAIActions {
-        SCR_ScenarioFrameworkAIAddWaypoint "{633328790BA4A3FB}" {
-         m_Getter SCR_ScenarioFrameworkGetLayerBase "{6333287911CCD3F3}" {
-          m_sLayerBaseName "Task02EscapeWP"
-         }
-         m_bAddOnTopOfQueue 1
-         m_bClearPreviousWaypoints 1
-        }
-       }
-      }
      }
-     m_fDefendTime 10
+     m_fDefendTime 180
      m_aFactionSettings {
       SCR_ScenarioFrameworkTaskDefendAttackingFaction "{60E90AC6CDEDAB98}" {
        m_sFactionKey "Criminal"
@@ -357,6 +341,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        SCR_ScenarioFrameworkSlotDefend "{5C52E161597D867A}" {
         m_sFactionKey "URBAN"
         m_sObjectToSpawn "{8AA5799597126801}Prefabs/Characters/Factions/INDFOR/URBAN/Character_URBAN_Businessman02.et"
+        m_sID "Defended1"
         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90AD9F4A26F48}" {
          m_aLayerName {
           "Task02StayHidden"
@@ -374,6 +359,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        SCR_ScenarioFrameworkSlotDefend "{5C52E161597D867A}" {
         m_sFactionKey "URBAN"
         m_sObjectToSpawn "{036D018C27337044}Prefabs/Characters/Factions/INDFOR/URBAN/Character_URBAN_Businessman00.et"
+        m_sID "Defended3"
         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90AC7FD3FB27D}" {
          m_aLayerName {
           "Task02StayHidden"
@@ -391,6 +377,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        SCR_ScenarioFrameworkSlotDefend "{5C52E161597D867A}" {
         m_sFactionKey "URBAN"
         m_sObjectToSpawn "{036D018C27337044}Prefabs/Characters/Factions/INDFOR/URBAN/Character_URBAN_Businessman00.et"
+        m_sID "Defended2"
         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90AC7CAEF3976}" {
          m_aLayerName {
           "Task02StayHidden"
