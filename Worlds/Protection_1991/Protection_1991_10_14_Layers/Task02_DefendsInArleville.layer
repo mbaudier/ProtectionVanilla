@@ -342,13 +342,13 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
        m_aPlugins {
         SCR_ScenarioFrameworkPluginSpawnPoint "{65AF3B8AC5F80EB0}" {
+         m_sFaction ""
          m_Info SCR_UIInfo "{65AF3B8AC76657C6}" {
           Name "Hotel"
          }
         }
        }
        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
-       m_bCanBeGarbageCollected 0
       }
      }
      coords 0 -0.898 -2.468

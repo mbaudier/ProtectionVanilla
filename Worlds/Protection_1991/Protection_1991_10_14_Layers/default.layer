@@ -65,6 +65,11 @@ SCR_FactionManager FactionManager_1991_10 : "{D1FD1F8F861F5002}Prefabs/Lore/Prot
   }
   SCR_CampaignFaction "{65B2E17F4016CE55}" {
   }
+  SCR_CampaignFaction "{65B2E17CB9AB760F}" {
+   m_aFriendlyFactionsIds + {
+    "URBAN"
+   }
+  }
  }
 }
 ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {

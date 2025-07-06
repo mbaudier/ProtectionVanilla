@@ -38,15 +38,15 @@ GenericEntity AreaBeauregardDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/Scena
      BeauregardDefendersGetInWP {
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{656EE3EB0BDD5506}" {
-         m_fCompletionRadius 5
+        m_Waypoint SCR_ScenarioFrameworkWaypointGetIn "{65CC7AA3A9186E39}" {
+         m_sEntityName "BeauregardDefendersVehicle1"
         }
        }
       }
       coords 1.229 0.669 -2.318
      }
     }
-    Vehicle UAZ469_FIA3 : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
+    Vehicle BeauregardDefendersVehicle1 : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
      coords 1.84 -0.013 -1.214
      angleY -104.855
     }
