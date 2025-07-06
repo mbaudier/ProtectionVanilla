@@ -35,6 +35,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        m_sFactionKey "Legal"
        m_eActivationType ON_TRIGGER_ACTIVATION
        m_sTaskTitle "Neutralize Mortar Servant #2"
+       m_aTriggerActionsOnFinish {
+        SCR_ScenarioFrameworkActionIncrementCounter "{65CD2DB4616C9DFE}" {
+         m_sCounterName "KilledMortarServants"
+        }
+       }
       }
      }
      coords -18.881 3.471 -29.146
@@ -85,6 +90,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        m_sFactionKey "Legal"
        m_eActivationType ON_TRIGGER_ACTIVATION
        m_sTaskTitle "Neutralize Mortar Servant #1"
+       m_aTriggerActionsOnFinish {
+        SCR_ScenarioFrameworkActionIncrementCounter "{65CD2DB471653D23}" {
+         m_sCounterName "KilledMortarServants"
+        }
+       }
       }
      }
      coords 1.736 1.885 -2.507
@@ -135,6 +145,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        m_sFactionKey "Legal"
        m_eActivationType ON_TRIGGER_ACTIVATION
        m_sTaskTitle "Neutralize Mortar Servant #3"
+       m_aTriggerActionsOnFinish {
+        SCR_ScenarioFrameworkActionIncrementCounter "{65CD2DB457614FF7}" {
+         m_sCounterName "KilledMortarServants"
+        }
+       }
       }
      }
      coords -14.468 1.763 -116.211
@@ -189,7 +204,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{65B0F9E87009989C}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "TaskKillServantMortar01" "TaskKillServantMortar02" "TaskKillServantMortar03"
+         "TaskKillServantMortar01" "TaskKillServantMortar02" "TaskKillServantMortar03" "Mortar11" "Mortar12"
         }
        }
       }
@@ -207,9 +222,27 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         }
        }
       }
-      coords 0 255.032 0
+      coords 0 201.518 0
      }
     }
+   }
+   SCR_ScenarioFrameworkLogicCounter KilledMortarServants : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
+    coords 0.004 0 -0.009
+    m_aActions {
+     SCR_ScenarioFrameworkActionSpawnObjects "{65CD2DB445347BE0}" {
+      m_aNameOfObjectsToSpawnOnActivation {
+       "TaskBuildEmergencyResponseCenter"
+      }
+     }
+     SCR_ScenarioFrameworkActionDeleteEntity "{65CD2DB5B6B397A4}" {
+      m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{65CD2DB5AB06FEB7}" {
+       m_aLayerBaseNames {
+        "ServantMortar11" "ServantMortar12"
+       }
+      }
+     }
+    }
+    m_iCountTo 2
    }
   }
  }
@@ -219,6 +252,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    GenericEntity TaskBuildEmergencyResponseCenter : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
       m_sTaskTitle "Build Emergency Response Center"
       m_bPlaceMarkerOnSubjectSlot 1
      }
