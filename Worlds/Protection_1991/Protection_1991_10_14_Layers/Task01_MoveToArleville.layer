@@ -82,93 +82,61 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     }
    }
   }
-  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-   MayorMeeting {
-    coords 0 0 0
-    {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-      Defender1 {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sFactionKey "Legal"
-         m_aFactionSwitchedObjects {
-          SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E2482ED0452}" {
-           m_sFactionKey "US"
-           m_sObjectToSpawn "{36E28C628A2F83CB}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF.et"
-          }
-          SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E24DA7BBD85}" {
-           m_sFactionKey "USSR"
-           m_sObjectToSpawn "{2DB452B3EC386B92}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF.et"
-          }
-         }
-         m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
-         m_eAIGroupFormation Line
-        }
-       }
-       coords 14.186 -1.249 7.444
-       angleX 0.194
-       angleY 19.554
-       angleZ -0.544
-      }
-      Defender2 {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sFactionKey "Legal"
-         m_aFactionSwitchedObjects {
-          SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E2482ED0452}" {
-           m_sFactionKey "US"
-           m_sObjectToSpawn "{36E28C628A2F83CB}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF.et"
-          }
-          SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E24DA7BBD85}" {
-           m_sFactionKey "USSR"
-           m_sObjectToSpawn "{2DB452B3EC386B92}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF.et"
-          }
-         }
-         m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
-         m_eAIGroupFormation Line
-        }
-       }
-       coords 14.467 -1.314 3.635
-       angleX 0.507
-       angleY 118.55
-       angleZ 0.277
-      }
-     }
-     GenericEntity EscapeVehicle : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+  GenericEntity MayorMeeting : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    Vehicle EscapeVehicle : "{870EB660433857D3}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_teal.et" {
+     coords 15.381 -1.25 17.999
+     angleY 135.85
+    }
+    $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+     Defender1 {
       components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
         m_sFactionKey "Legal"
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{60F0604E2879D2BF}" {
-          m_aActions {
-           SCR_ScenarioFrameworkActionSpawnObjects "{60F060414D926E36}" {
-            m_iMaxNumberOfActivations 1
-            m_aNameOfObjectsToSpawnOnActivation {
-             "LayerMayorMeetingAttackers"
-            }
-           }
-          }
-         }
-        }
         m_aFactionSwitchedObjects {
-         SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E2443745E8D}" {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E2482ED0452}" {
           m_sFactionKey "US"
-          m_sObjectToSpawn "{4A71F755A4513227}Prefabs/Vehicles/Wheeled/M998/M1025.et"
+          m_sObjectToSpawn "{36E28C628A2F83CB}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF.et"
          }
-         SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E27B65EB0FE}" {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E24DA7BBD85}" {
           m_sFactionKey "USSR"
-          m_sObjectToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+          m_sObjectToSpawn "{2DB452B3EC386B92}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF.et"
          }
         }
+        m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
+        m_eAIGroupFormation Line
        }
       }
-      coords 12.753 -1.208 16.486
-      angleY 135.85
+      coords 14.186 -1.249 7.444
+      angleX 0.194
+      angleY 19.554
+      angleZ -0.544
+     }
+     Defender2 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "Legal"
+        m_aFactionSwitchedObjects {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E2482ED0452}" {
+          m_sFactionKey "US"
+          m_sObjectToSpawn "{36E28C628A2F83CB}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF.et"
+         }
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E24DA7BBD85}" {
+          m_sFactionKey "USSR"
+          m_sObjectToSpawn "{2DB452B3EC386B92}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF.et"
+         }
+        }
+        m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
+        m_eAIGroupFormation Line
+       }
+      }
+      coords 14.467 -1.314 3.635
+      angleX 0.507
+      angleY 118.55
+      angleZ 0.277
      }
     }
-   }
-   CriminalHelicopters {
-    coords 0 0 0
    }
   }
  }

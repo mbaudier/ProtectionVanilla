@@ -9,17 +9,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
      m_bExcludeFromDynamicDespawn 1
      m_sTaskTitle "Flee with the vehicle to Beauregard"
      m_aTriggerActionsOnFinish {
-      SCR_ScenarioFrameworkActionShowPopupNotification "{60EF33BB820DFE12}" {
-       m_sText "Stop the car so that businessmen can evacuate to the building"
-      }
-      SCR_ScenarioFrameworkActionAI "{6334A5AEBFD1C665}" {
-       m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{6334A5AE869F070D}" {
-        m_aLayerBaseNames {
-         "Task02VIP" "Task02Businessman01" "Task02Businessman02"
-        }
-       }
-      }
-      SCR_ScenarioFrameworkActionSpawnObjects "{6334A5A1B8787C1A}" {
+      SCR_ScenarioFrameworkActionSpawnObjects "{65CCE362A04B1F05}" {
        m_aNameOfObjectsToSpawnOnActivation {
         "LayerEndMission"
        }
@@ -29,21 +19,6 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
    }
    coords -0.132 0 -0.572
    {
-    GenericEntity TriggerEndMissionFaction : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
-     components {
-      SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
-       m_aPlugins {
-        SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
-         m_fAreaRadius 20
-         m_eActivationPresence ANY_CHARACTER
-         m_sActivatedByThisFaction "URBAN"
-         m_bSearchVehicleInventory 0
-        }
-       }
-      }
-     }
-     coords 395.651 -61.129 1046.86
-    }
     GenericEntity RoadMines : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
      components {
       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
@@ -56,12 +31,42 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        Mines1 {
         coords 0 0 0
         {
-         $grp GenericEntity : "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et" {
-          {
-           coords 38.951 -2.008 339.759
+         $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          Mine10 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sFactionKey "Criminal"
+             m_aFactionSwitchedObjects {
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259CFDB09EE}" {
+               m_sFactionKey "USSR"
+               m_sObjectToSpawn "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
+              }
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259C719B76E}" {
+               m_sFactionKey "US"
+               m_sObjectToSpawn "{49FFE8F373F55960}Prefabs/Weapons/Explosives/Mine_M15AT/Mine_M15AT.et"
+              }
+             }
+            }
+           }
+           coords 38.777 -1.96 339.645
           }
-          {
-           coords 41.867 -2.344 349.585
+          Mine11 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sFactionKey "Criminal"
+             m_aFactionSwitchedObjects {
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259CFDB09EE}" {
+               m_sFactionKey "USSR"
+               m_sObjectToSpawn "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
+              }
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259C719B76E}" {
+               m_sFactionKey "US"
+               m_sObjectToSpawn "{49FFE8F373F55960}Prefabs/Weapons/Explosives/Mine_M15AT/Mine_M15AT.et"
+              }
+             }
+            }
+           }
+           coords 41.882 -2.215 349.48
           }
          }
         }
@@ -69,12 +74,42 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        Mines3 {
         coords 246.359 -20.187 613.131
         {
-         $grp GenericEntity : "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et" {
-          {
-           coords 3.325 -0.003 -3.143
+         $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          Mine30 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sFactionKey "Criminal"
+             m_aFactionSwitchedObjects {
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259CFDB09EE}" {
+               m_sFactionKey "USSR"
+               m_sObjectToSpawn "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
+              }
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259C719B76E}" {
+               m_sFactionKey "US"
+               m_sObjectToSpawn "{49FFE8F373F55960}Prefabs/Weapons/Explosives/Mine_M15AT/Mine_M15AT.et"
+              }
+             }
+            }
+           }
+           coords 3.224 0.079 -3.219
           }
-          {
-           coords 6.002 -0.02 -4.74
+          Mine31 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sFactionKey "Criminal"
+             m_aFactionSwitchedObjects {
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259CFDB09EE}" {
+               m_sFactionKey "USSR"
+               m_sObjectToSpawn "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
+              }
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259C719B76E}" {
+               m_sFactionKey "US"
+               m_sObjectToSpawn "{49FFE8F373F55960}Prefabs/Weapons/Explosives/Mine_M15AT/Mine_M15AT.et"
+              }
+             }
+            }
+           }
+           coords 5.936 0.081 -4.761
           }
          }
         }
@@ -82,12 +117,42 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        Mines2 {
         coords 123.874 -8.765 429.022
         {
-         $grp GenericEntity : "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et" {
-          {
-           coords -0.054 -0.286 4.08
+         $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          Mine20 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sFactionKey "Criminal"
+             m_aFactionSwitchedObjects {
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259CFDB09EE}" {
+               m_sFactionKey "USSR"
+               m_sObjectToSpawn "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
+              }
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259C719B76E}" {
+               m_sFactionKey "US"
+               m_sObjectToSpawn "{49FFE8F373F55960}Prefabs/Weapons/Explosives/Mine_M15AT/Mine_M15AT.et"
+              }
+             }
+            }
+           }
+           coords -0.056 -0.157 3.972
           }
-          {
-           coords 3.041 -0.894 11.017
+          Mine21 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sFactionKey "Criminal"
+             m_aFactionSwitchedObjects {
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259CFDB09EE}" {
+               m_sFactionKey "USSR"
+               m_sObjectToSpawn "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
+              }
+              SCR_ScenarioFrameworkFactionSwitchedObject "{65CCA259C719B76E}" {
+               m_sFactionKey "US"
+               m_sObjectToSpawn "{49FFE8F373F55960}Prefabs/Weapons/Explosives/Mine_M15AT/Mine_M15AT.et"
+              }
+             }
+            }
+           }
+           coords 3.021 -0.765 10.924
           }
          }
         }
@@ -95,24 +160,39 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
       }
      }
     }
+    GenericEntity BeauregardDefenders1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sObjectToSpawn "{1BB20A4B3A53D0F5}Prefabs/Groups/INDFOR/Group_FIA_LightFireTeam.et"
+       m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656EE3EC82B5253C}" {
+        m_aLayerName {
+         "BeauregardDefendersGetInWP" "BeauregardDefendersMoveWP"
+        }
+       }
+      }
+     }
+     coords 315.859 -49.167 892.545
+     angleY -80.732
+    }
     GenericEntity SlotMoveToBeauregard : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
      components {
       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
        m_bExcludeFromDynamicDespawn 1
        m_aPlugins {
         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+         m_fAreaRadius 6
         }
        }
       }
      }
      coords 395.651 -61.129 1046.86
     }
-    GenericEntity FinishMissionTrigger : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+    GenericEntity TriggerFinishMission : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
      components {
       SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
        m_aPlugins {
         SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
-         m_fAreaRadius 10
+         m_fAreaRadius 6
          m_fActivationCountdownTimer 5
         }
        }
@@ -123,6 +203,34 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
       }
      }
      coords 395.651 -61.129 1046.86
+    }
+    $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+     BeauregardDefendersGetInWP {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointGetIn "{65CC7AA3A9186E39}" {
+         m_sEntityName "BeauregardDefendersVehicle1"
+        }
+       }
+      }
+      coords 320.482 -50.081 900.946
+     }
+     BeauregardDefendersMoveWP {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{656EE3EB52ADE86F}" {
+         m_eAIWaypointCompletionType All
+        }
+       }
+      }
+      coords 30.354 2.608 -97.067
+     }
+    }
+    Vehicle BeauregardDefendersVehicle1 : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
+     coords 318.242 -50.041 902.231
+     angleX 5.702
+     angleY -145.015
+     angleZ -0.366
     }
    }
   }
@@ -182,6 +290,27 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     }
     coords 372.187 -69.252 1310.586
     {
+     GenericEntity TriggerCountProtected : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionSetMissionEndScreen "{65CCE3641E9E30B5}" {
+          m_eGameOverType COMBATPATROL_DEFEAT
+          m_sSubtitle "This is a disaster, you have saved no civilian"
+         }
+        }
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+          m_fAreaRadius 10
+          m_eActivationPresence ANY_CHARACTER
+          m_sActivatedByThisFaction "URBAN"
+         }
+        }
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+       }
+      }
+      coords 23.332 8.123 -264.298
+     }
      $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
       MissionStatusDraw {
        coords 0 0 0
@@ -189,7 +318,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         SCR_ScenarioFrameworkLogicInput "{629707756622CE83}" {
          m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{629707755C853993}" {
           m_Getter SCR_ScenarioFrameworkGetLayerBase "{629707765D632F4C}" {
-           m_sLayerBaseName "TriggerEndMissionFaction"
+           m_sLayerBaseName "TriggerCountProtected"
           }
           m_eComparisonOperator GREATER_OR_EQUAL
           m_iValue 1
@@ -209,7 +338,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         SCR_ScenarioFrameworkLogicInput "{629707756622CE83}" {
          m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{629707755C853993}" {
           m_Getter SCR_ScenarioFrameworkGetLayerBase "{629707765D632F4C}" {
-           m_sLayerBaseName "TriggerEndMissionFaction"
+           m_sLayerBaseName "TriggerCountProtected"
           }
           m_eComparisonOperator GREATER_OR_EQUAL
           m_iValue 2
@@ -222,6 +351,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          m_sSubtitle "Good job, you have saved many civilians"
         }
        }
+       m_iCountTo 2
       }
       MissionStatusVictory {
        coords 6.912 -0.275 1.47
@@ -229,7 +359,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         SCR_ScenarioFrameworkLogicInput "{629707756622CE83}" {
          m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{6334A5A14E2BA940}" {
           m_Getter SCR_ScenarioFrameworkGetLayerBase "{6334A5A1549DB231}" {
-           m_sLayerBaseName "TriggerEndMissionFaction"
+           m_sLayerBaseName "TriggerCountProtected"
           }
           m_eComparisonOperator GREATER_OR_EQUAL
           m_iValue 3
@@ -242,6 +372,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          m_sSubtitle "Complete success, you have saved most civilians"
         }
        }
+       m_iCountTo 3
       }
      }
     }

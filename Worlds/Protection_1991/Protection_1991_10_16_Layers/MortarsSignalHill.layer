@@ -3,6 +3,11 @@ GenericEntity AreaMortarsSignalHill : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
  {
   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    Mortar11 {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
     coords -0.131 -0.053 -1.892
     {
      GenericEntity PlacementMortar11 : "{2DE0838804526A10}Prefabs/Compositions/Slotted/SlotFlatSmall/MortarPlacement_S_FIA_01.et" {
@@ -74,6 +79,11 @@ GenericEntity AreaMortarsSignalHill : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
     }
    }
    Mortar12 {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
     coords -28.329 3.927 -12.417
     {
      GenericEntity PlacementMortar12 : "{2DE0838804526A10}Prefabs/Compositions/Slotted/SlotFlatSmall/MortarPlacement_S_FIA_01.et" {

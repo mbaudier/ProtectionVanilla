@@ -227,15 +227,13 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
       Task02EscapeWP {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65C90897FEED9479}" {
-          m_fCompletionRadius 10
-          m_fPriorityLevel 2000
-          m_fHoldingTime 60
-          m_bDriverAllowed 0
+         m_Waypoint SCR_ScenarioFrameworkWaypointGetIn "{65CCA25AB923D0F1}" {
+          m_sEntityName "EscapeVehicle"
+          m_fCompletionRadius 5
          }
         }
        }
-       coords -2.935 0.59 6.666
+       coords -0.862 -0.283 6.46
       }
       Task02StayHidden {
        components {
@@ -271,7 +269,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
       }
       SCR_ScenarioFrameworkActionSpawnObjects "{60E90ACE8A8FBF77}" {
        m_aNameOfObjectsToSpawnOnActivation {
-        "TaskMoveToBeauregard" "ArlevilleFIADefenders" "SignalHillBattle" "BeauregardFIADefenders"
+        "TaskMoveToBeauregard" "ArlevilleFIADefenders" "SignalHillBattle"
        }
       }
       SCR_ScenarioFrameworkActionAI "{6333287922E77BEC}" {
@@ -291,7 +289,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
       }
      }
-     m_fDefendTime 180
+     m_fDefendTime 10
      m_aFactionSettings {
       SCR_ScenarioFrameworkTaskDefendAttackingFaction "{60E90AC6CDEDAB98}" {
        m_sFactionKey "Criminal"
@@ -321,6 +319,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        m_sFactionKey "RURAL"
        m_sObjectToSpawn "{5460268B4DBF78E3}Prefabs/Characters/Factions/INDFOR/RURAL/Character_RURAL_Notable01.et"
        m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
+       m_sGroupPrefab "{5D2E5BBA44EAD0BD}Prefabs/AI/Groups/Group_NonCombatants.et"
       }
      }
      coords 8.548 -1.582 11.276
@@ -353,9 +352,10 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
      coords 0 -0.898 -2.468
     }
     $grp GenericEntity : "{E123BAC59A9B3D5F}Prefabs/Systems/ScenarioFramework/Components/SlotDefend.et" {
-     Task02VIP {
+     VIP {
       components {
        SCR_ScenarioFrameworkSlotDefend "{5C52E161597D867A}" {
+        m_sFactionKey "URBAN"
         m_sObjectToSpawn "{8AA5799597126801}Prefabs/Characters/Factions/INDFOR/URBAN/Character_URBAN_Businessman02.et"
         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90AD9F4A26F48}" {
          m_aLayerName {
@@ -363,14 +363,16 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          }
         }
         m_bSpawnAIOnWPPos 0
+        m_sGroupPrefab "{5D2E5BBA44EAD0BD}Prefabs/AI/Groups/Group_NonCombatants.et"
        }
       }
       coords 7.94 -1.554 14.025
       angleY -164.403
      }
-     Task02Businessman01 {
+     Businessman1 {
       components {
        SCR_ScenarioFrameworkSlotDefend "{5C52E161597D867A}" {
+        m_sFactionKey "URBAN"
         m_sObjectToSpawn "{036D018C27337044}Prefabs/Characters/Factions/INDFOR/URBAN/Character_URBAN_Businessman00.et"
         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90AC7FD3FB27D}" {
          m_aLayerName {
@@ -378,14 +380,16 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          }
         }
         m_bSpawnAIOnWPPos 0
+        m_sGroupPrefab "{5D2E5BBA44EAD0BD}Prefabs/AI/Groups/Group_NonCombatants.et"
        }
       }
       coords -0.194 -1.496 15.339
       angleY 138.218
      }
-     Task02Businessman02 {
+     Businessman2 {
       components {
        SCR_ScenarioFrameworkSlotDefend "{5C52E161597D867A}" {
+        m_sFactionKey "URBAN"
         m_sObjectToSpawn "{036D018C27337044}Prefabs/Characters/Factions/INDFOR/URBAN/Character_URBAN_Businessman00.et"
         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90AC7CAEF3976}" {
          m_aLayerName {
@@ -393,6 +397,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          }
         }
         m_bSpawnAIOnWPPos 0
+        m_sGroupPrefab "{5D2E5BBA44EAD0BD}Prefabs/AI/Groups/Group_NonCombatants.et"
        }
       }
       coords 0.843 -1.519 14.105
