@@ -5,6 +5,8 @@ SCR_FactionManager {
    m_sProtectedFaction "PROTECTED"
    m_bForceProtectedFactionFriendlyToAll 1
    m_bAlliesCanBeRecruited 1
+   m_bNonCombattantsCanBeProtected 1
+   m_bEnemiesCanBeCaptured 1
   }
  }
  Factions {
