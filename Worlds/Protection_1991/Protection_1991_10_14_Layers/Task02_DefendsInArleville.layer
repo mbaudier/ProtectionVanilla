@@ -292,7 +292,6 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
      m_aAttackerLayerNames {
       "MayorMeetingAttackers"
      }
-     m_sDelayedEvaluationText "All attackers have been eliminated"
     }
    }
    coords 0 0 0

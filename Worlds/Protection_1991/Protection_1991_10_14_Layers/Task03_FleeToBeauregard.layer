@@ -52,6 +52,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
          m_fAreaRadius 6
          m_fActivationCountdownTimer 5
+         m_bNotificationEnabled 1
         }
        }
        m_aTriggerActions {
@@ -151,20 +152,15 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
      GenericEntity TriggerCountProtected : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
       components {
        SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
-        m_aActivationActions {
-         SCR_ScenarioFrameworkActionSetMissionEndScreen "{65CCE3641E9E30B5}" {
-          m_eGameOverType COMBATPATROL_DEFEAT
-          m_sSubtitle "This is a disaster, you have saved no civilian"
-         }
-        }
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
           m_fAreaRadius 10
-          m_eActivationPresence ANY_CHARACTER
-          m_sActivatedByThisFaction "PROTECTED"
+          m_aSpecificEntityNames {
+           "Defended1" "Defended2" "Defended3"
+          }
+          m_bOnce 1
          }
         }
-        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
        }
       }
       coords 23.332 8.123 -264.298
@@ -179,7 +175,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
            m_sLayerBaseName "TriggerCountProtected"
           }
           m_eComparisonOperator GREATER_OR_EQUAL
-          m_iValue 1
+          m_iValue 0
          }
         }
        }
@@ -187,6 +183,9 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
          m_eGameOverType COMBATPATROL_DRAW
          m_sSubtitle "Unfortunately, you could only save some civilians"
+        }
+        SCR_ScenarioFrameworkActionShowPopupNotification "{65CF14C81C3B95A7}" {
+         m_sTitle "DRAW"
         }
        }
       }
@@ -208,8 +207,10 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          m_eGameOverType COMBATPATROL_PARTIAL_SUCCESS
          m_sSubtitle "Good job, you have saved many civilians"
         }
+        SCR_ScenarioFrameworkActionShowPopupNotification "{65CF14C816D92808}" {
+         m_sTitle "PARTIAL"
+        }
        }
-       m_iCountTo 2
       }
       MissionStatusVictory {
        coords 6.912 -0.275 1.47
@@ -229,8 +230,10 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          m_eGameOverType COMBATPATROL_VICTORY
          m_sSubtitle "Complete success, you have saved most civilians"
         }
+        SCR_ScenarioFrameworkActionShowPopupNotification "{65CF14C80E35D68A}" {
+         m_sTitle "VICTORY"
+        }
        }
-       m_iCountTo 3
       }
      }
     }
