@@ -10,7 +10,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
      m_aTriggerActionsOnFinish {
       SCR_ScenarioFrameworkActionSpawnObjects "{65CCE362A04B1F05}" {
        m_aNameOfObjectsToSpawnOnActivation {
-        "LayerEndMission"
+        "TriggerFinishMission"
        }
       }
      }
@@ -18,6 +18,89 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
    }
    coords -0.132 0 -0.572
    {
+    GenericEntity TriggerCountProtected : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+     components {
+      SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+       m_aActivationActions {
+        SCR_ScenarioFrameworkActionSetMissionEndScreen "{65CF27122F044C92}" {
+         m_eGameOverType COMBATPATROL_DEFEAT
+         m_sSubtitle "No civilian was saved"
+        }
+       }
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+         m_fAreaRadius 25
+         m_aSpecificEntityNames {
+          "Defended1" "Defended2" "Defended3"
+         }
+        }
+       }
+      }
+     }
+     coords 395.651 -61.129 1046.86
+    }
+    $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
+     MissionStatusDraw {
+      coords 372.319 -69.252 1311.158
+      m_aInputs {
+       SCR_ScenarioFrameworkLogicInput "{629707756622CE83}" {
+        m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{629707755C853993}" {
+         m_Getter SCR_ScenarioFrameworkGetLayerBase "{629707765D632F4C}" {
+          m_sLayerBaseName "TriggerCountProtected"
+         }
+         m_eComparisonOperator EQUAL
+         m_iValue 1
+        }
+       }
+      }
+      m_aActions {
+       SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
+        m_eGameOverType COMBATPATROL_DRAW
+        m_sSubtitle "Unfortunately, you could only save some civilians"
+       }
+      }
+     }
+     MissionStatusPartial {
+      coords 369.206 -69.127 1311.347
+      m_aInputs {
+       SCR_ScenarioFrameworkLogicInput "{629707756622CE83}" {
+        m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{629707755C853993}" {
+         m_Getter SCR_ScenarioFrameworkGetLayerBase "{629707765D632F4C}" {
+          m_sLayerBaseName "TriggerCountProtected"
+         }
+         m_eComparisonOperator EQUAL
+         m_iValue 2
+        }
+       }
+      }
+      m_aActions {
+       SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
+        m_eGameOverType COMBATPATROL_PARTIAL_SUCCESS
+        m_sSubtitle "Good job, you have saved many civilians"
+       }
+      }
+     }
+     MissionStatusVictory {
+      coords 379.231 -69.527 1312.628
+      m_aInputs {
+       SCR_ScenarioFrameworkLogicInput "{629707756622CE83}" {
+        m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{6334A5A14E2BA940}" {
+         m_Getter SCR_ScenarioFrameworkGetLayerBase "{6334A5A1549DB231}" {
+          m_sLayerBaseName "TriggerCountProtected"
+         }
+         m_eComparisonOperator EQUAL
+         m_iValue 3
+        }
+       }
+      }
+      m_aActions {
+       SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
+        m_eGameOverType COMBATPATROL_VICTORY
+        m_sSubtitle "Complete success, you have saved most civilians"
+       }
+      }
+     }
+    }
     GenericEntity BeauregardDefenders1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
      components {
       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -48,11 +131,11 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     GenericEntity TriggerFinishMission : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
      components {
       SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
        m_aPlugins {
         SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
          m_fAreaRadius 6
          m_fActivationCountdownTimer 5
-         m_bNotificationEnabled 1
         }
        }
        m_aTriggerActions {
@@ -93,148 +176,49 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     }
    }
   }
-  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-   ArlevilleFIADefenders {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_eActivationType ON_TRIGGER_ACTIVATION
-     }
-    }
-    coords 0 0 0
-    {
-     GenericEntity ArlevilleFIADefenders00 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-      components {
-       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
-        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90ACD425EDDDA}" {
-         m_aLayerName {
-          "Task03FIAForcedMoveWP" "Task03FIASaDWP"
-         }
-        }
-        m_eAIGroupFormation Line
-       }
-      }
-      coords -105.969 8.66 4.191
-      angleY 133.274
-     }
-     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-      Task03FIAForcedMoveWP {
-       components {
-        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{60E90AC67ECB851D}" {
-         }
-        }
-       }
-       coords -35.629 4.802 -76.382
-      }
-      Task03FIASaDWP {
-       components {
-        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_bShowDebugShapesInWorkbench 0
-         m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{60EF33BA0DA92F63}" {
-          m_fCompletionRadius 100
-         }
-        }
-       }
-       coords 16.041 4.331 -76.794
-      }
-     }
+  GenericEntity ArlevilleFIADefenders : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   components {
+    SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+     m_eActivationType ON_TRIGGER_ACTIVATION
     }
    }
-   LayerEndMission {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_eActivationType ON_TRIGGER_ACTIVATION
+   coords 0 0 0
+   {
+    GenericEntity ArlevilleFIADefenders00 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
+       m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90ACD425EDDDA}" {
+        m_aLayerName {
+         "Task03FIAForcedMoveWP" "Task03FIASaDWP"
+        }
+       }
+       m_eAIGroupFormation Line
+      }
      }
+     coords -105.969 8.66 4.191
+     angleY 133.274
     }
-    coords 372.187 -69.252 1310.586
-    {
-     GenericEntity TriggerCountProtected : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+    $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+     Task03FIAForcedMoveWP {
       components {
-       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
-          m_fAreaRadius 10
-          m_aSpecificEntityNames {
-           "Defended1" "Defended2" "Defended3"
-          }
-          m_bOnce 1
-         }
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{60E90AC67ECB851D}" {
         }
        }
       }
-      coords 23.332 8.123 -264.298
+      coords -35.629 4.802 -76.382
      }
-     $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
-      MissionStatusDraw {
-       coords 0 0 0
-       m_aInputs {
-        SCR_ScenarioFrameworkLogicInput "{629707756622CE83}" {
-         m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{629707755C853993}" {
-          m_Getter SCR_ScenarioFrameworkGetLayerBase "{629707765D632F4C}" {
-           m_sLayerBaseName "TriggerCountProtected"
-          }
-          m_eComparisonOperator GREATER_OR_EQUAL
-          m_iValue 0
-         }
-        }
-       }
-       m_aActions {
-        SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
-         m_eGameOverType COMBATPATROL_DRAW
-         m_sSubtitle "Unfortunately, you could only save some civilians"
-        }
-        SCR_ScenarioFrameworkActionShowPopupNotification "{65CF14C81C3B95A7}" {
-         m_sTitle "DRAW"
+     Task03FIASaDWP {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_bShowDebugShapesInWorkbench 0
+        m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{60EF33BA0DA92F63}" {
+         m_fCompletionRadius 100
         }
        }
       }
-      MissionStatusPartial {
-       coords -3.113 0.125 0.189
-       m_aInputs {
-        SCR_ScenarioFrameworkLogicInput "{629707756622CE83}" {
-         m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{629707755C853993}" {
-          m_Getter SCR_ScenarioFrameworkGetLayerBase "{629707765D632F4C}" {
-           m_sLayerBaseName "TriggerCountProtected"
-          }
-          m_eComparisonOperator GREATER_OR_EQUAL
-          m_iValue 2
-         }
-        }
-       }
-       m_aActions {
-        SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
-         m_eGameOverType COMBATPATROL_PARTIAL_SUCCESS
-         m_sSubtitle "Good job, you have saved many civilians"
-        }
-        SCR_ScenarioFrameworkActionShowPopupNotification "{65CF14C816D92808}" {
-         m_sTitle "PARTIAL"
-        }
-       }
-      }
-      MissionStatusVictory {
-       coords 6.912 -0.275 1.47
-       m_aInputs {
-        SCR_ScenarioFrameworkLogicInput "{629707756622CE83}" {
-         m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{6334A5A14E2BA940}" {
-          m_Getter SCR_ScenarioFrameworkGetLayerBase "{6334A5A1549DB231}" {
-           m_sLayerBaseName "TriggerCountProtected"
-          }
-          m_eComparisonOperator GREATER_OR_EQUAL
-          m_iValue 3
-         }
-        }
-       }
-       m_aActions {
-        SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
-         m_eGameOverType COMBATPATROL_VICTORY
-         m_sSubtitle "Complete success, you have saved most civilians"
-        }
-        SCR_ScenarioFrameworkActionShowPopupNotification "{65CF14C80E35D68A}" {
-         m_sTitle "VICTORY"
-        }
-       }
-      }
+      coords 16.041 4.331 -76.794
      }
     }
    }
