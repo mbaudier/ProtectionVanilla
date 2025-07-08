@@ -81,38 +81,89 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
      }
     }
    }
-   LayerStartSpawn {
+   LayerStart {
     coords 0 -0.001 0
     {
-     GenericEntity ArsenalBoxStart : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
-      coords -9.096 -1.644 -1.063
-      angleY -71.538
-     }
-     GenericEntity SlotBuddy : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-      components {
-       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-        m_sFactionKey "US"
-        m_sObjectToSpawn "{D0886786634E55AE}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_Squad.et"
-        m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
-        m_eAIGroupFormation StaggeredColumn
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      ReconTeam1 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D0D2771452295A}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{AC473DE5F4B24E82}Prefabs/Groups/BLUFOR/GreenBerets/Suppressed/Group_US_GreenBeret_ReconTeam.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D0D2774FE4EE4A}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{B721D5A8C1B556CE}Prefabs/Groups/OPFOR/Spetsnaz/Suppressed/Group_USSR_Spetsnaz_ReconTeam.et"
+          }
+         }
+         m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
+        }
        }
+       coords -1.2 -1.453 -3.91
+       angleY 176.923
       }
-      coords -2.524 -1.539 0.737
+      ReconTeam2 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D0D2771452295A}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{AC473DE5F4B24E82}Prefabs/Groups/BLUFOR/GreenBerets/Suppressed/Group_US_GreenBeret_ReconTeam.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D0D2774FE4EE4A}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{B721D5A8C1B556CE}Prefabs/Groups/OPFOR/Spetsnaz/Suppressed/Group_USSR_Spetsnaz_ReconTeam.et"
+          }
+         }
+         m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
+        }
+       }
+       coords -1.558 -1.458 -1.499
+       angleY -131.793
+      }
      }
-     GenericEntity SpawnStart : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEBA4AF0BC63}" {
-          m_Info SCR_UIInfo "{65AAEEB9B2641F32}" {
-           Name "Insertion"
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      SpawnStart {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEBA4AF0BC63}" {
+           m_sFaction "Legal"
+           m_Info SCR_UIInfo "{65AAEEB9B2641F32}" {
+            Name "Insertion"
+           }
+          }
+         }
+         m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
+        }
+       }
+       coords -5.039 -1.579 -5.888
+       angleY -23.457
+      }
+      ArsenalBoxStart {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D0D27508ADE9F6}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{C1AB654F77ABA58B}PrefabsEditable/Auto/Props/Military/Compositions/US/E_ArsenalBox_US.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D0D2756126FF1B}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{8CA93330EA43EA78}PrefabsEditable/Auto/Props/Military/Compositions/USSR/E_ArsenalBox_USSR.et"
           }
          }
         }
-        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
        }
+       coords -9.096 -1.644 -1.063
+       angleY -71.538
       }
-      coords -2.589 -1.487 -1.405
      }
      $grp GenericEntity : "{D07C2D4844753F76}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_storage.et" {
       {

@@ -72,10 +72,16 @@ SCR_LoadoutManager LoadoutManager_1991_10 : "{C4F7860EF519B92A}Prefabs/Lore/Prot
  coords 1891.968 11.785 1825.005
  m_aPlayerLoadouts {
   SCR_FactionPlayerLoadout "{65B90615D4CC8E45}" {
-   m_sLoadoutName "US Helicopter Pilot"
+   m_sLoadoutName "#AR-Role_HelicopterPilot"
    m_sLoadoutResource "{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et"
    m_sLoadoutImage "{F293529C376FB00C}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_HeliPilot.edds"
    m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{65D0D27DFD689B9E}" {
+   m_sLoadoutName "#AR-Role_HelicopterPilot"
+   m_sLoadoutResource "{A62FA97C4EC64F14}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_HeliPilot.et"
+   m_sLoadoutImage "{EDE66B00EFF911B0}UI/Textures/EditorPreviews/Characters/OPFOR/USSR_Army/Character_USSR_HeliPilot.edds"
+   m_sAffiliatedFaction "USSR"
   }
  }
 }

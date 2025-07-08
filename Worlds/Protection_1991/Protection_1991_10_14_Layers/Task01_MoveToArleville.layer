@@ -102,11 +102,11 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         m_aFactionSwitchedObjects {
          SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E2482ED0452}" {
           m_sFactionKey "US"
-          m_sObjectToSpawn "{36E28C628A2F83CB}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF.et"
+          m_sObjectToSpawn "{33155540F5CAA602}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_S.et"
          }
          SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E24DA7BBD85}" {
           m_sFactionKey "USSR"
-          m_sObjectToSpawn "{2DB452B3EC386B92}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF.et"
+          m_sObjectToSpawn "{4D20F57C29B6EC1D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_S.et"
          }
         }
         m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
@@ -125,11 +125,11 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         m_aFactionSwitchedObjects {
          SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E2482ED0452}" {
           m_sFactionKey "US"
-          m_sObjectToSpawn "{36E28C628A2F83CB}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF.et"
+          m_sObjectToSpawn "{33155540F5CAA602}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_S.et"
          }
          SCR_ScenarioFrameworkFactionSwitchedObject "{65C93E24DA7BBD85}" {
           m_sFactionKey "USSR"
-          m_sObjectToSpawn "{2DB452B3EC386B92}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF.et"
+          m_sObjectToSpawn "{4D20F57C29B6EC1D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_S.et"
          }
         }
         m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"

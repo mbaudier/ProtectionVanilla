@@ -27,6 +27,10 @@ SCR_BaseGameMode GameModeSF_Protection_Lore : "{785663D551AFE173}Prefabs/Lore/Pr
    m_iMonthOfTheYear 10
    m_iDayOfTheMonth 15
   }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+   }
+  }
   SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
@@ -61,4 +65,18 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFra
 }
 SCR_LoadoutManager LoadoutManager_1991_10 : "{C4F7860EF519B92A}Prefabs/Lore/Protection/LoadoutManager_1991_10.et" {
  coords 2031.731 33.819 2026.558
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{65D0D2719767FD79}" {
+   m_sLoadoutName "#AR-Role_GreenBeret_Sapper_S"
+   m_sLoadoutResource "{B7E8542C3CD9E4B2}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_Sapper_S.et"
+   m_sLoadoutImage "{73D6725AAB4D8213}UI/Textures/EditorPreviews/Characters/Factions/BLUFOR/US_Army/GreenBerets/Supressed/Character_US_SF_Sapper_S.edds"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{65D0D27E6E59C491}" {
+   m_sLoadoutName "#AR-Role_Spetsnaz_Sapper_S"
+   m_sLoadoutResource "{A16C1DE30B6957D9}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_Sapper_S.et"
+   m_sLoadoutImage "{07FDE5642EDD6169}UI/Textures/EditorPreviews/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_Sapper_S.edds"
+   m_sAffiliatedFaction "USSR"
+  }
+ }
 }

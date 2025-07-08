@@ -29,7 +29,6 @@ SCR_BaseGameMode GameModeSF_Protection_Lore : "{785663D551AFE173}Prefabs/Lore/Pr
   }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
    m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
-    m_sForcedFaction "Legal"
    }
   }
   SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
@@ -80,4 +79,18 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFra
 }
 SCR_LoadoutManager LoadoutManager_1991_10 : "{C4F7860EF519B92A}Prefabs/Lore/Protection/LoadoutManager_1991_10.et" {
  coords 2031.82 32.461 2019.627
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{65D0D27D3E27F274}" {
+   m_sLoadoutName "#AR-Role_GreenBeret_LMG"
+   m_sLoadoutResource "{6E1E87ECA5F5A7EA}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_LMG.et"
+   m_sLoadoutImage "{589163E956B88CD3}UI/Textures/EditorPreviews/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_LMG.edds"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{65D0D27D2E148697}" {
+   m_sLoadoutName "#AR-Role_Spetsnaz_LMG"
+   m_sLoadoutResource "{0B8AC0C3C447F90E}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_LMG.et"
+   m_sLoadoutImage "{DD93B2249E040245}UI/Textures/EditorPreviews/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_LMG.edds"
+   m_sAffiliatedFaction "USSR"
+  }
+ }
 }

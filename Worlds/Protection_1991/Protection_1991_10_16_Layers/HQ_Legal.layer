@@ -159,11 +159,11 @@ GenericEntity AreaHqLegal : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework
         m_aFactionSwitchedObjects {
          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FD192063A6}" {
           m_sFactionKey "US"
-          m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+          m_sObjectToSpawn "{1F468430E5AB477E}Prefabs/Groups/BLUFOR/GreenBerets/Suppressed/Group_US_GreenBeret_ReconSquad.et"
          }
          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA69FD117D8262}" {
           m_sFactionKey "USSR"
-          m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+          m_sObjectToSpawn "{666A2B0A6B1967AE}Prefabs/Groups/OPFOR/Spetsnaz/Suppressed/Group_USSR_Spetsnaz_ReconSquad.et"
          }
         }
        }

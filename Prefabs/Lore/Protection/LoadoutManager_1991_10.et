@@ -2,15 +2,15 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  ID "56B2B47708C4F23A"
  m_aPlayerLoadouts {
   SCR_FactionPlayerLoadout "{60E346374384B4C9}" {
-   m_sLoadoutName "#AR-Role_GreenBeret_Officer"
-   m_sLoadoutResource "{C0F45FA0C11853D1}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_Officer.et"
-   m_sLoadoutImage "{22835410C4A34254}UI/Textures/EditorPreviews/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_Officer.edds"
+   m_sLoadoutName "#AR-Role_GreenBeret_S"
+   m_sLoadoutResource "{33155540F5CAA602}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_S.et"
+   m_sLoadoutImage "{6EE70386E174CFD1}UI/Textures/EditorPreviews/Characters/Factions/BLUFOR/US_Army/GreenBerets/Supressed/Character_US_SF_S.edds"
    m_sAffiliatedFaction "US"
   }
   SCR_FactionPlayerLoadout "{65CA69FF3F3B67BA}" {
-   m_sLoadoutName "#AR-Role_Spetsnaz_Officer"
-   m_sLoadoutResource "{B2A71FE01BA567D6}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Officer.et"
-   m_sLoadoutImage "{37D9FD086B0184BE}UI/Textures/EditorPreviews/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Officer.edds"
+   m_sLoadoutName "#AR-Role_Spetsnaz_S"
+   m_sLoadoutResource "{4D20F57C29B6EC1D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_S.et"
+   m_sLoadoutImage "{8FB42E3B2F4C73CC}UI/Textures/EditorPreviews/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_S.edds"
    m_sAffiliatedFaction "USSR"
   }
  }
