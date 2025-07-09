@@ -22,7 +22,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
         A_MoveToBeauregard {
          components {
           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-           m_Waypoint SCR_ScenarioFrameworkWaypointMove "{65B915FEC33022F2}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{65D2D539918F8BE1}" {
            }
           }
          }
@@ -122,6 +122,38 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
         coords 0.971 -0.127 2.377
        }
        Vehicle AssaultVehicle3 : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
+        coords 1.63 -0.062 5.803
+        angleY 10.017
+       }
+      }
+     }
+     Assault4 {
+      coords -31.643 4.274 6.915
+      {
+       GenericEntity Attacker4 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+        components {
+         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+          m_sObjectToSpawn "{1BB20A4B3A53D0F5}Prefabs/Groups/INDFOR/Group_FIA_LightFireTeam.et"
+          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65AF2D201E5A934C}" {
+           m_aLayerName {
+            "AssaultGetIn3" "AssaultBeauregardWPs"
+           }
+          }
+         }
+        }
+        coords -0.957 -0.116 -2.494
+       }
+       GenericEntity AssaultGetIn4 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_Waypoint SCR_ScenarioFrameworkWaypointGetIn "{65CA83C6589C93BB}" {
+           m_sEntityName "AssaultVehicle4"
+          }
+         }
+        }
+        coords 0.971 -0.127 2.377
+       }
+       Vehicle AssaultVehicle4 : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
         coords 1.63 -0.062 5.803
         angleY 10.017
        }
