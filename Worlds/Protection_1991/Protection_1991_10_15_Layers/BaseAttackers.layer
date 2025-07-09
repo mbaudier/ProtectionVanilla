@@ -3,7 +3,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   coords 1354.396 38.76 2311.351
   {
    $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-    BaseAttackersSoldiers {
+    BaseAttackersRandom {
      components {
       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
        m_SpawnChildren RANDOM_ONE
@@ -13,55 +13,51 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      coords 0 0 0
      {
       $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-       BaseAttackers01 {
+       BaseAttackers2 {
         components {
          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-          m_sObjectToSpawn "{4D3BBEC1A955626A}Prefabs/Groups/OPFOR/Spetsnaz/Group_USSR_Spetsnaz_Squad.et"
+          m_sFactionKey "Criminal"
+          m_aFactionSwitchedObjects {
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F249E518E82C}" {
+            m_sFactionKey "USSR"
+            m_sObjectToSpawn "{4D3BBEC1A955626A}Prefabs/Groups/OPFOR/Spetsnaz/Group_USSR_Spetsnaz_Squad.et"
+           }
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F249E379D8B3}" {
+            m_sFactionKey "US"
+            m_sObjectToSpawn "{D0886786634E55AE}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_Squad.et"
+           }
+          }
           m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6294E8E3DA9B4D36}" {
            m_aLayerName {
-            "BaseAttackers01WP"
+            "BaseAttackersWP"
            }
           }
          }
         }
-        coords -56.682 0.181 20.278
+        coords 89.464 -2.508 -33.643
        }
-       BaseAttackers02 {
+       BaseAttackers1 {
         components {
          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-          m_sObjectToSpawn "{4D3BBEC1A955626A}Prefabs/Groups/OPFOR/Spetsnaz/Group_USSR_Spetsnaz_Squad.et"
+          m_sFactionKey "Criminal"
+          m_aFactionSwitchedObjects {
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F24A43621C23}" {
+            m_sFactionKey "USSR"
+            m_sObjectToSpawn "{4D3BBEC1A955626A}Prefabs/Groups/OPFOR/Spetsnaz/Group_USSR_Spetsnaz_Squad.et"
+           }
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F249B8E9CC97}" {
+            m_sFactionKey "US"
+            m_sObjectToSpawn "{D0886786634E55AE}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_Squad.et"
+           }
+          }
           m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6294E8E3DA9B4D36}" {
            m_aLayerName {
-            "BaseAttackers02WP"
+            "BaseAttackersWP"
            }
           }
          }
         }
-        coords 77.734 -2.508 -31.917
-       }
-      }
-      $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-       BaseAttackers01WP {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_bShowDebugShapesInWorkbench 0
-          m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{6294E8E3E6FE7836}" {
-           m_fCompletionRadius 60
-          }
-         }
-        }
-        coords 27.233 -2.524 75.56
-       }
-       BaseAttackers02WP {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_bShowDebugShapesInWorkbench 0
-          m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{6294E8E3E6FE7836}" {
-           m_fCompletionRadius 60
-          }
-         }
-        }
-        coords 33.657 -2.544 68.678
+        coords -91.085 -4.168 211.235
        }
       }
      }
@@ -82,15 +78,15 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          }
          m_aTriggerActions {
           SCR_ScenarioFrameworkActionShowPopupNotification "{65AAE399D029B34D}" {
-           m_sTitle "ALERT"
-           m_sText "Rogue Vityaz troops will soon attack the base"
+           m_sTitle "URGENT INTEL - THE INVASION OF ARLAND HAS BEGUN!"
+           m_sText "Rogue ОМСДОН troops will soon attack the base"
           }
           SCR_ScenarioFrameworkActionWaitAndExecute "{65AAE3995C475FDB}" {
            m_iDelayInSeconds 300
            m_aActions {
             SCR_ScenarioFrameworkActionSpawnObjects "{65AAE39947BFEA7D}" {
              m_aNameOfObjectsToSpawnOnActivation {
-              "BaseAttackersSoldiers" "Helicopters" "HelicopterDefendersSoldiers"
+              "BaseAttackersSoldiers" "BaseAttackersRandom" "Helicopters" "HelicopterDefendersSoldiers"
              }
             }
            }
@@ -99,6 +95,50 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         }
        }
        coords 25.892 -2.461 80.149
+      }
+      GenericEntity BaseAttackersWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesInWorkbench 0
+         m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{6294E8E3E6FE7836}" {
+          m_fCompletionRadius 60
+         }
+        }
+       }
+       coords 27.233 -2.524 75.56
+      }
+     }
+    }
+    BaseAttackersSoldiers {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords 0 0 0
+     {
+      GenericEntity BaseAttackers0 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "Criminal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F24A43621C23}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{4D3BBEC1A955626A}Prefabs/Groups/OPFOR/Spetsnaz/Group_USSR_Spetsnaz_Squad.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F249B8E9CC97}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{D0886786634E55AE}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_Squad.et"
+          }
+         }
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6294E8E3DA9B4D36}" {
+          m_aLayerName {
+           "BaseAttackersWP"
+          }
+         }
+        }
+       }
+       coords -56.682 0.181 20.278
       }
      }
     }
@@ -121,7 +161,17 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        HelicopterSlot {
         components {
          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-          m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+          m_sFactionKey "Criminal"
+          m_aFactionSwitchedObjects {
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25FFB7D1FC2}" {
+            m_sFactionKey "USSR"
+            m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+           }
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25FDE5849D7}" {
+            m_sFactionKey "US"
+            m_sObjectToSpawn "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et"
+           }
+          }
          }
         }
         coords 0 0 0
@@ -143,7 +193,16 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
             }
            }
           }
-          m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+          m_aFactionSwitchedObjects {
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25FC9A2578C}" {
+            m_sFactionKey "USSR"
+            m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+           }
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25FC39EB6FC}" {
+            m_sFactionKey "US"
+            m_sObjectToSpawn "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et"
+           }
+          }
          }
         }
         coords -16.244 -0.01 -15.655
@@ -152,6 +211,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        OtherHelicopter02 {
         components {
          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_sFactionKey "Criminal"
           m_aActivationActions {
            SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{6292FA34A9D03431}" {
             m_aActions {
@@ -165,7 +225,16 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
             }
            }
           }
-          m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+          m_aFactionSwitchedObjects {
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25FC5ED4F01}" {
+            m_sFactionKey "USSR"
+            m_sObjectToSpawn "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+           }
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25FC6A4566B}" {
+            m_sFactionKey "US"
+            m_sObjectToSpawn "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et"
+           }
+          }
          }
         }
         coords -30.779 -0.01 1.339
@@ -174,7 +243,21 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        CinematicHeli01 {
         components {
          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-          m_sObjectToSpawn "{039615384D5685B3}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_Mi8.et"
+          m_sFactionKey "Criminal"
+          m_aActivationActions {
+           ARGEO_ScenarioFrameworkActionProtectionCinematic "{65D2F25EB427F338}" {
+           }
+          }
+          m_aFactionSwitchedObjects {
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25F4EAE1BC4}" {
+            m_sFactionKey "USSR"
+            m_sObjectToSpawn "{039615384D5685B3}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_Mi8.et"
+           }
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25F47F4CA94}" {
+            m_sFactionKey "US"
+            m_sObjectToSpawn "{41609B3289F9ECC4}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_UH1.et"
+           }
+          }
          }
         }
         coords -114.946 -0.01 -17.114
@@ -183,7 +266,21 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        CinematicHeli02 {
         components {
          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-          m_sObjectToSpawn "{039615384D5685B3}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_Mi8.et"
+          m_sFactionKey "Criminal"
+          m_aActivationActions {
+           ARGEO_ScenarioFrameworkActionProtectionCinematic "{65D2F25EA253CA9A}" {
+           }
+          }
+          m_aFactionSwitchedObjects {
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25EAFB41D8B}" {
+            m_sFactionKey "USSR"
+            m_sObjectToSpawn "{039615384D5685B3}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_Mi8.et"
+           }
+           SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25EA970E04A}" {
+            m_sFactionKey "US"
+            m_sObjectToSpawn "{41609B3289F9ECC4}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_UH1.et"
+           }
+          }
          }
         }
         coords -98.71 -0.01 -45.511
@@ -202,20 +299,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         }
        }
        coords 0 0 0
-      }
-      GenericEntity GetInHelicopterWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-       components {
-        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{6292FA35717944F8}" {
-          m_fCompletionRadius 10
-          m_fPriorityLevel 1000
-          m_fHoldingTime 600
-          m_bDriverAllowed 0
-          m_bGunnerAllowed 0
-         }
-        }
-       }
-       coords -0.44 0 -4.951
       }
      }
     }
@@ -276,12 +359,27 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      }
     }
     HelicopterDefendersSoldiers {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
      coords 0 0 0
      {
       GenericEntity HelicopterDefenders : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+         m_sFactionKey "Criminal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25E91A87C46}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25E8A1A1B7C}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+          }
+         }
         }
        }
        coords 4.573 0.12 0.591

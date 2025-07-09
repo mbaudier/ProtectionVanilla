@@ -16,7 +16,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
         }
        }
       }
-      coords -0.088 0.102 0.076
+      coords -0.088 0 0.076
      }
     }
    }
@@ -40,7 +40,8 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
          }
         }
        }
-       coords -10.436 0.257 6.42
+       coords 4.024 -0.141 -15.206
+       angleY 35.717
       }
       BaseSquad02 {
        components {
@@ -53,19 +54,19 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
          }
         }
        }
-       coords -34.215 1.722 4.99
+       coords -33.979 0.19 10.07
       }
      }
     }
    }
-   BaseDefenders {
+   BaseDefendersWPs {
     coords 0 0 0
     {
      $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       TowerSoldiersWP {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6294E8E579C4CB89}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointWait "{65D2F24A341F39AA}" {
           m_fCompletionRadius 2
          }
         }
@@ -80,7 +81,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
          }
         }
        }
-       coords 8.929 -0.267 -26.767
+       coords 5.752 -0.025 -26.137
       }
       BaseSquad02WP {
        components {
@@ -90,7 +91,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
          }
         }
        }
-       coords -10.842 0.261 -29.227
+       coords -22.555 0.757 0.376
       }
      }
     }

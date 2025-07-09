@@ -2,15 +2,15 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  AreaTaskApproach {
   coords 1430.616 36.612 2457.74
   {
-   GenericEntity LayerTaskApproach : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+   GenericEntity TaskApproach : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_sTaskTitle "Approach"
-      m_sTaskDescription "Approach the base from the woods"
+      m_sTaskDescription "Approach the base from the south-east."
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03660383A95E}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "SlotSpawnPointApproach" "LayerTaskHospital" "LayerTaskBunker"
+         "SpawnPointApproach" "TaskHospital" "TaskBunker"
         }
        }
       }
@@ -30,12 +30,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
       coords 8.559 3.846 -8.122
      }
-     GenericEntity SlotSpawnPointApproach : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     GenericEntity SpawnPointApproach : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_eActivationType ON_TRIGGER_ACTIVATION
         m_aPlugins {
          SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB8F8036CA8}" {
+          m_sFaction "Legal"
           m_Info SCR_UIInfo "{65AAEEB8EF4FCBE7}" {
            Name "Approach"
           }
@@ -66,7 +67,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
   coords 1752.54 40.188 2716.326
   {
-   GenericEntity LayerTaskExtraction : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+   GenericEntity TaskExtraction : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_bShowDebugShapesDuringRuntime 1
@@ -86,6 +87,28 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     }
     coords 0 0 0
     {
+     GenericEntity TriggerWarCriminal : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+          m_fAreaRadius 30
+          m_aSpecificEntityNames {
+           "WarCriminal"
+          }
+         }
+        }
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkActionSetMissionEndScreen "{65D2F25282485F13}" {
+          m_eGameOverType COMBATPATROL_PARTIAL_SUCCESS
+          m_sSubtitle "Congratulations, you have captured the war criminal."
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
      GenericEntity SlotExtraction01 : "{9C47DECB98FDA4DA}Prefabs/Systems/ScenarioFramework/Components/SlotExtraction.et" {
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
@@ -200,16 +223,16 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  AreaTaskHospital {
   coords 1377.701 37.654 2447.693
   {
-   GenericEntity LayerTaskHospital : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+   GenericEntity TaskHospital : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
-      m_sTaskTitle "Hospital"
+      m_sTaskTitle "Approach Hospital"
       m_sTaskDescription "Approach the hospital in order to free prisoners"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03652F69737F}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "SlotSpawnHospital" "LayerTaskExtraction"
+         "SpawnHospital" "TaskExtraction"
         }
        }
       }
@@ -222,23 +245,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 18
-         }
-        }
-        m_aActionsOnFinished {
-         SCR_ScenarioFrameworkActionSpawnObjects "{64AD03B51680750D}" {
-          m_aNameOfObjectsToSpawnOnActivation {
-           "SlotSpawnPointHospital" "LayerTaskExtraction"
-          }
-         }
-         SCR_ScenarioFrameworkActionShowPopupNotification "{64AD03B5E7744F36}" {
-          m_sTitle "Checkpoint reached"
-          m_sText "Spawn point created"
+          m_fAreaRadius 20
          }
         }
        }
       }
-      coords 6.403 0.221 -12.392
+      coords 6.719 3.831 -15.567
      }
     }
    }
@@ -247,16 +259,16 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  AreaTaskBunker {
   coords 1286.116 40.676 2418.515
   {
-   GenericEntity LayerTaskBunker : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+   GenericEntity TaskBunker : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
-      m_sTaskTitle "Bunker"
-      m_sTaskDescription "Approach the bunker in order to free prisoners"
+      m_sTaskTitle "Approach Bunker"
+      m_sTaskDescription "Approach the bunker and try to free the prisoners inside."
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03656C69F0C4}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "SlotSpawnBunker" "LayerTaskExtraction"
+         "SpawnBunker" "TaskExtraction"
         }
        }
       }
@@ -275,6 +287,130 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        }
       }
       coords 0.664 2.967 7.975
+     }
+    }
+   }
+  }
+ }
+ AreaCaptureWarCriminal {
+  coords 1373.386 40.781 2347.459
+  {
+   GenericEntity TaskFindWarCriminal : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+      m_sTaskTitle "Chase War Criminal (optional)"
+      m_sTaskDescription "Find the unarmed FIA officer responsible for mistreating the civilians, and try to capture him"
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionSpawnObjects "{65D2F258305C917B}" {
+        m_aNameOfObjectsToSpawnOnActivation {
+         "TaskExtraction"
+        }
+       }
+      }
+     }
+    }
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      SlotWarCriminal {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{854C04F0EA2129CC}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Unarmed.et"
+         m_sID "WarCriminal"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65D2F24F2E050615}" {
+          m_aLayerName {
+           "WarCriminalWP"
+          }
+         }
+        }
+       }
+       coords 0 0 0
+      }
+      WarCriminalVictims {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{9437AA19314B81AB}Prefabs/Groups/INDFOR/URBAN/Group_URBAN_2x.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65D2F24C0910829D}" {
+          m_aLayerName {
+           "WarCriminalWP"
+          }
+         }
+        }
+       }
+       coords -2.916 0 2.434
+      }
+      WarCriminalGuards {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65D2F24C117CE6B2}" {
+          m_aLayerName {
+           "WarCriminalWP"
+          }
+         }
+        }
+       }
+       coords -3.373 0 0.404
+      }
+     }
+     GenericEntity SlotTaskFindWarCriminal : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_fAreaRadius 6
+         }
+        }
+       }
+      }
+      coords -1.476 0 2.462
+     }
+     GenericEntity SpawnWarCriminal : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB827B44B8B}" {
+          m_sFaction "Legal"
+          m_Info SCR_UIInfo "{65AAEEB823160711}" {
+           Name "Main Building"
+          }
+         }
+        }
+        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
+       }
+      }
+      coords -9.282 -4.255 -3.378
+     }
+     GenericEntity TriggerApproachWarCriminal : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+          m_fAreaRadius 15
+         }
+        }
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkActionSpawnObjects "{65D2F24CAC19D89B}" {
+          m_aNameOfObjectsToSpawnOnActivation {
+           "SpawnWarCriminal"
+          }
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+     GenericEntity WarCriminalWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{65D2F24F929FCF71}" {
+         m_fCompletionRadius 6
+         m_fPriorityLevel 1000
+        }
+       }
+      }
+      coords -1.476 0 2.462
      }
     }
    }

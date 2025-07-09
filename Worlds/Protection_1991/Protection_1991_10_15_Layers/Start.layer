@@ -137,6 +137,14 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
            m_Info SCR_UIInfo "{65AAEEB9B2641F32}" {
             Name "Insertion"
            }
+           m_aActionsOnSpawnPointUsed {
+            SCR_ScenarioFrameworkActionShowHint "{65D2F25A1AFF4FF6}" {
+             m_sTitle "#PRTC-SC02_IntroHint_Title"
+             m_sText "#PRTC-SC02_IntroHint_Text"
+             m_iTimeout 30
+             m_sFactionKey "Legal"
+            }
+           }
           }
          }
          m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
@@ -163,6 +171,44 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
        }
        coords -9.096 -1.644 -1.063
        angleY -71.538
+      }
+      Vehicle1 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25E79A1DE81}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25E401A0111}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+          }
+         }
+        }
+       }
+       coords 8.615 -0.83 -16.067
+       angleY 30.942
+      }
+      Vehicle2 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sFactionKey "Legal"
+         m_aFactionSwitchedObjects {
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25E79A1DE81}" {
+           m_sFactionKey "US"
+           m_sObjectToSpawn "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et"
+          }
+          SCR_ScenarioFrameworkFactionSwitchedObject "{65D2F25E401A0111}" {
+           m_sFactionKey "USSR"
+           m_sObjectToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+          }
+         }
+        }
+       }
+       coords 12.106 -0.562 -18.226
+       angleY 36.019
       }
      }
      $grp GenericEntity : "{D07C2D4844753F76}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_storage.et" {

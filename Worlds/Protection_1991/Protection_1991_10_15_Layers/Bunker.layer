@@ -40,12 +40,13 @@ GenericEntity AreaBunker : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
       }
      }
-     GenericEntity SlotSpawnBunker : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     GenericEntity SpawnBunker : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_eActivationType ON_TRIGGER_ACTIVATION
         m_aPlugins {
          SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB83D2DE79F}" {
+          m_sFaction "Legal"
           m_Info SCR_UIInfo "{65AAEEB83BB33A34}" {
            Name "Bunker"
           }
