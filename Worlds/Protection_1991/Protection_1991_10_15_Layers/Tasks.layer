@@ -30,22 +30,66 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
       coords 8.559 3.846 -8.122
      }
-     GenericEntity SpawnPointApproach : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      SpawnPointApproach {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB8F8036CA8}" {
+           m_sFaction "Legal"
+           m_Info SCR_UIInfo "{65AAEEB8EF4FCBE7}" {
+            Name "Approach"
+           }
+          }
+         }
+         m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
+        }
+       }
+       coords 49.629 0.418 26.802
+      }
+      SpawnMainBuilding {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB827B44B8B}" {
+           m_sFaction "Legal"
+           m_Info SCR_UIInfo "{65AAEEB823160711}" {
+            Name "Main Building"
+           }
+          }
+         }
+         m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
+        }
+       }
+       coords -67.639 -0.37 -120.452
+      }
+     }
+     GenericEntity TriggerInBase : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
       components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_eActivationType ON_TRIGGER_ACTIVATION
+       SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
         m_aPlugins {
-         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB8F8036CA8}" {
-          m_sFaction "Legal"
-          m_Info SCR_UIInfo "{65AAEEB8EF4FCBE7}" {
-           Name "Approach"
+         SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+          m_fAreaRadius 50
+          m_bOnce 1
+         }
+        }
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkActionSpawnObjects "{65D52513030DD415}" {
+          m_aNameOfObjectsToSpawnOnActivation {
+           "SpawnMainBuilding"
+          }
+         }
+         SCR_ScenarioFrameworkActionChangeTaskState "{65D5251290AA22A5}" {
+          m_Getter SCR_ScenarioFrameworkGetTask "{65D5251292EEEEE2}" {
+           m_sLayerTaskName "TaskApproach"
           }
          }
         }
-        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
        }
       }
-      coords 49.629 0.418 26.802
+      coords -58.036 -0.181 -75.955
      }
     }
    }
@@ -365,35 +409,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
       coords -1.476 0 2.462
      }
-     GenericEntity SpawnWarCriminal : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_eActivationType ON_TRIGGER_ACTIVATION
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB827B44B8B}" {
-          m_sFaction "Legal"
-          m_Info SCR_UIInfo "{65AAEEB823160711}" {
-           Name "Main Building"
-          }
-         }
-        }
-        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
-       }
-      }
-      coords -9.282 -4.255 -3.378
-     }
      GenericEntity TriggerApproachWarCriminal : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
       components {
        SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
           m_fAreaRadius 15
+          m_bOnce 1
          }
         }
         m_aTriggerActions {
          SCR_ScenarioFrameworkActionSpawnObjects "{65D2F24CAC19D89B}" {
           m_aNameOfObjectsToSpawnOnActivation {
-           "SpawnWarCriminal"
+           "SpawnMainBuilding"
           }
          }
         }
