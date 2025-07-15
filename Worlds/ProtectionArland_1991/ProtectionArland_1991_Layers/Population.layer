@@ -1,4 +1,4 @@
-$grp ARGEO_PopulateStructuresTriggerEntity : "{D48BC61D01C94A5D}Prefabs/Systems/Population/PopulateStructuresTrigger.et" {
+$grp ARGEO_PopulatedTerritoryTriggerEntity : "{D48BC61D01C94A5D}Prefabs/Systems/Population/PopulatedTerritoryTrigger.et" {
  Populate_MossHill {
   coords 2126.837 73.129 1262.261
   SphereRadius 550
