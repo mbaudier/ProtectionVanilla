@@ -47,6 +47,16 @@ RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.
  coords 1891.659 11.959 1826.161
 }
 SCR_FactionManager FactionManager_1991_10 : "{D1FD1F8F861F5002}Prefabs/Lore/Protection/FactionManager_1991_10.et" {
+ components {
+  SCR_FactionAliasComponent "{65C9088E44A8A973}" {
+   m_aFactionAliases {
+    SCR_ScenarioFrameworkFactionAliasConfig "{65C9088E46DA4B70}" {
+    }
+    SCR_ScenarioFrameworkFactionAliasConfig "{65C90889B95FD0BD}" {
+    }
+   }
+  }
+ }
  coords 1891.256 12.194 1827.967
  Factions {
   SCR_CampaignFaction "{65B2E17F453D6459}" {
