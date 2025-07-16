@@ -141,7 +141,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
     coords 469.662 -64.575 983.594
     {
      $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-      B_ClearHarbor {
+      C_ClearHarbor {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
          m_bShowDebugShapesInWorkbench 0
@@ -152,14 +152,23 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
        }
        coords 108.784 -9.557 90.125
       }
-      A_MoveToBeauregard {
+      B_MoveToBeauregard {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{65D2D539918F8BE1}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointMove "{65E0FAA5C53B69D7}" {
          }
         }
        }
-       coords -85.37 8.272 -153.772
+       coords -30.347 2.178 -69.929
+      }
+      A_LeaveArleville {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{65E0FAA743077C41}" {
+         }
+        }
+       }
+       coords -258.457 45.356 -561.112
       }
      }
     }

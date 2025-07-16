@@ -49,19 +49,19 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
            m_sID "CounterAttackVehicle1_ID"
           }
          }
-         coords -23.502 0.348 -5.558
+         coords -24.654 1.308 -4.524
          angleY -92.914
         }
         GenericEntity CounterAttackGetIn1 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
          components {
           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
            m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65E0EC5DB68FD061}" {
-            m_fCompletionRadius 5
+            m_fCompletionRadius 10
             m_fPriorityLevel 2000
            }
           }
          }
-         coords -23.502 0.348 -5.558
+         coords -24.056 0.343 -2.615
         }
        }
       }
@@ -108,19 +108,19 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
            m_sID "CounterAttackVehicle1_ID"
           }
          }
-         coords 5.324 0 0.322
+         coords 7.401 0.776 -3.88
          angleY -92.914
         }
         GenericEntity CounterAttackGetIn2 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
          components {
           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
            m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65E0EC5DB68FD061}" {
-            m_fCompletionRadius 5
+            m_fCompletionRadius 10
             m_fPriorityLevel 2000
            }
           }
          }
-         coords 5.324 0 0.322
+         coords 5.544 0 -1.774
         }
        }
       }
@@ -138,7 +138,7 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
          }
         }
        }
-       coords -537.351 75.38 -1241.46
+       coords -574.554 75.499 -1228.59
       }
       B_ClearArleville {
        components {
