@@ -4,6 +4,7 @@ SCR_FactionManager {
   ARGEO_ProtectionFactionManagerComponent "{65C4FA10B63E5205}" {
    m_sProtectedFaction "PROTECTED"
    m_bForceProtectedFactionFriendlyToAll 1
+   m_bAlliesCanBeRecruited 1
    m_bNonCombattantsCanBeProtected 1
   }
  }

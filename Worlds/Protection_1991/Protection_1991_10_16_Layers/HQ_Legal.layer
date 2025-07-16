@@ -314,6 +314,84 @@ GenericEntity AreaHqLegal : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework
      }
     }
    }
+   BeauregardDefenders {
+    coords -533.18 74.143 -1135.906
+    {
+     GenericEntity BeauregardDefenders1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "Legal"
+        m_aFactionSwitchedObjects {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C4640826248D}" {
+          m_sFactionKey "US"
+          m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         }
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C4643D5CFBCE}" {
+          m_sFactionKey "USSR"
+          m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+         }
+        }
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65E0EC5E81F1042F}" {
+         m_aLayerName {
+          "PatrolCycleWP"
+         }
+        }
+        m_eAIGroupFormation Column
+       }
+      }
+      coords 471.714 -64.6 983.781
+     }
+     GenericEntity PatrolCycleWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{65E0EC5EEEBE8A97}" {
+         m_aLayersWithWaypointsToCycle {
+          "BeauregardDefendersWP"
+         }
+        }
+       }
+      }
+      coords 470.523 -64.628 992.504
+     }
+    }
+   }
+   BeauregardDefendersWP {
+    coords -60.429 9.476 -145.304
+    {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      Patrol1 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65E0EC5E095ED1DC}" {
+         }
+        }
+       }
+       coords 0.479 0.036 -5.442
+      }
+      Patrol2 {
+       coords -51.779 3.941 -103.149
+      }
+      Patrol3 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65E0EC5E20705E40}" {
+         }
+        }
+       }
+       coords 14.646 -1.083 15.306
+      }
+      Patrol4 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65E0EC5EDA686433}" {
+         }
+        }
+       }
+       coords -73.074 -0.373 50.684
+      }
+     }
+    }
+   }
   }
  }
 }
