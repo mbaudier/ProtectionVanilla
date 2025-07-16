@@ -160,11 +160,11 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        angleY -127.851
       }
      }
-     $grp GenericEntity : "{B5B3DFD888F6032C}Prefabs/ScenarioFramework/Components/SlotCivilian.et" {
-      SlotCivilian5 {
+     $grp GenericEntity : "{BC99FC44C5533F4D}Prefabs/Systems/ScenarioFramework/Components/SlotCivilian.et" {
+      SlotCivilian9 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D036885B9F5A7}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65E0D44A95EC98A7}" {
           m_aLayerName {
            "PrisonersWP"
           }
@@ -173,10 +173,10 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
        coords 1.978 -0.136 -4.314
       }
-      SlotCivilian6 {
+      SlotCivilian8 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D036880A6E266}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65E0D44AE8602FE9}" {
           m_aLayerName {
            "PrisonersWP"
           }
@@ -185,10 +185,10 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
        coords -1.529 -0.096 -2.295
       }
-      SlotCivilian7 {
+      SlotCivilian6 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D0368FDFF07B8}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65E0D44AF1FB5168}" {
           m_aLayerName {
            "PrisonersWP"
           }
@@ -197,10 +197,10 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
        coords 3.59 -0.045 -2.383
       }
-      SlotCivilian8 {
+      SlotCivilian7 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D0368FEA85683}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65E0D44AEF3D6263}" {
           m_aLayerName {
            "PrisonersWP"
           }
@@ -227,14 +227,12 @@ GenericEntity PrisonArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
      GenericEntity PrisonersWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-        m_Waypoint SCR_ScenarioFrameworkWaypointMove "{628CDA463C3E3AEA}" {
-         m_fCompletionRadius 3
-         m_sWaypointPrefab "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
-         m_eAIWaypointCompletionType All
+        m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{65E0D44AD7B883DC}" {
+         m_fCompletionRadius 8
         }
        }
       }
-      coords 0.483 -0.058 -5.65
+      coords 0.905 0.084 -1.369
       angleY -35.922
      }
     }

@@ -12,6 +12,7 @@ GenericEntity AreaAssaultBeauregard : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
         B_ClearHarbor {
          components {
           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_bShowDebugShapesInWorkbench 0
            m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{65AF2D23F9B2A7B4}" {
             m_fCompletionRadius 70
            }

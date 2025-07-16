@@ -5,6 +5,10 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
    Hospital {
     coords 0 0 0
     {
+     GenericEntity ArsenalMedical1 : "{0AA94C2082A4A3A0}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Medical_FIA.et" {
+      coords -2.263 0.622 -3.728
+      angleY 144.926
+     }
      $grp LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LightPrefabs/LampStreet_E_03_light.et" {
       Light1 {
        coords -4.871 3.348 -2.88
@@ -39,6 +43,16 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
        }
       }
       coords -6.945 -0.221 12.101
+     }
+     $grp GenericEntity : "{D07C2D4844753F76}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_storage.et" {
+      {
+       coords -2.229 0 -3.735
+       angleY -37.244
+      }
+      {
+       coords -2.253 0.311 -3.723
+       angleY -36.048
+      }
      }
     }
    }
@@ -84,23 +98,23 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
     }
     coords 0 0 0
     {
-     $grp GenericEntity : "{B5B3DFD888F6032C}Prefabs/ScenarioFramework/Components/SlotCivilian.et" {
-      SlotCivilian1 {
+     $grp GenericEntity : "{BC99FC44C5533F4D}Prefabs/Systems/ScenarioFramework/Components/SlotCivilian.et" {
+      SlotCivilian4 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D0369265DD0B3}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65E0D44AA51329E8}" {
           m_aLayerName {
            "HospitalPrisonersWP"
           }
          }
         }
        }
-       coords -6.214 -2.925 -3.904
+       coords -5.375 0 -3.904
       }
-      SlotCivilian2 {
+      SlotCivilian1 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D03691CDBEF7D}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65E0D44AB7FD5C27}" {
           m_aLayerName {
            "HospitalPrisonersWP"
           }
@@ -109,10 +123,10 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
        }
        coords 2.281 0 2.169
       }
-      SlotCivilian3 {
+      SlotCivilian2 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D03691E652F4C}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65E0D44ABF03D46B}" {
           m_aLayerName {
            "HospitalPrisonersWP"
           }
@@ -121,10 +135,10 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
        }
        coords -1.735 0 4.946
       }
-      SlotCivilian4 {
+      SlotCivilian3 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656D03691A8C8878}" {
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65E0D44ABBAF73D2}" {
           m_aLayerName {
            "HospitalPrisonersWP"
           }
@@ -151,8 +165,8 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
      GenericEntity HospitalPrisonersWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-        m_Waypoint SCR_ScenarioFrameworkWaypointMove "{6292FA34617F168D}" {
-         m_sWaypointPrefab "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
+        m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{65E0D44A84D33AA2}" {
+         m_fCompletionRadius 5
         }
        }
       }

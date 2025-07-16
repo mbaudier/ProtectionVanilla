@@ -24,12 +24,6 @@ SCR_FactionManager : "{E70679F5E0A515AC}Prefabs/MP/Managers/Factions/FactionMana
     "RURAL"
    }
   }
-  SCR_CampaignFaction "{65B2E17CA2C76861}" : "{081E35D18047E893}Configs/Factions/GANG_Campaign.conf" {
-   m_bIsPlayable 0
-   m_aFriendlyFactionsIds {
-    "URBAN" "RURAL" "US" "USSR"
-   }
-  }
   SCR_CampaignFaction "{65B2E17C9E12D96F}" : "{8D2B128564EDFC31}Configs/Factions/RURAL_Campaign.conf" {
    m_aFriendlyFactionsIds {
     "URBAN"

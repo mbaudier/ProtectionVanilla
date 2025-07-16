@@ -1,0 +1,181 @@
+GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 3065.289 11.761 2875.946
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   CounterAttack {
+    coords 222.543 -9.758 -4.292
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+      CounterAttack1 {
+       coords 1.776 -0.011 -1.592
+       {
+        GenericEntity CounterAttackers1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+         components {
+          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+           m_sFactionKey "Legal"
+           m_aFactionSwitchedObjects {
+            SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C4642F1CB628}" {
+             m_sFactionKey "US"
+             m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+            }
+            SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C464CA924EFE}" {
+             m_sFactionKey "USSR"
+             m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+            }
+           }
+           m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65CA83C2E39F6BDD}" {
+            m_aLayerName {
+             "CounterAttackGetIn1" "CounterAttackWPs"
+            }
+           }
+          }
+         }
+         coords -6.819 0.039 -5.356
+        }
+        GenericEntity CounterAttackVehicle1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sFactionKey "Legal"
+           m_aFactionSwitchedObjects {
+            SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C46514B159F4}" {
+             m_sFactionKey "US"
+             m_sObjectToSpawn "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+            }
+            SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C4652A18A71F}" {
+             m_sFactionKey "USSSR"
+             m_sObjectToSpawn "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et"
+            }
+           }
+          }
+         }
+         coords -14.971 0.123 -4.462
+         angleY -92.914
+        }
+        GenericEntity CounterAttackGetIn1 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointGetIn "{65CA83C26F434F99}" {
+            m_sEntityName "CounterAttackVehicle1"
+            m_fCompletionRadius 5
+            m_fPriorityLevel 2000
+           }
+          }
+         }
+         coords -15.953 0.125 -4.651
+        }
+       }
+      }
+      CounterAttack2 {
+       coords -16.934 0.284 16.866
+       {
+        GenericEntity CounterAttackers2 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+         components {
+          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+           m_sFactionKey "Legal"
+           m_aFactionSwitchedObjects {
+            SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C464D82F4C28}" {
+             m_sFactionKey "US"
+             m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+            }
+            SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C464F61FE6CF}" {
+             m_sFactionKey "USSR"
+             m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+            }
+           }
+           m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65CA83C2E39F6BDD}" {
+            m_aLayerName {
+             "CounterAttackGetIn2" "CounterAttackWPs"
+            }
+           }
+          }
+         }
+         coords -13.636 0.74 -32.603
+        }
+        GenericEntity CounterAttackVehicle2 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sFactionKey "Legal"
+           m_aFactionSwitchedObjects {
+            SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C465EF730CE1}" {
+             m_sFactionKey "US"
+             m_sObjectToSpawn "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+            }
+            SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C465967D033E}" {
+             m_sFactionKey "USSSR"
+             m_sObjectToSpawn "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et"
+            }
+           }
+          }
+         }
+         coords -13.513 0.502 -29.007
+         angleY -94.312
+        }
+        GenericEntity CounterAttackGetIn2 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointGetIn "{65CA83C26F434F99}" {
+            m_sEntityName "CounterAttackVehicle2"
+            m_fCompletionRadius 5
+            m_fPriorityLevel 2000
+           }
+          }
+         }
+         coords -14.376 0.844 -30.092
+        }
+       }
+      }
+      CounterAttackWPs {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+         A_MoveToArleville {
+          components {
+           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+            m_Waypoint SCR_ScenarioFrameworkWaypointMove "{65CA83C2282B87C4}" {
+            }
+           }
+          }
+          coords -285.8 59.109 -815.009
+         }
+         B_ClearArleville {
+          components {
+           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+            m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{65CA83C5B5EF49BD}" {
+             m_fCompletionRadius 100
+            }
+           }
+          }
+          coords -282.227 62.314 -1208.874
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   BeauregardDefenders {
+    coords -368.613 64.371 -1063.161
+    {
+     GenericEntity BeauregardDefenders1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "Legal"
+        m_aFactionSwitchedObjects {
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C4640826248D}" {
+          m_sFactionKey "US"
+          m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         }
+         SCR_ScenarioFrameworkFactionSwitchedObject "{65E0C4643D5CFBCE}" {
+          m_sFactionKey "USSR"
+          m_sObjectToSpawn "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et"
+         }
+        }
+       }
+      }
+      coords 476.391 -65.925 1019.534
+     }
+    }
+   }
+  }
+ }
+}
