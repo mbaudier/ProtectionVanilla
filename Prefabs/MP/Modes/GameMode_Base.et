@@ -8,6 +8,9 @@ SCR_BaseGameMode {
    m_bKillingHorsDeCombatIsWarCrime 1
    m_bKillingWhileDisguisedIsWarCrime 1
    m_bPerfidyIsWarCrime 1
+   m_bTreatAllWarCrimesAsFriendlyKills 0
+   m_bVanillaLogicForStatistics 0
+   m_bVanillaLogicForXP 0
   }
   SCR_PerceivedFactionManagerComponent "{61AA7E6E0C6A76F9}" {
    m_eCharacterPerceivedFactionOutfitType HIGHEST_VALUE
