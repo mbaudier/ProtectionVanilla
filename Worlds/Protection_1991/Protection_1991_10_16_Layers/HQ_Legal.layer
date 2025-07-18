@@ -120,10 +120,10 @@ GenericEntity AreaHqLegal : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework
          }
         }
        }
-       coords -21.872 -0.635 9.503
-       angleX -1.411
-       angleY 53.478
-       angleZ -3.405
+       coords 69.598 -0.361 -86.006
+       angleX -0.387
+       angleY -33.664
+       angleZ 0.178
       }
       VehicleMaintenanceLegal {
        components {
