@@ -15,6 +15,8 @@ SCR_BaseGameMode : "{FDDB712823199E09}Prefabs/Systems/ScenarioFramework/GameMode
     m_sForcedFaction "Legal"
    }
   }
+  SCR_ScoringSystemComponent "{65E537461C911688}" {
+  }
   SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
   }
   SCR_XPHandlerComponent "{65E30DDF1379B91F}" {
