@@ -312,6 +312,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
       m_aActions {
        SCR_ScenarioFrameworkActionSetMissionEndScreen "{65D2D53BE007241E}" {
+        m_eGameOverType COMBATPATROL_VICTORY
+        m_sSubtitle "You have provided with shelter civilians fleeing the fighting"
        }
        SCR_ScenarioFrameworkActionEndMission "{65D2D5301CECB4AA}" {
        }
