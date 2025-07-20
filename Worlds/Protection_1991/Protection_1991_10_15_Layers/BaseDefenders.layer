@@ -40,7 +40,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
          }
         }
        }
-       coords 4.024 -0.141 -15.206
+       coords 10.214 -0.064 3.18
        angleY 35.717
       }
       BaseSquad02 {
@@ -81,7 +81,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
          }
         }
        }
-       coords 5.752 -0.025 -26.137
+       coords 9.839 -0.154 -1.183
       }
       BaseSquad02WP {
        components {
@@ -91,7 +91,7 @@ GenericEntity AreaBaseDefenders : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
          }
         }
        }
-       coords -22.555 0.757 0.376
+       coords -26.472 0.558 -4.984
       }
      }
     }

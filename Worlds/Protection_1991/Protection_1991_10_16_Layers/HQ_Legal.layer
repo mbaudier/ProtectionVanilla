@@ -219,6 +219,14 @@ GenericEntity AreaHqLegal : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework
            m_Info SCR_UIInfo "{65AF2D25B9C814AD}" {
             Name "Harbor"
            }
+           m_aActionsOnSpawnPointUsed {
+            SCR_ScenarioFrameworkActionShowHint "{65E85298DFB04A53}" {
+             m_sTitle "#PRTC-SC03_IntroHint_Title"
+             m_sText "#PRTC-SC03_IntroHint_Text"
+             m_iTimeout 30
+             m_sFactionKey "Legal"
+            }
+           }
           }
          }
          m_sObjectToSpawn "{987991DCED3DC197}PrefabsEditable/SpawnPoints/E_SpawnPoint.et"

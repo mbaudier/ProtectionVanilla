@@ -88,17 +88,17 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
       angleY -140.946
      }
     }
+    $grp GenericEntity : "{D07C2D4844753F76}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_storage.et" {
+     {
+      coords -18.986 2.926 8.757
+      angleY -42.832
+     }
+     {
+      coords -19.006 3.239 8.709
+      angleY -33.43
+     }
+    }
    }
   }
- }
-}
-$grp GenericEntity : "{D07C2D4844753F76}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_storage.et" {
- {
-  coords 3158.503 3.633 1167.503
-  angleY -42.832
- }
- {
-  coords 3158.483 3.946 1167.455
-  angleY -33.43
  }
 }

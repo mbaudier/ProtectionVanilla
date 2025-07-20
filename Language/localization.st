@@ -61,5 +61,27 @@ StringTable {
    Author "argeo"
    LastChanged "argeo"
   }
+  CustomStringTableItem "{65E852988CEB99FE}" {
+   Id "PRTC-SC03_IntroHint_Text"
+   Target_en_us "The Protection mods extend Arma Reforger with the mechanisms of International Humanitarian Law (IHL), also known as the \"laws of war\".  Notably, more unlawful behaviors are punished than in the vanilla version."\
+   ""\
+   "This short but intense mission showcases:"\
+   ""\
+   "- Mass displacement of civilians as the safety of their home territory steadily degrades."\
+   ""\
+   "- Construction of mobile emergency response centers in order to redirect civilians away from the fighting zones."\
+   ""\
+   "Helicopter gunships will give you the edge when it comes to destroy the mortars which indiscriminately bomb the population, but beware of collateral damages."
+   Modified 1709728219
+   Author "mathi"
+   LastChanged "mathi"
+  }
+  CustomStringTableItem "{65E85298E1880924}" {
+   Id "PRTC-SC03_IntroHint_Title"
+   Target_en_us "Protection - Showcase #3"
+   Modified 1709727402
+   Author "mathi"
+   LastChanged "mathi"
+  }
  }
 }

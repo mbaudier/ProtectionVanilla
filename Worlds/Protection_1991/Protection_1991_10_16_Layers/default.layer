@@ -23,7 +23,7 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 SCR_BaseGameMode GameModeSF_Protection_Lore : "{785663D551AFE173}Prefabs/Lore/Protection/GameModeSF_Protection_Lore.et" {
  components {
   ARGEO_PopulationComponent "{657F0CE6ADBB46C4}" {
-   m_fGlobalBuildingsOccupation 100
+   m_fGlobalBuildingsOccupation 90
   }
   ARGEO_ProtectionLoreComponent "{65C4F0AFC88F0211}" {
    m_iYear 1991

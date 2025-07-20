@@ -114,7 +114,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    GenericEntity TaskExtraction : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-      m_bShowDebugShapesDuringRuntime 1
       m_eActivationType ON_TRIGGER_ACTIVATION
       m_aActivationActions {
        SCR_ScenarioFrameworkActionShowPopupNotification "{6297077A90E1C529}" {
