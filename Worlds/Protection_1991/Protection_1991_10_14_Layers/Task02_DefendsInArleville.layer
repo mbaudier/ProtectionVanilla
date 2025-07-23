@@ -261,12 +261,10 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
       }
      }
-     m_sTaskTitle "Defend the businessmen"
+     m_sTaskTitle "#PRTC-SC01_Task02_Title"
+     m_sTaskDescription "#PRTC-SC01_Task02_Text"
      m_sTaskPrefab "{888DC29A0B4F3F20}Prefabs/Systems/ScenarioFramework/Tasks/TaskDefend.et"
      m_aTriggerActionsOnFinish {
-      SCR_ScenarioFrameworkActionShowPopupNotification "{60E90ADCC21CDBCA}" {
-       m_sText "FIA are arriving to defend the civilians"
-      }
       SCR_ScenarioFrameworkActionSpawnObjects "{60E90ACE8A8FBF77}" {
        m_aNameOfObjectsToSpawnOnActivation {
         "TaskMoveToBeauregard" "ArlevilleFIADefenders" "SignalHillBattle"
@@ -324,8 +322,9 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
        m_aPlugins {
         SCR_ScenarioFrameworkPluginSpawnPoint "{65AF3B8AC5F80EB0}" {
+         m_sFaction "Legal"
          m_Info SCR_UIInfo "{65AF3B8AC76657C6}" {
-          Name "Hotel"
+          Name "#PRTC-Lore_Spawn_Hotel"
          }
         }
        }

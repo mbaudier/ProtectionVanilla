@@ -60,7 +60,7 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
        components {
         SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
          m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6297077E9D6E9CDF}" {
-          m_sMapMarkerText "Base defenders"
+          m_sMapMarkerText "#PRTC-Lore_Marker_BaseDefenders"
           m_eMapMarkerFactionIcon INDFOR
          }
         }
@@ -71,7 +71,7 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
        components {
         SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
          m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{629707606E9AAE9A}" {
-          m_sMapMarkerText "Patrols"
+          m_sMapMarkerText "#PRTC-Lore_Marker_Patrols"
           m_eMapMarkerFactionIcon INDFOR
          }
         }

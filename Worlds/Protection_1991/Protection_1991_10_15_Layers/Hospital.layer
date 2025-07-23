@@ -27,23 +27,6 @@ GenericEntity HospitalArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewor
        VolLightOffset 0
       }
      }
-     GenericEntity SpawnHospital : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-      components {
-       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-        m_eActivationType ON_TRIGGER_ACTIVATION
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB827B44B8B}" {
-          m_sFaction "Legal"
-          m_Info SCR_UIInfo "{65AAEEB823160711}" {
-           Name "Hospital"
-          }
-         }
-        }
-        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
-       }
-      }
-      coords -6.945 -0.221 12.101
-     }
      $grp GenericEntity : "{D07C2D4844753F76}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_storage.et" {
       {
        coords -2.229 0 -3.735

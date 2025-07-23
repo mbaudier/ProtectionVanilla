@@ -5,12 +5,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    GenericEntity TaskApproach : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-      m_sTaskTitle "Approach"
-      m_sTaskDescription "Approach the base from the south-east."
+      m_sTaskTitle "#PRTC-SC02_TaskApproach_Title"
+      m_sTaskDescription "#PRTC-SC02_TaskApproach_Text"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03660383A95E}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "SpawnPointApproach" "TaskHospital" "TaskBunker"
+         "SpawnApproach" "TaskHospital" "TaskBunker"
         }
        }
       }
@@ -31,7 +31,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       coords 8.559 3.846 -8.122
      }
      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-      SpawnPointApproach {
+      SpawnApproach {
        components {
         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
          m_eActivationType ON_TRIGGER_ACTIVATION
@@ -39,7 +39,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB8F8036CA8}" {
            m_sFaction "Legal"
            m_Info SCR_UIInfo "{65AAEEB8EF4FCBE7}" {
-            Name "Approach"
+            Name "#PRTC-Lore_Spawn_Approach"
            }
           }
          }
@@ -56,7 +56,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB827B44B8B}" {
            m_sFaction "Legal"
            m_Info SCR_UIInfo "{65AAEEB823160711}" {
-            Name "Main Building"
+            Name "#PRTC-Lore_Spawn_MainBuilding"
            }
           }
          }
@@ -120,8 +120,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_sText "Bring the civilians to the extraction point"
        }
       }
-      m_sTaskTitle "Extraction"
-      m_sTaskDescription "Bring the civilans to the extraction point"
+      m_sTaskTitle "#PRTC-SC02_TaskExtraction_Title"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionEndMission "{5C6E788E9FA7BE1A}" {
        }
@@ -145,7 +144,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_aTriggerActions {
          SCR_ScenarioFrameworkActionSetMissionEndScreen "{65D2F25282485F13}" {
           m_eGameOverType COMBATPATROL_PARTIAL_SUCCESS
-          m_sSubtitle "Congratulations, you have captured the war criminal."
+          m_sSubtitle "#PRTC-Lore_MissionStatus_CaptureWarCriminal_Partial"
          }
         }
        }
@@ -182,7 +181,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_aActivationActions {
          SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077867ABB969}" {
           m_eGameOverType COMBATPATROL_DEFEAT
-          m_sSubtitle "This is a disaster, you have saved no civilian"
+          m_sSubtitle "#PRTC-Lore_MissionStatus_SaveCivilians_Defeat"
          }
         }
         m_aPlugins {
@@ -214,7 +213,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        m_aActions {
         SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
          m_eGameOverType COMBATPATROL_DRAW
-         m_sSubtitle "Unfortunately, you could only save some civilians"
+         m_sSubtitle "#PRTC-Lore_MissionStatus_SaveCivilians_Draw"
         }
        }
       }
@@ -234,7 +233,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        m_aActions {
         SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
          m_eGameOverType COMBATPATROL_PARTIAL_SUCCESS
-         m_sSubtitle "Good job, you have saved many civilians"
+         m_sSubtitle "#PRTC-Lore_MissionStatus_SaveCivilians_Partial"
         }
        }
       }
@@ -254,7 +253,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        m_aActions {
         SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
          m_eGameOverType COMBATPATROL_VICTORY
-         m_sSubtitle "Complete success, you have saved most civilians"
+         m_sSubtitle "#PRTC-Lore_MissionStatus_SaveCivilians_Victory"
         }
        }
       }
@@ -270,8 +269,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
-      m_sTaskTitle "Approach Hospital"
-      m_sTaskDescription "Approach the hospital in order to free prisoners"
+      m_sTaskTitle "#PRTC-SC02_TaskHospital_Title"
+      m_sTaskDescription "#PRTC-SC02_TaskHospital_Text"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03652F69737F}" {
         m_aNameOfObjectsToSpawnOnActivation {
@@ -295,6 +294,23 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
       coords 6.719 3.831 -15.567
      }
+     GenericEntity SpawnHospital : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB827B44B8B}" {
+          m_sFaction "Legal"
+          m_Info SCR_UIInfo "{65AAEEB823160711}" {
+           Name "#PRTC-Lore_Spawn_Hospital"
+          }
+         }
+        }
+        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
+       }
+      }
+      coords 0 0 0
+     }
     }
    }
   }
@@ -306,8 +322,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
-      m_sTaskTitle "Approach Bunker"
-      m_sTaskDescription "Approach the bunker and try to free the prisoners inside."
+      m_sTaskTitle "#PRTC-SC02_TaskBunker_Title"
+      m_sTaskDescription "#PRTC-SC02_TaskBunker_Text"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03656C69F0C4}" {
         m_aNameOfObjectsToSpawnOnActivation {
@@ -331,6 +347,23 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
       coords 0.664 2.967 7.975
      }
+     GenericEntity SpawnBunker : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65AAEEB83D2DE79F}" {
+          m_sFaction "Legal"
+          m_Info SCR_UIInfo "{65AAEEB83BB33A34}" {
+           Name "#PRTC-Lore_Spawn_Bunker"
+          }
+         }
+        }
+        m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
+       }
+      }
+      coords -11.079 -3.012 6.008
+     }
     }
    }
   }
@@ -341,8 +374,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    GenericEntity TaskFindWarCriminal : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-      m_sTaskTitle "Chase War Criminal (optional)"
-      m_sTaskDescription "Find the unarmed FIA officer responsible for mistreating the civilians, and try to capture him"
+      m_sTaskTitle "#PRTC-SC02_TaskWarCriminal_Title"
+      m_sTaskDescription "#PRTC-SC02_TaskWarCriminal_Text"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{65D2F258305C917B}" {
         m_aNameOfObjectsToSpawnOnActivation {

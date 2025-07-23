@@ -47,7 +47,7 @@ GenericEntity AreaStart : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
          SCR_ScenarioFrameworkPluginSpawnPoint "{65AF3B8AE8098E3E}" {
           m_sFaction "Legal"
           m_Info SCR_UIInfo "{65AF3B8AE6832723}" {
-           Name "Insertion"
+           Name "#PRTC-Lore_Spawn_Insertion"
           }
           m_aActionsOnSpawnPointUsed {
            SCR_ScenarioFrameworkActionShowHint "{65CD0DC335319DC5}" {

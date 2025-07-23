@@ -34,7 +34,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       SCR_ScenarioFrameworkLayerTaskKill "{5B02763B6A6D6C4B}" {
        m_sFactionKey "Legal"
        m_eActivationType ON_TRIGGER_ACTIVATION
-       m_sTaskTitle "Neutralize Mortar Servant #2"
+       m_sTaskTitle "#PRTC-SC03_TaskNeutralizeMortar2_Title"
+       m_sTaskDescription "#PRTC-SC03_TaskNeutralizeMortar_Text"
        m_aTriggerActionsOnFinish {
         SCR_ScenarioFrameworkActionIncrementCounter "{65CD2DB4616C9DFE}" {
          m_sCounterName "KilledMortarServants"
@@ -89,7 +90,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       SCR_ScenarioFrameworkLayerTaskKill "{5B02763B6A6D6C4B}" {
        m_sFactionKey "Legal"
        m_eActivationType ON_TRIGGER_ACTIVATION
-       m_sTaskTitle "Neutralize Mortar Servant #1"
+       m_sTaskTitle "#PRTC-SC03_TaskNeutralizeMortar1_Title"
+       m_sTaskDescription "#PRTC-SC03_TaskNeutralizeMortar_Text"
        m_aTriggerActionsOnFinish {
         SCR_ScenarioFrameworkActionIncrementCounter "{65CD2DB471653D23}" {
          m_sCounterName "KilledMortarServants"
@@ -144,7 +146,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       SCR_ScenarioFrameworkLayerTaskKill "{5B02763B6A6D6C4B}" {
        m_sFactionKey "Legal"
        m_eActivationType ON_TRIGGER_ACTIVATION
-       m_sTaskTitle "Neutralize Mortar Servant #3"
+       m_sTaskTitle "#PRTC-SC03_TaskNeutralizeMortar3_Title"
+       m_sTaskDescription "#PRTC-SC03_TaskNeutralizeMortar_Text"
        m_aTriggerActionsOnFinish {
         SCR_ScenarioFrameworkActionIncrementCounter "{65CD2DB457614FF7}" {
          m_sCounterName "KilledMortarServants"
@@ -199,8 +202,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_sFactionKey "Legal"
-      m_sTaskTitle "Helicopter Reconnaissance"
-      m_sTaskDescription "FIA seems to be moving mortars to Arlevile, take an helicopter and observe the situation from above"
+      m_sTaskTitle "#PRTC-SC03_TaskRecon_Title"
+      m_sTaskDescription "#PRTC-SC03_TaskRecon_Text"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{65B0F9E87009989C}" {
         m_aNameOfObjectsToSpawnOnActivation {
@@ -235,53 +238,44 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
      }
      SCR_ScenarioFrameworkActionDeleteEntity "{65CD2DB5B6B397A4}" {
-      m_Getter SCR_ScenarioFrameworkGetArrayOfLayerBases "{65CD2DB5AB06FEB7}" {
-       m_aLayerBaseNames {
-        "ServantMortar11" "ServantMortar12"
-       }
+      m_Getter SCR_ScenarioFrameworkGetLayerBase "{65ECE7C247495698}" {
+       m_sLayerBaseName "ServantMortar11"
+      }
+     }
+     SCR_ScenarioFrameworkActionDeleteEntity "{65ECE7C1A4F5582F}" {
+      m_Getter SCR_ScenarioFrameworkGetLayerBase "{65ECE7C247495698}" {
+       m_sLayerBaseName "ServantMortar12"
       }
      }
     }
+    m_iCountTo 2
    }
   }
  }
  AreaTasksIDP {
   coords 3118.305 34.333 2031.547
   {
-   GenericEntity TaskBuildEmergencyResponseCenter : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+   GenericEntity TaskGatherCivilians : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
     components {
-     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
-      m_sTaskTitle "Build Emergency Response Center"
-      m_bPlaceMarkerOnSubjectSlot 1
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionSetMissionEndScreen "{65ECE7CB3493F274}" {
+        m_eGameOverType COMBATPATROL_DEFEAT
+        m_sSubtitle "#PRTC-Lore_MissionStatus_ProvideShelter_Defeat"
+       }
+      }
+      m_sTaskTitle "#PRTC-SC03_TaskGatherCivilians_Title"
+      m_sTaskDescription "#PRTC-SC03_TaskGatherCivilians_Text"
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionEndMission "{65ECE7CB86AC0A4B}" {
+       }
+      }
      }
     }
-    coords 0 0 0
+    coords 0.009 0 -0.003
     {
      $grp GenericEntity : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
-      TriggerBuildCompleted {
-       components {
-        SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
-         m_aPlugins {
-          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
-           m_fAreaRadius 100
-           m_eActivationPresence SPECIFIC_CLASS
-           m_aSpecificClassNames {
-            "ARGEO_CivicCenterEntity"
-           }
-          }
-         }
-         m_aTriggerActions {
-          SCR_ScenarioFrameworkActionChangeTaskState "{65CCA2423255A1C5}" {
-           m_Getter SCR_ScenarioFrameworkGetTask "{65CCA2422F4516AA}" {
-            m_sLayerTaskName "TaskBuildEmergencyResponseCenter"
-           }
-          }
-         }
-        }
-       }
-       coords 0 0 0
-      }
       TriggerCountRuralIDPs {
        components {
         SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
@@ -294,7 +288,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          }
         }
        }
-       coords 0 0 0
+       coords -0.009 0 0.003
       }
       TriggerCountUrbanIDPs {
        components {
@@ -308,11 +302,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          }
         }
        }
-       coords 0 0 0
+       coords -0.009 0 0.003
       }
      }
      SCR_ScenarioFrameworkLogicCounter CounterIDPs : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
-      coords 0 0 0
+      coords -0.009 0 0.003
       m_aInputs {
        SCR_ScenarioFrameworkLogicInput "{65D2D5303A153883}" {
         m_InputAction SCR_ScenarioFrameworkActionInputCheckEntitiesInTrigger "{65D2D53031BE75DD}" {
@@ -336,11 +330,67 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_aActions {
        SCR_ScenarioFrameworkActionSetMissionEndScreen "{65D2D53BE007241E}" {
         m_eGameOverType COMBATPATROL_VICTORY
-        m_sSubtitle "You have provided with shelter civilians fleeing the fighting"
+        m_sSubtitle "#PRTC-Lore_MissionStatus_ProvideShelter_Victory"
        }
        SCR_ScenarioFrameworkActionEndMission "{65D2D5301CECB4AA}" {
        }
       }
+     }
+     GenericEntity SlotEndMission : "{9C47DECB98FDA4DA}Prefabs/Systems/ScenarioFramework/Components/SlotExtraction.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_fActivationCountdownTimer 300
+          m_bNotificationEnabled 1
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   GenericEntity TaskBuildEmergencyResponseCenter : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_sTaskTitle "#PRTC-SC03_TaskEmergencyResponseCenter_Title"
+      m_sTaskDescription "#PRTC-SC03_TaskEmergencyResponseCenter_Text"
+      m_bPlaceMarkerOnSubjectSlot 1
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionSpawnObjects "{65ECE7CBE7B82F9B}" {
+        m_aNameOfObjectsToSpawnOnActivation {
+         "TaskGatherCivilians"
+        }
+       }
+      }
+     }
+    }
+    coords 0 0 0
+    {
+     GenericEntity TriggerBuildCompleted : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+          m_fAreaRadius 100
+          m_eActivationPresence SPECIFIC_CLASS
+          m_aSpecificClassNames {
+           "ARGEO_CivicCenterEntity"
+          }
+         }
+        }
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkActionChangeTaskState "{65CCA2423255A1C5}" {
+          m_Getter SCR_ScenarioFrameworkGetTask "{65CCA2422F4516AA}" {
+           m_sLayerTaskName "TaskBuildEmergencyResponseCenter"
+          }
+         }
+        }
+       }
+      }
+      coords 0 0 0
      }
      GenericEntity SlotBuildEmergencyResponseCenter : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
       coords 0 0 0

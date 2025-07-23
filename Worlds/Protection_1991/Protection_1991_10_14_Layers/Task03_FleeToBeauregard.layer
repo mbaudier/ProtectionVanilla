@@ -6,7 +6,8 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
      m_sFactionKey "Legal"
      m_eActivationType ON_TRIGGER_ACTIVATION
-     m_sTaskTitle "Flee with the vehicle to Beauregard"
+     m_sTaskTitle "#PRTC-SC01_Task03_Title"
+     m_sTaskDescription "#PRTC-SC01_Task03_Text"
      m_aTriggerActionsOnFinish {
       SCR_ScenarioFrameworkActionSpawnObjects "{65CCE362A04B1F05}" {
        m_aNameOfObjectsToSpawnOnActivation {
@@ -24,7 +25,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        m_aActivationActions {
         SCR_ScenarioFrameworkActionSetMissionEndScreen "{65CF27122F044C92}" {
          m_eGameOverType COMBATPATROL_DEFEAT
-         m_sSubtitle "No civilian was saved"
+         m_sSubtitle "#PRTC-Lore_MissionStatus_SaveCivilians_Defeat"
         }
        }
        m_aPlugins {
@@ -56,7 +57,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
       m_aActions {
        SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
         m_eGameOverType COMBATPATROL_DRAW
-        m_sSubtitle "Unfortunately, you could only save some civilians"
+        m_sSubtitle "#PRTC-Lore_MissionStatus_SaveCivilians_Draw"
        }
       }
      }
@@ -76,7 +77,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
       m_aActions {
        SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
         m_eGameOverType COMBATPATROL_PARTIAL_SUCCESS
-        m_sSubtitle "Good job, you have saved many civilians"
+        m_sSubtitle "#PRTC-Lore_MissionStatus_SaveCivilians_Partial"
        }
       }
      }
@@ -96,7 +97,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
       m_aActions {
        SCR_ScenarioFrameworkActionSetMissionEndScreen "{6297077741AE9457}" {
         m_eGameOverType COMBATPATROL_VICTORY
-        m_sSubtitle "Complete success, you have saved most civilians"
+        m_sSubtitle "#PRTC-Lore_MissionStatus_SaveCivilians_Victory"
        }
       }
      }
