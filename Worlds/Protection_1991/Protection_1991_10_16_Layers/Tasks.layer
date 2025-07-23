@@ -355,6 +355,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionShowHint "{65EE818A460E95DB}" {
+        m_sTitle "#PRTC-Hint_Build_EmergencyResponseCenter_Title"
+        m_sText "#PRTC-Hint_Build_EmergencyResponseCenter_Text"
+        m_sFactionKey "Legal"
+       }
+      }
       m_sTaskTitle "#PRTC-SC03_TaskEmergencyResponseCenter_Title"
       m_sTaskDescription "#PRTC-SC03_TaskEmergencyResponseCenter_Text"
       m_bPlaceMarkerOnSubjectSlot 1

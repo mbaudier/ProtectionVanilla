@@ -277,6 +277,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          "SpawnHospital" "TaskExtraction"
         }
        }
+       SCR_ScenarioFrameworkActionShowHint "{65EE818B7D84E77E}" {
+        m_sTitle "#PRTC-Hint_Command_Protect_Title"
+        m_sText "#PRTC-Hint_Command_Protect_Text"
+        m_sFactionKey "Legal"
+       }
       }
      }
     }
@@ -330,6 +335,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          "SpawnBunker" "TaskExtraction"
         }
        }
+       SCR_ScenarioFrameworkActionShowHint "{65EE818B130D00D5}" {
+        m_sTitle "#PRTC-Hint_Command_Protect_Title"
+        m_sText "#PRTC-Hint_Command_Protect_Text"
+        m_sFactionKey "Legal"
+       }
       }
      }
     }
@@ -381,6 +391,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_aNameOfObjectsToSpawnOnActivation {
          "TaskExtraction"
         }
+       }
+       SCR_ScenarioFrameworkActionShowHint "{65EE818A1A5F2511}" {
+        m_sTitle "PRTC-Hint_Command_Capture_Title"
+        m_sText "PRTC-Hint_Command_Capture_Text"
+        m_sFactionKey "Legal"
        }
       }
      }
