@@ -219,7 +219,7 @@ GenericEntity AreaMortarsArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenario
       CiviliansNearMortar02 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{591DED76888ABC0D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_3x.et"
+         m_sObjectToSpawn "{2E1785FE7C28537D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_2x.et"
          m_sWPToSpawn "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
         }
        }
@@ -228,7 +228,7 @@ GenericEntity AreaMortarsArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenario
       CiviliansNearMortar03 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{591DED76888ABC0D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_3x.et"
+         m_sObjectToSpawn "{2E1785FE7C28537D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_2x.et"
          m_sWPToSpawn "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
         }
        }
@@ -237,7 +237,7 @@ GenericEntity AreaMortarsArleville : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenario
       CiviliansNearMortar01 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{591DED76888ABC0D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_3x.et"
+         m_sObjectToSpawn "{2E1785FE7C28537D}Prefabs/Groups/INDFOR/RURAL/Group_RURAL_2x.et"
          m_sWPToSpawn "{2FCBE5C76E285A7B}Prefabs/AI/Waypoints/AIWaypoint_DefendSmall.et"
         }
        }
