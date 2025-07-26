@@ -172,6 +172,20 @@ StringTable {
    Author "argeo"
    LastChanged "argeo"
   }
+  CustomStringTableItem "{65F4CB6EAD358314}" {
+   Id "PRTC-SC02_AssaultTrigger_Text"
+   Target_en_us "Rogue ОМСДОН troops will soon attack the base. Their past behavior indicates that the civilians are in mortal danger."
+   Modified 1710545042
+   Author "argeo"
+   LastChanged "argeo"
+  }
+  CustomStringTableItem "{65F4CB6D4124807B}" {
+   Id "PRTC-SC02_AssaultTrigger_Title"
+   Target_en_us "URGENT INTEL - THE FULL-SCALE INVASION OF ARLAND HAS BEGUN!"
+   Modified 1710544686
+   Author "argeo"
+   LastChanged "argeo"
+  }
   CustomStringTableItem "{65D2F2451AC8854B}" {
    Id "PRTC-SC02_IntroHint_Text"
    Target_en_us "The Protection mods extend Arma Reforger with the mechanisms of International Humanitarian Law (IHL), also known as the \"laws of war\".  Notably, more unlawful behaviors are punished than in the vanilla version."\

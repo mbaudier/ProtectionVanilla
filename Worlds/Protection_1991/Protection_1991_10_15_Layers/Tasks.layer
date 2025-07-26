@@ -135,9 +135,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
           m_fAreaRadius 30
-          m_aSpecificEntityNames {
-           "WarCriminal"
-          }
+          m_eActivationPresence ANY_CHARACTER
+          m_sActivatedByThisFaction "FIA"
          }
         }
         m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
@@ -226,7 +225,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
            m_sLayerBaseName "TriggerEndMissionFaction"
           }
           m_eComparisonOperator GREATER_OR_EQUAL
-          m_iValue 4
+          m_iValue 3
          }
         }
        }

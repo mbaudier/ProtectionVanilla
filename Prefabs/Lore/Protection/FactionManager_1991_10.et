@@ -36,4 +36,18 @@ SCR_FactionManager : "{E70679F5E0A515AC}Prefabs/MP/Managers/Factions/FactionMana
   }
  }
  m_bCanChangeFactionsPlayable 0
+ m_aRanks {
+  SCR_RankID "{5CB0777E83631136}" {
+   m_iRequiredXP -251
+  }
+  SCR_RankID "{5CB0777E828E61F3}" {
+   m_iRequiredXP -250
+  }
+  SCR_RankID "{5CB0777E803B7EA2}" {
+   m_iRequiredXP -150
+  }
+  SCR_RankID "{5CB0777E8F0E82AF}" {
+   m_iRequiredXP -100
+  }
+ }
 }

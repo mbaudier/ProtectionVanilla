@@ -72,14 +72,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
            m_fAreaRadius 150
            m_bOnce 1
-           m_bNotificationEnabled 1
-           m_sPlayerActivationNotificationTitle "Rogue Vityaz troops will soon attack the base"
           }
          }
          m_aTriggerActions {
           SCR_ScenarioFrameworkActionShowPopupNotification "{65AAE399D029B34D}" {
-           m_sTitle "URGENT INTEL - THE INVASION OF ARLAND HAS BEGUN!"
-           m_sText "Rogue ОМСДОН troops will soon attack the base"
+           m_sTitle "#PRTC-SC02_AssaultTrigger_Title"
+           m_sText "#PRTC-SC02_AssaultTrigger_Text"
           }
           SCR_ScenarioFrameworkActionWaitAndExecute "{65AAE3995C475FDB}" {
            m_iDelayInSeconds 300
