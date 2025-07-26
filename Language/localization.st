@@ -172,20 +172,6 @@ StringTable {
    Author "argeo"
    LastChanged "argeo"
   }
-  CustomStringTableItem "{65F4A826D55DBC72}" {
-   Id "PRTC-SC01_Text"
-   Target_en_us "Tensions are escalating between the Rural and Urban communities on Arland, with the FIA clearly supporting the Rurals. As you join the US-provided security detail of Urban businessmen meeting the Rural mayor of Arleville, rogue Soviet forces are suddenly appearing on the small island..."
-   Modified 1710537060
-   Author "argeo"
-   LastChanged "argeo"
-  }
-  CustomStringTableItem "{65F4A826EAC4E339}" {
-   Id "PRTC-SC01_Title"
-   Target_en_us "Mayor's Meeting"
-   Modified 1710537052
-   Author "argeo"
-   LastChanged "argeo"
-  }
   CustomStringTableItem "{65D2F2451AC8854B}" {
    Id "PRTC-SC02_IntroHint_Text"
    Target_en_us "The Protection mods extend Arma Reforger with the mechanisms of International Humanitarian Law (IHL), also known as the \"laws of war\".  Notably, more unlawful behaviors are punished than in the vanilla version."\
