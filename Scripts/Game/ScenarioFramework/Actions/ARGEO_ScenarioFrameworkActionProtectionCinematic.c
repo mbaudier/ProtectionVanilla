@@ -1,3 +1,6 @@
+//------------------------------------------------------------------------------------------------
+//! The helicopters' cinematic logic as a component (instead of a custom entity script),
+//! so that it can be used in faction-switched slots.
 [BaseContainerProps(), SCR_ContainerActionTitle()]
 class ARGEO_ScenarioFrameworkActionProtectionCinematic : SCR_ScenarioFrameworkActionBase
 {

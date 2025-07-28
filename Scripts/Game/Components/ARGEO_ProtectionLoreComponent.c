@@ -3,6 +3,8 @@ class ARGEO_ProtectionLoreComponentClass : SCR_BaseGameModeComponentClass
 {
 }
 
+//------------------------------------------------------------------------------------------------
+//! Set the world to a given date.
 class ARGEO_ProtectionLoreComponent : SCR_BaseGameModeComponent
 {
 	[Attribute("1989", UIWidgets.Slider, "Year", "1900 2200 1", category: "Date")]
@@ -16,6 +18,8 @@ class ARGEO_ProtectionLoreComponent : SCR_BaseGameModeComponent
 
 	protected static ARGEO_ProtectionLoreComponent s_Instance;
 
+	//------------------------------------------------------------------------------------------------
+	//! Sets the world date.
 	void SetupDate(int year, int month, int day = 1)
 	{
 		ChimeraWorld world = ChimeraWorld.CastFrom(GetOwner().GetWorld());
@@ -53,6 +57,7 @@ class ARGEO_ProtectionLoreComponent : SCR_BaseGameModeComponent
 		SetupDate(m_iYear, m_iMonthOfTheYear, m_iDayOfTheMonth);
 	}
 
+	//------------------------------------------------------------------------------------------------
 	override void OnPostInit(IEntity owner)
 	{
 		// Allow only one instance
