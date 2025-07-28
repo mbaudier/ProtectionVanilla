@@ -26,10 +26,9 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     GenericEntity MoveToMayorMeeting : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
      components {
       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-       m_bShowDebugShapesInWorkbench 0
        m_aPlugins {
         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-         m_fAreaRadius 50
+         m_fAreaRadius 70
         }
        }
       }
