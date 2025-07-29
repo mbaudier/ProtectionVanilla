@@ -36,8 +36,8 @@ StringTable {
   CustomStringTableItem "{65ECE7CD43FA87E4}" {
    Id "PRTC-Lore_MissionStatus_ProvideShelter_Victory"
    Target_en_us "Congratulations, you have provided with shelter the civilians fleeing the fighting."
-   Target_fr_fr "Félicitations, vous avez fourni un abri aux civils fuyant le combat."
-   Modified 1710029985
+   Target_fr_fr "Félicitations, vous avez fourni un abri aux civils fuyant les combats."
+   Modified 1710920594
    Author "argeo"
    LastChanged "argeo"
   }
@@ -76,16 +76,16 @@ StringTable {
   CustomStringTableItem "{65ECE7C44EE48C32}" {
    Id "PRTC-Lore_Spawn_Approach"
    Target_en_us "Approach"
-   Target_fr_fr "Approcher"
-   Modified 1710026461
+   Target_fr_fr "Approche"
+   Modified 1710920612
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7C3E3A49FDB}" {
    Id "PRTC-Lore_Spawn_Bunker"
    Target_en_us "Bunker"
-   Target_fr_fr "Tunnel"
-   Modified 1710026908
+   Target_fr_fr "Bunker"
+   Modified 1710920616
    Author "argeo"
    LastChanged "argeo"
   }
@@ -134,90 +134,90 @@ StringTable {
    "- Two additional civilian factions (Rural and Urban Civilians), which can be used to model populations of mixed ethnicity, social background, etc."\
    ""\
    "As confusion and misunderstandings reign, you have to focus on your mission to protect specific persons, while doing your best to prevent any war crime."
-   Target_fr_fr "Les mods Protection étendent Arma Reforger avec les mécanismes du Droit international humain (Dih), également connu sous le nom de \"lois de la guerre\".  Notamment, plus de comportements illicites sont punis que dans la version originale."\
+   Target_fr_fr "Les mods Protection étendent Arma Reforger avec les mécanismes du Droit International Humanitaire, également connu comme les \"lois de la guerre\".  Notamment, plus de comportements illicites sont punis que dans la version originale du jeu."\
    ""\
    "Cette mission courte met en évidence :"\
    ""\
    "- La population automatique des maisons par des civils."\
    ""\
-   "- La \"protection\" des non-combattants AI via leur recrutement dans des groupes commandés."\
+   "- La \"protection\" des IAs non-combattantes via leur recrutement dans des groupes commandés."\
    ""\
-   "- Deux factions civiles supplémentaires (Civils ruraux et Urbains), qui peuvent être utilisés pour modéliser des populations mixtes d'ethnie, de fonds sociaux, etc."\
+   "- Deux factions civiles supplémentaires (civils Ruraux et Urbains), qui peuvent être utilisées pour modéliser des populations mixtes ethniquement, socialement, etc."\
    ""\
-   "Alors que la confusion et les malentendus règnent, il faut se concentrer sur votre mission de protéger des personnes spécifiques, tout en faisant de votre mieux pour éviter tout crime de guerre."
-   Modified 1708331764
+   "Alors que la confusion et les malentendus règnent, concentrez-vous sur votre mission qui consiste à protéger quelques personnes spécifiques, tout en faisant de votre mieux pour empêcher tout crime de guerre."
+   Modified 1710920875
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65CD0DC154C46AF7}" {
    Id "PRTC-SC01_IntroHint_Title"
    Target_en_us "Protection - Showcase #1"
-   Target_fr_fr "Protection - Démo #1"
-   Modified 1707943634
+   Target_fr_fr "Protection - Mission De Présentation N° 1"
+   Modified 1710921100
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65CD0DC36AAFBB60}" {
    Id "PRTC-SC01_Task01_Text"
    Target_en_us "Take a car and drive fast to Arleville in order to join urban businessmen meeting with the rural mayor."
-   Target_fr_fr "Prenez une voiture et conduisez rapidement vers Arleville afin de rejoindre les entrepreneurs urbains en meeting avec le maire rural."
-   Modified 1710025159
+   Target_fr_fr "Prenez une voiture et conduisez rapidement vers Arleville afin de rejoindre les businessmen Urbains en réunion avec le maire Rural d'Arleville."
+   Modified 1710921174
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65CD0DC49CAA44F1}" {
    Id "PRTC-SC01_Task01_Title"
    Target_en_us "Drive To Arleville"
-   Target_fr_fr "Conduire vers Arleville"
-   Modified 1707943319
+   Target_fr_fr "Conduire Vers Arleville"
+   Modified 1710921181
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7C75859E049}" {
    Id "PRTC-SC01_Task02_Text"
    Target_en_us "Stay put and defend the businessmen until we understand what is going on."
-   Target_fr_fr "Restez là et défendez les entrepreneurs jusqu'à ce que nous comprenions ce qui se passe."
-   Modified 1710025133
+   Target_fr_fr "Restez sur place et défendez les businessmen jusqu'à ce que nous comprenions mieux la situation."
+   Modified 1710921218
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7C77B207142}" {
    Id "PRTC-SC01_Task02_Title"
    Target_en_us "Defend The Businessmen"
-   Target_fr_fr "Défendre les entrepreneurs"
-   Modified 1710025027
+   Target_fr_fr "Défendre Les Businessmen"
+   Modified 1710921228
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7C61ECD1FDD}" {
    Id "PRTC-SC01_Task03_Text"
    Target_en_us "Enraged FIA soldiers are arriving to protect the rural civilians. Avoid them and extract the surviving businessmen to Beauregard."
-   Target_fr_fr "Les soldats FIA fous arrivent pour protéger les civils ruraux. Évitez-les et extrayez les entrepreneurs survivants vers Beauregard."
-   Modified 1710025531
+   Target_fr_fr "Des soldats FIA enragés de colère arrivent pour protéger les civils Ruraux. Évitez-les et assurez l'extraction les businessmen survivants vers Beauregard."
+   Modified 1710921261
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7C6C389BC1E}" {
    Id "PRTC-SC01_Task03_Title"
    Target_en_us "Flee With A Vehicle To Beauregard"
-   Target_fr_fr "Fuir avec un véhicule vers Beauregard"
-   Modified 1710025363
+   Target_fr_fr "Fuir Avec Un Véhicule Vers Beauregard"
+   Modified 1710921275
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65F4CB6EAD358314}" {
    Id "PRTC-SC02_AssaultTrigger_Text"
-   Target_en_us "Rogue ОМСДОН troops will soon attack the base. Their past behavior indicates that the civilians are in mortal danger."
-   Target_fr_fr "Les troupes criminelles ОМСДОН attaqueront bientôt la base. Leur comportement antérieur indique que les civils sont en danger de mort."
-   Modified 1710545042
+   Target_en_us "Rogue ОМСДОН troops will soon attack the base. Their past behavior indicates that the jailed civilians are in mortal danger."
+   Target_fr_fr "Les troupes criminelles ОМСДОН vont bientôt attaquer la base. Leur comportement passé indique que les civils prisonniers sont en danger de mort."
+   Modified 1710921348
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65F4CB6D4124807B}" {
    Id "PRTC-SC02_AssaultTrigger_Title"
    Target_en_us "URGENT INTEL - THE FULL-SCALE INVASION OF ARLAND HAS BEGUN!"
-   Target_fr_fr "INFO URGENTE - L'INVASION COMPLÈTE D'ARLAND A DÉBUTÉ !"
-   Modified 1710544686
+   Target_fr_fr "INTEL URGENTE - L'INVASION TOTALE D'ARLAND A DÉBUTÉ !"
+   Modified 1710921382
    Author "argeo"
    LastChanged "argeo"
   }
@@ -232,24 +232,24 @@ StringTable {
    "- The capturing of unarmed enemies."\
    ""\
    "The goal is to save as many civilians as possible, unfortunately not all of them. You will probably have to leave some behind in order to save at least few..."
-   Target_fr_fr "Les mods Protection étendent Arma Reforger avec les mécanismes du Droit international humain (Dih), également connu sous le nom de \"lois de la guerre\".  Notamment, plus de comportements illicites sont punis que dans la version originale."\
+   Target_fr_fr "Les mods Protection étendent Arma Reforger avec les mécanismes du Droit International Humanitaire, également connu comme les \"lois de la guerre\".  Notamment, plus de comportements illicites sont punis que dans la version originale du jeu."\
    ""\
    "Cette mission plus dynamique et complexe met en évidence :"\
    ""\
-   "- La \"protection\" des non-combattants AI via leur recrutement dans des groupes commandés, et les défis liés à leur direction sous feu lourd."\
+   "- La \"protection\" des IA non-combattantes via leur recrutement dans des groupes commandés, et la difficulté à les diriger sous feu nourri."\
    ""\
-   "- La capturation d'ennemis non armés."\
+   "- La capture d'ennemis désarmés."\
    ""\
-   "L'objectif est de sauver autant de civils que possible, malheureusement pas tous. Vous devrez probablement laisser certains en arrière pour sauver au moins quelques-uns..."
-   Modified 1708331290
+   "L'objectif est de sauver autant de civils que possible, mais malheureusement pas tous. Vous devrez probablement en abandonner certains afin de pouvoir en sauver au moins quelques-uns..."
+   Modified 1710921496
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65D2F25A955474FD}" {
    Id "PRTC-SC02_IntroHint_Title"
    Target_en_us "Protection - Showcase #2"
-   Target_fr_fr "Protection - Démo #2"
-   Modified 1708331814
+   Target_fr_fr "Protection - Mission De Présentation N° 2"
+   Modified 1710921107
    Author "argeo"
    LastChanged "argeo"
   }
@@ -264,8 +264,8 @@ StringTable {
   CustomStringTableItem "{65ECE7C4146E51E1}" {
    Id "PRTC-SC02_TaskApproach_Title"
    Target_en_us "Approach"
-   Target_fr_fr "Approcher"
-   Modified 1710026342
+   Target_fr_fr "Approche"
+   Modified 1710921520
    Author "argeo"
    LastChanged "argeo"
   }
@@ -280,8 +280,8 @@ StringTable {
   CustomStringTableItem "{65ECE7C398209E7F}" {
    Id "PRTC-SC02_TaskBunker_Title"
    Target_en_us "Approach Bunker"
-   Target_fr_fr "Approcher du bunker"
-   Modified 1710026807
+   Target_fr_fr "Approcher Du Bunker"
+   Modified 1710921546
    Author "argeo"
    LastChanged "argeo"
   }
@@ -304,32 +304,32 @@ StringTable {
   CustomStringTableItem "{65ECE7C2A903EA07}" {
    Id "PRTC-SC02_TaskHospital_Text"
    Target_en_us "Approach the hospital in order to free the prisoners trapped inside."
-   Target_fr_fr "Approcher de l'hôpital afin de libérer les prisonniers coincés à l'intérieur."
-   Modified 1710027248
+   Target_fr_fr "Approcher de l'hôpital afin de libérer les civils prisonniers à l'intérieur."
+   Modified 1710921583
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7C2BBBD7E0F}" {
    Id "PRTC-SC02_TaskHospital_Title"
    Target_en_us "Approach Hospital"
-   Target_fr_fr "Approcher de l'hôpital"
-   Modified 1710027212
+   Target_fr_fr "Approcher De L'Hôpital"
+   Modified 1710921594
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7C371647684}" {
    Id "PRTC-SC02_TaskWarCriminal_Text"
    Target_en_us "Find the unarmed FIA officer responsible for mistreating the civilians, and try to capture him."
-   Target_fr_fr "Trouvez l'officier FIA non armé responsable du maltraitement des civils, et tentez de le capturer."
-   Modified 1710027117
+   Target_fr_fr "Trouvez l'officier FIA désarmé responsable des mauvais traitements infligés aux civils, et tentez de le capturer."
+   Modified 1710921627
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7C33E82C2E5}" {
    Id "PRTC-SC02_TaskWarCriminal_Title"
    Target_en_us "Chase War Criminal (alternative)"
-   Target_fr_fr "Chasser le criminel de guerre (alternative)"
-   Modified 1710027082
+   Target_fr_fr "Poursuivre Le Criminel De Guerre (alternative)"
+   Modified 1710921644
    Author "argeo"
    LastChanged "argeo"
   }
@@ -344,96 +344,96 @@ StringTable {
    "- Construction of mobile emergency response centers in order to redirect civilians away from the fighting zones."\
    ""\
    "Helicopter gunships will give you the edge when it comes to destroy the mortars which indiscriminately bomb the population, but beware of collateral damages."
-   Target_fr_fr "Les mods Protection étendent Arma Reforger avec les mécanismes du Droit international humain (Dih), également connu sous le nom de \"lois de la guerre\".  Notamment, plus de comportements illicites sont punis que dans la version originale."\
+   Target_fr_fr "Les mods Protection étendent Arma Reforger avec les mécanismes du Droit International Humanitaire, également connu comme les \"lois de la guerre\".  Notamment, plus de comportements illicites sont punis que dans la version originale du jeu."\
    ""\
    "Cette mission courte mais intense met en évidence :"\
    ""\
-   "- Le déplacement en masse des civils alors que la sécurité de leur territoire natal se dégrade progressivement."\
+   "- Le déplacement en masse de civils alors que la sécurité de leur territoire se dégrade progressivement."\
    ""\
-   "- La construction de centres d'intervention d'urgence mobiles afin de détourner les civils loin des zones de combat."\
+   "- La construction de centres de réponse d'urgence mobiles, afin d'éloigner les civils des zones de combat."\
    ""\
-   "Les avions de chasse vous donneront un avantage lors de la destruction des obusiers qui bombardent indistinctement la population, mais soyez prudent concernant les dommages collatéraux."
-   Modified 1709728219
+   "Les helicoptères de combat vous donneront un avantage lors de la destruction des mortiers qui bombardent sans distinction la population, mais soyez prudent avec les dommages collatéraux."
+   Modified 1710921871
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65E85298E1880924}" {
    Id "PRTC-SC03_IntroHint_Title"
    Target_en_us "Protection - Showcase #3"
-   Target_fr_fr "Protection - Démo #3"
-   Modified 1709727402
+   Target_fr_fr "Protection - Mission De Présentation N° 3"
+   Modified 1710921117
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7CDC0127196}" {
    Id "PRTC-SC03_TaskEmergencyResponseCenter_Text"
    Target_en_us "Build an emergency response center away from the fighting zone, so that fleeing civilians can gather there."
-   Target_fr_fr "Construisez un centre d'intervention d'urgence en dehors de la zone de combat, afin que les civils fuyant puissent s'y rassembler."
-   Modified 1710029755
+   Target_fr_fr "Construisez un centre de réponse d'urgence en dehors de la zone de combat, afin que les civils en fuite puissent s'y rassembler."
+   Modified 1710921851
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7CDD2CC2A74}" {
    Id "PRTC-SC03_TaskEmergencyResponseCenter_Title"
    Target_en_us "Build Emergency Response Center"
-   Target_fr_fr "Construire un centre d'intervention d'urgence"
-   Modified 1710029690
+   Target_fr_fr "Construire Un Centre De Réponse D'Urgence"
+   Modified 1710921834
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7CC7A1327E4}" {
    Id "PRTC-SC03_TaskGatherCivilians_Text"
    Target_en_us "Wait for enough civilians to gather at the response center. Depending on the situation, either defend or go looking for them."
-   Target_fr_fr "Attendez que suffisamment de civils se rassemblent au centre d'intervention. Selon la situation, soit défendez-les soit allez les chercher."
-   Modified 1710030366
+   Target_fr_fr "Attendez que suffisamment de civils se rassemblent au centre de réponse d'urgence. Selon la situation, soit défendez-les soit allez les chercher."
+   Modified 1710921823
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7CC07307F1D}" {
    Id "PRTC-SC03_TaskGatherCivilians_Title"
    Target_en_us "Gather Civilians"
-   Target_fr_fr "Rassembler les civils"
-   Modified 1710030293
+   Target_fr_fr "Rassembler Les Civils"
+   Modified 1710921884
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7CE4BB772AA}" {
    Id "PRTC-SC03_TaskNeutralizeMortar1_Title"
    Target_en_us "Neutralize Mortar Servant #1"
-   Target_fr_fr "Désamorcer l'obusier #1"
-   Modified 1710029478
+   Target_fr_fr "Neutraliser Le Servant De Mortier N° 1"
+   Modified 1710921947
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7CDF0DC0235}" {
    Id "PRTC-SC03_TaskNeutralizeMortar2_Title"
    Target_en_us "Neutralize Mortar Servant #2"
-   Target_fr_fr "Désamorcer l'obusier #2"
-   Modified 1710029625
+   Target_fr_fr "Neutraliser Le Servant De Mortier N° 2"
+   Modified 1710921953
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7CDEF4FF312}" {
    Id "PRTC-SC03_TaskNeutralizeMortar3_Title"
    Target_en_us "Neutralize Mortar Servant #3"
-   Target_fr_fr "Désamorcer l'obusier #3"
-   Modified 1710029638
+   Target_fr_fr "Neutraliser Le Servant De Mortier N° 3"
+   Modified 1710921959
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7CDA4AA529F}" {
    Id "PRTC-SC03_TaskNeutralizeMortar_Text"
    Target_en_us "Neutralize the mortar servant, while avoiding collateral damages."
-   Target_fr_fr "Désamorcer l'obusier tout en évitant les dommages collatéraux."
-   Modified 1710029560
+   Target_fr_fr "Neutraliez le servant de mortier tout en évitant les dommages collatéraux."
+   Modified 1710921977
    Author "argeo"
    LastChanged "argeo"
   }
   CustomStringTableItem "{65ECE7CE03A7E56C}" {
    Id "PRTC-SC03_TaskRecon_Text"
    Target_en_us "The FIA seems to be moving mortars to Arlevile, take an helicopter and observe the situation from above."
-   Target_fr_fr "L'FIA semble transporter des obusiers vers Arleville, prenez un hélicoptère et observez la situation depuis le ciel."
-   Modified 1710029401
+   Target_fr_fr "Les FIA semblent transporter des mortiers vers Arleville. Prenez un hélicoptère et observez la situation depuis le ciel."
+   Modified 1710922018
    Author "argeo"
    LastChanged "argeo"
   }
