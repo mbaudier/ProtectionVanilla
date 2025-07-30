@@ -124,34 +124,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     }
     coords 0 0 0
     {
-     GenericEntity TriggerWarCriminal : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
-      components {
-       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
-          m_fAreaRadius 30
-          m_aSpecificEntityNames {
-           "WarCriminal"
-          }
-          m_aPrefabFilter {
-           SCR_ScenarioFrameworkPrefabFilter "{65FCC21CA00D41B2}" {
-            m_sSpecificPrefabName "{0CCAE78F179E3BC4}Prefabs/Lore/Protection/Character_FIA_WarCriminal.et"
-            m_bIncludeChildren 1
-           }
-          }
-         }
-        }
-        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
-        m_aTriggerActions {
-         SCR_ScenarioFrameworkActionSetMissionEndScreen "{65D2F25282485F13}" {
-          m_eGameOverType COMBATPATROL_PARTIAL_SUCCESS
-          m_sSubtitle "#PRTC-Lore_MissionStatus_CaptureWarCriminal_Partial"
-         }
-        }
-       }
-      }
-      coords 0 0 0
-     }
      GenericEntity SlotExtraction01 : "{9C47DECB98FDA4DA}Prefabs/Systems/ScenarioFramework/Components/SlotExtraction.et" {
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
