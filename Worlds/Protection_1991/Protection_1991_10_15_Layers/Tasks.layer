@@ -115,11 +115,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
-      m_aActivationActions {
-       SCR_ScenarioFrameworkActionShowPopupNotification "{6297077A90E1C529}" {
-        m_sText "Bring the civilians to the extraction point"
-       }
-      }
       m_sTaskTitle "#PRTC-SC02_TaskExtraction_Title"
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionEndMission "{5C6E788E9FA7BE1A}" {
@@ -135,8 +130,15 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
           m_fAreaRadius 30
-          m_eActivationPresence ANY_CHARACTER
-          m_sActivatedByThisFaction "FIA"
+          m_aSpecificEntityNames {
+           "WarCriminal"
+          }
+          m_aPrefabFilter {
+           SCR_ScenarioFrameworkPrefabFilter "{65FCC21CA00D41B2}" {
+            m_sSpecificPrefabName "{0CCAE78F179E3BC4}Prefabs/Lore/Protection/Character_FIA_WarCriminal.et"
+            m_bIncludeChildren 1
+           }
+          }
          }
         }
         m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
@@ -187,7 +189,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
           m_fAreaRadius 30
           m_eActivationPresence ANY_CHARACTER
-          m_sActivatedByThisFaction "URBAN"
+          m_sActivatedByThisFaction "PROTECTED"
          }
         }
         m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
@@ -392,8 +394,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         }
        }
        SCR_ScenarioFrameworkActionShowHint "{65EE818A1A5F2511}" {
-        m_sTitle "PRTC-Hint_Command_Capture_Title"
-        m_sText "PRTC-Hint_Command_Capture_Text"
+        m_sTitle "#PRTC-Hint_Command_Capture_Title"
+        m_sText "#PRTC-Hint_Command_Capture_Text"
         m_sFactionKey "Legal"
        }
       }
@@ -405,7 +407,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       SlotWarCriminal {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sObjectToSpawn "{854C04F0EA2129CC}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Unarmed.et"
+         m_sObjectToSpawn "{0CCAE78F179E3BC4}Prefabs/Lore/Protection/Character_FIA_WarCriminal.et"
          m_sID "WarCriminal"
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65D2F24F2E050615}" {
           m_aLayerName {
