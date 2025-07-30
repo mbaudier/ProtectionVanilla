@@ -18,6 +18,18 @@ GenericEntity AreaMortarsSignalHill : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
         m_sFactionKey "Criminal"
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginOnDestroyEvent "{65FCA1368C8A0204}" {
+          m_aActionsOnDestroy {
+           SCR_ScenarioFrameworkActionSetMissionEndScreen "{65FCA136FD272CB3}" {
+            m_eGameOverType COMBATPATROL_DEFEAT
+            m_sSubtitle "#PRTC-SC03_MissionStatus_EngageEnemy_Defeat"
+           }
+           SCR_ScenarioFrameworkActionEndMission "{65FCA1368427C6B6}" {
+           }
+          }
+         }
+        }
         m_aFactionSwitchedObjects {
          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA83D6700C5A7C}" {
           m_sFactionKey "USSR"
@@ -94,6 +106,18 @@ GenericEntity AreaMortarsSignalHill : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenari
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
         m_sFactionKey "Criminal"
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginOnDestroyEvent "{65FCA136D4DD7CA5}" {
+          m_aActionsOnDestroy {
+           SCR_ScenarioFrameworkActionSetMissionEndScreen "{65FCA136FD272CB3}" {
+            m_eGameOverType COMBATPATROL_DEFEAT
+            m_sSubtitle "#PRTC-SC03_MissionStatus_EngageEnemy_Defeat"
+           }
+           SCR_ScenarioFrameworkActionEndMission "{65FCA1368427C6B6}" {
+           }
+          }
+         }
+        }
         m_aFactionSwitchedObjects {
          SCR_ScenarioFrameworkFactionSwitchedObject "{65CA83D61299F802}" {
           m_sFactionKey "USSR"

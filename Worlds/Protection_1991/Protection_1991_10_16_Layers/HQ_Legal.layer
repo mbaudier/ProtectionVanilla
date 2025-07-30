@@ -217,7 +217,7 @@ GenericEntity AreaHqLegal : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework
           SCR_ScenarioFrameworkPluginSpawnPoint "{65AF2D2240DDDCE5}" {
            m_sFaction "Legal"
            m_Info SCR_UIInfo "{65AF2D25B9C814AD}" {
-            Name "Harbor"
+            Name "#PRTC-Lore_Spawn_Harbor"
            }
            m_aActionsOnSpawnPointUsed {
             SCR_ScenarioFrameworkActionShowHint "{65E85298DFB04A53}" {

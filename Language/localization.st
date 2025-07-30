@@ -89,6 +89,14 @@ StringTable {
    Author "argeo"
    LastChanged "argeo"
   }
+  CustomStringTableItem "{65FCA13C7E37418C}" {
+   Id "PRTC-Lore_Spawn_Harbor"
+   Target_en_us "Harbor"
+   Target_fr_fr "Port"
+   Modified 1711060373
+   Author "argeo"
+   LastChanged "argeo"
+  }
   CustomStringTableItem "{65ECE7C2FF9661C9}" {
    Id "PRTC-Lore_Spawn_Hospital"
    Target_en_us "Hospital"
@@ -365,6 +373,14 @@ StringTable {
    Author "argeo"
    LastChanged "argeo"
   }
+  CustomStringTableItem "{65FCA1374C5F55BD}" {
+   Id "PRTC-SC03_MissionStatus_EngageEnemy_Defeat"
+   Target_en_us "Do not engage the Soviet troops!"
+   Target_fr_fr "N'attaquez pas les troupes soviétiques !"
+   Modified 1711056094
+   Author "argeo"
+   LastChanged "argeo"
+  }
   CustomStringTableItem "{65ECE7CDC0127196}" {
    Id "PRTC-SC03_TaskEmergencyResponseCenter_Text"
    Target_en_us "Build an emergency response center away from the fighting zone, so that fleeing civilians can gather there."
@@ -431,9 +447,9 @@ StringTable {
   }
   CustomStringTableItem "{65ECE7CE03A7E56C}" {
    Id "PRTC-SC03_TaskRecon_Text"
-   Target_en_us "The FIA seems to be moving mortars to Arlevile, take an helicopter and observe the situation from above."
-   Target_fr_fr "Les FIA semblent transporter des mortiers vers Arleville. Prenez un hélicoptère et observez la situation depuis le ciel."
-   Modified 1710922018
+   Target_en_us "The FIA seems to be moving mortars to Arlevile, take an helicopter and observe the situation from above. Do not enage Soviet troops!"
+   Target_fr_fr "Les FIA semblent transporter des mortiers vers Arleville. Prenez un hélicoptère et observez la situation depuis le ciel. N'attaquez pas les troupes soviétiques !"
+   Modified 1711056212
    Author "argeo"
    LastChanged "argeo"
   }

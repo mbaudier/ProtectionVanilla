@@ -288,7 +288,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          }
         }
        }
-       coords -0.009 0 0.003
+       coords 0 0 0
       }
       TriggerCountUrbanIDPs {
        components {
@@ -302,7 +302,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          }
         }
        }
-       coords -0.009 0 0.003
+       coords 0 0 0
       }
      }
      SCR_ScenarioFrameworkLogicCounter CounterIDPs : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
@@ -314,7 +314,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           m_sLayerBaseName "TriggerCountRuralIDPs"
          }
          m_eComparisonOperator GREATER_OR_EQUAL
-         m_iValue 5
+         m_iValue 2
         }
        }
        SCR_ScenarioFrameworkLogicInput "{65E85296848DA391}" {
@@ -323,7 +323,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           m_sLayerBaseName "TriggerCountUrbanIDPs"
          }
          m_eComparisonOperator GREATER_OR_EQUAL
-         m_iValue 5
+         m_iValue 2
         }
        }
       }
@@ -341,7 +341,9 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fActivationCountdownTimer 300
+          m_fAreaRadius 100
+          m_sActivatedByThisFaction "Legal"
+          m_fActivationCountdownTimer 600
           m_bNotificationEnabled 1
          }
         }
