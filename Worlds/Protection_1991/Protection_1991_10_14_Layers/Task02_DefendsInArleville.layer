@@ -11,7 +11,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
       m_SpawnChildren RANDOM_MULTIPLE
-      m_iRandomPercent 75
+      m_iRandomPercent 50
       m_eActivationType ON_TRIGGER_ACTIVATION
      }
     }
@@ -34,10 +34,13 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          }
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E708A40A60EBA2}" {
           m_aLayerName {
-           "Task02Move01" "Task02SaD01" "Task02SaDClear"
+           "Task02Move01"
+           "Task02SaD01"
+           "Task02SaDClear"
           }
          }
          m_eAIGroupFormation Line
+         m_eAISkill VETERAN
         }
        }
        coords -76.285 -13.117 -64.59
@@ -58,10 +61,13 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          }
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E708A438AF8CF2}" {
           m_aLayerName {
-           "Task02Move02" "Task02SaD02" "Task02SaDClear"
+           "Task02Move02"
+           "Task02SaD02"
+           "Task02SaDClear"
           }
          }
          m_eAIGroupFormation Line
+         m_eAISkill VETERAN
         }
        }
        coords 13.074 -15.677 -150.183
@@ -82,10 +88,13 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          }
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E708BB831E9175}" {
           m_aLayerName {
-           "Task02Move00" "Task02SaD00" "Task02SaDClear"
+           "Task02Move00"
+           "Task02SaD00"
+           "Task02SaDClear"
           }
          }
          m_eAIGroupFormation Line
+         m_eAISkill VETERAN
         }
        }
        coords 120.208 -6.091 -63.307
@@ -106,14 +115,17 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          }
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E708A438AF8CF2}" {
           m_aLayerName {
-           "Task02Move03" "Task02SaD03" "Task02SaDClear"
+           "Task02Move03"
+           "Task02SaD03"
+           "Task02SaDClear"
           }
          }
          m_eAIGroupFormation Line
+         m_eAISkill VETERAN
         }
        }
        coords 74.528 -10.137 125.687
-       angleY -155.403
+       angles 0 -155.403 0
       }
      }
     }
@@ -267,7 +279,9 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
      m_aTriggerActionsOnFinish {
       SCR_ScenarioFrameworkActionSpawnObjects "{60E90ACE8A8FBF77}" {
        m_aNameOfObjectsToSpawnOnActivation {
-        "TaskMoveToBeauregard" "ArlevilleFIADefenders" "SignalHillBattle"
+        "TaskMoveToBeauregard"
+        "ArlevilleFIADefenders"
+        "SignalHillBattle"
        }
       }
      }
@@ -304,7 +318,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
       }
      }
      coords 8.548 -1.582 11.276
-     angleY 16.08
+     angles 0 16.08 0
     }
     GenericEntity Task02Spawn : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
      components {
@@ -350,7 +364,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
       }
       coords 7.94 -1.554 14.025
-      angleY -164.403
+      angles 0 -164.403 0
      }
      Businessman1 {
       components {
@@ -368,7 +382,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
       }
       coords -0.194 -1.496 15.339
-      angleY 138.218
+      angles 0 138.218 0
      }
      Businessman2 {
       components {
@@ -386,7 +400,7 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        }
       }
       coords 0.843 -1.519 14.105
-      angleY 97.883
+      angles 0 97.883 0
      }
     }
    }
