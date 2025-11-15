@@ -18,6 +18,7 @@ SCR_FactionManager : "{E70679F5E0A515AC}Prefabs/MP/Managers/Factions/FactionMana
   SCR_CampaignFaction "{65B2E17F453D6459}" : "{ADFDBDA163950168}Configs/Factions/US_Campaign.conf" {
   }
   SCR_CampaignFaction "{65B2E17F4016CE55}" : "{15B582F8FA0B0940}Configs/Factions/USSR_Campaign.conf" {
+   m_bIsPlayable 0
   }
   SCR_CampaignFaction "{65B2E17CB9AB760F}" : "{CF9447B87AB774DB}Configs/Factions/FIA_Campaign.conf" {
    m_aFriendlyFactionsIds {
