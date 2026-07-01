@@ -10,7 +10,9 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03660383A95E}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "SpawnApproach" "TaskHospital" "TaskBunker"
+         "SpawnApproach"
+         "TaskHospital"
+         "TaskBunker"
         }
        }
       }
@@ -46,7 +48,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
         }
        }
-       coords 49.629 0.418 26.802
+       coords 49.629 0.419 26.802
       }
       SpawnMainBuilding {
        components {
@@ -98,7 +100,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  AreaTaskExtraction {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_sTriggerResource "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+    m_sTriggerResource "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
     m_fAreaRadius 30
     m_aTriggerActions {
      SCR_ScenarioFrameworkActionSpawnObjects "{6297077BE730CD6D}" {
@@ -138,7 +140,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           m_sCountdownAudio "SOUND_RESPAWNMENU"
          }
         }
-        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
        }
       }
       coords 0.139 0.014 -0.887
@@ -164,12 +166,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           m_sActivatedByThisFaction "PROTECTED"
          }
         }
-        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
        }
       }
       coords 0 0 0
      }
-     $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
+     $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/Logic/LogicCounter.et" {
       MissionStatusDraw {
        coords 0 0 0
        m_aInputs {
@@ -247,7 +249,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03652F69737F}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "SpawnHospital" "TaskExtraction"
+         "SpawnHospital"
+         "TaskExtraction"
         }
        }
        SCR_ScenarioFrameworkActionShowHint "{65EE818B7D84E77E}" {
@@ -287,7 +290,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
        }
       }
-      coords 0 0 0
+      coords 23.587 -0.286 4.226
      }
     }
    }
@@ -305,7 +308,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{656D03656C69F0C4}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "SpawnBunker" "TaskExtraction"
+         "SpawnBunker"
+         "TaskExtraction"
         }
        }
        SCR_ScenarioFrameworkActionShowHint "{65EE818B130D00D5}" {
@@ -345,7 +349,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_sObjectToSpawn "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et"
        }
       }
-      coords -11.079 -3.012 6.008
+      coords -11.259 -2.811 7.03
      }
     }
    }

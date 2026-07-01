@@ -25,12 +25,13 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
            }
            m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65CA83C2E39F6BDD}" {
             m_aLayerName {
-             "CounterAttackGetIn1" "CounterAttackWPs"
+             "CounterAttackGetIn1"
+             "AA_WPs_CounterAttack"
             }
            }
           }
          }
-         coords -3.516 0.039 -0.209
+         coords -26.606 0.348 1.14
         }
         GenericEntity CounterAttackVehicle1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
          components {
@@ -50,7 +51,7 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
           }
          }
          coords -24.654 0.384 -4.524
-         angleY -92.914
+         angles 0 -92.914 0
         }
         GenericEntity CounterAttackGetIn1 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
          components {
@@ -84,12 +85,13 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
            }
            m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65CA83C2E39F6BDD}" {
             m_aLayerName {
-             "CounterAttackGetIn2" "CounterAttackWPs"
+             "CounterAttackGetIn2"
+             "AA_WPs_CounterAttack"
             }
            }
           }
          }
-         coords -3.516 0 -0.209
+         coords 8.598 -0 2.748
         }
         GenericEntity CounterAttackVehicle2 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
          components {
@@ -109,7 +111,7 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
           }
          }
          coords 7.401 0 -3.88
-         angleY -92.914
+         angles 0 -92.914 0
         }
         GenericEntity CounterAttackGetIn2 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
          components {
@@ -127,7 +129,7 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
      }
     }
    }
-   CounterAttackWPs {
+   AA_WPs_CounterAttack {
     coords 222.543 -9.758 -4.292
     {
      $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
@@ -135,10 +137,11 @@ GenericEntity AreaCounterAttack : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
          m_Waypoint SCR_ScenarioFrameworkWaypointMove "{65CA83C2282B87C4}" {
+          m_fCompletionRadius 75
          }
         }
        }
-       coords -574.554 75.499 -1228.59
+       coords -528.065 75.244 -1223.891
       }
       B_ClearArleville {
        components {

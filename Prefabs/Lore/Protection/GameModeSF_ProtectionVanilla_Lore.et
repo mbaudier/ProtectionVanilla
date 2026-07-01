@@ -18,5 +18,6 @@ SCR_BaseGameMode : "{FDDB712823199E09}Prefabs/Systems/ScenarioFramework/GameMode
   SCR_TimeAndWeatherHandlerComponent "{65B323FCA270F580}" {
   }
  }
+ m_eTestGameFlags 7
  m_bAllowFactionChange 0
 }

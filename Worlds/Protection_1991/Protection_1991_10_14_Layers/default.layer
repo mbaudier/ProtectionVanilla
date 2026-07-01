@@ -20,7 +20,7 @@ SCR_AIWorld SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 2033.122 33.266 2023.837
 }
-SCR_BaseGameMode GameModeSF_Protection_Lore : "{785663D551AFE173}Prefabs/Lore/Protection/GameModeSF_Protection_Lore.et" {
+SCR_BaseGameMode GameMode : "{785663D551AFE173}Prefabs/Lore/Protection/GameModeSF_ProtectionVanilla_Lore.et" {
  components {
   ARGEO_PopulationComponent "{657F0CE6ADBB46C4}" {
    m_fGlobalBuildingsOccupation 100
@@ -49,7 +49,7 @@ SCR_BaseGameMode GameModeSF_Protection_Lore : "{785663D551AFE173}Prefabs/Lore/Pr
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Systems/Radio/RadioManager.et" {
  coords 2033.122 33.063 2022.837
 }
-SCR_FactionManager FactionManager_1991_10 : "{D1FD1F8F861F5002}Prefabs/Lore/Protection/FactionManager_1991_10.et" {
+SCR_FactionManager FactionManager : "{D1FD1F8F861F5002}Prefabs/Lore/Protection/FactionManager_1991_10.et" {
  components {
   SCR_FactionAliasComponent "{65C9088E44A8A973}" {
    m_aFactionAliases {
@@ -80,7 +80,7 @@ SCR_FactionManager FactionManager_1991_10 : "{D1FD1F8F861F5002}Prefabs/Lore/Prot
 ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
  coords 2033.122 33.482 2024.837
 }
-SCR_LoadoutManager LoadoutManager_1991_10 : "{C4F7860EF519B92A}Prefabs/Lore/Protection/LoadoutManager_1991_10.et" {
+SCR_LoadoutManager LoadoutManager : "{C4F7860EF519B92A}Prefabs/Lore/Protection/LoadoutManager_1991_10.et" {
  coords 2031.82 32.461 2019.627
  m_aPlayerLoadouts {
   SCR_FactionPlayerLoadout "{65D0D27D3E27F274}" {

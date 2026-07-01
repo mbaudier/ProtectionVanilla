@@ -43,7 +43,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        }
       }
      }
-     coords -18.881 3.471 -29.146
+     coords -48.614 4.208 -14.76
      {
       GenericEntity ServantMortar02 : "{C70DC6CBD1AAEC9A}Prefabs/Systems/ScenarioFramework/Components/SlotKill.et" {
        components {
@@ -99,7 +99,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        }
       }
      }
-     coords 1.736 1.885 -2.507
+     coords 45.213 1.127 -19.872
      {
       GenericEntity ServantMortar01 : "{C70DC6CBD1AAEC9A}Prefabs/Systems/ScenarioFramework/Components/SlotKill.et" {
        components {
@@ -155,7 +155,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        }
       }
      }
-     coords -14.468 1.763 -116.211
+     coords -26.802 2.983 -119.351
      {
       GenericEntity ServantMortar03 : "{C70DC6CBD1AAEC9A}Prefabs/Systems/ScenarioFramework/Components/SlotKill.et" {
        components {
@@ -207,7 +207,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionSpawnObjects "{65B0F9E87009989C}" {
         m_aNameOfObjectsToSpawnOnActivation {
-         "TaskKillServantMortar01" "TaskKillServantMortar02" "TaskKillServantMortar03" "Mortar11" "Mortar12"
+         "TaskKillServantMortar01"
+         "TaskKillServantMortar02"
+         "TaskKillServantMortar03"
+         "Mortar11"
+         "Mortar12"
         }
        }
       }
@@ -229,7 +233,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      }
     }
    }
-   SCR_ScenarioFrameworkLogicCounter KilledMortarServants : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
+   SCR_ScenarioFrameworkLogicCounter KilledMortarServants : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/Logic/LogicCounter.et" {
     coords 0.004 0 -0.009
     m_aActions {
      SCR_ScenarioFrameworkActionSpawnObjects "{65CD2DB445347BE0}" {
@@ -305,7 +309,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        coords 0 0 0
       }
      }
-     SCR_ScenarioFrameworkLogicCounter CounterIDPs : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
+     SCR_ScenarioFrameworkLogicCounter CounterIDPs : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/Logic/LogicCounter.et" {
       coords -0.009 0 0.003
       m_aInputs {
        SCR_ScenarioFrameworkLogicInput "{65D2D5303A153883}" {
