@@ -12,6 +12,9 @@ SCR_BaseGameMode {
    m_bVanillaLogicForStatistics 0
    m_bVanillaLogicForXP 0
   }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{ACFC2F20D14A4CC4}Configs/NameTags/NametagProtection.conf"
+  }
   SCR_PerceivedFactionManagerComponent "{61AA7E6E0C6A76F9}" {
    m_eCharacterPerceivedFactionOutfitType HIGHEST_VALUE
    m_ePunishmentKillingWhileDisguised WARCRIME

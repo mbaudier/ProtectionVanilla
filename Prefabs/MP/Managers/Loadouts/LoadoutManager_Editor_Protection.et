@@ -3,9 +3,11 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  m_aPlayerLoadouts {
   SCR_FactionPlayerLoadout "{65BD083263A78C8B}" {
    m_sLoadoutResource "{33155540F5CAA602}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_S.et"
+   m_sLoadoutImage "{6EE70386E174CFD1}UI/Textures/EditorPreviews/Characters/Factions/BLUFOR/US_Army/GreenBerets/Supressed/Character_US_SF_S.edds"
   }
   SCR_FactionPlayerLoadout "{65BD083263A78CF0}" {
    m_sLoadoutResource "{4D20F57C29B6EC1D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_S.et"
+   m_sLoadoutImage "{8FB42E3B2F4C73CC}UI/Textures/EditorPreviews/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_S.edds"
   }
  }
 }
