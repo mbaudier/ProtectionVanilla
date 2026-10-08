@@ -32,7 +32,9 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
          m_fAreaRadius 25
          m_aSpecificEntityNames {
-          "Defended1" "Defended2" "Defended3"
+          "Defended1"
+          "Defended2"
+          "Defended3"
          }
         }
        }
@@ -40,7 +42,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
      }
      coords 395.651 -61.129 1046.86
     }
-    $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
+    $grp SCR_ScenarioFrameworkLogicCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/Logic/LogicCounter.et" {
      MissionStatusDraw {
       coords 372.319 -69.252 1311.158
       m_aInputs {
@@ -108,13 +110,14 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        m_sObjectToSpawn "{1BB20A4B3A53D0F5}Prefabs/Groups/INDFOR/Group_FIA_LightFireTeam.et"
        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{656EE3EC82B5253C}" {
         m_aLayerName {
-         "BeauregardDefendersGetInWP" "BeauregardDefendersMoveWP"
+         "BeauregardDefendersGetInWP"
+         "BeauregardDefendersMoveWP"
         }
        }
       }
      }
      coords 315.859 -49.167 892.545
-     angleY -80.732
+     angles 0 -80.732 0
     }
     GenericEntity SlotMoveToBeauregard : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
      components {
@@ -122,7 +125,6 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        m_bExcludeFromDynamicDespawn 1
        m_aPlugins {
         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-         m_fAreaRadius 6
         }
        }
       }
@@ -135,7 +137,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        m_eActivationType ON_TRIGGER_ACTIVATION
        m_aPlugins {
         SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
-         m_fAreaRadius 6
+         m_fAreaRadius 10
          m_fActivationCountdownTimer 5
         }
        }
@@ -171,9 +173,7 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     }
     Vehicle BeauregardDefendersVehicle1 : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
      coords 318.242 -50.041 902.231
-     angleX 5.702
-     angleY -145.015
-     angleZ -0.366
+     angles 5.702 -145.015 -0.366
     }
    }
   }
@@ -191,14 +191,15 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
        m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90ACD425EDDDA}" {
         m_aLayerName {
-         "Task03FIAForcedMoveWP" "Task03FIASaDWP"
+         "Task03FIAForcedMoveWP"
+         "Task03FIASaDWP"
         }
        }
        m_eAIGroupFormation Line
       }
      }
      coords -105.969 8.66 4.191
-     angleY 133.274
+     angles 0 133.274 0
     }
     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
      Task03FIAForcedMoveWP {
