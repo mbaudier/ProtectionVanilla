@@ -46,6 +46,7 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          ARGEO_ScenarioFrameworkActionProtectionCinematic "{65C908890C428D30}" {
          }
         }
+        m_sObjectToSpawn "{039615384D5685B3}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_Mi8.et"
         m_aFactionSwitchedObjects {
          SCR_ScenarioFrameworkFactionSwitchedObject "{65C908893E287302}" {
           m_sFactionKey "US"
@@ -69,6 +70,7 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
          ARGEO_ScenarioFrameworkActionProtectionCinematic "{65C908890C428D30}" {
          }
         }
+        m_sObjectToSpawn "{039615384D5685B3}Prefabs/MP/CombatOps/Vehicles/Cinematic_Flying_Mi8.et"
         m_aFactionSwitchedObjects {
          SCR_ScenarioFrameworkFactionSwitchedObject "{65C908893E287302}" {
           m_sFactionKey "US"
@@ -109,6 +111,13 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
           m_sObjectToSpawn "{4D20F57C29B6EC1D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_S.et"
          }
         }
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType GROUP
+        m_aIncludedEditableEntityLabels {
+         GROUPSIZE_SMALL
+        }
+        m_aExcludedEditableEntityLabels {
+        }
         m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
         m_eAIGroupFormation Line
         m_eAISkill EXPERT
@@ -130,6 +139,13 @@ GenericEntity AreaTask01 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
           m_sFactionKey "USSR"
           m_sObjectToSpawn "{4D20F57C29B6EC1D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_S.et"
          }
+        }
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType GROUP
+        m_aIncludedEditableEntityLabels {
+         GROUPSIZE_SMALL
+        }
+        m_aExcludedEditableEntityLabels {
         }
         m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
         m_eAIGroupFormation Line

@@ -188,7 +188,15 @@ GenericEntity AreaTask03 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
     GenericEntity ArlevilleFIADefenders00 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
      components {
       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sFactionKey "Occupier"
        m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
+       m_bRandomizePerFaction 1
+       m_eEntityCatalogType GROUP
+       m_aIncludedEditableEntityLabels {
+        GROUPSIZE_LARGE
+       }
+       m_aExcludedEditableEntityLabels {
+       }
        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E90ACD425EDDDA}" {
         m_aLayerName {
          "Task03FIAForcedMoveWP"

@@ -32,6 +32,13 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
            m_sObjectToSpawn "{D0886786634E55AE}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_Squad.et"
           }
          }
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType GROUP
+         m_aIncludedEditableEntityLabels {
+          GROUPSIZE_LARGE
+         }
+         m_aExcludedEditableEntityLabels {
+         }
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E708A40A60EBA2}" {
           m_aLayerName {
            "Task02Move01"
@@ -58,6 +65,13 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
            m_sFactionKey "US"
            m_sObjectToSpawn "{D0886786634E55AE}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_Squad.et"
           }
+         }
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType GROUP
+         m_aIncludedEditableEntityLabels {
+          GROUPSIZE_LARGE
+         }
+         m_aExcludedEditableEntityLabels {
          }
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E708A438AF8CF2}" {
           m_aLayerName {
@@ -86,6 +100,11 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
            m_sObjectToSpawn "{D0886786634E55AE}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_Squad.et"
           }
          }
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType GROUP
+         m_aIncludedEditableEntityLabels {
+          GROUPSIZE_LARGE
+         }
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E708BB831E9175}" {
           m_aLayerName {
            "Task02Move00"
@@ -112,6 +131,13 @@ GenericEntity AreaTask02 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
            m_sFactionKey "US"
            m_sObjectToSpawn "{D0886786634E55AE}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_Squad.et"
           }
+         }
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType GROUP
+         m_aIncludedEditableEntityLabels {
+          GROUPSIZE_LARGE
+         }
+         m_aExcludedEditableEntityLabels {
          }
          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{60E708A438AF8CF2}" {
           m_aLayerName {
